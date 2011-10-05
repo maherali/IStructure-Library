@@ -9,7 +9,7 @@ level as your `.xcodeproj` XCode project, it should be as
 `-force_load ./Library/libIStructure.a`
 
 If you have problems, use the following instead:
--all_load
+`-all_load`
 
 Under Build Phases, add the `libIStructure.a` library to the *"Link Binary with Libraries"* section.
 
@@ -23,8 +23,8 @@ Model
 
 A model is a subclass of `ISModel`.
 It provides an interface for a resource that lives on a server.
-For example a Note class can be used to represent a note
-stored on a server. A Note instance represents a note that is either
+For example a `Note` class can be used to represent a note
+stored on a server. A `Note` instance represents a note that is either
 stored on the server or can be stored on the server.
 
 Collection
@@ -32,7 +32,7 @@ Collection
 
 A collection is a subclass of `ISCollection`.
 It provides an interface for a collection of models.
-A Notes class represents all notes stored on the server.
+A `Notes` class represents all notes stored on the server.
 
 
 Controller
@@ -42,11 +42,16 @@ Is a subclass of `ISGenericController` or `ISTableViewController`
 that can register for specific route patterns.
 
 For a class to be considered a controller, it needs at a minimum:
-1) have a property observers of type NSMutableArray.
-2) Either declare at least one of the following methods:
+
+* have a property observers of type NSMutableArray.
+* Either declare at least one of the following methods:
 
 `- (id) initWithValues:(NSDictionary*) _passedIn;`
+
+
 or
+
+
 `+ (void) startWithValues:(NSDictionary*) _passedIn;`
 
 Make sure that you initialize the `observers` array in the` initWithValues:` method
