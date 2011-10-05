@@ -124,6 +124,19 @@ the service using `$register()` in it `+ load` method.
 
 The following is an example of a service:
 
+	#import "NetworkStateService.h"
+
+	static NetworkStateService  *singleton          = nil;
+	static int                  netActivityCounter  = 0;
+
+	@implementation NetworkStateService
+
+	@synthesize observers;
+
+	- (void) updateNetworkActivity{
+	    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:(netActivityCounter > 0)];
+	}
+
 	- (id) intWithOptions:(NSDictionary*) options{
 	    self = [super init];
 	    self.observers = $marray();
