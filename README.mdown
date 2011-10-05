@@ -61,7 +61,7 @@ If your controller class is a subclass of either `ISViewController` or `ISTableV
 
 Here is an example of how `ISViewController` declares `observers` property:
 
-`#import "ISRouter.h"
+`\#import "ISRouter.h"
 
 @interface ISViewController : UIViewController {
     NSMutableArray   *observers;
