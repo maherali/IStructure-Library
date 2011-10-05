@@ -78,6 +78,8 @@
 		411C1C85143C04AE000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
 		411C1C86143C04BE000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
 		411C1C87143C04CA000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
+		41F40449143C08B300116FC3 /* icon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F40448143C08B300116FC3 /* icon57x57.png */; };
+		41F4044B143C08B900116FC3 /* icon114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F4044A143C08B900116FC3 /* icon114x114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,8 +209,6 @@
 		411C1C16143BFF32000449E1 /* GeoNamesErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoNamesErrorDecoder.m; path = Classes/GeoNamesErrorDecoder.m; sourceTree = "<group>"; };
 		411C1C17143BFF32000449E1 /* GeoNamesSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoNamesSync.h; path = Classes/GeoNamesSync.h; sourceTree = "<group>"; };
 		411C1C18143BFF32000449E1 /* GeoNamesSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoNamesSync.m; path = Classes/GeoNamesSync.m; sourceTree = "<group>"; };
-		411C1C19143BFF32000449E1 /* icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57x57.png; path = Classes/icon57x57.png; sourceTree = "<group>"; };
-		411C1C1A143BFF32000449E1 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114x114.png; path = Classes/icon114x114.png; sourceTree = "<group>"; };
 		411C1C1B143BFF32000449E1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = "<group>"; };
 		411C1C1C143BFF32000449E1 /* NearbyPlace-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "NearbyPlace-Info.plist"; path = "Classes/NearbyPlace-Info.plist"; sourceTree = "<group>"; };
 		411C1C1D143BFF32000449E1 /* NearbyPlace-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NearbyPlace-Prefix.pch"; path = "Classes/NearbyPlace-Prefix.pch"; sourceTree = "<group>"; };
@@ -241,6 +241,8 @@
 		411C1C7C143C036C000449E1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		411C1C81143C0392000449E1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		411C1C83143C049D000449E1 /* libIStructure.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIStructure.a; path = Library/libIStructure.a; sourceTree = "<group>"; };
+		41F40448143C08B300116FC3 /* icon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57x57.png; path = ../icon57x57.png; sourceTree = "<group>"; };
+		41F4044A143C08B900116FC3 /* icon114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon114x114.png; path = ../icon114x114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +479,8 @@
 		411C1BE7143BFEF4000449E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41F4044A143C08B900116FC3 /* icon114x114.png */,
+				41F40448143C08B300116FC3 /* icon57x57.png */,
 				411C1BE8143BFEF4000449E1 /* NearbyPlace-Info.plist */,
 				411C1BE9143BFEF4000449E1 /* InfoPlist.strings */,
 				411C1BEE143BFEF4000449E1 /* NearbyPlace-Prefix.pch */,
@@ -521,8 +525,6 @@
 				411C1C16143BFF32000449E1 /* GeoNamesErrorDecoder.m */,
 				411C1C17143BFF32000449E1 /* GeoNamesSync.h */,
 				411C1C18143BFF32000449E1 /* GeoNamesSync.m */,
-				411C1C19143BFF32000449E1 /* icon57x57.png */,
-				411C1C1A143BFF32000449E1 /* icon114x114.png */,
 				411C1C1B143BFF32000449E1 /* main.m */,
 				411C1C1C143BFF32000449E1 /* NearbyPlace-Info.plist */,
 				411C1C1D143BFF32000449E1 /* NearbyPlace-Prefix.pch */,
@@ -702,6 +704,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				411C1BEB143BFEF4000449E1 /* InfoPlist.strings in Resources */,
+				41F40449143C08B300116FC3 /* icon57x57.png in Resources */,
+				41F4044B143C08B900116FC3 /* icon114x114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1059,6 +1063,7 @@
 				411C1B58143BFBB7000449E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		411C1BCC143BFE19000449E1 /* Build configuration list for PBXNativeTarget "SimplePhotos" */ = {
 			isa = XCConfigurationList;
@@ -1067,6 +1072,7 @@
 				411C1BCF143BFE19000449E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		411C1BF2143BFEF4000449E1 /* Build configuration list for PBXNativeTarget "NearbyPlace" */ = {
 			isa = XCConfigurationList;
@@ -1075,6 +1081,7 @@
 				411C1BF5143BFEF4000449E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		411C1C5F143C029B000449E1 /* Build configuration list for PBXNativeTarget "RoutePlayground" */ = {
 			isa = XCConfigurationList;
@@ -1083,6 +1090,7 @@
 				411C1C62143C029B000449E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
