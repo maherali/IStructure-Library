@@ -78,7 +78,7 @@ Here is an example of how `ISViewController` declares `observers` property:
  	
 	@end  
 
-In the `initWithNibName:bundle:andValues:`
+In the `initWithNibName:bundle:andValues:`, we initialize the `observers` array using the macro `$marray()` which is basically `[NSMutableArray array]`
 
 	- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues{
     	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
