@@ -1,5 +1,5 @@
 Usage.
-==========
+======
 
 To use the libIStructure.a library, add the following parameter to the
 Other Linker flags of the target or if you use it in all your targets, add
@@ -14,24 +14,32 @@ If you have problems, use the following instead:
 Under Build Phases, add the libIStructure.a library to the "Link Binary with Libraries" section.
 
 In your .pch file, add the following import statement:
-'#import "IStructure.h"'
 
+#import "IStructure.h"
 
-====================
-Model.
+MVC Framework Components
+========================
+
+Model
+-----
+
 A model is a subclass of ISModel.
 It provides an interface for a resource that lives on a server.
 For example a Note class can be used to represent a note
 stored on a server. A Note instance represents a note that is either
 stored on the server or can be stored on the server.
 
-Collection.
+Collection
+----------
+
 A collection is a subclass of ISCollection.
 It provides an interface for a collection of models.
 A Notes class represents all notes stored on the server.
 
 
-Controller.
+Controller
+----------
+
 Is a subclass of ISGenericController or ISTableViewController
 that can register for specific route patterns.
 
@@ -49,12 +57,16 @@ and $unwatch() in the dealloc.
 If your controller class is a subclass of either ISGenericController or ISTableViewController, you do not need to worry about initialization and unwatching event. Just make sure you call the respective super method.
 
 View
+----
+
 A view is a regular Cocoa view. It is initialized with either a model or a collection and interacts with the controller using $trigger() command.
 Same restriction on the use of the commands as in controllers. You can subclass ISTableView or ISBaseView class, you don't have to worry about these restrictions.
 Of course, you can create your own base class to take care of the requirements and have other class subclass it.
 
 
-Service.
+Service
+-------
+
 A service is a class that works semi-independently. It can be UI-based or not.
 For example, a Location service or a service that handles showing the
 network indicator based on network activity.
@@ -65,7 +77,8 @@ The service is usually a singleton, but it does not have to be.
 Services are started by $start() command.
 
 
-==========================================================================================
+Commands
+========
 The following commands make use of this variable.
 The this variable is either class object or the instance object
 depending on the whether the method is a class or instance method,
