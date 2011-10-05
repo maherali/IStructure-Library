@@ -61,8 +61,6 @@ If your controller class is a subclass of either `ISViewController` or `ISTableV
 
 Here is an example of how `ISViewController` declares `observers` property:
 
-	#import "ISRouter.h"
-
 	@interface ISViewController : UIViewController {  
     		NSMutableArray   *observers;    
    			NSDictionary     *options;  
@@ -95,7 +93,7 @@ In the `initWithNibName:bundle:andValues:`, we initialize the `observers` array 
     	return self;
 	}
 
-the dealloc method always stops watching events and cleans up. For example:
+the `dealloc` method always stops watching events and cleans up. For example:
 
 	- (void) dealloc{
     	__block ISViewController *this = self;
@@ -121,9 +119,42 @@ Service
 A service is a class that works semi-independently. It can be UI-based or not.
 For example, a Location service or a service that handles showing the
 network indicator based on network activity.
-A service needs to implement startWithOptions: class method and register for
+A service needs to implement` startWithOptions:` class method and register for
 the service using `$register()` in it `+ load` method.
 
+The following is an example of a service:
+
+	- (id) intWithOptions:(NSDictionary*) options{
+	    self = [super init];
+	    self.observers = $marray();
+	    __block NetworkStateService *this = self;
+	    $watch(@"network:on", ^(NSNotification* notif){
+	        ++netActivityCounter;
+	        [this updateNetworkActivity];
+	    });
+	    $watch(@"network:off", ^(NSNotification* notif){
+	        --netActivityCounter;
+	        [this updateNetworkActivity];
+	    });
+	    return self;
+	}
+
+	+ (void) startWithOptions:(NSDictionary*) options{
+	    singleton = singleton ? singleton : [[self alloc] intWithOptions:options];
+	}
+
+	+ (void) load{
+	    __block Class this = self;
+	    $register(@"net_state");
+	}
+
+	- (void) dealloc{
+	    __block NetworkStateService *this = self;
+	    $unwatch();
+	    [super dealloc];
+	}
+
+ 
 The service is usually a singleton, but it does not have to be.
 Services are started by` $start()` command.
 
