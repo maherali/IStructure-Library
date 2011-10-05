@@ -124,7 +124,11 @@ the service using `$register()` in it `+ load` method.
 
 The following is an example of a service:
 
-	#import "NetworkStateService.h"
+	@interface NetworkStateService : NSObject{
+	    NSMutableArray      *observers;
+	}
+	@property (retain) NSMutableArray   *observers;
+	@end
 
 	static NetworkStateService  *singleton          = nil;
 	static int                  netActivityCounter  = 0;
