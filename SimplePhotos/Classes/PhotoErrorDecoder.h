@@ -1,0 +1,3 @@
+@interface PhotoErrorDecoder : ISBasicErrorDecoder
+
+@end

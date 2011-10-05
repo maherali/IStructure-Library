@@ -1,0 +1,3 @@
+@interface Notes : ISCollection 
+
+@end

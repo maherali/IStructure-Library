@@ -1,0 +1,3 @@
+@interface PhotoSync : ISBasicSync
+
+@end
