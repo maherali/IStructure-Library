@@ -13,8 +13,7 @@ If you have problems, use the following instead:
 
 Under Build Phases, add the libIStructure.a library to the "Link Binary with Libraries" section.
 
-In your .pch file, add the following import statement:
-#import "IStructure.h"
+In your .pch file, add the following import statement: #import "IStructure.h"
 
 MVC Framework Components
 ========================
