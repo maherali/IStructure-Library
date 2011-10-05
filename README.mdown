@@ -61,41 +61,40 @@ If your controller class is a subclass of either `ISViewController` or `ISTableV
 
 Here is an example of how `ISViewController` declares `observers` property:
 
-		\#import "ISRouter.h"
+	#import "ISRouter.h"
 
-		@interface ISViewController : UIViewController {  
-    			NSMutableArray   *observers;    
-    			NSDictionary     *options;  
-    			NSDictionary     *params;  
-		}  
-  	
-		@property (retain) NSMutableArray   *observers;  
-		@property (retain) NSDictionary     *options;  
-		@property (retain) NSDictionary     *params;  
+	@interface ISViewController : UIViewController {  
+    		NSMutableArray   *observers;    
+   			NSDictionary     *options;  
+   			NSDictionary     *params;  
+	}  
+	@property (retain) NSMutableArray   *observers;  
+	@property (retain) NSDictionary     *options;  
+	@property (retain) NSDictionary     *params;  
   
-		- (id)              initWithValues:(NSDictionary*) _passedIn;  
-		- (id)              initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues;  
-		- (NSDictionary*)   routes;  
-  	
-		@end  
+	- (id)              initWithValues:(NSDictionary*) _passedIn;  
+	- (id)              initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues;  
+	- (NSDictionary*)   routes;  
+ 	
+	@end  
 
 In the `initWithNibName:bundle:andValues:`
 
-`- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if(self){
-        __block ISViewController *this = self;
-        self.observers = $marray();
-        [[self routes] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            ISActionBlock block = (id) obj;
-            $route(key, block);
-        }];
-        self.options    = [_passedInValues objectForKey:OPTIONS_KEY];
-        self.params     = [_passedInValues objectForKey:PARAMS_KEY];
-    }
-    return self;
-}
-`
+	- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues{
+    	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    	if(self){
+        	__block ISViewController *this = self;
+        	self.observers = $marray();
+        	[[self routes] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            	ISActionBlock block = (id) obj;
+            	$route(key, block);
+        	}];
+        	self.options    = [_passedInValues objectForKey:OPTIONS_KEY];
+        	self.params     = [_passedInValues objectForKey:PARAMS_KEY];
+    	}
+    	return self;
+	}
+
 
 View
 ----
