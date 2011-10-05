@@ -95,6 +95,17 @@ In the `initWithNibName:bundle:andValues:`, we initialize the `observers` array 
     	return self;
 	}
 
+the dealloc method always stops watching events and cleans up. For example:
+
+	- (void) dealloc{
+    	__block ISViewController *this = self;
+    	$unwatch()
+    	self.observers  =   nil;
+    	self.options    =   nil;
+    	self.params     =   nil;
+    	[super dealloc];
+	}
+
 
 View
 ----
