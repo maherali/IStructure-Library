@@ -14,7 +14,6 @@ If you have problems, use the following instead:
 Under Build Phases, add the libIStructure.a library to the "Link Binary with Libraries" section.
 
 In your .pch file, add the following import statement:
-
 #import "IStructure.h"
 
 MVC Framework Components
@@ -114,7 +113,7 @@ object: instance of NSObject (usually a model or a collection)
 
 block: an instance of ISActionBlock
 typedef void (^ISActionBlock)(NSNotification*);
-==========================================================
+
 
 $trigger() is used to trigger events so that interested parties who are watching these events get notified.
 
@@ -130,7 +129,7 @@ $trigger(message, data, object)
 notify watchers that message has been triggered from object and pass data to the watchers. Watchers can access this data from the notification userInfo.
 Usually this data is a dictionary.
 
-==========================================================
+
 $routec()
 register a controller for a given route.
 
@@ -149,7 +148,7 @@ same as above, except the action message is sent to the newly-created controller
 $route(pattern, block)
 registers the current context for the route pattern pattern.
 Whenever navigating to a matched route, the given block is executed.
-==========================================
+
 
 $navigate()
 navigate to a given controller passing optional data.
@@ -166,7 +165,7 @@ Same as above, but passing data (usually a dictionary)
 Example:
 $navigate(@"/notes", $dict(@"title", @"Simple Notes"));
 
-====================================
+
 $register(name)
 Used to register a service name.
 Registers the current context class for service name.
@@ -182,8 +181,8 @@ sends a startWithOptions: message to it.
 $start(name, options)
 same as above except sends options as argument of
 startWithOptions: message.
-=============================================
-=============================================
+
+
 $unwatch()
 Stop watching a given message
 
