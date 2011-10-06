@@ -1,3 +1,6 @@
+/** ISModel class is the base class of the Model component of iStructure framework. 
+*/
+
 @class ISCollection;
 @class ISBasicSync;
 
