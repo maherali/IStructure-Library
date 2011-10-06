@@ -33,11 +33,12 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 
 /** Initilizes the model instance.
  
+ During initialization ...
  
  @param attrs attributes that you wish to add to the new instance
  @param options the options used during initialization
 
- During initialization ...
+ 
  */
 - (id)   initWithAttributes:(NSDictionary*) attrs andOptions:(NSDictionary*) options;
 - (void) initializeWithAttributes:(NSDictionary*) attrs andOptions:(NSDictionary*) options;
