@@ -43,10 +43,10 @@
         } else if (no == 2){\
             if([[objs objectAtIndex:0] isKindOfClass:[NSString class]]){\
                 id ret = [[NSNotificationCenter defaultCenter] addObserverForName:[objs objectAtIndex:0] object:nil queue:nil usingBlock:[objs objectAtIndex:1]];\
-                [observers addObject:[ISObserver valueWithName:[objs objectAtIndex:0] andObserver:ret forObject:[NSNull null]]];\
+                [observers addObject:[ISObserver valueWithName:[objs objectAtIndex:0] andObserver:ret forObject:nil]];\
             }else{\
                 id ret = [[NSNotificationCenter defaultCenter] addObserverForName:nil object:[objs objectAtIndex:0] queue:nil usingBlock:[objs objectAtIndex:1]];\
-                [observers addObject:[ISObserver valueWithName:(id)[NSNull null] andObserver:ret forObject:[objs objectAtIndex:0]]];\
+                [observers addObject:[ISObserver valueWithName:nil andObserver:ret forObject:[objs objectAtIndex:0]]];\
             }\
         }\
     } while(0);
