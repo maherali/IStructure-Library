@@ -1,5 +1,3 @@
-#import "ISRouter.h"
-
 @interface ISViewController : UIViewController {
     NSMutableArray   *observers;
     NSDictionary     *options;

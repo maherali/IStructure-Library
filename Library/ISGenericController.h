@@ -1,6 +1,4 @@
-#import "ISRouter.h"
-
-@interface ISGenericController : UIViewController {
+@interface ISGenericController : NSObject {
     NSMutableArray   *observers;
     NSDictionary     *options;
     NSDictionary     *params;

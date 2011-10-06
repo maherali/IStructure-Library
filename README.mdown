@@ -34,6 +34,10 @@ A collection is a subclass of `ISCollection`.
 It provides an interface for a collection of models.
 A `Notes` class represents all notes stored on the server.
 
+Sync
+----
+
+
 
 Controller
 ----------
