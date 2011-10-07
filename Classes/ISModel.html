@@ -414,7 +414,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/idAttribute">&ndash;&nbsp;idAttribute</a></code>
-		
+		<span class="tooltip"><p>Specifies the name of the <a href="#//api/name/id">id</a> attribute of the model.</p></span>
 	</span>
 	
 	
@@ -463,21 +463,21 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/defaults">&ndash;&nbsp;defaults</a></code>
-		
+		<span class="tooltip"><p>Specifies the default <a href="#//api/name/attributes">attributes</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/parse:">&ndash;&nbsp;parse:</a></code>
-		
+		<span class="tooltip"><p>Parses the raw data from the server into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/get:">&ndash;&nbsp;get:</a></code>
-		
+		<span class="tooltip"><p>Obtain the value for a given attribute.</p></span>
 	</span>
 	
 	
@@ -837,6 +837,41 @@
 	<h3 class="subsubtitle method-title">defaults</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the default <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)defaults</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the default <a href="#//api/name/attributes">attributes</a>.</p>
+
+<p>By default, this method returns nil. Override this method to
+provide <a href="#//api/name/attributes">attributes</a> that get set on a newly created model instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -872,6 +907,51 @@
 	<h3 class="subsubtitle method-title">get:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Obtain the value for a given attribute.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)get:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>the attribute you want to obtain its value</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Obtain the value for a given attribute.</p>
+
+<p>Looks in the attributes and returns the value stored for attr.
+For example, to obtain the title of a note, use [note get:@&ldquo;title&rdquo;]</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -898,6 +978,41 @@
 						<div class="section-method">
 	<a name="//api/name/idAttribute" title="idAttribute"></a>
 	<h3 class="subsubtitle method-title">idAttribute</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the name of the <a href="#//api/name/id">id</a> attribute of the model.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)idAttribute</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the name of the <a href="#//api/name/id">id</a> attribute of the model.</p>
+
+<p>By default, the method returns @&ldquo;id&rdquo;. Override this method to
+specify different behavior.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -1039,7 +1154,9 @@ to subclasses to initialize themselves. <a href="ISModel.html">ISModel</a> imple
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Indicates wheather the model instance is new or not.</p>
 
-<p>A new model instance is one whose <a href="#//api/name/id">id</a> is nil.</p>
+<p>A new model instance is one whose <a href="#//api/name/id">id</a> is nil. Saving a new model
+to the server will result in a post while saving a non-new model
+will result in an update.</p>
 	</div>
 	
 	
@@ -1059,6 +1176,53 @@ to subclasses to initialize themselves. <a href="ISModel.html">ISModel</a> imple
 						<div class="section-method">
 	<a name="//api/name/parse:" title="parse:"></a>
 	<h3 class="subsubtitle method-title">parse:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Parses the raw data from the server into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSMutableDictionary *)parse:(NSData *)<em>data</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>the raw data obtained from the server to be parsed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Parses the raw data from the server into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p>
+
+<p>After obtaining the server&rsquo;s response, the data needs to be parsed into a dictionary
+of <a href="#//api/name/attributes">attributes</a> and these <a href="#//api/name/attributes">attributes</a> are set on the model. The default behavior assumes that the
+server&rsquo;s response is a JSON hash. Override this method to specify different behavior.
+You can also return nil and use the data to decorate your instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -1160,7 +1324,7 @@ to subclasses to initialize themselves. <a href="ISModel.html">ISModel</a> imple
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-10-06)</span><br />
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-10-07)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
