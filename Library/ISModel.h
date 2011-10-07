@@ -31,42 +31,56 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 #pragma mark
 #pragma mark INIT
 
-/** Initilizes the model instance.
+/** Initialize a new model instance. You call this method after allocating a new ISModel instance.
  
- During initialization ...
+ First, a unique Client ID (cid) is assigned to the new instance. After that, 
+ the defaults and _attrs_ parameter are set on the model's attributes with `SILENT_KEY` equal to `YES`. In addition, if
+ a Collection is passed in the _options_ dictionary (using the key `COLLECTION_KEY`), it's assigned
+ to the collection property. Finally, `initializeWithAttributes:andOptions:` message is sent to the 
+ newly-created instance.
  
- @param attrs attributes that you wish to add to the new instance
- @param options the options used during initialization
+ 
+ The following shows an example:
+ 
+ 
+    ISModel *aModel = [[[ISModel alloc] initWithAttributes:$dict(@"one", @"1") andOptions:$dict()] autorelease];
+    STAssertTrue([aModel has:@"one"], @"Model: has a \"one\" attribute from initialization");
+ 
+ 
+ @param attrs Attributes that you wish to add to the new instance.
+ @param options The options used during initialization.
 
  
  */
 - (id)   initWithAttributes:(NSDictionary*) attrs andOptions:(NSDictionary*) options;
 
-/** A chance for subclasses to initialize themselves
+/** A chance for subclasses to initialize themselves.
  
- At the end of the  initWithAttributes:andOptions: method, it call this method giving a chance 
+ 
+ At the end of the  initWithAttributes:andOptions: method, it calls this method giving a chance 
  to subclasses to initialize themselves. ISModel implementation is a noop.
  
- @param attrs the attributes used during the initWithAttributes:andOptions: call
- @param options the options used during the initWithAttributes:andOptions: call
+ @param attrs Attributes used during the initWithAttributes:andOptions: call.
+ @param options Options used during the initWithAttributes:andOptions: call.
 
 */
 - (void) initializeWithAttributes:(NSDictionary*) attrs andOptions:(NSDictionary*) options;
 
 #pragma mark
 #pragma mark Model
-/** Indicates wheather the model instance is new or not.
+
+/** Indicates Whether the model instance is new or not.
  
- A new model instance is one whose id is nil. Saving a new model
- to the server will result in a post while saving a non-new model
- will result in an update.
+ A new model instance is one whose id is *nil*. Saving a new model
+ to the server will result in a POST while saving a non-new model
+ will result in an UPDATE.
 
 */
 - (BOOL) isNew;
 
 /** Specifies the name of the id attribute of the model.
  
- By default, the method returns @"id". Override this method to 
+ By default, the method returns `@"id"`. Override this method to 
  specify different behavior.
 */
 - (NSString*) idAttribute;
@@ -80,10 +94,11 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 - (ISModel*) clear:(NSDictionary*) options;
 - (BOOL)         has:(NSString*) attr;
 
+
 /** Specifies the default attributes.
  
- By default, this method returns nil. Override this method to 
- provide attributes that get set on a newly created model instance.
+ By default, this method returns *nil*. Override this method to 
+ provide default values that get set on a newly created model instance.
 */
 - (NSDictionary*) defaults;
 
@@ -93,7 +108,7 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
  After obtaining the server's response, the data needs to be parsed into a dictionary 
  of attributes and these attributes are set on the model. The default behavior assumes that the
  server's response is a JSON hash. Override this method to specify different behavior.
- You can also return nil and use the data to decorate your instance. 
+ You can also return *nil* and use the data to decorate your instance. 
  
  
  @param data the raw data obtained from the server to be parsed.
@@ -103,21 +118,87 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 
 /** Obtain the value for a given attribute.
  
- Looks in the attributes and returns the value stored for attr.
- For example, to obtain the title of a note, use [note get:@"title"]
+ Looks in the attributes dictionary and returns the value stored for _attr_ key.
+ For example, to obtain the `title` of a note in an instance `note`, use `[note get:@"title"]`.
  
- @param attr the attribute you want to obtain its value
+ @param attr Attribute you want to obtain its value.
 */
 - (id) get:(NSString*) attr;
 
 #pragma mark
 #pragma mark URLS
+
+/** Specifies the root URL of the model.
+ 
+ The ISModel implementation returns *nil*.
+ @return Root URL.
+ */
 - (NSString*) urlRoot;
+
+
+/** The URL used to synchronize this model with the server.
+ 
+ For a model that is server-backed, it needs to provide a URL value. The url method, by default, looks to see if 
+ the model is inside a collection, if that's the case and the model is new, the collection's URL becomes the URL value. 
+ If there is a collection and the model is not new, the collection's URL and the encoded value of the model's id value
+ becomes the model's url. For example `/notes/1` is the URL value returned where `/notes` is the collection's URL 
+ and `1` is the `id` value of the model instance. 
+ 
+ 
+ If the model does not belong to a collection, then the value of its urlRoot method is substituted and used as above
+ instead of the collection's URL. Otherwise, an exception is thrown.
+ 
+ 
+ For the complete URL to be used in accessing the server-backed version of the model instance, a base URL is prepended.
+ This base URL can be empty (provided the URL value calculated above is sufficient) or it can be something else.
+ The value of the base URL is provided by the baseUrl instance method of the model. The default, it returns the collection's 
+ [ISCollection baseUrl]. If the model does not have a collection, it looks to see if the model's instance has one stored
+ in its modelBaseUrl instance variable and returns it. If not, it looks for it in the model's class \_baseUrl static value.
+ You can set the instance value using the setBaseUrl: instance method. You can set the class \_baseUrl using the setBaseUrl:
+ class method.
+ 
+ 
+ In addtion, you can provide fine-grained model URLs for the four different synchronization methods by overriding the
+ following methods: fetchUrl, createUrl, updateUrl, destroyUrl.
+ 
+ 
+ If an operation (such as Fetch) is invoked on the instance and the corresponding URL method (e.g., fetchUrl) does not
+ return *nil*, the value returned is used instead of the value returned from the url instance method.
+ The base URL is calculated as normal.
+ 
+ @return The URL value of this instance.
+ */
 - (NSString*) url;
+
+/** The fetch URL used in a Fetch operation.
+ 
+ @return the URL value used in a Fetch operation.
+ Base implementation returns *nil*.
+ */
 - (NSString*) fetchUrl;
+
+/** The create URL used in a Save operation.
+ 
+ @return the URL value used in a Save operation.
+ Base implementation returns *nil*.
+ */
 - (NSString*) createUrl;
+
+
+/** The create URL used in a Save operation of a model with id equals to *nil*.
+ 
+ @return the URL value used in a Save operation.
+ Base implementation returns *nil*.
+ */
 - (NSString*) updateUrl;
+
+/** The create URL used in a Destroy operation with a non-*nil* id.
+ 
+ @return the URL value used in a Destroy operation.
+ Base implementation returns *nil*.
+ */
 - (NSString*) destroyUrl;
+
 
 - (NSString*) baseUrl;
 - (void) setBaseUrl:(NSString*) _url;
