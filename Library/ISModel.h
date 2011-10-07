@@ -55,6 +55,11 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 
 #pragma mark
 #pragma mark Model
+/** Indicates wheather the model instance is new or not.
+ 
+ A new model instance is one whose id is nil.
+
+*/
 - (BOOL) isNew;
 - (NSString*) idAttribute;
 
