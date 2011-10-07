@@ -41,6 +41,16 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
  
  */
 - (id)   initWithAttributes:(NSDictionary*) attrs andOptions:(NSDictionary*) options;
+
+/** A chance for subclasses to initialize themselves
+ 
+ At the end of the  initWithAttributes:andOptions: method, it call this method giving a chance 
+ to subclasses to initialize themselves. ISModel implementation is a no-op.
+ 
+ @param attrs the attributes used during the initWithAttributes:andOptions: call
+ @param options the options used during the initWithAttributes:andOptions: call
+
+*/
 - (void) initializeWithAttributes:(NSDictionary*) attrs andOptions:(NSDictionary*) options;
 
 #pragma mark
