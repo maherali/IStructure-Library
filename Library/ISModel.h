@@ -57,10 +57,18 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 #pragma mark Model
 /** Indicates wheather the model instance is new or not.
  
- A new model instance is one whose id is nil.
+ A new model instance is one whose id is nil. Saving a new model
+ to the server will result in a post while saving a non-new model
+ will result in an update.
 
 */
 - (BOOL) isNew;
+
+/** Specifies the name of the id attribute of the model.
+ 
+ By default, the method returns @"id". Override this method to 
+ specify different behavior.
+*/
 - (NSString*) idAttribute;
 
 #pragma mark
@@ -71,9 +79,36 @@ typedef void(^ErrorHandler)(id model, NSArray *errors);
 - (ISModel*) unSet:(NSString*) attr withOptions:(NSDictionary*) options;
 - (ISModel*) clear:(NSDictionary*) options;
 - (BOOL)         has:(NSString*) attr;
+
+/** Specifies the default attributes.
+ 
+ By default, this method returns nil. Override this method to 
+ provide attributes that get set on a newly created model instance.
+*/
 - (NSDictionary*) defaults;
+
+/** Parses the raw data from the server into attributes to be set on the model instance.
+ 
+ 
+ After obtaining the server's response, the data needs to be parsed into a dictionary 
+ of attributes and these attributes are set on the model. The default behavior assumes that the
+ server's response is a JSON hash. Override this method to specify different behavior.
+ You can also return nil and use the data to decorate your instance. 
+ 
+ 
+ @param data the raw data obtained from the server to be parsed.
+*/
 - (NSMutableDictionary*) parse:(NSData*) data;
-- (id) get:(NSString*) key;
+
+
+/** Obtain the value for a given attribute.
+ 
+ Looks in the attributes and returns the value stored for attr.
+ For example, to obtain the title of a note, use [note get:@"title"]
+ 
+ @param attr the attribute you want to obtain its value
+*/
+- (id) get:(NSString*) attr;
 
 #pragma mark
 #pragma mark URLS
