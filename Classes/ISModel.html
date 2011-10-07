@@ -1,0 +1,1171 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ISModel Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">IStructure </a></h1>
+				<a id="developerHome" href="../index.html">Agilis Mobility, LLC</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ISModel Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/_changed">&nbsp;&nbsp;&nbsp;&nbsp;_changed</option>
+	
+	<option value="//api/name/_changing">&nbsp;&nbsp;&nbsp;&nbsp;_changing</option>
+	
+	<option value="//api/name/_previousAttributes">&nbsp;&nbsp;&nbsp;&nbsp;_previousAttributes</option>
+	
+	<option value="//api/name/attributes">&nbsp;&nbsp;&nbsp;&nbsp;attributes</option>
+	
+	<option value="//api/name/cid">&nbsp;&nbsp;&nbsp;&nbsp;cid</option>
+	
+	<option value="//api/name/collection">&nbsp;&nbsp;&nbsp;&nbsp;collection</option>
+	
+	<option value="//api/name/id">&nbsp;&nbsp;&nbsp;&nbsp;id</option>
+	
+	<option value="//api/name/observers">&nbsp;&nbsp;&nbsp;&nbsp;observers</option>
+	
+	<option value="//api/name/sync">&nbsp;&nbsp;&nbsp;&nbsp;sync</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/setBaseUrl:">&nbsp;&nbsp;&nbsp;&nbsp;+ setBaseUrl:</option>
+	
+	<option value="//api/name/syncClass">&nbsp;&nbsp;&nbsp;&nbsp;+ syncClass</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/JSONDataFromAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- JSONDataFromAttributes:</option>
+	
+	<option value="//api/name/_performValidation:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- _performValidation:withOptions:</option>
+	
+	<option value="//api/name/baseUrl">&nbsp;&nbsp;&nbsp;&nbsp;- baseUrl</option>
+	
+	<option value="//api/name/change">&nbsp;&nbsp;&nbsp;&nbsp;- change</option>
+	
+	<option value="//api/name/changeWithOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- changeWithOptions:</option>
+	
+	<option value="//api/name/changedAttributes">&nbsp;&nbsp;&nbsp;&nbsp;- changedAttributes</option>
+	
+	<option value="//api/name/changedAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- changedAttributes:</option>
+	
+	<option value="//api/name/clear:">&nbsp;&nbsp;&nbsp;&nbsp;- clear:</option>
+	
+	<option value="//api/name/createUrl">&nbsp;&nbsp;&nbsp;&nbsp;- createUrl</option>
+	
+	<option value="//api/name/dataToSave">&nbsp;&nbsp;&nbsp;&nbsp;- dataToSave</option>
+	
+	<option value="//api/name/defaults">&nbsp;&nbsp;&nbsp;&nbsp;- defaults</option>
+	
+	<option value="//api/name/destroy:">&nbsp;&nbsp;&nbsp;&nbsp;- destroy:</option>
+	
+	<option value="//api/name/destroyUrl">&nbsp;&nbsp;&nbsp;&nbsp;- destroyUrl</option>
+	
+	<option value="//api/name/fetch:">&nbsp;&nbsp;&nbsp;&nbsp;- fetch:</option>
+	
+	<option value="//api/name/fetchUrl">&nbsp;&nbsp;&nbsp;&nbsp;- fetchUrl</option>
+	
+	<option value="//api/name/get:">&nbsp;&nbsp;&nbsp;&nbsp;- get:</option>
+	
+	<option value="//api/name/has:">&nbsp;&nbsp;&nbsp;&nbsp;- has:</option>
+	
+	<option value="//api/name/hasChanged">&nbsp;&nbsp;&nbsp;&nbsp;- hasChanged</option>
+	
+	<option value="//api/name/hasChanged:">&nbsp;&nbsp;&nbsp;&nbsp;- hasChanged:</option>
+	
+	<option value="//api/name/idAttribute">&nbsp;&nbsp;&nbsp;&nbsp;- idAttribute</option>
+	
+	<option value="//api/name/initWithAttributes:andOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAttributes:andOptions:</option>
+	
+	<option value="//api/name/initializeWithAttributes:andOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- initializeWithAttributes:andOptions:</option>
+	
+	<option value="//api/name/isNew">&nbsp;&nbsp;&nbsp;&nbsp;- isNew</option>
+	
+	<option value="//api/name/parse:">&nbsp;&nbsp;&nbsp;&nbsp;- parse:</option>
+	
+	<option value="//api/name/previous:">&nbsp;&nbsp;&nbsp;&nbsp;- previous:</option>
+	
+	<option value="//api/name/previousAttributes">&nbsp;&nbsp;&nbsp;&nbsp;- previousAttributes</option>
+	
+	<option value="//api/name/save:">&nbsp;&nbsp;&nbsp;&nbsp;- save:</option>
+	
+	<option value="//api/name/save:options:">&nbsp;&nbsp;&nbsp;&nbsp;- save:options:</option>
+	
+	<option value="//api/name/set:">&nbsp;&nbsp;&nbsp;&nbsp;- set:</option>
+	
+	<option value="//api/name/set:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- set:withOptions:</option>
+	
+	<option value="//api/name/setBaseUrl:">&nbsp;&nbsp;&nbsp;&nbsp;- setBaseUrl:</option>
+	
+	<option value="//api/name/unSet:">&nbsp;&nbsp;&nbsp;&nbsp;- unSet:</option>
+	
+	<option value="//api/name/unSet:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- unSet:withOptions:</option>
+	
+	<option value="//api/name/updateUrl">&nbsp;&nbsp;&nbsp;&nbsp;- updateUrl</option>
+	
+	<option value="//api/name/url">&nbsp;&nbsp;&nbsp;&nbsp;- url</option>
+	
+	<option value="//api/name/urlRoot">&nbsp;&nbsp;&nbsp;&nbsp;- urlRoot</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_changed">_changed</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_changing">_changing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_previousAttributes">_previousAttributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributes">attributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cid">cid</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collection">collection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/id">id</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/observers">observers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sync">sync</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBaseUrl:">setBaseUrl:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/syncClass">syncClass</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JSONDataFromAttributes:">JSONDataFromAttributes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_performValidation:withOptions:">_performValidation:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baseUrl">baseUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/change">change</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changeWithOptions:">changeWithOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changedAttributes">changedAttributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changedAttributes:">changedAttributes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clear:">clear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createUrl">createUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataToSave">dataToSave</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaults">defaults</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/destroy:">destroy:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/destroyUrl">destroyUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetch:">fetch:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchUrl">fetchUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/get:">get:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/has:">has:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasChanged">hasChanged</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasChanged:">hasChanged:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/idAttribute">idAttribute</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initializeWithAttributes:andOptions:">initializeWithAttributes:andOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isNew">isNew</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parse:">parse:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previous:">previous:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previousAttributes">previousAttributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:">save:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:options:">save:options:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/set:">set:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/set:withOptions:">set:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBaseUrl:">setBaseUrl:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unSet:">unSet:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unSet:withOptions:">unSet:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateUrl">updateUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/url">url</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/urlRoot">urlRoot</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ISModel Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ISModel Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ISModel.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><a href="ISModel.html">ISModel</a> class is the base class of the Model component of iStructure framework.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/observers">&nbsp;&nbsp;observers</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cid">&nbsp;&nbsp;cid</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collection">&nbsp;&nbsp;collection</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sync">&nbsp;&nbsp;sync</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/_previousAttributes">&nbsp;&nbsp;_previousAttributes</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/_changed">&nbsp;&nbsp;_changed</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/_changing">&nbsp;&nbsp;_changing</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAttributes:andOptions:">&ndash;&nbsp;initWithAttributes:andOptions:</a></code>
+		<span class="tooltip"><p>Initilizes the model instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initializeWithAttributes:andOptions:">&ndash;&nbsp;initializeWithAttributes:andOptions:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isNew">&ndash;&nbsp;isNew</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/idAttribute">&ndash;&nbsp;idAttribute</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/set:">&ndash;&nbsp;set:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/set:withOptions:">&ndash;&nbsp;set:withOptions:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unSet:">&ndash;&nbsp;unSet:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unSet:withOptions:">&ndash;&nbsp;unSet:withOptions:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clear:">&ndash;&nbsp;clear:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/has:">&ndash;&nbsp;has:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaults">&ndash;&nbsp;defaults</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parse:">&ndash;&nbsp;parse:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/get:">&ndash;&nbsp;get:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/urlRoot">&ndash;&nbsp;urlRoot</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/url">&ndash;&nbsp;url</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchUrl">&ndash;&nbsp;fetchUrl</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createUrl">&ndash;&nbsp;createUrl</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateUrl">&ndash;&nbsp;updateUrl</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/destroyUrl">&ndash;&nbsp;destroyUrl</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/baseUrl">&ndash;&nbsp;baseUrl</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBaseUrl:">&ndash;&nbsp;setBaseUrl:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBaseUrl:">+&nbsp;setBaseUrl:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasChanged:">&ndash;&nbsp;hasChanged:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/changedAttributes:">&ndash;&nbsp;changedAttributes:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/previous:">&ndash;&nbsp;previous:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/previousAttributes">&ndash;&nbsp;previousAttributes</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/changedAttributes">&ndash;&nbsp;changedAttributes</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasChanged">&ndash;&nbsp;hasChanged</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/change">&ndash;&nbsp;change</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/changeWithOptions:">&ndash;&nbsp;changeWithOptions:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetch:">&ndash;&nbsp;fetch:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/destroy:">&ndash;&nbsp;destroy:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:">&ndash;&nbsp;save:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:options:">&ndash;&nbsp;save:options:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/syncClass">+&nbsp;syncClass</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataToSave">&ndash;&nbsp;dataToSave</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JSONDataFromAttributes:">&ndash;&nbsp;JSONDataFromAttributes:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/_performValidation:withOptions:">&ndash;&nbsp;_performValidation:withOptions:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/_changed" title="_changed"></a>
+	<h3 class="subsubtitle method-title">_changed</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/_changing" title="_changing"></a>
+	<h3 class="subsubtitle method-title">_changing</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/_previousAttributes" title="_previousAttributes"></a>
+	<h3 class="subsubtitle method-title">_previousAttributes</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="subsubtitle method-title">attributes</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cid" title="cid"></a>
+	<h3 class="subsubtitle method-title">cid</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collection" title="collection"></a>
+	<h3 class="subsubtitle method-title">collection</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="subsubtitle method-title">id</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/observers" title="observers"></a>
+	<h3 class="subsubtitle method-title">observers</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sync" title="sync"></a>
+	<h3 class="subsubtitle method-title">sync</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/setBaseUrl:" title="setBaseUrl:"></a>
+	<h3 class="subsubtitle method-title">setBaseUrl:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/syncClass" title="syncClass"></a>
+	<h3 class="subsubtitle method-title">syncClass</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/JSONDataFromAttributes:" title="JSONDataFromAttributes:"></a>
+	<h3 class="subsubtitle method-title">JSONDataFromAttributes:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/_performValidation:withOptions:" title="_performValidation:withOptions:"></a>
+	<h3 class="subsubtitle method-title">_performValidation:withOptions:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/baseUrl" title="baseUrl"></a>
+	<h3 class="subsubtitle method-title">baseUrl</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/change" title="change"></a>
+	<h3 class="subsubtitle method-title">change</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/changeWithOptions:" title="changeWithOptions:"></a>
+	<h3 class="subsubtitle method-title">changeWithOptions:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/changedAttributes" title="changedAttributes"></a>
+	<h3 class="subsubtitle method-title">changedAttributes</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/changedAttributes:" title="changedAttributes:"></a>
+	<h3 class="subsubtitle method-title">changedAttributes:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clear:" title="clear:"></a>
+	<h3 class="subsubtitle method-title">clear:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createUrl" title="createUrl"></a>
+	<h3 class="subsubtitle method-title">createUrl</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataToSave" title="dataToSave"></a>
+	<h3 class="subsubtitle method-title">dataToSave</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaults" title="defaults"></a>
+	<h3 class="subsubtitle method-title">defaults</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/destroy:" title="destroy:"></a>
+	<h3 class="subsubtitle method-title">destroy:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/destroyUrl" title="destroyUrl"></a>
+	<h3 class="subsubtitle method-title">destroyUrl</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetch:" title="fetch:"></a>
+	<h3 class="subsubtitle method-title">fetch:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchUrl" title="fetchUrl"></a>
+	<h3 class="subsubtitle method-title">fetchUrl</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/get:" title="get:"></a>
+	<h3 class="subsubtitle method-title">get:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/has:" title="has:"></a>
+	<h3 class="subsubtitle method-title">has:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasChanged" title="hasChanged"></a>
+	<h3 class="subsubtitle method-title">hasChanged</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasChanged:" title="hasChanged:"></a>
+	<h3 class="subsubtitle method-title">hasChanged:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/idAttribute" title="idAttribute"></a>
+	<h3 class="subsubtitle method-title">idAttribute</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAttributes:andOptions:" title="initWithAttributes:andOptions:"></a>
+	<h3 class="subsubtitle method-title">initWithAttributes:andOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initilizes the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithAttributes:(NSDictionary *)<em>attrs</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p><a href="#//api/name/attributes">attributes</a> that you wish to add to the new instance</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>the options used during initialization</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initilizes the model instance.</p>
+
+<p>During initialization &hellip;</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initializeWithAttributes:andOptions:" title="initializeWithAttributes:andOptions:"></a>
+	<h3 class="subsubtitle method-title">initializeWithAttributes:andOptions:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isNew" title="isNew"></a>
+	<h3 class="subsubtitle method-title">isNew</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parse:" title="parse:"></a>
+	<h3 class="subsubtitle method-title">parse:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/previous:" title="previous:"></a>
+	<h3 class="subsubtitle method-title">previous:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/previousAttributes" title="previousAttributes"></a>
+	<h3 class="subsubtitle method-title">previousAttributes</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:" title="save:"></a>
+	<h3 class="subsubtitle method-title">save:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:options:" title="save:options:"></a>
+	<h3 class="subsubtitle method-title">save:options:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/set:" title="set:"></a>
+	<h3 class="subsubtitle method-title">set:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/set:withOptions:" title="set:withOptions:"></a>
+	<h3 class="subsubtitle method-title">set:withOptions:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBaseUrl:" title="setBaseUrl:"></a>
+	<h3 class="subsubtitle method-title">setBaseUrl:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unSet:" title="unSet:"></a>
+	<h3 class="subsubtitle method-title">unSet:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unSet:withOptions:" title="unSet:withOptions:"></a>
+	<h3 class="subsubtitle method-title">unSet:withOptions:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateUrl" title="updateUrl"></a>
+	<h3 class="subsubtitle method-title">updateUrl</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/url" title="url"></a>
+	<h3 class="subsubtitle method-title">url</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/urlRoot" title="urlRoot"></a>
+	<h3 class="subsubtitle method-title">urlRoot</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-10-06)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>
