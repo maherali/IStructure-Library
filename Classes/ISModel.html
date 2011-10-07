@@ -400,7 +400,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initializeWithAttributes:andOptions:">&ndash;&nbsp;initializeWithAttributes:andOptions:</a></code>
-		
+		<span class="tooltip"><p>A chance for subclasses to initialize themselves</p></span>
 	</span>
 	
 	
@@ -961,6 +961,56 @@
 						<div class="section-method">
 	<a name="//api/name/initializeWithAttributes:andOptions:" title="initializeWithAttributes:andOptions:"></a>
 	<h3 class="subsubtitle method-title">initializeWithAttributes:andOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A chance for subclasses to initialize themselves</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)initializeWithAttributes:(NSDictionary *)<em>attrs</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>the <a href="#//api/name/attributes">attributes</a> used during the <a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a> call</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>the options used during the <a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a> call</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A chance for subclasses to initialize themselves</p>
+
+<p>At the end of the  <a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a> method, it call this method giving a chance
+to subclasses to initialize themselves. <a href="ISModel.html">ISModel</a> implementation is a no-op.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
 	
 	
 </div>
