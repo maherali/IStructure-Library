@@ -289,42 +289,42 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithModels:">&ndash;&nbsp;initWithModels:</a></code>
-		
+		<span class="tooltip"><p>Initialize with a set of <a href="#//api/name/models">models</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithModels:andOptions:">&ndash;&nbsp;initWithModels:andOptions:</a></code>
-		
+		<span class="tooltip"><p>Initialize the collection with a set of <a href="#//api/name/models">models</a> using options.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initializeWithModels:andOptions:">&ndash;&nbsp;initializeWithModels:andOptions:</a></code>
-		
+		<span class="tooltip"><p>Initialize the collection.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/resetWithModels:">&ndash;&nbsp;resetWithModels:</a></code>
-		
+		<span class="tooltip"><p>Resets the collection with a new set of <a href="#//api/name/models">models</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/resetWithModels:andOptions:">&ndash;&nbsp;resetWithModels:andOptions:</a></code>
-		
+		<span class="tooltip"><p>Resets the collection with a new set of <a href="#//api/name/models">models</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/modelClass">&ndash;&nbsp;modelClass</a></code>
-		
+		<span class="tooltip"><p>The model class used to instiantiate <a href="#//api/name/models">models</a> when adding to the collection.</p></span>
 	</span>
 	
 	
@@ -387,56 +387,56 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/first">&ndash;&nbsp;first</a></code>
-		
+		<span class="tooltip"><p>The <a href="#//api/name/first">first</a> element in the collection.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/last">&ndash;&nbsp;last</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/add:withOptions:">&ndash;&nbsp;add:withOptions:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/byCid:">&ndash;&nbsp;byCid:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/get:">&ndash;&nbsp;get:</a></code>
-		
+		<span class="tooltip"><p>The <a href="#//api/name/last">last</a> element in the collection.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/add:">&ndash;&nbsp;add:</a></code>
-		
+		<span class="tooltip"><p>Add a set of <a href="#//api/name/models">models</a> to the collection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/add:withOptions:">&ndash;&nbsp;add:withOptions:</a></code>
+		<span class="tooltip"><p>Add a set of <a href="#//api/name/models">models</a> to the collection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/byCid:">&ndash;&nbsp;byCid:</a></code>
+		<span class="tooltip"><p>Retrieves a model in the collection by its cid</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/get:">&ndash;&nbsp;get:</a></code>
+		<span class="tooltip"><p>Retrieves a model in the collection by its id</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/at:">&ndash;&nbsp;at:</a></code>
-		
+		<span class="tooltip"><p>Retrieves a model in the collection by its index</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/length">&ndash;&nbsp;length</a></code>
-		
+		<span class="tooltip"><p>Retrieves the <a href="#//api/name/length">length</a> of the collection</p></span>
 	</span>
 	
 	
@@ -551,6 +551,55 @@
 	<h3 class="subsubtitle method-title">add:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Add a set of <a href="#//api/name/models">models</a> to the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISCollection *)add:(id)<em>models</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>The <a href="#//api/name/models">models</a> to add to the collection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The collection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Add a set of <a href="#//api/name/models">models</a> to the collection.</p>
+
+<p>Invokes <a href="#//api/name/add:withOptions:">add:withOptions:</a> with <code>options</code> equal to <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -558,11 +607,115 @@
 	<h3 class="subsubtitle method-title">add:withOptions:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Add a set of <a href="#//api/name/models">models</a> to the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISCollection *)add:(id)<em>models</em> withOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>The <a href="#//api/name/models">models</a> to add to the collection.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>Options used to add <a href="#//api/name/models">models</a> to the collection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The collection instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Add a set of <a href="#//api/name/models">models</a> to the collection.</p>
+
+<p>If <code>options</code> does not have a SILENT_KEY key with value <code>YES</code>, an <code>add</code> event is triggered as follows:</p>
+
+<pre><code>$trigger(@"add", $dict(SENDER_KEY, model, OPTIONS_KEY, options, COLLECTION_KEY, self), model);
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/at:" title="at:"></a>
 	<h3 class="subsubtitle method-title">at:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves a model in the collection by its index</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)at:(NSInteger)<em>index</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>The index of the model in the collection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/ISModel.html">ISModel</a> instance or <strong>nil</strong> if not found.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves a model in the collection by its index</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -577,6 +730,53 @@
 						<div class="section-method">
 	<a name="//api/name/byCid:" title="byCid:"></a>
 	<h3 class="subsubtitle method-title">byCid:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves a model in the collection by its cid</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)byCid:(id)<em>cid</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cid</em></dt>
+			<dd><p>The cid of the model or an instance of <a href="../Classes/ISModel.html">ISModel</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/ISModel.html">ISModel</a> instance or <strong>nil</strong> if not found.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves a model in the collection by its cid</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -614,11 +814,95 @@
 	<h3 class="subsubtitle method-title">first</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/first">first</a> element in the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)first</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/ISModel.html">ISModel</a> instance that is <a href="#//api/name/first">first</a> in the collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/first">first</a> element in the collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/get:" title="get:"></a>
 	<h3 class="subsubtitle method-title">get:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves a model in the collection by its id</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)get:(id)<em>id</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>id</em></dt>
+			<dd><p>The id of the model or an instance of <a href="../Classes/ISModel.html">ISModel</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/ISModel.html">ISModel</a> instance or <strong>nil</strong> if not found.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves a model in the collection by its id</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -628,11 +912,113 @@
 	<h3 class="subsubtitle method-title">initWithModels:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with a set of <a href="#//api/name/models">models</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithModels:(id)<em>models</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>A model or an array of <a href="#//api/name/models">models</a> to initialize the collection with.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initialize with a set of <a href="#//api/name/models">models</a>.</p>
+
+<p>Invokes <a href="#//api/name/initWithModels:andOptions:">initWithModels:andOptions:</a> with <strong>nil</strong> options.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/initWithModels:andOptions:" title="initWithModels:andOptions:"></a>
 	<h3 class="subsubtitle method-title">initWithModels:andOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize the collection with a set of <a href="#//api/name/models">models</a> using options.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithModels:(id)<em>models</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>A model or an array of <a href="#//api/name/models">models</a> to initialize the collection with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options used in the initialization.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initialize the collection with a set of <a href="#//api/name/models">models</a> using options.</p>
+
+<p>The <a href="#//api/name/models"><code>models</code></a> can be either an array of <a href="#//api/name/models">models</a>, an array of dictionaries (attributes for each model), a model,
+or a dictionary representing the attributes of a model.</p>
+
+<p>After <a href="#//api/name/models"><code>models</code></a> are added to the <a href="#//api/name/models"><code>models</code></a> internal array, a <code>reset</code> eent is triggered as follows:</p>
+
+<pre><code>$trigger(@"reset", $dict(SENDER_KEY, self, OPTIONS_KEY, options, COLLECTION_KEY, self) );
+</code></pre>
+
+<p>At the end, the message <a href="#//api/name/initializeWithModels:andOptions:">initializeWithModels:andOptions:</a> is sent to the instance passing
+in the <a href="#//api/name/models"><code>models</code></a> and <code>options</code> as parameters. The base class' implementation is a noop.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -642,11 +1028,98 @@
 	<h3 class="subsubtitle method-title">initializeWithModels:andOptions:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)initializeWithModels:(id)<em>models</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>A model or an array of <a href="#//api/name/models">models</a> to initialize the collection with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options used in the initialization.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initialize the collection.</p>
+
+<p>This is an oppertunity for the subclasses to do any custom initialization. Base class' implementation
+is a noop.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/last" title="last"></a>
 	<h3 class="subsubtitle method-title">last</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/last">last</a> element in the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)last</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="../Classes/ISModel.html">ISModel</a> instance that is <a href="#//api/name/last">last</a> in the collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/last">last</a> element in the collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -656,11 +1129,88 @@
 	<h3 class="subsubtitle method-title">length</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves the <a href="#//api/name/length">length</a> of the collection</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSInteger)length</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of <a href="#//api/name/models">models</a> in the collection.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves the <a href="#//api/name/length">length</a> of the collection</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/modelClass" title="modelClass"></a>
 	<h3 class="subsubtitle method-title">modelClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The model class used to instiantiate <a href="#//api/name/models">models</a> when adding to the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (Class)modelClass</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A class of type <a href="../Classes/ISModel.html">ISModel</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The model class used to instiantiate <a href="#//api/name/models">models</a> when adding to the collection.</p>
+
+<p>When you pass in a dictionary or an array of dictionary to add to the collection,
+this class instantiated and the initialized by one of the dictionary objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -691,11 +1241,107 @@
 	<h3 class="subsubtitle method-title">resetWithModels:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the collection with a new set of <a href="#//api/name/models">models</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)resetWithModels:(id)<em>models</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>The <a href="#//api/name/models">models</a> to reset the collection with.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Resets the collection with a new set of <a href="#//api/name/models">models</a>.</p>
+
+<p>Invokes <a href="#//api/name/resetWithModels:andOptions:">resetWithModels:andOptions:</a> with <strong>nil</strong> <code>options</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/resetWithModels:andOptions:" title="resetWithModels:andOptions:"></a>
 	<h3 class="subsubtitle method-title">resetWithModels:andOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the collection with a new set of <a href="#//api/name/models">models</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)resetWithModels:(id)<em>models</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>models</em></dt>
+			<dd><p>The <a href="#//api/name/models">models</a> to reset the collection with.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options to use in resetting the collection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Resets the collection with a new set of <a href="#//api/name/models">models</a>.</p>
+
+<p>All exisitng <a href="#//api/name/models">models</a> in the <a href="#//api/name/models">models</a> array have references to the collection removed and
+are then removed from the <a href="#//api/name/models">models</a> array.</p>
+
+<p>If <code>SILENT_KEY</code> is not equal to YES, a <code>reset</code> event is triggered.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -727,7 +1373,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-10-07)</span><br />
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-10-08)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
