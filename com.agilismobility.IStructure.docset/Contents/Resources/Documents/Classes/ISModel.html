@@ -414,28 +414,28 @@ A dictionary of key/value objects.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/unSet:">&ndash;&nbsp;unSet:</a></code>
-		
+		<span class="tooltip"><p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/unSet:withOptions:">&ndash;&nbsp;unSet:withOptions:</a></code>
-		
+		<span class="tooltip"><p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/clear:">&ndash;&nbsp;clear:</a></code>
-		
+		<span class="tooltip"><p>Clears all the <a href="#//api/name/attributes">attributes</a>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/has:">&ndash;&nbsp;has:</a></code>
-		
+		<span class="tooltip"><p>Checks to see if <a href="#//api/name/attributes">attributes</a> has a specifc attribute.</p></span>
 	</span>
 	
 	
@@ -1297,6 +1297,53 @@ default implementation of the ISModel class:</p>
 	<h3 class="subsubtitle method-title">clear:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Clears all the <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)clear:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options used during the clearing process.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The instance itself.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Clears all the <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -1718,6 +1765,53 @@ For example, to obtain the <code>title</code> of a note in an instance <code>not
 						<div class="section-method">
 	<a name="//api/name/has:" title="has:"></a>
 	<h3 class="subsubtitle method-title">has:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Checks to see if <a href="#//api/name/attributes">attributes</a> has a specifc attribute.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)has:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute to check.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the <code>attr</code> exists in <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Checks to see if <a href="#//api/name/attributes">attributes</a> has a specifc attribute.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -2547,11 +2641,112 @@ STAssertTrue(people.count == 1, @"Model: people attribute should be a mutable ar
 	<h3 class="subsubtitle method-title">unSet:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)unSet:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute to be removed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The instance itself.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+
+<p>Invokes <a href="#//api/name/unSet:withOptions:">unSet:withOptions:</a> passing <strong>nil</strong> as options.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/unSet:withOptions:" title="unSet:withOptions:"></a>
 	<h3 class="subsubtitle method-title">unSet:withOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)unSet:(NSString *)<em>attr</em> withOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute to be removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options to be used during the removal process.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The instance itself.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
 	
 	
 </div>
