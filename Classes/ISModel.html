@@ -70,8 +70,6 @@
 	
 	<option value="//api/name/JSONDataFromAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- JSONDataFromAttributes:</option>
 	
-	<option value="//api/name/_performValidation:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- _performValidation:withOptions:</option>
-	
 	<option value="//api/name/baseUrl">&nbsp;&nbsp;&nbsp;&nbsp;- baseUrl</option>
 	
 	<option value="//api/name/change">&nbsp;&nbsp;&nbsp;&nbsp;- change</option>
@@ -115,6 +113,8 @@
 	<option value="//api/name/isNew">&nbsp;&nbsp;&nbsp;&nbsp;- isNew</option>
 	
 	<option value="//api/name/parse:">&nbsp;&nbsp;&nbsp;&nbsp;- parse:</option>
+	
+	<option value="//api/name/performValidation:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- performValidation:withOptions:</option>
 	
 	<option value="//api/name/previous:">&nbsp;&nbsp;&nbsp;&nbsp;- previous:</option>
 	
@@ -196,8 +196,6 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JSONDataFromAttributes:">JSONDataFromAttributes:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_performValidation:withOptions:">_performValidation:withOptions:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baseUrl">baseUrl</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/change">change</a></span></li>
@@ -241,6 +239,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isNew">isNew</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parse:">parse:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/performValidation:withOptions:">performValidation:withOptions:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previous:">previous:</a></span></li>
 	
@@ -589,49 +589,49 @@ A dictionary of key/value objects.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/destroy:">&ndash;&nbsp;destroy:</a></code>
-		
+		<span class="tooltip"><p>The options if any</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/save:">&ndash;&nbsp;save:</a></code>
-		
+		<span class="tooltip"><p>Save a model to the server.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/save:options:">&ndash;&nbsp;save:options:</a></code>
-		
+		<span class="tooltip"><p>Save a model to the server.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/syncClass">+&nbsp;syncClass</a></code>
-		
+		<span class="tooltip"><p>The synchronization class.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/dataToSave">&ndash;&nbsp;dataToSave</a></code>
-		
+		<span class="tooltip"><p>Data to send to the server during save operation.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/JSONDataFromAttributes:">&ndash;&nbsp;JSONDataFromAttributes:</a></code>
-		
+		<span class="tooltip"><p>Obtain a raw data of teh JSON representation of a set of <a href="#//api/name/attributes">attributes</a></p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/_performValidation:withOptions:">&ndash;&nbsp;_performValidation:withOptions:</a></code>
-		
+		<code><a href="#//api/name/performValidation:withOptions:">&ndash;&nbsp;performValidation:withOptions:</a></code>
+		<span class="tooltip"><p>Performs validations on a set of <a href="#//api/name/attributes">attributes</a>.</p></span>
 	</span>
 	
 	
@@ -968,15 +968,31 @@ assumed to be unique in its class.</p>
 	
 	
 	
+	<div class="method-subsection brief-description">
+		<p>The synchronization class.</p>
+	</div>		
+	
 	
 	<div class="method-subsection method-declaration"><code>+ (Class)syncClass</code></div>
 	
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a class of type <a href="../Classes/ISSync.html">ISSync</a>.</p>
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The synchronization class.</p>
+
+<p>Default <a href="ISModel.html">ISModel</a> returns <a href="../Classes/ISBasicSync.html">ISBasicSync</a> for JSON over HTTP.</p>
+	</div>
 	
 	
 	
@@ -1006,45 +1022,39 @@ assumed to be unique in its class.</p>
 	
 	
 	
+	<div class="method-subsection brief-description">
+		<p>Obtain a raw data of teh JSON representation of a set of <a href="#//api/name/attributes">attributes</a></p>
+	</div>		
+	
 	
 	<div class="method-subsection method-declaration"><code>- (NSData *)JSONDataFromAttributes:(NSDictionary *)<em>attrs</em></code></div>
 	
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The <a href="#//api/name/attributes">attributes</a> you want to obtain raw data from.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The raw <code>NSData</code> representation.</p>
+	</div>
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ISModel.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/_performValidation:withOptions:" title="_performValidation:withOptions:"></a>
-	<h3 class="subsubtitle method-title">_performValidation:withOptions:</h3>
-	
-	
-	
-	
-	<div class="method-subsection method-declaration"><code>- (BOOL)_performValidation:(NSDictionary *)<em>attrs</em> withOptions:(NSDictionary *)<em>options</em></code></div>
-	
-	
-	
-	
-	
-	
-	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Obtain a raw data of teh JSON representation of a set of <a href="#//api/name/attributes">attributes</a></p>
+	</div>
 	
 	
 	
@@ -1340,15 +1350,31 @@ Base implementation returns <strong>nil</strong>.</p>
 	
 	
 	
+	<div class="method-subsection brief-description">
+		<p>Data to send to the server during save operation.</p>
+	</div>		
+	
 	
 	<div class="method-subsection method-declaration"><code>- (NSData *)dataToSave</code></div>
 	
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An <code>NSData</code> instance representign the raw data.</p>
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Data to send to the server during save operation.</p>
+
+<p>Default implementation is to return an <code>NSData</code> instance from the JSON representation of the <a href="#//api/name/attributes">attributes</a> dictionary.</p>
+	</div>
 	
 	
 	
@@ -1412,9 +1438,23 @@ provide default values that get set on a newly created model instance.</p>
 	
 	
 	
+	<div class="method-subsection brief-description">
+		<p>The options if any</p>
+	</div>		
 	
-	<div class="method-subsection method-declaration"><code>- (void)destroy:(NSDictionary *)<em>_options</em></code></div>
 	
+	<div class="method-subsection method-declaration"><code>- (void)destroy:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options if any</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -1495,6 +1535,16 @@ Base implementation returns <strong>nil</strong>.</p>
 	<div class="method-subsection method-declaration"><code>- (void)fetch:(NSDictionary *)<em>options</em></code></div>
 	
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options if any.</p></dd>
+		</dl>
+		
+	</div>
+	
 	
 	
 	
@@ -1511,20 +1561,18 @@ Fetch uses an optional <code>options</code> parameter.</p>
 <p>The following options can be used:</p>
 
 <ol>
-<li><code>SUCCESS_HANDLER_KEY</code>. This is a block of type <code>SuccessHandler</code> to be invoked when the retrieval of the model
-is successful. <code>SuccessHandler</code> is declared as follows:</li>
+<li><p><code>SUCCESS_HANDLER_KEY</code>. This is a block of type <code>SuccessHandler</code> to be invoked when the retrieval of the model
+is successful. <code>SuccessHandler</code> is declared as follows:</p>
+
+<pre><code>  typedef void(^SuccessHandler)(id model, NSData *data);
+</code></pre></li>
+<li><p><code>FAILURE_HANDLER_KEY</code>. This is a block of type <code>ErrorHandler</code> to be invoked when the retrieval of the model fails.
+<code>ErrorHandler</code> is declared as follows:</p>
+
+<pre><code>  typedef void(^ErrorHandler)(id model, NSArray *errors);
+</code></pre></li>
 </ol>
 
-
-<p>typedef vo<a href="#//api/name/id">id</a>(^SuccessHandler)(<a href="#//api/name/id">id</a> model, NSData *data);</p>
-
-<ol>
-<li><code>FAILURE_HANDLER_KEY</code>. This is a block of type <code>ErrorHandler</code> to be invoked when the retrieval of the model fails.
-<code>ErrorHandler</code> is declared as follows:</li>
-</ol>
-
-
-<p>typedef vo<a href="#//api/name/id">id</a>(^ErrorHandler)(<a href="#//api/name/id">id</a> model, NSArray *errors);</p>
 
 <p>After contacting the server, the error handler is invoked in the case of having network or  app erros.
 An example of a network error is if the server is down. Models can define their own app errors in their customized Sync class.
@@ -2023,6 +2071,74 @@ You can also return <strong>nil</strong> and use the data to decorate your insta
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/performValidation:withOptions:" title="performValidation:withOptions:"></a>
+	<h3 class="subsubtitle method-title">performValidation:withOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs validations on a set of <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)performValidation:(NSDictionary *)<em>attrs</em> withOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The <a href="#//api/name/attributes">attributes</a> to validate.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>option</em></dt>
+			<dd><p>The options to be used in the validation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the validation is successful.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Performs validations on a set of <a href="#//api/name/attributes">attributes</a>.</p>
+
+<p>You can pass in the <code>options</code> an validation error block of type <code>ValidationErrorHandler</code> using the
+<code>VALIDATION_ERROR_HANDLER_KEY</code> key.</p>
+
+<p>A <code>validate:</code> message is sent to the model instance passing in the <code>attrs</code> parameter.
+If the return value of <code>validate:</code> has one or more elements (errors) and the validation error block
+is not <strong>nil</strong>, the validation error block is
+invoked passing the value of <strong>self</strong>, the errors array, and the <code>options</code>.
+Otherwise, an <code>@"error"</code> is triggered passing the errors, the <code>options</code>, and the model&rsquo;s <a href="#//api/name/collection">collection</a>, if it has one.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/previous:" title="previous:"></a>
 	<h3 class="subsubtitle method-title">previous:</h3>
 	
@@ -2126,15 +2242,36 @@ You can also return <strong>nil</strong> and use the data to decorate your insta
 	
 	
 	
-	
-	<div class="method-subsection method-declaration"><code>- (void)save:(NSDictionary *)<em>_options</em></code></div>
-	
-	
-	
+	<div class="method-subsection brief-description">
+		<p>Save a model to the server.</p>
+	</div>		
 	
 	
+	<div class="method-subsection method-declaration"><code>- (void)save:(NSDictionary *)<em>options</em></code></div>
 	
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options if any.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Save a model to the server.</p>
+
+<p>Invokes <a href="#//api/name/save:options:">save:options:</a> passing <strong>nil</strong> for the <code>attrs</code> parameter.</p>
+	</div>
 	
 	
 	
@@ -2156,15 +2293,46 @@ You can also return <strong>nil</strong> and use the data to decorate your insta
 	
 	
 	
-	
-	<div class="method-subsection method-declaration"><code>- (void)save:(NSDictionary *)<em>attrs</em> options:(NSDictionary *)<em>_options</em></code></div>
-	
-	
-	
+	<div class="method-subsection brief-description">
+		<p>Save a model to the server.</p>
+	</div>		
 	
 	
+	<div class="method-subsection method-declaration"><code>- (void)save:(NSDictionary *)<em>attrs</em> options:(NSDictionary *)<em>options</em></code></div>
 	
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The <a href="#//api/name/attributes">attributes</a> to be set before saving the model.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options, if any.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Save a model to the server.</p>
+
+<p>Save works in the same way as fetch except the method <a href="#//api/name/dataToSave"><code>dataToSave</code></a> of the model is called to provide the data
+(instance of <code>NSData</code>) that will be sent to the server. By default the data is a JSON representation of the <a href="#//api/name/attributes">attributes</a>
+obtained by sending a <a href="#//api/name/JSONDataFromAttributes:">JSONDataFromAttributes:</a> message to the model instance passing in <a href="#//api/name/attributes"><code>attributes</code></a> as an argument.
+Override this method in your base class if this is not the behavior that you wish. See SimplePhotos sample app.</p>
+
+<p>Save is used for both saving an existing (non-new) model as well as creating a new object.</p>
+	</div>
 	
 	
 	
