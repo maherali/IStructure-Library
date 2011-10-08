@@ -582,7 +582,7 @@ A dictionary of key/value objects.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fetch:">&ndash;&nbsp;fetch:</a></code>
-		
+		<span class="tooltip"><p>Fetches the model from the server.</p></span>
 	</span>
 	
 	
@@ -1487,6 +1487,10 @@ Base implementation returns <strong>nil</strong>.</p>
 	
 	
 	
+	<div class="method-subsection brief-description">
+		<p>Fetches the model from the server.</p>
+	</div>		
+	
 	
 	<div class="method-subsection method-declaration"><code>- (void)fetch:(NSDictionary *)<em>options</em></code></div>
 	
@@ -1496,6 +1500,61 @@ Base implementation returns <strong>nil</strong>.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Fetches the model from the server.</p>
+
+<p>To fetch a model instance is to go to the server and retrieve the <a href="#//api/name/attributes">attributes</a> and set them on the model instance.
+Fetch uses an optional <code>options</code> parameter.</p>
+
+<p>The following options can be used:</p>
+
+<ol>
+<li><code>SUCCESS_HANDLER_KEY</code>. This is a block of type <code>SuccessHandler</code> to be invoked when the retrieval of the model
+is successful. <code>SuccessHandler</code> is declared as follows:</li>
+</ol>
+
+
+<p>typedef vo<a href="#//api/name/id">id</a>(^SuccessHandler)(<a href="#//api/name/id">id</a> model, NSData *data);</p>
+
+<ol>
+<li><code>FAILURE_HANDLER_KEY</code>. This is a block of type <code>ErrorHandler</code> to be invoked when the retrieval of the model fails.
+<code>ErrorHandler</code> is declared as follows:</li>
+</ol>
+
+
+<p>typedef vo<a href="#//api/name/id">id</a>(^ErrorHandler)(<a href="#//api/name/id">id</a> model, NSArray *errors);</p>
+
+<p>After contacting the server, the error handler is invoked in the case of having network or  app erros.
+An example of a network error is if the server is down. Models can define their own app errors in their customized Sync class.
+If there is an error and the error handler is not specified, an <code>@"error"</code> event is triggered by the model.</p>
+
+<p>A model specifies a Sync class that is instantiated when the model is synchronized. This is done in the <a href="#//api/name/syncClass"><code>syncClass</code></a> class
+method. The ISModel class defines it as follows:</p>
+
+<pre><code>+ (Class) syncClass{
+    return [ISBasicSync class];
+}
+</code></pre>
+
+<p>See <a href="../Classes/ISSync.html">ISSync</a> and <a href="../Classes/ISBasicSync.html">ISBasicSync</a> for more information.</p>
+
+<p>In the case that the network communication is successful and there are no network errors, the <a href="#//api/name/parse:">parse:</a> method of the model is called
+passing in the raw data received by from the server. The base implementation assumes that  the data is in JSON format and it is a hash,
+so it parses it and generates a mutable dictionary of it as follows:</p>
+
+<pre><code>- (NSMutableDictionary*) parse:(NSData*) data{
+    return [[[[SBJsonParser alloc] init] autorelease] objectWithData:data];
+}
+</code></pre>
+
+<p>For most applications (such as those created using Rails 3.1), this si sufficient. If that is not the case, you can override
+this method and parse it as you like. See the NearbyPlace example for parsing XML. Whatever is returned from the parse method
+is used to set the <a href="#//api/name/attributes">attributes</a> of the model instance. You can always return empty dictionary and use the data returned from the
+server to update the model according to your pleasing (e.g., update model associations, etc.)
+The <a href="#//api/name/parse:"><code>parse:</code></a> message is always sent on a different thread than the Main Thread. This offloads heavy parsing from the UI thread.</p>
+	</div>
 	
 	
 	
