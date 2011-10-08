@@ -390,12 +390,14 @@ After initialization, the model is new:
  1. `SUCCESS_HANDLER_KEY`. This is a block of type `SuccessHandler` to be invoked when the retrieval of the model 
  is successful. `SuccessHandler` is declared as follows:
  
- typedef void(^SuccessHandler)(id model, NSData *data);
+    
+        typedef void(^SuccessHandler)(id model, NSData *data);
+ 
  
  2. `FAILURE_HANDLER_KEY`. This is a block of type `ErrorHandler` to be invoked when the retrieval of the model fails. 
  `ErrorHandler` is declared as follows:
  
- typedef void(^ErrorHandler)(id model, NSArray *errors);
+        typedef void(^ErrorHandler)(id model, NSArray *errors);
  
  
  After contacting the server, the error handler is invoked in the case of having network or  app erros.
@@ -426,39 +428,80 @@ After initialization, the model is new:
  server to update the model according to your pleasing (e.g., update model associations, etc.)
  The `parse:` message is always sent on a different thread than the Main Thread. This offloads heavy parsing from the UI thread. 
  
+ @param options The options if any.
 */
 - (void) fetch:(NSDictionary*) options;
 
 /**
+ 
+ @param options The options if any
  */
-- (void) destroy:(NSDictionary*) _options;
+- (void) destroy:(NSDictionary*) options;
 
-/**
+/** Save a model to the server.
+ 
+ Invokes save:options: passing *nil* for the `attrs` parameter.
+ 
+ @param options The options if any.
  */
-- (void) save:(NSDictionary*) _options;
+- (void) save:(NSDictionary*) options;
 
-/**
+
+/** Save a model to the server.
+ 
+ Save works in the same way as fetch except the method `dataToSave` of the model is called to provide the data 
+ (instance of `NSData`) that will be sent to the server. By default the data is a JSON representation of the attributes 
+ obtained by sending a JSONDataFromAttributes: message to the model instance passing in `attributes` as an argument. 
+ Override this method in your base class if this is not the behavior that you wish. See SimplePhotos sample app.
+ 
+ Save is used for both saving an existing (non-new) model as well as creating a new object.
+
+ @param attrs The attributes to be set before saving the model.
+ @param options The options, if any.
  */
-- (void) save:(NSDictionary *) attrs options:(NSDictionary*) _options;
 
-/**
+- (void) save:(NSDictionary *) attrs options:(NSDictionary*) options;
+
+/** The synchronization class.
+ 
+ Default ISModel returns ISBasicSync for JSON over HTTP.
+ @return a class of type ISSync.
  */
 + (Class) syncClass;
 
-/**
+/** Data to send to the server during save operation.
+ 
+ Default implementation is to return an `NSData` instance from the JSON representation of the attributes dictionary.
+ @return An `NSData` instance representign the raw data. 
  */
 - (NSData*) dataToSave;
 
-/**
+/** Obtain a raw data of teh JSON representation of a set of attributes
+ 
+ @return The raw `NSData` representation.
+ @param attrs The attributes you want to obtain raw data from.
+ 
  */
 - (NSData*) JSONDataFromAttributes:(NSDictionary*) attrs;
 
 #pragma mark
-#pragma mark INTERNAL
 
-/**
+/** Performs validations on a set of attributes.
+ 
+ You can pass in the `options` an validation error block of type `ValidationErrorHandler` using the
+ `VALIDATION_ERROR_HANDLER_KEY` key.
+ 
+ A `validate:` message is sent to the model instance passing in the `attrs` parameter.
+ If the return value of `validate:` has one or more elements (errors) and the validation error block 
+ is not *nil*, the validation error block is 
+ invoked passing the value of *self*, the errors array, and the `options`.
+ Otherwise, an `@"error"` is triggered passing the errors, the `options`, and the model's collection, if it has one.
+ 
+ @return YES if the validation is successful.
+ @param attrs The attributes to validate.
+ @param option The options to be used in the validation.
  */
-- (BOOL) _performValidation:(NSDictionary*) attrs withOptions:(NSDictionary*) options;
+- (BOOL) performValidation:(NSDictionary*) attrs withOptions:(NSDictionary*) options;
 
 @end
 
