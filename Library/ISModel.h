@@ -178,10 +178,37 @@ After initialization, the model is new:
 */
 - (ISModel*) set:(NSDictionary*) attrs withOptions:(NSDictionary*) options;
 
-
+/** Remove a specific attribute from attributes.
+ 
+ Invokes unSet:withOptions: passing *nil* as options.
+ 
+ @return The instance itself.
+ @param attr The attribute to be removed.
+ */
 - (ISModel*) unSet:(NSString*) attr;
+
+
+/** Remove a specific attribute from attributes.
+  
+ @return The instance itself.
+ @param attr The attribute to be removed.
+ @param options The options to be used during the removal process.
+ */
 - (ISModel*) unSet:(NSString*) attr withOptions:(NSDictionary*) options;
+
+/** Clears all the attributes.
+ 
+ @return The instance itself.
+ @param options The options used during the clearing process.
+ */
 - (ISModel*) clear:(NSDictionary*) options;
+
+
+/** Checks to see if attributes has a specifc attribute.
+ 
+ @return YES if the `attr` exists in attributes.
+ @param attr The attribute to check.
+ */
 - (BOOL)     has:(NSString*) attr;
 
 
