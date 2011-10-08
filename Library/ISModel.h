@@ -1,4 +1,9 @@
-/** ISModel class is the base class of the Model component of iStructure framework. 
+/** ISModel class is the base class of the Model component of iStructure framework.
+ 
+ A model has attributes and these attributes can be set directly or by synching with 
+ a server. Other objects can observer a model and react to change events.
+ 
+ A model can, and usually does, belong to a collection. 
 */
 
 @class ISCollection;
