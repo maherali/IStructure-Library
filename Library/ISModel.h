@@ -380,7 +380,52 @@ After initialization, the model is new:
 #pragma mark
 #pragma mark SYNC
 
-/**
+/** Fetches the model from the server.
+ 
+ To fetch a model instance is to go to the server and retrieve the attributes and set them on the model instance.
+ Fetch uses an optional `options` parameter. 
+ 
+ The following options can be used:
+ 
+ 1. `SUCCESS_HANDLER_KEY`. This is a block of type `SuccessHandler` to be invoked when the retrieval of the model 
+ is successful. `SuccessHandler` is declared as follows:
+ 
+ typedef void(^SuccessHandler)(id model, NSData *data);
+ 
+ 2. `FAILURE_HANDLER_KEY`. This is a block of type `ErrorHandler` to be invoked when the retrieval of the model fails. 
+ `ErrorHandler` is declared as follows:
+ 
+ typedef void(^ErrorHandler)(id model, NSArray *errors);
+ 
+ 
+ After contacting the server, the error handler is invoked in the case of having network or  app erros.
+ An example of a network error is if the server is down. Models can define their own app errors in their customized Sync class. 
+ If there is an error and the error handler is not specified, an `@"error"` event is triggered by the model.
+ 
+ 
+ A model specifies a Sync class that is instantiated when the model is synchronized. This is done in the `syncClass` class
+ method. The ISModel class defines it as follows:
+ 
+    + (Class) syncClass{
+        return [ISBasicSync class];
+    }
+ 
+ See ISSync and ISBasicSync for more information.
+ 
+ In the case that the network communication is successful and there are no network errors, the parse: method of the model is called 
+ passing in the raw data received by from the server. The base implementation assumes that  the data is in JSON format and it is a hash, 
+ so it parses it and generates a mutable dictionary of it as follows:
+ 
+    - (NSMutableDictionary*) parse:(NSData*) data{
+        return [[[[SBJsonParser alloc] init] autorelease] objectWithData:data];
+    }
+ 
+ For most applications (such as those created using Rails 3.1), this si sufficient. If that is not the case, you can override 
+ this method and parse it as you like. See the NearbyPlace example for parsing XML. Whatever is returned from the parse method 
+ is used to set the attributes of the model instance. You can always return empty dictionary and use the data returned from the 
+ server to update the model according to your pleasing (e.g., update model associations, etc.)
+ The `parse:` message is always sent on a different thread than the Main Thread. This offloads heavy parsing from the UI thread. 
+ 
 */
 - (void) fetch:(NSDictionary*) options;
 
