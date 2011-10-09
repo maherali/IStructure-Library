@@ -149,28 +149,29 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/options">&nbsp;&nbsp;options</a></code>
-		
+		<span class="tooltip"><p>Options used in synchronization.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/errorDecoder">&nbsp;&nbsp;errorDecoder</a></code>
-		
+		<span class="tooltip"><p>The error decoder instance. This instance is responsible
+for decoding both network and aplication errors.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sync:">&ndash;&nbsp;sync:</a></code>
-		
+		<span class="tooltip"><p>The mothod used to initiate sync.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/errorDecoderClass">+&nbsp;errorDecoderClass</a></code>
-		
+		<span class="tooltip"><p>The class to use for net/app error decoding.</p></span>
 	</span>
 	
 	
@@ -192,11 +193,77 @@
 	<h3 class="subsubtitle method-title">errorDecoder</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The error decoder instance. This instance is responsible
+for decoding both network and aplication errors.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) ISErrorDecoder *errorDecoder</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The error decoder instance. This instance is responsible
+for decoding both network and aplication errors.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/options" title="options"></a>
 	<h3 class="subsubtitle method-title">options</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Options used in synchronization.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) NSDictionary *options</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Options used in synchronization.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -214,6 +281,38 @@
 	<h3 class="subsubtitle method-title">errorDecoderClass</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>The class to use for net/app error decoding.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (Class)errorDecoderClass</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The class to use for net/app error decoding.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -227,6 +326,71 @@
 						<div class="section-method">
 	<a name="//api/name/sync:" title="sync:"></a>
 	<h3 class="subsubtitle method-title">sync:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The mothod used to initiate sync.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)sync:(NSThread *)<em>callerThread</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>callerThread</em></dt>
+			<dd><p>The thread that called sync.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The mothod used to initiate sync.</p>
+
+<p>The method assumes that <a href="#//api/name/options"><code>options</code></a> has been set. It&rsquo;s usually executed in
+a background thread (not the main UI thread). As such, it uses its own autorelease pool.</p>
+
+<p>You can pass in a Sync handler (type SyncHandler) for success in <a href="#//api/name/options"><code>options</code></a> using the <code>SYNC_SUCCESS_HANDLER_KEY</code> key.
+You can also pass in a SyncHandler for failure in <a href="#//api/name/options"><code>options</code></a> using the <code>SYNC_FAILURE_HANDLER_KEY</code> key.
+Depending on the outcome of synchronization, either one will be invoked.</p>
+
+<p>The method first sends a <code>initiateSync</code> message to itself. implementation of <code>initiateSync</code> in the ISync base class is a noop.
+After that, it sends a <code>hasNetworkLevelErrors</code> message to itself to determine if there are network-level errors. If
+there are, it invokes the failure handler on the <code>callerThread</code>. Otherwise, the success handler is invoked (also on the
+<code>callerThread</code>). When invoking a failure/success call back, it asks itself for the arguments by sending itself a
+<code>callbackArgs</code> message. This method should return a dictionary of two values:</p>
+
+<ol>
+<li>The data in a <code>SYNC_DATA_ARG_KEY</code> key.</li>
+<li>The metadata in a <code>SYNC_META_DATA_ARG_KEY</code> key.</li>
+</ol>
+
+
+<p>The data and the metadata are the only two parameters used in calling either of the two sync handlers.</p>
+
+<p>Default implementation in ISync returns empty dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
 	
 	
 </div>
