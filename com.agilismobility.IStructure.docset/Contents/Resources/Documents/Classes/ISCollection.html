@@ -331,7 +331,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/change:">&ndash;&nbsp;change:</a></code>
-		
+		<span class="tooltip"><p>Triggers a <code>change</code> event from the collection</p></span>
 	</span>
 	
 	
@@ -903,6 +903,53 @@ Otherwise, the model is added at the end.</p>
 						<div class="section-method">
 	<a name="//api/name/change:" title="change:"></a>
 	<h3 class="subsubtitle method-title">change:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Triggers a <code>change</code> event from the collection</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)change:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options used in triggering the event.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Triggers a <code>change</code> event from the collection</p>
+
+<p>The <code>change</code>s event is triggered as follows:</p>
+
+<pre><code>$trigger(@"change", $dict(SENDER_KEY, self, OPTIONS_KEY, options, COLLECTION_KEY, self));
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISCollection.h</code><br />
+	</div>				
 	
 	
 </div>
