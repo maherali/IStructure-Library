@@ -72,7 +72,14 @@
  */
 - (Class) modelClass;
 
-
+/** Triggers a `change` event from the collection
+ 
+ The `change`s event is triggered as follows:
+ 
+    $trigger(@"change", $dict(SENDER_KEY, self, OPTIONS_KEY, options, COLLECTION_KEY, self));
+ 
+ @param options The options used in triggering the event.
+ */
 - (void) change:(NSDictionary*) options;
 
 /** Parse the raw data from the server.
