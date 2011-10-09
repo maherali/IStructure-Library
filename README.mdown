@@ -18,6 +18,9 @@ In your `.pch` file, add the following import statement: `#import "IStructure.h"
 MVC Framework Components
 ========================
 
+Consult the home page of iStructure for up-to-date documentation or install the 
+.docset as explained in the Wiki.
+
 Model
 -----
 
@@ -37,7 +40,8 @@ A `Notes` class represents all notes stored on the server.
 Sync
 ----
 
-
+The synchronization mechanism with the server. ISBasicSync uses JSON over HTTP.
+Models/Collections can use custom sync classes.
 
 Controller
 ----------
