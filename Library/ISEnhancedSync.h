@@ -9,9 +9,25 @@
  */
 @interface ISEnhancedSync : ISBasicSync
 
-
+/** Specify the database name and version.
+ 
+ Databases are stored in Library directory of the apps sandbox.
+ 
+ @param name Database name.
+ @param version Database version.
+ */
 + (void) setDBName:(NSString*) name andVersion:(NSString*) version;
+
+/** Retrieves the database name
+ 
+ @return Database name
+ */
 + (NSString*) dbName;
+
+/** Retrieves database version
+ 
+ @return Database version.
+*/
 + (NSString*) dbVersion;
 
 @end
