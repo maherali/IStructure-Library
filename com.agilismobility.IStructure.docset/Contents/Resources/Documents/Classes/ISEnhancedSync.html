@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -57,6 +59,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -111,6 +115,19 @@
 </tr>
 						</tbody></table></div>
 					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A Sync class with JSON over HTTP and Offline capabilities</p>
+
+<p>To use, just return this class from the <a href="../Classes/ISModel.html#//api/name/syncClass">[ISModel syncClass]</a> or [ISCollection synClass] method.
+For a specific database name, use <a href="#//api/name/setDBName:andVersion:">setDBName:andVersion:</a> before synching. Only needs to be done once.
+Data is caches for all requests, to partition the cached data, provide the key in SYNC_CACHE_USER_KEY
+in th eoptions hash of syncWithOptions: method.</p>
+					</div>
 					
 					
 					
