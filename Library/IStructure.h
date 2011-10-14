@@ -8,7 +8,10 @@
 #import "SBJson.h"
 #import "ISErrorDecoder.h"
 #import "ISMacros.h"
+#import "ISSync.h"
+#import "ISCacheDatabase.h"
 #import "ISBasicSync.h"
+#import "ISEnhancedSync.h"
 #import "ISErrorDecoder.h"
 #import "ISBasicErrorDecoder.h"
 #import "ISModel.h"
@@ -29,3 +32,7 @@ void _extend(NSDictionary**, size_t count);
 
 
 
+@interface IStructure : NSObject 
+
+
+@end

@@ -11,4 +11,11 @@
     return @"/notes";
 }
 
+/* Uncomment this to enable caching
++ (Class) syncClass{
+    return [ISEnhancedSync class];    
+}
+*/
+
+
 @end

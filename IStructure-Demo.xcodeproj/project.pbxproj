@@ -78,6 +78,10 @@
 		411C1C85143C04AE000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
 		411C1C86143C04BE000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
 		411C1C87143C04CA000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
+		412745C11448ED2400CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -239,6 +243,9 @@
 		411C1C7C143C036C000449E1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		411C1C81143C0392000449E1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		411C1C83143C049D000449E1 /* libIStructure.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIStructure.a; path = Library/libIStructure.a; sourceTree = "<group>"; };
+		412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISCacheDatabase.h; path = Library/ISCacheDatabase.h; sourceTree = "<group>"; };
+		412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISEnhancedSync.h; path = Library/ISEnhancedSync.h; sourceTree = "<group>"; };
+		412745C01448ED2400CA7E05 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412745C11448ED2400CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C84143C049D000449E1 /* libIStructure.a in Frameworks */,
 				411C1B47143BFBB7000449E1 /* UIKit.framework in Frameworks */,
 				411C1B48143BFBB7000449E1 /* Foundation.framework in Frameworks */,
@@ -259,6 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C85143C04AE000449E1 /* libIStructure.a in Frameworks */,
 				411C1BBD143BFE19000449E1 /* UIKit.framework in Frameworks */,
 				411C1BBE143BFE19000449E1 /* Foundation.framework in Frameworks */,
@@ -270,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C86143C04BE000449E1 /* libIStructure.a in Frameworks */,
 				411C1BE3143BFEF4000449E1 /* UIKit.framework in Frameworks */,
 				411C1BE4143BFEF4000449E1 /* Foundation.framework in Frameworks */,
@@ -281,6 +291,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C87143C04CA000449E1 /* libIStructure.a in Frameworks */,
 				411C1C50143C029B000449E1 /* UIKit.framework in Frameworks */,
 				411C1C51143C029B000449E1 /* Foundation.framework in Frameworks */,
@@ -294,7 +305,6 @@
 		411C1B1B143BFBA1000449E1 = {
 			isa = PBXGroup;
 			children = (
-				411C1C83143C049D000449E1 /* libIStructure.a */,
 				411C1B59143BFBE6000449E1 /* IStructure Library */,
 				411C1B4A143BFBB7000449E1 /* SimpleNotes App */,
 				411C1BC0143BFE19000449E1 /* SimplePhotos App */,
@@ -319,6 +329,8 @@
 		411C1B29143BFBA2000449E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				412745C01448ED2400CA7E05 /* libsqlite3.dylib */,
+				411C1C83143C049D000449E1 /* libIStructure.a */,
 				411C1B2A143BFBA2000449E1 /* UIKit.framework */,
 				411C1B2C143BFBA2000449E1 /* Foundation.framework */,
 				411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */,
@@ -354,6 +366,8 @@
 		411C1B59143BFBE6000449E1 /* IStructure Library */ = {
 			isa = PBXGroup;
 			children = (
+				412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */,
+				412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */,
 				411C1B5A143BFBFC000449E1 /* CollectionUtils.h */,
 				411C1B5B143BFBFC000449E1 /* ISBaseView.h */,
 				411C1B5C143BFBFC000449E1 /* ISBasicErrorDecoder.h */,

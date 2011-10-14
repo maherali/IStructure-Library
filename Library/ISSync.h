@@ -123,3 +123,5 @@ extern  NSString* const METHOD_DELETE;
 extern  NSString* const METHOD_CREATE;
 extern  NSString* const SYNC_SUCCESS_HANDLER_KEY;
 extern  NSString* const SYNC_FAILURE_HANDLER_KEY;
+extern  NSString* const SYNC_CONTINUES_KEY;
+
