@@ -8,3 +8,5 @@
 + (NSString*) dbVersion;
 
 @end
+
+extern  NSString* const SYNC_CACHE_USER_KEY;
