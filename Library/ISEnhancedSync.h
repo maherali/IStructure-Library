@@ -11,7 +11,7 @@
 
 /** Specify the database name and version.
  
- Databases are stored in Library directory of the apps sandbox.
+ Databases are stored in `Library` directory of the app's sandbox.
  
  @param name Database name.
  @param version Database version.
