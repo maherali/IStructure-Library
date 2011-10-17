@@ -30,9 +30,8 @@
 
 void _extend(NSDictionary**, size_t count);
 
-
-
 @interface IStructure : NSObject 
 
++ (NSString*) version;
 
 @end
