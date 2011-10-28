@@ -233,7 +233,16 @@ After initialization, the model is new:
  You can also return *nil* and use the data to decorate your instance. 
  
  
- @param data the raw data obtained from the server to be parsed.
+ @param data the raw data to be parsed.
+ @param options the options for parsing.
+*/
+
+- (NSMutableDictionary*) parse:(NSData*) data withOptions:(NSMutableDictionary*) options;
+
+/** Parses the raw data into attributes to be set on the model instance.
+
+ Calls parse:withOptions: with options = $dict()
+ 
 */
 - (NSMutableDictionary*) parse:(NSData*) data;
 
