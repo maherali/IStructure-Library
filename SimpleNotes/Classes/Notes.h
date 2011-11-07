@@ -1,3 +1,0 @@
-@interface Notes : ISCollection 
-
-@end

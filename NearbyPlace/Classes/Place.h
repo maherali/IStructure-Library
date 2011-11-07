@@ -1,2 +1,0 @@
-@interface Place : ISModel
-@end
