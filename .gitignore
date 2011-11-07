@@ -1,15 +1,5 @@
+IStructure-Demo.xcodeproj/project.xcworkspace/xcuserdata/ali.xcuserdatad/UserInterfaceState.xcuserstate
+.gitignore
 *~
 DerivedData/
 build
-
-*.pbxuser
-*.mode1v3
-*.mode2v3
-*.perspectivev3
-*.xcuserstate
-project.xcworkspace/
-xcuserdata/
-
-IStructure-Demo.xcodeproj/xcuserdata/*
-IStructure-Demo.xcodeproj/project.xcworkspace/xcuserdata/*
-
