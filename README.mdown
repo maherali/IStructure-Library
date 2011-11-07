@@ -1,0 +1,321 @@
+Usage.
+======
+
+To use the `libIStructure.a` library, add the following parameter to the
+Other Linker flags of the target or if you use it in all your targets, add
+it to the project. This can be found under Build Settings.
+If you put the `libIStructure.a` file in a directory called Library at the same
+level as your `.xcodeproj` XCode project, it should be as
+`-force_load ./Library/libIStructure.a`
+
+If you have problems, use the following instead:
+`-all_load`
+
+Under Build Phases, add the `libIStructure.a` library to the *"Link Binary with Libraries"* section.
+
+In your `.pch` file, add the following import statement: `#import "IStructure.h"`
+
+MVC Framework Components
+========================
+
+Consult the home page of iStructure for up-to-date documentation or install the 
+.docset as explained in the Wiki.
+
+Model
+-----
+
+A model is a subclass of `ISModel`.
+It provides an interface for a resource that lives on a server.
+For example a `Note` class can be used to represent a note
+stored on a server. A `Note` instance represents a note that is either
+stored on the server or can be stored on the server.
+
+Collection
+----------
+
+A collection is a subclass of `ISCollection`.
+It provides an interface for a collection of models.
+A `Notes` class represents all notes stored on the server.
+
+Sync
+----
+
+The synchronization mechanism with the server. ISBasicSync uses JSON over HTTP.
+Models/Collections can use custom sync classes.
+
+Controller
+----------
+
+Is a subclass of `ISViewController` or `ISTableViewController`
+that can register for specific route patterns.
+
+For a class to be considered a controller, it needs at a minimum:
+
+* have a property called `observers` of type `NSMutableArray`.
+* Either declare at least one of the following methods:
+
+`- (id) initWithValues:(NSDictionary*) _passedIn;`
+
+
+or
+
+
+`+ (void) startWithValues:(NSDictionary*) _passedIn;`
+
+Make sure that you initialize the `observers` array in the` initWithValues:` method
+and `$unwatch()` in the `dealloc`.
+
+If your controller class is a subclass of either `ISViewController` or `ISTableViewController`, you do not need to worry about initialization and unwatching event. Just make sure you call the respective `super` method.
+
+Here is an example of how `ISViewController` declares `observers` property:
+
+	@interface ISViewController : UIViewController {  
+    		NSMutableArray   *observers;    
+   			NSDictionary     *options;  
+   			NSDictionary     *params;  
+	}  
+	@property (retain) NSMutableArray   *observers;  
+	@property (retain) NSDictionary     *options;  
+	@property (retain) NSDictionary     *params;  
+  
+	- (id)              initWithValues:(NSDictionary*) _passedIn;  
+	- (id)              initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues;  
+	- (NSDictionary*)   routes;  
+ 	
+	@end  
+
+In the `initWithNibName:bundle:andValues:`, we initialize the `observers` array using the macro `$marray()` which is basically `[NSMutableArray array]`
+
+	- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues{
+    	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    	if(self){
+        	__block ISViewController *this = self;
+        	self.observers = $marray();
+        	[[self routes] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            	ISActionBlock block = (id) obj;
+            	$route(key, block);
+        	}];
+        	self.options    = [_passedInValues objectForKey:OPTIONS_KEY];
+        	self.params     = [_passedInValues objectForKey:PARAMS_KEY];
+    	}
+    	return self;
+	}
+
+the `dealloc` method always stops watching events and cleans up. For example:
+
+	- (void) dealloc{
+    	__block ISViewController *this = self;
+    	$unwatch()
+    	self.observers  =   nil;
+    	self.options    =   nil;
+    	self.params     =   nil;
+    	[super dealloc];
+	}
+
+
+View
+----
+
+A view is a regular Cocoa view. It is initialized with either a model or a collection and interacts with the controller using `$trigger()` command.
+Same restriction on the use of the commands as in controllers. You can subclass `ISTableView` or `ISBaseView` class, you don't have to worry about these restrictions.
+Of course, you can create your own base class to take care of the requirements and have other class subclass it.
+
+
+Service
+-------
+
+A service is a class that works semi-independently. It can be UI-based or not.
+For example, a Location service or a service that handles showing the
+network indicator based on network activity.
+A service needs to implement` startWithOptions:` class method and register for
+the service using `$register()` in it `+ load` method.
+
+The following is an example of a service:
+
+	@interface NetworkStateService : NSObject{
+	    NSMutableArray      *observers;
+	}
+	@property (retain) NSMutableArray   *observers;
+	@end
+
+	static NetworkStateService  *singleton          = nil;
+	static int                  netActivityCounter  = 0;
+
+	@implementation NetworkStateService
+
+	@synthesize observers;
+
+	- (void) updateNetworkActivity{
+	    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:(netActivityCounter > 0)];
+	}
+
+	- (id) intWithOptions:(NSDictionary*) options{
+	    self = [super init];
+	    self.observers = $marray();
+	    __block NetworkStateService *this = self;
+	    $watch(@"network:on", ^(NSNotification* notif){
+	        ++netActivityCounter;
+	        [this updateNetworkActivity];
+	    });
+	    $watch(@"network:off", ^(NSNotification* notif){
+	        --netActivityCounter;
+	        [this updateNetworkActivity];
+	    });
+	    return self;
+	}
+
+	+ (void) startWithOptions:(NSDictionary*) options{
+	    singleton = singleton ? singleton : [[self alloc] intWithOptions:options];
+	}
+
+	+ (void) load{
+	    __block Class this = self;
+	    $register(@"net_state");
+	}
+
+	- (void) dealloc{
+	    __block NetworkStateService *this = self;
+	    $unwatch();
+	    [super dealloc];
+	}
+
+ 
+The service is usually a singleton, but it does not have to be.
+Services are started by` $start()` command.
+
+
+Commands
+========
+The following commands make use of this variable.
+The this variable is either class object or the instance object
+depending on the whether the method is a class or instance method,
+respectively. Before invoking any of the following commands, create this
+local variable as a block variable:
+In a class method,
+
+`__block Class this = self;`
+
+In an instance method of class A,
+`__block A* this = self;`
+
+Inside the blocks used in the following command, access instance variables
+using the this variable and never use self. This will help in preventing retain cycles.
+
+The context used in the following discussion refers to the this variable.
+
+
+`$watch()` is used to observe events and executed blocks whenever
+these events occur. There are three flavors:
+
+`$watch(message, object, block)`
+The `block` is executed whenever `object` triggers message.
+
+`$watch(message, block)`
+The `block` is excited whenever `message` is triggered.
+
+`$watch(object, block)`
+The `block` executed whenever `object` triggers any message.
+
+`message`: instance of `NSString`
+`object`: instance of `NSObject` (usually a model or a collection)
+
+`block`: an instance of `ISActionBlock`
+`typedef void (^ISActionBlock)(NSNotification*);`
+
+
+`$trigger()` is used to trigger events so that interested parties who are watching these events get notified.
+
+`$trigger(message)`
+notify watchers that message has been triggered from the current context.
+No data is passed to the watchers.
+
+`$trigger(message, data)`
+notify watchers that message has been triggered from the current context and pass data to the watchers. Watchers can access this data from the notification userInfo.
+Usually this data is a dictionary.
+
+`$trigger(message, data, object)`
+notify watchers that message has been triggered from object and pass data to the watchers. Watchers can access this data from the notification userInfo.
+Usually this data is a dictionary.
+
+
+`$routec()`
+register a controller for a given route.
+
+`$routec(pattern)`
+register the current context for a given route `pattern`. Whenever a route is navigated to and that route matches pattern, the controller is instantiated,
+`initWithValues:` message is sent to the newly-created instance passing any data from the `$navigate()` command, and the view controller is put on the stack of the navigation controller of the context of `$navigate()`. If `$navigate()` context does not have a navigation controller, the `startWithValues:` message is sent to the class of the current context.
+
+Example:
+`$routec(@"/notes/:id");`
+
+
+`$routec(pattern, action)`
+same as above, except the action message is sent to the newly-created controller instance.
+
+
+`$route(pattern, block)`
+registers the current context for the route `pattern`.
+Whenever navigating to a matched route, the given `block` is executed.
+
+
+`$navigate()`
+navigate to a given controller passing optional data.
+
+`$navigate(to)`
+find the controller that registered for a pattern `to` that matches to and put it on the navigation stack of the current context. If the current context does not have a navigation controller, send startWithValues: message to that class passing nil.
+
+Example:
+`$navigate(@"/notes/5");`
+
+`$navigate(to, data)`
+Same as above, but passing `data` (usually a dictionary)
+
+Example:
+`$navigate(@"/notes", $dict(@"title", @"Simple Notes"));`
+
+
+`$register(name)`
+Used to register a service name.
+Registers the current context class for service name.
+
+`$start()`
+used to start a service.
+
+`$start(name)`
+start a service `name` and pass in nil as options.
+Finds the class registered for service name and
+sends a `startWithOptions:` message to it.
+
+`$start(name, options)`
+same as above except sends `options` as argument of
+`startWithOptions:` message.
+
+
+`$unwatch()`
+Stop watching a given message
+
+`$unwatch(name)`
+stop watching `name` events.
+
+`$unwatch(name, object)`
+stop watching `name` event from `object`.
+
+`$unwatch(object)`
+stop watching all events from `object`.
+
+`$unwatch()`
+stop watching all events from all objects.
+
+
+`$unroute()`
+removes the route registered for the current context.
+
+`$stop()`
+stops a given service. Finds the class registered for a given service and
+sends a stopWithOptions: message to it.
+
+`$stop(name)`
+pass nil as options.
+
+`$stop(name, options)`
+pass `options` as argument to `stopWithOptions:`.

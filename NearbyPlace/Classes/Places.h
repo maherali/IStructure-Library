@@ -1,0 +1,2 @@
+@interface Places : ISCollection
+@end
