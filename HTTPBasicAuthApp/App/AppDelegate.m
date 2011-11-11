@@ -19,10 +19,6 @@
     self.marketing = [[[Marketing alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
     [session save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         [UIAlertView message:$array(@"Success logging to server!")];
-        
-       
-        
-        
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
         [UIAlertView errors:errors];
         [this.marketing fetch:$dict(SUCCESS_HANDLER_KEY, $block(^(Marketing *model, NSData *data){

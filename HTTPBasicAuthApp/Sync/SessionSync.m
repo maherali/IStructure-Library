@@ -1,11 +1,10 @@
 #import "SessionSync.h"
 #import "MyErrorDecoder.h"
-#import "NSMutableURLRequest+IStructure.h"
 
 @implementation SessionSync
 
 - (NSMutableURLRequest*) lastChanceToUpdateRequest:(NSMutableURLRequest*) request{
-    [request setValue:$sprintf(@"Basic %@", [[$sprintf(@"%@:%@", [self.options objectForKey:@"USER_NAME"], [self.options objectForKey:@"PASSWORD"]) dataUsingEncoding:NSASCIIStringEncoding] base64Encoding]) forHTTPHeaderField:@"Authorization"];
+    [request addBasicHTTPAuthHeaderForUser:[self.options objectForKey:@"USER_NAME"] withPassword:[self.options objectForKey:@"PASSWORD"]];
     return request;
 }
 
