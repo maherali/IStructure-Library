@@ -13,7 +13,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application{
-    __block AppDelegate *this = self;
+ //   __block AppDelegate *this = self;
     [ISModel setBaseUrl:@"http://10.211.55.4:3000/"];
     self.session = [[[Session alloc] initWithAttributes:$dict(@"user_name", @"alime@me.com", @"password", @"test123 ") andOptions:$dict()] autorelease];
     self.marketing = [[[Marketing alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];

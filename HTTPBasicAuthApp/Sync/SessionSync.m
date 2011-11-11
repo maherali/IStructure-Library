@@ -12,4 +12,8 @@
     return [MyErrorDecoder class];
 }
 
+- (void) dealloc{
+    [super dealloc];
+}
+
 @end
