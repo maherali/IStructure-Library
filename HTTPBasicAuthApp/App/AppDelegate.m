@@ -15,7 +15,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application{
     __block AppDelegate *this = self;
     [ISModel setBaseUrl:@"http://10.211.55.4:3000/"];
-    self.session = [[[Session alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
+    self.session = [[[Session alloc] initWithAttributes:$dict(@"user_name", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
     self.marketing = [[[Marketing alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
     [session save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         [UIAlertView message:$array(@"Success logging to server!")];

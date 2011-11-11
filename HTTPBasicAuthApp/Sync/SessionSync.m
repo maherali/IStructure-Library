@@ -4,10 +4,7 @@
 @implementation SessionSync
 
 - (NSMutableURLRequest*) lastChanceToUpdateRequest:(NSMutableURLRequest*) request{
-    NSLog(@"%@", self.options);
-    NSString    *userName = [self.options objectForKey:@"USER_NAME"];
-    NSString    *password = [self.options objectForKey:@"PASSWORD"];
-    [request     setValue:$sprintf(@"Basic %@", [[$sprintf(@"%@:%@", userName, password) dataUsingEncoding:NSASCIIStringEncoding] base64Encoding]) forHTTPHeaderField:@"Authorization"];
+    [request setValue:$sprintf(@"Basic %@", [[$sprintf(@"%@:%@", [self.options objectForKey:@"USER_NAME"], [self.options objectForKey:@"PASSWORD"]) dataUsingEncoding:NSASCIIStringEncoding] base64Encoding]) forHTTPHeaderField:@"Authorization"];
     return request;
 }
 

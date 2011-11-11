@@ -16,10 +16,8 @@
 }
 
 - (void) lastChanceToUpdateSyncOptions:(NSMutableDictionary*) opts forMethod:(NSString*) method{
-    NSString    *userName = @"alime@me.com";
-    NSString    *password = @"test123 ";
-    [opts setObject:userName forKey:@"USER_NAME"];
-    [opts setObject:password forKey:@"PASSWORD"];
+    [opts setObject:[self get:@"user_name"] forKey:@"USER_NAME"];
+    [opts setObject:[self get:@"password"] forKey:@"PASSWORD"];
 }
 
 @end
