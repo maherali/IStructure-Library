@@ -3,6 +3,7 @@
 #import "ISObserver.h"
 #import "NSDate+ISStructure.h"
 #import "NSData+ISStructure.h"
+#import "NSMutableURLRequest+IStructure.h"
 #import "CollectionUtils.h"
 #import "SPDeepCopy.h"
 #import "SBJson.h"
