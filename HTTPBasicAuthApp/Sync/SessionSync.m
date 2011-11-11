@@ -1,5 +1,6 @@
 #import "SessionSync.h"
 #import "MyErrorDecoder.h"
+#import "NSMutableURLRequest+IStructure.h"
 
 @implementation SessionSync
 

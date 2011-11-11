@@ -277,6 +277,7 @@
 		418A6E4A146CDE8C009243E4 /* MyErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyErrorDecoder.m; path = Sync/MyErrorDecoder.m; sourceTree = "<group>"; };
 		418A6E4C146CE841009243E4 /* MarketingSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarketingSync.h; path = Sync/MarketingSync.h; sourceTree = "<group>"; };
 		418A6E4D146CE841009243E4 /* MarketingSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarketingSync.m; path = Sync/MarketingSync.m; sourceTree = "<group>"; };
+		418A6E5C146D516F009243E4 /* NSMutableURLRequest+IStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+IStructure.h"; path = "Library/NSMutableURLRequest+IStructure.h"; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -441,6 +442,7 @@
 				411C1B72143BFBFC000449E1 /* NSObject+ISStructure.h */,
 				411C1B73143BFBFC000449E1 /* NSObject+SBJson.h */,
 				411C1B74143BFBFC000449E1 /* NSString+ISStructure.h */,
+				418A6E5C146D516F009243E4 /* NSMutableURLRequest+IStructure.h */,
 				411C1B75143BFBFC000449E1 /* SBJson.h */,
 				411C1B76143BFBFC000449E1 /* SBJsonParser.h */,
 				411C1B77143BFBFC000449E1 /* SBJsonStreamParser.h */,
@@ -1402,6 +1404,7 @@
 				418A6E36146CC9B4009243E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
