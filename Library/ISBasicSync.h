@@ -11,12 +11,15 @@
 @interface ISBasicSync : ISSync {
     NSHTTPURLResponse       *response;
 	NSError                 *error;
-    NSData                  *data;
+    NSMutableData           *data;
+    NSURLConnection         *connection;
 }
 
 @property (retain) NSHTTPURLResponse        *response;
 @property (retain) NSError                  *error;
-@property (retain) NSData                   *data;
+@property (retain) NSMutableData            *data;
+@property (retain) NSURLConnection          *connection;
+
 
 /** Contact the server.
  The following is a possible implementation of this method:
