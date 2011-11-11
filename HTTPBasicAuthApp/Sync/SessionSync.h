@@ -1,0 +1,3 @@
+@interface SessionSync : ISBasicSync
+
+@end

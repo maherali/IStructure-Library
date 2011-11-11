@@ -82,6 +82,19 @@
 		412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		418A6E25146CC9B4009243E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2A143BFBA2000449E1 /* UIKit.framework */; };
+		418A6E26146CC9B4009243E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2C143BFBA2000449E1 /* Foundation.framework */; };
+		418A6E27146CC9B4009243E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */; };
+		418A6E2D146CC9B4009243E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 418A6E2B146CC9B4009243E4 /* InfoPlist.strings */; };
+		418A6E2F146CC9B4009243E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E2E146CC9B4009243E4 /* main.m */; };
+		418A6E37146CCA4F009243E4 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
+		418A6E3D146CCB1F009243E4 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E3C146CCB1F009243E4 /* Session.m */; };
+		418A6E40146CCB56009243E4 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E3F146CCB56009243E4 /* SessionSync.m */; };
+		418A6E43146CCEA2009243E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E42146CCEA2009243E4 /* AppDelegate.m */; };
+		418A6E45146CCFBB009243E4 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */; };
+		418A6E48146CDB2B009243E4 /* Marketing.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E47146CDB2B009243E4 /* Marketing.m */; };
+		418A6E4B146CDE8C009243E4 /* MyErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E4A146CDE8C009243E4 /* MyErrorDecoder.m */; };
+		418A6E4E146CE841009243E4 /* MarketingSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E4D146CE841009243E4 /* MarketingSync.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -246,6 +259,24 @@
 		412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISCacheDatabase.h; path = Library/ISCacheDatabase.h; sourceTree = "<group>"; };
 		412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISEnhancedSync.h; path = Library/ISEnhancedSync.h; sourceTree = "<group>"; };
 		412745C01448ED2400CA7E05 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		418A6E23146CC9B4009243E4 /* HTTPBasicAuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPBasicAuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		418A6E2A146CC9B4009243E4 /* HTTPBasicAuthApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTTPBasicAuthApp-Info.plist"; sourceTree = "<group>"; };
+		418A6E2C146CC9B4009243E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		418A6E2E146CC9B4009243E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		418A6E30146CC9B4009243E4 /* HTTPBasicAuthApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTTPBasicAuthApp-Prefix.pch"; sourceTree = "<group>"; };
+		418A6E3B146CCB1F009243E4 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = Models/Session.h; sourceTree = "<group>"; };
+		418A6E3C146CCB1F009243E4 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = Models/Session.m; sourceTree = "<group>"; };
+		418A6E3E146CCB56009243E4 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Sync/SessionSync.h; sourceTree = "<group>"; };
+		418A6E3F146CCB56009243E4 /* SessionSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionSync.m; path = Sync/SessionSync.m; sourceTree = "<group>"; };
+		418A6E41146CCEA2009243E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = App/AppDelegate.h; sourceTree = "<group>"; };
+		418A6E42146CCEA2009243E4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = App/AppDelegate.m; sourceTree = "<group>"; };
+		418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		418A6E46146CDB2B009243E4 /* Marketing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Marketing.h; path = Models/Marketing.h; sourceTree = "<group>"; };
+		418A6E47146CDB2B009243E4 /* Marketing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Marketing.m; path = Models/Marketing.m; sourceTree = "<group>"; };
+		418A6E49146CDE8C009243E4 /* MyErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyErrorDecoder.h; path = Sync/MyErrorDecoder.h; sourceTree = "<group>"; };
+		418A6E4A146CDE8C009243E4 /* MyErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyErrorDecoder.m; path = Sync/MyErrorDecoder.m; sourceTree = "<group>"; };
+		418A6E4C146CE841009243E4 /* MarketingSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarketingSync.h; path = Sync/MarketingSync.h; sourceTree = "<group>"; };
+		418A6E4D146CE841009243E4 /* MarketingSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarketingSync.m; path = Sync/MarketingSync.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,17 +330,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		418A6E20146CC9B4009243E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418A6E45146CCFBB009243E4 /* libsqlite3.0.dylib in Frameworks */,
+				418A6E37146CCA4F009243E4 /* libIStructure.a in Frameworks */,
+				418A6E25146CC9B4009243E4 /* UIKit.framework in Frameworks */,
+				418A6E26146CC9B4009243E4 /* Foundation.framework in Frameworks */,
+				418A6E27146CC9B4009243E4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		411C1B1B143BFBA1000449E1 = {
 			isa = PBXGroup;
 			children = (
+				418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */,
 				411C1B59143BFBE6000449E1 /* IStructure Library */,
 				411C1B4A143BFBB7000449E1 /* SimpleNotes App */,
 				411C1BC0143BFE19000449E1 /* SimplePhotos App */,
 				411C1BE6143BFEF4000449E1 /* NearbyPlace App */,
 				411C1C53143C029B000449E1 /* RoutePlayground App */,
+				418A6E28146CC9B4009243E4 /* HTTPBasicAuthApp */,
 				411C1B29143BFBA2000449E1 /* Frameworks */,
 				411C1B27143BFBA2000449E1 /* Products */,
 			);
@@ -322,6 +367,7 @@
 				411C1BBB143BFE19000449E1 /* SimplePhotos.app */,
 				411C1BE1143BFEF4000449E1 /* NearbyPlace.app */,
 				411C1C4E143C029B000449E1 /* RoutePlayground.app */,
+				418A6E23146CC9B4009243E4 /* HTTPBasicAuthApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,6 +532,61 @@
 				411C1C77143C034E000449E1 /* RoutePlayground-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		418A6E28146CC9B4009243E4 /* HTTPBasicAuthApp */ = {
+			isa = PBXGroup;
+			children = (
+				418A6E3A146CCAB2009243E4 /* Sync */,
+				418A6E39146CCA9B009243E4 /* Models */,
+				418A6E38146CCA93009243E4 /* App */,
+				418A6E29146CC9B4009243E4 /* Supporting Files */,
+			);
+			path = HTTPBasicAuthApp;
+			sourceTree = "<group>";
+		};
+		418A6E29146CC9B4009243E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				418A6E2A146CC9B4009243E4 /* HTTPBasicAuthApp-Info.plist */,
+				418A6E2B146CC9B4009243E4 /* InfoPlist.strings */,
+				418A6E2E146CC9B4009243E4 /* main.m */,
+				418A6E30146CC9B4009243E4 /* HTTPBasicAuthApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		418A6E38146CCA93009243E4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				418A6E41146CCEA2009243E4 /* AppDelegate.h */,
+				418A6E42146CCEA2009243E4 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		418A6E39146CCA9B009243E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				418A6E3B146CCB1F009243E4 /* Session.h */,
+				418A6E3C146CCB1F009243E4 /* Session.m */,
+				418A6E46146CDB2B009243E4 /* Marketing.h */,
+				418A6E47146CDB2B009243E4 /* Marketing.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		418A6E3A146CCAB2009243E4 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				418A6E3E146CCB56009243E4 /* SessionSync.h */,
+				418A6E3F146CCB56009243E4 /* SessionSync.m */,
+				418A6E4C146CE841009243E4 /* MarketingSync.h */,
+				418A6E4D146CE841009243E4 /* MarketingSync.m */,
+				418A6E49146CDE8C009243E4 /* MyErrorDecoder.h */,
+				418A6E4A146CDE8C009243E4 /* MyErrorDecoder.m */,
+			);
+			name = Sync;
 			sourceTree = "<group>";
 		};
 		41F4044C143C0AC700116FC3 /* TouchXML */ = {
@@ -768,6 +869,23 @@
 			productReference = 411C1C4E143C029B000449E1 /* RoutePlayground.app */;
 			productType = "com.apple.product-type.application";
 		};
+		418A6E22146CC9B4009243E4 /* HTTPBasicAuthApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 418A6E34146CC9B4009243E4 /* Build configuration list for PBXNativeTarget "HTTPBasicAuthApp" */;
+			buildPhases = (
+				418A6E1F146CC9B4009243E4 /* Sources */,
+				418A6E20146CC9B4009243E4 /* Frameworks */,
+				418A6E21146CC9B4009243E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTTPBasicAuthApp;
+			productName = HTTPBasicAuthApp;
+			productReference = 418A6E23146CC9B4009243E4 /* HTTPBasicAuthApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -792,6 +910,7 @@
 				411C1BBA143BFE19000449E1 /* SimplePhotos */,
 				411C1BE0143BFEF4000449E1 /* NearbyPlace */,
 				411C1C4D143C029B000449E1 /* RoutePlayground */,
+				418A6E22146CC9B4009243E4 /* HTTPBasicAuthApp */,
 			);
 		};
 /* End PBXProject section */
@@ -832,6 +951,14 @@
 				411C1C80143C036C000449E1 /* second@2x.png in Resources */,
 				41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */,
 				41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		418A6E21146CC9B4009243E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418A6E2D146CC9B4009243E4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,6 +1040,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		418A6E1F146CC9B4009243E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418A6E2F146CC9B4009243E4 /* main.m in Sources */,
+				418A6E3D146CCB1F009243E4 /* Session.m in Sources */,
+				418A6E40146CCB56009243E4 /* SessionSync.m in Sources */,
+				418A6E43146CCEA2009243E4 /* AppDelegate.m in Sources */,
+				418A6E48146CDB2B009243E4 /* Marketing.m in Sources */,
+				418A6E4B146CDE8C009243E4 /* MyErrorDecoder.m in Sources */,
+				418A6E4E146CE841009243E4 /* MarketingSync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -936,6 +1077,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				411C1BEA143BFEF4000449E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		418A6E2B146CC9B4009243E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				418A6E2C146CC9B4009243E4 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1158,6 +1307,46 @@
 			};
 			name = Release;
 		};
+		418A6E35146CC9B4009243E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HTTPBasicAuthApp/HTTPBasicAuthApp-Prefix.pch";
+				INFOPLIST_FILE = "HTTPBasicAuthApp/HTTPBasicAuthApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					./Library/libIStructure.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		418A6E36146CC9B4009243E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HTTPBasicAuthApp/HTTPBasicAuthApp-Prefix.pch";
+				INFOPLIST_FILE = "HTTPBasicAuthApp/HTTPBasicAuthApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					./Library/libIStructure.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1205,6 +1394,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		418A6E34146CC9B4009243E4 /* Build configuration list for PBXNativeTarget "HTTPBasicAuthApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				418A6E35146CC9B4009243E4 /* Debug */,
+				418A6E36146CC9B4009243E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

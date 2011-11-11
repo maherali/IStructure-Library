@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HTTPBasicAuthApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>NearbyPlace.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>411C1C4D143C029B000449E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>418A6E22146CC9B4009243E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

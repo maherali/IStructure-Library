@@ -1,0 +1,3 @@
+@interface Marketing : ISModel
+
+@end

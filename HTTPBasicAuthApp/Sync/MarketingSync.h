@@ -1,0 +1,3 @@
+@interface MarketingSync : ISBasicSync
+
+@end
