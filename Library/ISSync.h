@@ -84,9 +84,7 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 /** The mothod used to initiate sync. 
  
- The method assumes that `options` has been set. It's usually executed in 
- a background thread (not the main UI thread). As such, it uses its own autorelease pool.
- 
+ The method assumes that `options` has been set.  
  You can pass in a Sync handler (type SyncHandler) for success in `options` using the `SYNC_SUCCESS_HANDLER_KEY` key.
  You can also pass in a SyncHandler for failure in `options` using the `SYNC_FAILURE_HANDLER_KEY` key.
  Depending on the outcome of synchronization, either one will be invoked.
@@ -104,9 +102,10 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
  
  Default implementation in ISync returns empty dictionary.
  
- @param callerThread The thread that called sync.
  */
-- (void)    sync:(NSThread*) callerThread;
+- (void)    sync;
+
+- (void)    finish;
 
 /** The class to use for net/app error decoding.
  */
