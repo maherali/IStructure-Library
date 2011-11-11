@@ -544,6 +544,14 @@ After initialization, the model is new:
  */
 - (BOOL) performValidation:(NSDictionary*) attrs withOptions:(NSDictionary*) options;
 
+/** Perform last minute changes to the options hash sent by the model during read, update, delete, and create
+ 
+ @param opts The options to be sent to the sync to perform method operation
+ @param method The operation being performed. Can be METHOD_READ, METHOD_UPDATE, METHOD_DELETE, METHOD_CREATE.
+ 
+ */
+- (void) lastChanceToUpdateSyncOptions:(NSMutableDictionary*) opts forMethod:(NSString*) method;
+
 @end
 
 extern NSString* const  MODEL_KEY;
