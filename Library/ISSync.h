@@ -9,16 +9,15 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 /** Method to initiate synching with options.
  
- ISync class implements that simply by forking a background thread on sync: as follows:
+ ISync class implements that simply by calling sync as follows:
  
     + (id<ISSyncProtocol>) syncWithOptions:(NSDictionary*) _options{
         ISSync *sync = [[[self alloc] initWithOptions:_options] autorelease];
-        [sync performSelectorInBackground:@selector(sync:) withObject:[NSThread currentThread]];
+        [sync sync];
         return sync;
     }
  
  This behaviour should be sufficient for most apps.
- 
  
  @return The id\<ISSyncProtocol\> instance.
  @param options The options to use in the synchronization.
@@ -89,11 +88,10 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
  You can also pass in a SyncHandler for failure in `options` using the `SYNC_FAILURE_HANDLER_KEY` key.
  Depending on the outcome of synchronization, either one will be invoked.
  
- The method first sends a `initiateSync` message to itself. implementation of `initiateSync` in the ISync base class is a noop.
- After that, it sends a `hasNetworkLevelErrors` message to itself to determine if there are network-level errors. If 
- there are, it invokes the failure handler on the `callerThread`. Otherwise, the success handler is invoked (also on the 
- `callerThread`). When invoking a failure/success call back, it asks itself for the arguments by sending itself a 
- `callbackArgs` message. This method should return a dictionary of two values:
+ The method first sends a `initiateSync` message to itself. implementation of `initiateSync` in the ISync base class is a call to finish.
+ finish sends a `hasNetworkLevelErrors` message to sync instance to determine if there are network-level errors. If 
+ there are, it invokes the failure handler. Otherwise, the success handler is invoked. When invoking a failure/success call back, 
+ it asks itself for the arguments by sending itself a `callbackArgs` message. This method should return a dictionary of two values:
  
  1. The data in a `SYNC_DATA_ARG_KEY` key.
  2. The metadata in a `SYNC_META_DATA_ARG_KEY` key.

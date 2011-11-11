@@ -24,21 +24,15 @@
 /** Contact the server.
  The following is a possible implementation of this method:
  
-      - (void) send:(NSMutableURLRequest*)request{
-            NSHTTPURLResponse *returnResponse = nil;
-            NSError *returnError    = nil;
-            __block ISBasicSync *this = self;
+        - (void) send:(NSMutableURLRequest*)request{
+            __block ISBasicSync *this   = self;
             $trigger(@"network:on");
-            self.data               = [NSURLConnection sendSynchronousRequest:request returningResponse:&returnResponse error:&returnError];
-            LOG(@"Received Data: %@", [[[NSString alloc] initWithData:data encoding:NSStringEncodingConversionAllowLossy] autorelease]);
-            $trigger(@"network:off");
-            self.response           = returnResponse;
-            self.error              = returnError;
-            ((ISBasicErrorDecoder*)self.errorDecoder).data      = self.data;
-            ((ISBasicErrorDecoder*)self.errorDecoder).response  = self.response;
-            ((ISBasicErrorDecoder*)self.errorDecoder).error     = self.error;
+            self.data                   = [NSMutableData data];
+            self.connection             = [[[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES] autorelease];
         }
 
+ Notice how this implementation is asynchronous. 
+ 
  @param request The request used in contacting the server.
  */
 - (void) send:(NSMutableURLRequest*)request;
