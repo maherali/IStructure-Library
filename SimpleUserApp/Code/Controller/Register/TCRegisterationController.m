@@ -5,14 +5,19 @@
 
 @implementation TCRegisterationController
 
+- (void) nav{
+    [self removeFromParentViewController];
+}
 - (void) signup{
     __block TCRegisterationController *this = self;
-    LOG(@"Registration attributes: %@", self.model);
     $trigger(@"internet:begin", this.model);
+    
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Registration *model, NSData *data){
         $trigger(@"internet:end", this.model);
+        $trigger(@"login:success");
         [UIAlertView message:$array(@"Successful Registration!")];
         $navigate(@"/welcome");
+        [this performSelector:@selector(nav) withObject:nil afterDelay:0];
     }), FAILURE_HANDLER_KEY, $block(^(Registration *model, NSArray *errors){
         $trigger(@"internet:end", this.model);
         [UIAlertView errors:errors];

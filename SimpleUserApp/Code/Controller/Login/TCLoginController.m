@@ -52,12 +52,17 @@
     __block TCLoginController *this = self;
     $unwatch(@"initiate:login", this.tableView);
     $unwatch(@"start:register", this.tableView);
+    $unwatch(@"login:success");
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
     });
     $watch(@"start:register", this.tableView,  ^(NSNotification *notif){
         [this startRegister];
     });
+    $watch(@"login:success", ^(NSNotification *notif){
+        ((Session*)this.model).loggedIn = YES;
+    });
+    
 }
 
 - (void) logout{
