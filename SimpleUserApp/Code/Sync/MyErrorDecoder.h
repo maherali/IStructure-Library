@@ -1,0 +1,3 @@
+@interface MyErrorDecoder : ISBasicErrorDecoder
+
+@end

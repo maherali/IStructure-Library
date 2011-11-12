@@ -121,14 +121,17 @@
 		412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* MyErrorDecoder.m */; };
+		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
+		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
 		418A6E25146CC9B4009243E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2A143BFBA2000449E1 /* UIKit.framework */; };
 		418A6E26146CC9B4009243E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2C143BFBA2000449E1 /* Foundation.framework */; };
 		418A6E27146CC9B4009243E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */; };
 		418A6E2D146CC9B4009243E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 418A6E2B146CC9B4009243E4 /* InfoPlist.strings */; };
 		418A6E2F146CC9B4009243E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E2E146CC9B4009243E4 /* main.m */; };
 		418A6E37146CCA4F009243E4 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
-		418A6E3D146CCB1F009243E4 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E3C146CCB1F009243E4 /* Session.m */; };
-		418A6E40146CCB56009243E4 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E3F146CCB56009243E4 /* SessionSync.m */; };
+		418A6E3D146CCB1F009243E4 /* Session1.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E3C146CCB1F009243E4 /* Session1.m */; };
+		418A6E40146CCB56009243E4 /* Session1Sync.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E3F146CCB56009243E4 /* Session1Sync.m */; };
 		418A6E43146CCEA2009243E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E42146CCEA2009243E4 /* AppDelegate.m */; };
 		418A6E45146CCFBB009243E4 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */; };
 		418A6E48146CDB2B009243E4 /* Marketing.m in Sources */ = {isa = PBXBuildFile; fileRef = 418A6E47146CDB2B009243E4 /* Marketing.m */; };
@@ -321,7 +324,7 @@
 		4123062C146E068600B0DEA1 /* TCEditingNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCEditingNavigationBar.m; path = Code/View/Shared/TCEditingNavigationBar.m; sourceTree = "<group>"; };
 		4123062D146E068600B0DEA1 /* TCFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormCell.h; path = Code/View/Shared/TCFormCell.h; sourceTree = "<group>"; };
 		4123062E146E068600B0DEA1 /* TCFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCFormCell.m; path = Code/View/Shared/TCFormCell.m; sourceTree = "<group>"; };
-		4123062F146E068600B0DEA1 /* TCFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = TCFormView.h; path = Code/View/Shared/TCFormView.h; sourceTree = "<group>"; };
+		4123062F146E068600B0DEA1 /* TCFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormView.h; path = Code/View/Shared/TCFormView.h; sourceTree = "<group>"; };
 		41230630146E068600B0DEA1 /* TCFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCFormView.m; path = Code/View/Shared/TCFormView.m; sourceTree = "<group>"; };
 		41230631146E068600B0DEA1 /* TCLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLinkLabel.h; path = Code/View/Shared/TCLinkLabel.h; sourceTree = "<group>"; };
 		41230632146E068600B0DEA1 /* TCLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLinkLabel.m; path = Code/View/Shared/TCLinkLabel.m; sourceTree = "<group>"; };
@@ -341,7 +344,7 @@
 		4123064B146E069900B0DEA1 /* TCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLoginView.m; path = Code/View/Login/TCLoginView.m; sourceTree = "<group>"; };
 		4123064E146E06B400B0DEA1 /* TCRegistrationFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegistrationFooter.h; path = Code/View/Register/TCRegistrationFooter.h; sourceTree = "<group>"; };
 		4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationFooter.m; path = Code/View/Register/TCRegistrationFooter.m; sourceTree = "<group>"; };
-		41230650146E06B400B0DEA1 /* TCRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = TCRegistrationView.h; path = Code/View/Register/TCRegistrationView.h; sourceTree = "<group>"; };
+		41230650146E06B400B0DEA1 /* TCRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegistrationView.h; path = Code/View/Register/TCRegistrationView.h; sourceTree = "<group>"; };
 		41230651146E06B400B0DEA1 /* TCRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationView.m; path = Code/View/Register/TCRegistrationView.m; sourceTree = "<group>"; };
 		41230652146E06B400B0DEA1 /* TCTermsAndConditionsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTermsAndConditionsLabel.h; path = Code/View/Register/TCTermsAndConditionsLabel.h; sourceTree = "<group>"; };
 		41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTermsAndConditionsLabel.m; path = Code/View/Register/TCTermsAndConditionsLabel.m; sourceTree = "<group>"; };
@@ -351,20 +354,26 @@
 		4123065E146E075800B0DEA1 /* TCFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCFormController.m; path = Code/Controller/Shared/TCFormController.m; sourceTree = "<group>"; };
 		41230660146E076300B0DEA1 /* TCLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLoginController.h; path = Code/Controller/Login/TCLoginController.h; sourceTree = "<group>"; };
 		41230661146E076300B0DEA1 /* TCLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLoginController.m; path = Code/Controller/Login/TCLoginController.m; sourceTree = "<group>"; };
-		41230663146E076D00B0DEA1 /* TCRegisterationController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = TCRegisterationController.h; path = Code/Controller/Register/TCRegisterationController.h; sourceTree = "<group>"; };
+		41230663146E076D00B0DEA1 /* TCRegisterationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegisterationController.h; path = Code/Controller/Register/TCRegisterationController.h; sourceTree = "<group>"; };
 		41230664146E076D00B0DEA1 /* TCRegisterationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegisterationController.m; path = Code/Controller/Register/TCRegisterationController.m; sourceTree = "<group>"; };
 		412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISCacheDatabase.h; path = Library/ISCacheDatabase.h; sourceTree = "<group>"; };
 		412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISEnhancedSync.h; path = Library/ISEnhancedSync.h; sourceTree = "<group>"; };
 		412745C01448ED2400CA7E05 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4184A10D146E129D00572663 /* MyErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyErrorDecoder.h; path = Code/Sync/MyErrorDecoder.h; sourceTree = "<group>"; };
+		4184A10E146E129D00572663 /* MyErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyErrorDecoder.m; path = Code/Sync/MyErrorDecoder.m; sourceTree = "<group>"; };
+		4184A10F146E129D00572663 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Code/Sync/SessionSync.h; sourceTree = "<group>"; };
+		4184A110146E129D00572663 /* SessionSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionSync.m; path = Code/Sync/SessionSync.m; sourceTree = "<group>"; };
+		4184A114146E12AC00572663 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = Code/Model/Session.h; sourceTree = "<group>"; };
+		4184A115146E12AC00572663 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = Code/Model/Session.m; sourceTree = "<group>"; };
 		418A6E23146CC9B4009243E4 /* HTTPBasicAuthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPBasicAuthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418A6E2A146CC9B4009243E4 /* HTTPBasicAuthApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HTTPBasicAuthApp-Info.plist"; sourceTree = "<group>"; };
 		418A6E2C146CC9B4009243E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		418A6E2E146CC9B4009243E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		418A6E30146CC9B4009243E4 /* HTTPBasicAuthApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTTPBasicAuthApp-Prefix.pch"; sourceTree = "<group>"; };
-		418A6E3B146CCB1F009243E4 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = Models/Session.h; sourceTree = "<group>"; };
-		418A6E3C146CCB1F009243E4 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = Models/Session.m; sourceTree = "<group>"; };
-		418A6E3E146CCB56009243E4 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Sync/SessionSync.h; sourceTree = "<group>"; };
-		418A6E3F146CCB56009243E4 /* SessionSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionSync.m; path = Sync/SessionSync.m; sourceTree = "<group>"; };
+		418A6E3B146CCB1F009243E4 /* Session1.h */ = {isa = PBXFileReference; fileEncoding = 4; name = Session1.h; path = Models/Session1.h; sourceTree = "<group>"; };
+		418A6E3C146CCB1F009243E4 /* Session1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session1.m; path = Models/Session1.m; sourceTree = "<group>"; };
+		418A6E3E146CCB56009243E4 /* Session1Sync.h */ = {isa = PBXFileReference; fileEncoding = 4; name = Session1Sync.h; path = Sync/Session1Sync.h; sourceTree = "<group>"; };
+		418A6E3F146CCB56009243E4 /* Session1Sync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session1Sync.m; path = Sync/Session1Sync.m; sourceTree = "<group>"; };
 		418A6E41146CCEA2009243E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = App/AppDelegate.h; sourceTree = "<group>"; };
 		418A6E42146CCEA2009243E4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = App/AppDelegate.m; sourceTree = "<group>"; };
 		418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -713,6 +722,10 @@
 		4123060A146E02A800B0DEA1 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
+				4184A10D146E129D00572663 /* MyErrorDecoder.h */,
+				4184A10E146E129D00572663 /* MyErrorDecoder.m */,
+				4184A10F146E129D00572663 /* SessionSync.h */,
+				4184A110146E129D00572663 /* SessionSync.m */,
 			);
 			name = Sync;
 			sourceTree = "<group>";
@@ -720,6 +733,8 @@
 		4123060B146E02AA00B0DEA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4184A114146E12AC00572663 /* Session.h */,
+				4184A115146E12AC00572663 /* Session.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -865,8 +880,8 @@
 		418A6E39146CCA9B009243E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				418A6E3B146CCB1F009243E4 /* Session.h */,
-				418A6E3C146CCB1F009243E4 /* Session.m */,
+				418A6E3B146CCB1F009243E4 /* Session1.h */,
+				418A6E3C146CCB1F009243E4 /* Session1.m */,
 				418A6E46146CDB2B009243E4 /* Marketing.h */,
 				418A6E47146CDB2B009243E4 /* Marketing.m */,
 			);
@@ -876,8 +891,8 @@
 		418A6E3A146CCAB2009243E4 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
-				418A6E3E146CCB56009243E4 /* SessionSync.h */,
-				418A6E3F146CCB56009243E4 /* SessionSync.m */,
+				418A6E3E146CCB56009243E4 /* Session1Sync.h */,
+				418A6E3F146CCB56009243E4 /* Session1Sync.m */,
 				418A6E4C146CE841009243E4 /* MarketingSync.h */,
 				418A6E4D146CE841009243E4 /* MarketingSync.m */,
 				418A6E49146CDE8C009243E4 /* MyErrorDecoder.h */,
@@ -1400,6 +1415,9 @@
 				4123065F146E075800B0DEA1 /* TCFormController.m in Sources */,
 				41230662146E076300B0DEA1 /* TCLoginController.m in Sources */,
 				41230665146E076D00B0DEA1 /* TCRegisterationController.m in Sources */,
+				4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */,
+				4184A112146E129D00572663 /* SessionSync.m in Sources */,
+				4184A116146E12AC00572663 /* Session.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1408,8 +1426,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				418A6E2F146CC9B4009243E4 /* main.m in Sources */,
-				418A6E3D146CCB1F009243E4 /* Session.m in Sources */,
-				418A6E40146CCB56009243E4 /* SessionSync.m in Sources */,
+				418A6E3D146CCB1F009243E4 /* Session1.m in Sources */,
+				418A6E40146CCB56009243E4 /* Session1Sync.m in Sources */,
 				418A6E43146CCEA2009243E4 /* AppDelegate.m in Sources */,
 				418A6E48146CDB2B009243E4 /* Marketing.m in Sources */,
 				418A6E4B146CDE8C009243E4 /* MyErrorDecoder.m in Sources */,
@@ -1813,6 +1831,7 @@
 				412305FE146E019000B0DEA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		418A6E34146CC9B4009243E4 /* Build configuration list for PBXNativeTarget "HTTPBasicAuthApp" */ = {
 			isa = XCConfigurationList;

@@ -14,7 +14,14 @@
 
 -(void)viewDidLoad {
 	[super viewDidLoad];
-	self.tableView = [[[[self formTableClass] alloc] initWithOptions:$dict(COLLECTION_KEY, collection)] autorelease];
+    NSMutableDictionary *dict = $mdict();
+    if(collection){
+        [dict setObject:collection forKey:COLLECTION_KEY];
+    }
+    if(model){
+        [dict setObject:model forKey:MODEL_KEY];
+    }
+	self.tableView = [[[[self formTableClass] alloc] initWithOptions:dict] autorelease];
 }
 
 @end

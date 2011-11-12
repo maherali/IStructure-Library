@@ -1,4 +1,0 @@
-
-@interface Session : ISModel
-
-@end

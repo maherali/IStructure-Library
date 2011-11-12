@@ -1,7 +1,7 @@
 #import "Session.h"
 #import "SessionSync.h"
 
-@implementation Session
+@implementation Session1
 
 - (NSString*) createPath{
     return @"/users/sign_in.json";

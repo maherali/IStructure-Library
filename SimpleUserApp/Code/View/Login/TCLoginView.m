@@ -12,10 +12,13 @@
     TCEditingNavigationBar *bar = [[[TCEditingNavigationBar alloc] init] autorelease];
     bar.delegate              = self;
     TCTextFieldCell   *cell1 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Username"] autorelease];
+    cell1.textField.text = [self.model get:@"user_name"];
     cell1.textField.delegate = self;
     [cell1 setEditingNavigationBar:bar];
     TCTextFieldCell   *cell2 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];
     cell2.textField.delegate = self;
+    cell2.textField.secureTextEntry = YES;
+    cell2.textField.text = [self.model get:@"password"];
     [cell2 setEditingNavigationBar:bar];
     cell2.textField.returnKeyType  = UIReturnKeyDone;
     TCToggleFieldCell   *cell3 = [[[TCToggleFieldCell alloc] init] autorelease];
@@ -24,6 +27,7 @@
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
         LOG(@"Signin button tapped");
+        $trigger(@"initiate:login");
     });
     return self;
 }
