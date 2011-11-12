@@ -9,10 +9,10 @@
         [UIAlertView message:$array(@"You are already logged in!")];
         return;
     }
-  //  __block TCLoginController *this = self;
+     __block TCLoginController *this = self;
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         [UIAlertView message:$array(@"Success logging to server!")];
-        ((Session*)self.model).loggedIn = YES;
+        ((Session*)this.model).loggedIn = YES;
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
         [UIAlertView errors:errors];
         
@@ -21,16 +21,7 @@
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
     self = [super initWithValues:passedInValues andStyle:style];
-    [ISModel setBaseUrl:@"http://10.211.55.4:3000/"];
     self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
-    
-    
-    __block TCLoginController *this = self;
-    $watch(@"initiate:login", ^(NSNotification *notif){
-        [this login];
-    });
-    
-    
     return self;
 }
 
@@ -41,6 +32,11 @@
 - (void) viewDidLoad{
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
+    __block TCLoginController *this = self;
+    $unwatch(@"initiate:login", this.tableView);
+    $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
+        [this login];
+    });
 }
 
 @end

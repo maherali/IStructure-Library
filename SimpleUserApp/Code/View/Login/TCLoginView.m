@@ -11,11 +11,11 @@
     self.sectionHeaderHeight = 5;
     TCEditingNavigationBar *bar = [[[TCEditingNavigationBar alloc] init] autorelease];
     bar.delegate              = self;
-    TCTextFieldCell   *cell1 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Username"] autorelease];
+    __block TCTextFieldCell   *cell1 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Username"] autorelease];
     cell1.textField.text = [self.model get:@"user_name"];
     cell1.textField.delegate = self;
     [cell1 setEditingNavigationBar:bar];
-    TCTextFieldCell   *cell2 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];
+    __block TCTextFieldCell   *cell2 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];
     cell2.textField.delegate = self;
     cell2.textField.secureTextEntry = YES;
     cell2.textField.text = [self.model get:@"password"];
@@ -26,7 +26,7 @@
     
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
-        LOG(@"Signin button tapped");
+        [this.model set:$dict(@"user_name", cell1.textField.text, @"password", cell2.textField.text)];
         $trigger(@"initiate:login");
     });
     return self;
