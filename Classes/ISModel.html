@@ -1,0 +1,3145 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ISModel Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">IStructure </a></h1>
+				<a id="developerHome" href="../index.html">Agilis Mobility, LLC</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ISModel Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/_previousAttributes">&nbsp;&nbsp;&nbsp;&nbsp;_previousAttributes</option>
+	
+	<option value="//api/name/attributes">&nbsp;&nbsp;&nbsp;&nbsp;attributes</option>
+	
+	<option value="//api/name/cid">&nbsp;&nbsp;&nbsp;&nbsp;cid</option>
+	
+	<option value="//api/name/collection">&nbsp;&nbsp;&nbsp;&nbsp;collection</option>
+	
+	<option value="//api/name/id">&nbsp;&nbsp;&nbsp;&nbsp;id</option>
+	
+	<option value="//api/name/observers">&nbsp;&nbsp;&nbsp;&nbsp;observers</option>
+	
+	<option value="//api/name/sync">&nbsp;&nbsp;&nbsp;&nbsp;sync</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/setBaseUrl:">&nbsp;&nbsp;&nbsp;&nbsp;+ setBaseUrl:</option>
+	
+	<option value="//api/name/syncClass">&nbsp;&nbsp;&nbsp;&nbsp;+ syncClass</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/JSONDataFromAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- JSONDataFromAttributes:</option>
+	
+	<option value="//api/name/baseUrl">&nbsp;&nbsp;&nbsp;&nbsp;- baseUrl</option>
+	
+	<option value="//api/name/change">&nbsp;&nbsp;&nbsp;&nbsp;- change</option>
+	
+	<option value="//api/name/changeWithOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- changeWithOptions:</option>
+	
+	<option value="//api/name/changedAttributes">&nbsp;&nbsp;&nbsp;&nbsp;- changedAttributes</option>
+	
+	<option value="//api/name/changedAttributes:">&nbsp;&nbsp;&nbsp;&nbsp;- changedAttributes:</option>
+	
+	<option value="//api/name/clear:">&nbsp;&nbsp;&nbsp;&nbsp;- clear:</option>
+	
+	<option value="//api/name/createPath">&nbsp;&nbsp;&nbsp;&nbsp;- createPath</option>
+	
+	<option value="//api/name/dataToSave">&nbsp;&nbsp;&nbsp;&nbsp;- dataToSave</option>
+	
+	<option value="//api/name/defaults">&nbsp;&nbsp;&nbsp;&nbsp;- defaults</option>
+	
+	<option value="//api/name/destroy:">&nbsp;&nbsp;&nbsp;&nbsp;- destroy:</option>
+	
+	<option value="//api/name/destroyPath">&nbsp;&nbsp;&nbsp;&nbsp;- destroyPath</option>
+	
+	<option value="//api/name/fetch:">&nbsp;&nbsp;&nbsp;&nbsp;- fetch:</option>
+	
+	<option value="//api/name/fetchPath">&nbsp;&nbsp;&nbsp;&nbsp;- fetchPath</option>
+	
+	<option value="//api/name/get:">&nbsp;&nbsp;&nbsp;&nbsp;- get:</option>
+	
+	<option value="//api/name/has:">&nbsp;&nbsp;&nbsp;&nbsp;- has:</option>
+	
+	<option value="//api/name/hasChanged">&nbsp;&nbsp;&nbsp;&nbsp;- hasChanged</option>
+	
+	<option value="//api/name/hasChanged:">&nbsp;&nbsp;&nbsp;&nbsp;- hasChanged:</option>
+	
+	<option value="//api/name/idAttribute">&nbsp;&nbsp;&nbsp;&nbsp;- idAttribute</option>
+	
+	<option value="//api/name/initWithAttributes:andOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithAttributes:andOptions:</option>
+	
+	<option value="//api/name/initializeWithAttributes:andOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- initializeWithAttributes:andOptions:</option>
+	
+	<option value="//api/name/isNew">&nbsp;&nbsp;&nbsp;&nbsp;- isNew</option>
+	
+	<option value="//api/name/lastChanceToUpdateSyncOptions:forMethod:">&nbsp;&nbsp;&nbsp;&nbsp;- lastChanceToUpdateSyncOptions:forMethod:</option>
+	
+	<option value="//api/name/parse:">&nbsp;&nbsp;&nbsp;&nbsp;- parse:</option>
+	
+	<option value="//api/name/parse:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- parse:withOptions:</option>
+	
+	<option value="//api/name/path">&nbsp;&nbsp;&nbsp;&nbsp;- path</option>
+	
+	<option value="//api/name/pathRoot">&nbsp;&nbsp;&nbsp;&nbsp;- pathRoot</option>
+	
+	<option value="//api/name/performValidation:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- performValidation:withOptions:</option>
+	
+	<option value="//api/name/previous:">&nbsp;&nbsp;&nbsp;&nbsp;- previous:</option>
+	
+	<option value="//api/name/previousAttributes">&nbsp;&nbsp;&nbsp;&nbsp;- previousAttributes</option>
+	
+	<option value="//api/name/save:">&nbsp;&nbsp;&nbsp;&nbsp;- save:</option>
+	
+	<option value="//api/name/save:options:">&nbsp;&nbsp;&nbsp;&nbsp;- save:options:</option>
+	
+	<option value="//api/name/set:">&nbsp;&nbsp;&nbsp;&nbsp;- set:</option>
+	
+	<option value="//api/name/set:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- set:withOptions:</option>
+	
+	<option value="//api/name/setBaseUrl:">&nbsp;&nbsp;&nbsp;&nbsp;- setBaseUrl:</option>
+	
+	<option value="//api/name/unSet:">&nbsp;&nbsp;&nbsp;&nbsp;- unSet:</option>
+	
+	<option value="//api/name/unSet:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- unSet:withOptions:</option>
+	
+	<option value="//api/name/updatePath">&nbsp;&nbsp;&nbsp;&nbsp;- updatePath</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_previousAttributes">_previousAttributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/attributes">attributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cid">cid</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collection">collection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/id">id</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/observers">observers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sync">sync</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBaseUrl:">setBaseUrl:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/syncClass">syncClass</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JSONDataFromAttributes:">JSONDataFromAttributes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baseUrl">baseUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/change">change</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changeWithOptions:">changeWithOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changedAttributes">changedAttributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/changedAttributes:">changedAttributes:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/clear:">clear:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createPath">createPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataToSave">dataToSave</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaults">defaults</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/destroy:">destroy:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/destroyPath">destroyPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetch:">fetch:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchPath">fetchPath</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/get:">get:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/has:">has:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasChanged">hasChanged</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hasChanged:">hasChanged:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/idAttribute">idAttribute</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initializeWithAttributes:andOptions:">initializeWithAttributes:andOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isNew">isNew</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastChanceToUpdateSyncOptions:forMethod:">lastChanceToUpdateSyncOptions:forMethod:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parse:">parse:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/parse:withOptions:">parse:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/path">path</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pathRoot">pathRoot</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/performValidation:withOptions:">performValidation:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previous:">previous:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previousAttributes">previousAttributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:">save:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:options:">save:options:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/set:">set:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/set:withOptions:">set:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setBaseUrl:">setBaseUrl:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unSet:">unSet:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unSet:withOptions:">unSet:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updatePath">updatePath</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ISModel Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ISModel Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ISModel.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><a href="ISModel.html">ISModel</a> class is the base class of the Model component of iStructure framework.</p>
+
+<p>A model has <a href="#//api/name/attributes">attributes</a> and these <a href="#//api/name/attributes">attributes</a> can be set directly or by synching with
+a server. Other objects can observer a model and react to <a href="#//api/name/change">change</a> events.</p>
+
+<p>A model can, and usually does, belong to a <a href="#//api/name/collection">collection</a>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/_previousAttributes">&nbsp;&nbsp;_previousAttributes</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/observers">&nbsp;&nbsp;observers</a></code>
+		<span class="tooltip"><p>The <a href="#//api/name/observers">observers</a> array.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/attributes">&nbsp;&nbsp;attributes</a></code>
+		<span class="tooltip"><p>The <a href="#//api/name/attributes">attributes</a> of the instance.
+A dictionary of key/value objects.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/id">&nbsp;&nbsp;id</a></code>
+		<span class="tooltip"><p>The identifier of the model instance.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cid">&nbsp;&nbsp;cid</a></code>
+		<span class="tooltip"><p>The client ID of the instance.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collection">&nbsp;&nbsp;collection</a></code>
+		<span class="tooltip"><p>The <a href="#//api/name/collection">collection</a> of the model instance.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sync">&nbsp;&nbsp;sync</a></code>
+		<span class="tooltip"><p>The synchronization property.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithAttributes:andOptions:">&ndash;&nbsp;initWithAttributes:andOptions:</a></code>
+		<span class="tooltip"><p>Initialize a new model instance. You call this method after allocating a new <a href="ISModel.html">ISModel</a> instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initializeWithAttributes:andOptions:">&ndash;&nbsp;initializeWithAttributes:andOptions:</a></code>
+		<span class="tooltip"><p>A chance for subclasses to initialize themselves.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isNew">&ndash;&nbsp;isNew</a></code>
+		<span class="tooltip"><p>Indicates Whether the model instance is new or not.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/idAttribute">&ndash;&nbsp;idAttribute</a></code>
+		<span class="tooltip"><p>Specifies the name of the <a href="#//api/name/id">id</a> attribute of the model.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/set:">&ndash;&nbsp;set:</a></code>
+		<span class="tooltip"><p>Sets the <a href="#//api/name/attributes">attributes</a> of the model with additional values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/set:withOptions:">&ndash;&nbsp;set:withOptions:</a></code>
+		<span class="tooltip"><p>Sets the <a href="#//api/name/attributes">attributes</a> of the model with additional values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unSet:">&ndash;&nbsp;unSet:</a></code>
+		<span class="tooltip"><p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unSet:withOptions:">&ndash;&nbsp;unSet:withOptions:</a></code>
+		<span class="tooltip"><p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/clear:">&ndash;&nbsp;clear:</a></code>
+		<span class="tooltip"><p>Clears all the <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/has:">&ndash;&nbsp;has:</a></code>
+		<span class="tooltip"><p>Checks to see if <a href="#//api/name/attributes">attributes</a> has a specifc attribute.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaults">&ndash;&nbsp;defaults</a></code>
+		<span class="tooltip"><p>Specifies the default <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parse:withOptions:">&ndash;&nbsp;parse:withOptions:</a></code>
+		<span class="tooltip"><p>Parses the raw data from the server into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/parse:">&ndash;&nbsp;parse:</a></code>
+		<span class="tooltip"><p>Parses the raw data into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/get:">&ndash;&nbsp;get:</a></code>
+		<span class="tooltip"><p>Obtain the value for a given attribute.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pathRoot">&ndash;&nbsp;pathRoot</a></code>
+		<span class="tooltip"><p>Specifies the root PATH of the model.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/path">&ndash;&nbsp;path</a></code>
+		<span class="tooltip"><p>The PATH used to synchronize this model with the server.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchPath">&ndash;&nbsp;fetchPath</a></code>
+		<span class="tooltip"><p>The fetch <a href="#//api/name/path">path</a> used in a Fetch operation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createPath">&ndash;&nbsp;createPath</a></code>
+		<span class="tooltip"><p>The create <a href="#//api/name/path">path</a> used in a Save operation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updatePath">&ndash;&nbsp;updatePath</a></code>
+		<span class="tooltip"><p>The create <a href="#//api/name/path">path</a> used in a Save operation of a model with <a href="#//api/name/id">id</a> equals to <strong>nil</strong>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/destroyPath">&ndash;&nbsp;destroyPath</a></code>
+		<span class="tooltip"><p>The create <a href="#//api/name/path">path</a> used in a Destroy operation with a non-<strong>nil</strong> <a href="#//api/name/id">id</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/baseUrl">&ndash;&nbsp;baseUrl</a></code>
+		<span class="tooltip"><p>The Base URL of the <a href="ISModel.html">ISModel</a> instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBaseUrl:">&ndash;&nbsp;setBaseUrl:</a></code>
+		<span class="tooltip"><p>Set the Base URL of the model instance.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setBaseUrl:">+&nbsp;setBaseUrl:</a></code>
+		<span class="tooltip"><p>Set the Base URL of the model class.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasChanged:">&ndash;&nbsp;hasChanged:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/changedAttributes:">&ndash;&nbsp;changedAttributes:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/previous:">&ndash;&nbsp;previous:</a></code>
+		<span class="tooltip"><p>The previous value of an attribute</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/previousAttributes">&ndash;&nbsp;previousAttributes</a></code>
+		<span class="tooltip"><p>The previous <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/changedAttributes">&ndash;&nbsp;changedAttributes</a></code>
+		<span class="tooltip"><p>The changed <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hasChanged">&ndash;&nbsp;hasChanged</a></code>
+		<span class="tooltip"><p>Has the model instance changed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/change">&ndash;&nbsp;change</a></code>
+		<span class="tooltip"><p>Force a <a href="#//api/name/change">change</a> event on the model.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/changeWithOptions:">&ndash;&nbsp;changeWithOptions:</a></code>
+		<span class="tooltip"><p>Force a <a href="#//api/name/change">change</a> event on the model</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetch:">&ndash;&nbsp;fetch:</a></code>
+		<span class="tooltip"><p>Fetches the model from the server.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/destroy:">&ndash;&nbsp;destroy:</a></code>
+		<span class="tooltip"><p>The options if any</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:">&ndash;&nbsp;save:</a></code>
+		<span class="tooltip"><p>Save a model to the server.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:options:">&ndash;&nbsp;save:options:</a></code>
+		<span class="tooltip"><p>Save a model to the server.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/syncClass">+&nbsp;syncClass</a></code>
+		<span class="tooltip"><p>The synchronization class.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataToSave">&ndash;&nbsp;dataToSave</a></code>
+		<span class="tooltip"><p>Data to send to the server during save operation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/JSONDataFromAttributes:">&ndash;&nbsp;JSONDataFromAttributes:</a></code>
+		<span class="tooltip"><p>Obtain a raw data of teh JSON representation of a set of <a href="#//api/name/attributes">attributes</a></p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/performValidation:withOptions:">&ndash;&nbsp;performValidation:withOptions:</a></code>
+		<span class="tooltip"><p>Performs validations on a set of <a href="#//api/name/attributes">attributes</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lastChanceToUpdateSyncOptions:forMethod:">&ndash;&nbsp;lastChanceToUpdateSyncOptions:forMethod:</a></code>
+		<span class="tooltip"><p>Perform last minute changes to the options hash sent by the model during read, update, delete, and create</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/_previousAttributes" title="_previousAttributes"></a>
+	<h3 class="subsubtitle method-title">_previousAttributes</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/attributes" title="attributes"></a>
+	<h3 class="subsubtitle method-title">attributes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/attributes">attributes</a> of the instance.
+A dictionary of key/value objects.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) NSMutableDictionary *attributes</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/attributes">attributes</a> of the instance.
+A dictionary of key/value objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cid" title="cid"></a>
+	<h3 class="subsubtitle method-title">cid</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The client ID of the instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) NSString *cid</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The client ID of the instance.</p>
+
+<p>This value is autogenerated and is unique in all iStructure objects.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collection" title="collection"></a>
+	<h3 class="subsubtitle method-title">collection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/collection">collection</a> of the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) ISCollection *collection</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/collection">collection</a> of the model instance.</p>
+
+<p>A model instance can belong to at most one <a href="#//api/name/collection">collection</a>. When this value
+is set, the model instance is tied to a <a href="#//api/name/collection">collection</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/id" title="id"></a>
+	<h3 class="subsubtitle method-title">id</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The identifier of the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) NSString *id</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The identifier of the model instance.</p>
+
+<p>This value is obtained when the model instance is synchronized with the server and
+assumed to be unique in its class.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/observers" title="observers"></a>
+	<h3 class="subsubtitle method-title">observers</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The <a href="#//api/name/observers">observers</a> array.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) NSMutableArray *observers</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The <a href="#//api/name/observers">observers</a> array.</p>
+
+<p>As any object that can watch events, it defines and initializes the <a href="#//api/name/observers">observers</a> mutable array.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sync" title="sync"></a>
+	<h3 class="subsubtitle method-title">sync</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The synchronization property.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (retain) ISBasicSync *sync</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The synchronization property.</p>
+
+<p>During Fetch, Save, and Destroy, this synchronization instance is used to communicate with the server.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/setBaseUrl:" title="setBaseUrl:"></a>
+	<h3 class="subsubtitle method-title">setBaseUrl:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the Base URL of the model class.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)setBaseUrl:(NSString *)<em>theUrl</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>theUrl</em></dt>
+			<dd><p>The URL value to be set as Base URL of the model class.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set the Base URL of the model class.</p>
+
+<p>Used to provide a Base URL of the model class that will be used when server is contacted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/syncClass" title="syncClass"></a>
+	<h3 class="subsubtitle method-title">syncClass</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The synchronization class.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (Class)syncClass</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a class of type <a href="../Classes/ISSync.html">ISSync</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The synchronization class.</p>
+
+<p>Default <a href="ISModel.html">ISModel</a> returns <a href="../Classes/ISBasicSync.html">ISBasicSync</a> for JSON over HTTP.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/JSONDataFromAttributes:" title="JSONDataFromAttributes:"></a>
+	<h3 class="subsubtitle method-title">JSONDataFromAttributes:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Obtain a raw data of teh JSON representation of a set of <a href="#//api/name/attributes">attributes</a></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)JSONDataFromAttributes:(NSDictionary *)<em>attrs</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The <a href="#//api/name/attributes">attributes</a> you want to obtain raw data from.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The raw <code>NSData</code> representation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Obtain a raw data of teh JSON representation of a set of <a href="#//api/name/attributes">attributes</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/baseUrl" title="baseUrl"></a>
+	<h3 class="subsubtitle method-title">baseUrl</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The Base URL of the <a href="ISModel.html">ISModel</a> instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)baseUrl</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The Base URL part of the model&rsquo;s URL.</p>
+
+<p>The default behavior is to return the Base URL of the <a href="#//api/name/collection">collection</a> if the model has a <a href="#//api/name/collection">collection</a>.
+Otherwise, the model&rsquo;s   modelBaseUrl   instance variable is returned if set. If not, the class' _<a href="#//api/name/baseUrl">baseUrl</a>
+is returned if it&rsquo;s set. Otherwise, an empty string is returned. The following shows the
+default implementation of the ISModel class:</p>
+
+<pre><code>if(self.collection){
+    return [self.collection baseUrl];
+}else{
+    return modelBaseUrl ? modelBaseUrl : _baseUrl ? _baseUrl : @"";
+}
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The Base URL of the <a href="ISModel.html">ISModel</a> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/change" title="change"></a>
+	<h3 class="subsubtitle method-title">change</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Force a <a href="#//api/name/change">change</a> event on the model.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)change</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Force a <a href="#//api/name/change">change</a> event on the model.</p>
+
+<p>Call <a href="#//api/name/changeWithOptions:">changeWithOptions:</a> with <code>options</code> as <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/changeWithOptions:" title="changeWithOptions:"></a>
+	<h3 class="subsubtitle method-title">changeWithOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Force a <a href="#//api/name/change">change</a> event on the model</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)changeWithOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options for this call.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Force a <a href="#//api/name/change">change</a> event on the model</p>
+
+<p>Triggers a <code>@"change"</code> event with passing the <code>options</code> in the <code>OPTIONS_KEY</code> key.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/changedAttributes" title="changedAttributes"></a>
+	<h3 class="subsubtitle method-title">changedAttributes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The changed <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)changedAttributes</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of attribute names whose values have changed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The changed <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/changedAttributes:" title="changedAttributes:"></a>
+	<h3 class="subsubtitle method-title">changedAttributes:</h3>
+	
+	
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)changedAttributes:(NSDictionary *)<em>now</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/clear:" title="clear:"></a>
+	<h3 class="subsubtitle method-title">clear:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Clears all the <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)clear:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options used during the clearing process.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The instance itself.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Clears all the <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createPath" title="createPath"></a>
+	<h3 class="subsubtitle method-title">createPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The create <a href="#//api/name/path">path</a> used in a Save operation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)createPath</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/path">path</a> value used in a Save operation.
+Base implementation returns <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The create <a href="#//api/name/path">path</a> used in a Save operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataToSave" title="dataToSave"></a>
+	<h3 class="subsubtitle method-title">dataToSave</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Data to send to the server during save operation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)dataToSave</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An <code>NSData</code> instance representign the raw data.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Data to send to the server during save operation.</p>
+
+<p>Default implementation is to return an <code>NSData</code> instance from the JSON representation of the <a href="#//api/name/attributes">attributes</a> dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/defaults" title="defaults"></a>
+	<h3 class="subsubtitle method-title">defaults</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the default <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)defaults</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the default <a href="#//api/name/attributes">attributes</a>.</p>
+
+<p>By default, this method returns <strong>nil</strong>. Override this method to
+provide default values that get set on a newly created model instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/destroy:" title="destroy:"></a>
+	<h3 class="subsubtitle method-title">destroy:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The options if any</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)destroy:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options if any</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/destroyPath" title="destroyPath"></a>
+	<h3 class="subsubtitle method-title">destroyPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The create <a href="#//api/name/path">path</a> used in a Destroy operation with a non-<strong>nil</strong> <a href="#//api/name/id">id</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)destroyPath</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/path">path</a> value used in a Destroy operation.
+Base implementation returns <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The create <a href="#//api/name/path">path</a> used in a Destroy operation with a non-<strong>nil</strong> <a href="#//api/name/id">id</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetch:" title="fetch:"></a>
+	<h3 class="subsubtitle method-title">fetch:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fetches the model from the server.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)fetch:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options if any.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Fetches the model from the server.</p>
+
+<p>To fetch a model instance is to go to the server and retrieve the <a href="#//api/name/attributes">attributes</a> and set them on the model instance.
+Fetch uses an optional <code>options</code> parameter.</p>
+
+<p>The following options can be used:</p>
+
+<ol>
+<li><p><code>SUCCESS_HANDLER_KEY</code>. This is a block of type <code>SuccessHandler</code> to be invoked when the retrieval of the model
+is successful. <code>SuccessHandler</code> is declared as follows:</p>
+
+<pre><code>  typedef void(^SuccessHandler)(id model, NSData *data);
+</code></pre></li>
+<li><p><code>FAILURE_HANDLER_KEY</code>. This is a block of type <code>ErrorHandler</code> to be invoked when the retrieval of the model fails.
+<code>ErrorHandler</code> is declared as follows:</p>
+
+<pre><code>  typedef void(^ErrorHandler)(id model, NSArray *errors);
+</code></pre></li>
+</ol>
+
+
+<p>After contacting the server, the error handler is invoked in the case of having network or  app erros.
+An example of a network error is if the server is down. Models can define their own app errors in their customized Sync class.
+If there is an error and the error handler is not specified, an <code>@"error"</code> event is triggered by the model.</p>
+
+<p>A model specifies a Sync class that is instantiated when the model is synchronized. This is done in the <a href="#//api/name/syncClass"><code>syncClass</code></a> class
+method. The ISModel class defines it as follows:</p>
+
+<pre><code>+ (Class) syncClass{
+    return [ISBasicSync class];
+}
+</code></pre>
+
+<p>See <a href="../Classes/ISSync.html">ISSync</a> and <a href="../Classes/ISBasicSync.html">ISBasicSync</a> for more information.</p>
+
+<p>In the case that the network communication is successful and there are no network errors, the <a href="#//api/name/parse:">parse:</a> method of the model is called
+passing in the raw data received by from the server. The base implementation assumes that  the data is in JSON format and it is a hash,
+so it parses it and generates a mutable dictionary of it as follows:</p>
+
+<pre><code>- (NSMutableDictionary*) parse:(NSData*) data{
+    return [[[[SBJsonParser alloc] init] autorelease] objectWithData:data];
+}
+</code></pre>
+
+<p>For most applications (such as those created using Rails 3.1), this si sufficient. If that is not the case, you can override
+this method and parse it as you like. See the NearbyPlace example for parsing XML. Whatever is returned from the parse method
+is used to set the <a href="#//api/name/attributes">attributes</a> of the model instance. You can always return empty dictionary and use the data returned from the
+server to update the model according to your pleasing (e.g., update model associations, etc.)
+The <a href="#//api/name/parse:"><code>parse:</code></a> message is always sent on a different thread than the Main Thread. This offloads heavy parsing from the UI thread.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fetchPath" title="fetchPath"></a>
+	<h3 class="subsubtitle method-title">fetchPath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The fetch <a href="#//api/name/path">path</a> used in a Fetch operation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)fetchPath</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/path">path</a> value used in a Fetch operation.
+Base implementation returns <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The fetch <a href="#//api/name/path">path</a> used in a Fetch operation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/get:" title="get:"></a>
+	<h3 class="subsubtitle method-title">get:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Obtain the value for a given attribute.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)get:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>Attribute you want to obtain its value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Obtain the value for a given attribute.</p>
+
+<p>Looks in the <a href="#//api/name/attributes">attributes</a> dictionary and returns the value stored for <em>attr</em> key.
+For example, to obtain the <code>title</code> of a note in an instance <code>note</code>, use <code>[note get:@"title"]</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/has:" title="has:"></a>
+	<h3 class="subsubtitle method-title">has:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Checks to see if <a href="#//api/name/attributes">attributes</a> has a specifc attribute.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)has:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute to check.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the <code>attr</code> exists in <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Checks to see if <a href="#//api/name/attributes">attributes</a> has a specifc attribute.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasChanged" title="hasChanged"></a>
+	<h3 class="subsubtitle method-title">hasChanged</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Has the model instance changed.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasChanged</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the model instance has any attribute whose value has changed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Has the model instance changed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hasChanged:" title="hasChanged:"></a>
+	<h3 class="subsubtitle method-title">hasChanged:</h3>
+	
+	
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasChanged:(NSString *)<em>attr</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/idAttribute" title="idAttribute"></a>
+	<h3 class="subsubtitle method-title">idAttribute</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the name of the <a href="#//api/name/id">id</a> attribute of the model.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)idAttribute</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the name of the <a href="#//api/name/id">id</a> attribute of the model.</p>
+
+<p>By default, the method returns <code>@"id"</code>. Override this method to
+specify different behavior.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithAttributes:andOptions:" title="initWithAttributes:andOptions:"></a>
+	<h3 class="subsubtitle method-title">initWithAttributes:andOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a new model instance. You call this method after allocating a new <a href="ISModel.html">ISModel</a> instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithAttributes:(NSDictionary *)<em>attrs</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>Attributes that you wish to add to the new instance.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options used during initialization.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initialize a new model instance. You call this method after allocating a new <a href="ISModel.html">ISModel</a> instance.</p>
+
+<p>First, a unique Client ID (<a href="#//api/name/cid">cid</a>) is assigned to the new instance. After that,
+the <a href="#//api/name/defaults">defaults</a> and <em>attrs</em> parameter are set on the model&rsquo;s <a href="#//api/name/attributes">attributes</a> with <code>SILENT_KEY</code> equal to <code>YES</code>. In addition, if
+a Collection is passed in the <em>options</em> dictionary (using the key <code>COLLECTION_KEY</code>), it&rsquo;s assigned
+to the <a href="#//api/name/collection">collection</a> property. Finally, <a href="#//api/name/initializeWithAttributes:andOptions:"><code>initializeWithAttributes:andOptions:</code></a> message is sent to the
+newly-created instance.</p>
+
+<p>The following shows an example:</p>
+
+<pre><code>ISModel *aModel = [[[ISModel alloc] initWithAttributes:$dict(@"one", @"1") andOptions:$dict()] autorelease];
+STAssertTrue([aModel has:@"one"], @"Model: has a \"one\" attribute from initialization");
+</code></pre>
+
+<p>The following show that a <a href="#//api/name/cid">cid</a> value is assigned after initialization:</p>
+
+<pre><code>ISModel *aModel = [[[ISModel alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
+STAssertNotNil(aModel.cid, @"Model: model should have a value for cid");
+</code></pre>
+
+<p>After initialization, the model is new:</p>
+
+<pre><code>ISModel *aModel = [[[ISModel alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
+STAssertTrue([aModel isNew], @"Model: model should be new after initalization");
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initializeWithAttributes:andOptions:" title="initializeWithAttributes:andOptions:"></a>
+	<h3 class="subsubtitle method-title">initializeWithAttributes:andOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A chance for subclasses to initialize themselves.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)initializeWithAttributes:(NSDictionary *)<em>attrs</em> andOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>Attributes used during the <a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a> call.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>Options used during the <a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a> call.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A chance for subclasses to initialize themselves.</p>
+
+<p>At the end of the  <a href="#//api/name/initWithAttributes:andOptions:">initWithAttributes:andOptions:</a> method, it calls this method giving a chance
+to subclasses to initialize themselves. <a href="ISModel.html">ISModel</a> implementation is a noop.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isNew" title="isNew"></a>
+	<h3 class="subsubtitle method-title">isNew</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates Whether the model instance is new or not.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isNew</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates Whether the model instance is new or not.</p>
+
+<p>A new model instance is one whose <a href="#//api/name/id">id</a> is <strong>nil</strong>. Saving a new model
+to the server will result in a POST while saving a non-new model
+will result in an UPDATE.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lastChanceToUpdateSyncOptions:forMethod:" title="lastChanceToUpdateSyncOptions:forMethod:"></a>
+	<h3 class="subsubtitle method-title">lastChanceToUpdateSyncOptions:forMethod:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Perform last minute changes to the options hash sent by the model during read, update, delete, and create</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)lastChanceToUpdateSyncOptions:(NSMutableDictionary *)<em>opts</em> forMethod:(NSString *)<em>method</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>opts</em></dt>
+			<dd><p>The options to be sent to the <a href="#//api/name/sync">sync</a> to perform method operation</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>method</em></dt>
+			<dd><p>The operation being performed. Can be METHOD_READ, METHOD_UPDATE, METHOD_DELETE, METHOD_CREATE.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Perform last minute changes to the options hash sent by the model during read, update, delete, and create</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parse:" title="parse:"></a>
+	<h3 class="subsubtitle method-title">parse:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Parses the raw data into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSMutableDictionary *)parse:(NSData *)<em>data</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Parses the raw data into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p>
+
+<p>Calls <a href="#//api/name/parse:withOptions:">parse:withOptions:</a> with options = $dict()</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/parse:withOptions:" title="parse:withOptions:"></a>
+	<h3 class="subsubtitle method-title">parse:withOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Parses the raw data from the server into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSMutableDictionary *)parse:(NSData *)<em>data</em> withOptions:(NSMutableDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>the raw data to be parsed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>the options for parsing.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Parses the raw data from the server into <a href="#//api/name/attributes">attributes</a> to be set on the model instance.</p>
+
+<p>After obtaining the server&rsquo;s response, the data needs to be parsed into a dictionary
+of <a href="#//api/name/attributes">attributes</a> and these <a href="#//api/name/attributes">attributes</a> are set on the model. The default behavior assumes that the
+server&rsquo;s response is a JSON hash. Override this method to specify different behavior.
+You can also return <strong>nil</strong> and use the data to decorate your instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/path" title="path"></a>
+	<h3 class="subsubtitle method-title">path</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The PATH used to synchronize this model with the server.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)path</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The <a href="#//api/name/path">path</a> value of this instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The PATH used to synchronize this model with the server.</p>
+
+<p>For a model that is server-backed, it needs to provide a URL value. The <a href="#//api/name/path">path</a> method, by default, looks to see if
+the model is inside a <a href="#//api/name/collection">collection</a>, if that&rsquo;s the case and the model is new, the collection&rsquo;s <a href="#//api/name/path">path</a> becomes the Path value.
+If there is a <a href="#//api/name/collection">collection</a> and the model is not new, the collection&rsquo;s <a href="#//api/name/path">path</a> and the encoded value of the model&rsquo;s <a href="#//api/name/id">id</a> value
+becomes the model&rsquo;s <a href="#//api/name/path">path</a>. For example <code>/notes/1</code> is the <a href="#//api/name/path">path</a> value returned where <code>/notes</code> is the collection&rsquo;s <a href="#//api/name/path">path</a>
+and <code>1</code> is the <a href="#//api/name/id"><code>id</code></a> value of the model instance.</p>
+
+<p>If the model does not belong to a collection, then the value of its pathRoot method is substituted and used as above
+instead of the collection&rsquo;s path. Otherwise, an exception is thrown.</p>
+
+<p>For the complete URL to be used in accessing the server-backed version of the model instance, a base URL is prepended.
+This base URL can be empty (provided the URL value calculated above is sufficient) or it can be something else.
+The value of the base URL is provided by the baseUrl instance method of the model. The default, it returns the collection&rsquo;s
+<a href="../Classes/ISCollection.html#//api/name/baseUrl">[ISCollection baseUrl]</a>. If the model does not have a <a href="#//api/name/collection">collection</a>, it looks to see if the model&rsquo;s instance has one stored
+in its modelBaseUrl instance variable and returns it. If not, it looks for it in the model&rsquo;s class _<a href="#//api/name/baseUrl">baseUrl</a> static value.
+You can set the instance value using the <a href="#//api/name/setBaseUrl:">setBaseUrl:</a> instance method. You can set the class _<a href="#//api/name/baseUrl">baseUrl</a> using the <a href="#//api/name/setBaseUrl:">setBaseUrl:</a>
+class method.</p>
+
+<p>In addtion, you can provide fine-grained model paths for the four different synchronization methods by overriding the
+following methods: <a href="#//api/name/fetchPath">fetchPath</a>, <a href="#//api/name/createPath">createPath</a>, <a href="#//api/name/updatePath">updatePath</a>, and <a href="#//api/name/destroyPath">destroyPath</a>.</p>
+
+<p>If an operation (such as Fetch) is invoked on the instance and the corresponding <a href="#//api/name/path">path</a> method (e.g., fetch<a href="#//api/name/path">path</a>) does not
+return <strong>nil</strong>, the value returned is used instead of the value returned from the <a href="#//api/name/path">path</a> instance method.
+The base URL is calculated as normal.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pathRoot" title="pathRoot"></a>
+	<h3 class="subsubtitle method-title">pathRoot</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specifies the root PATH of the model.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)pathRoot</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Root PATH.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specifies the root PATH of the model.</p>
+
+<p>The <a href="ISModel.html">ISModel</a> implementation returns <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/performValidation:withOptions:" title="performValidation:withOptions:"></a>
+	<h3 class="subsubtitle method-title">performValidation:withOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs validations on a set of <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)performValidation:(NSDictionary *)<em>attrs</em> withOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The <a href="#//api/name/attributes">attributes</a> to validate.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>option</em></dt>
+			<dd><p>The options to be used in the validation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if the validation is successful.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Performs validations on a set of <a href="#//api/name/attributes">attributes</a>.</p>
+
+<p>You can pass in the <code>options</code> an validation error block of type <code>ValidationErrorHandler</code> using the
+<code>VALIDATION_ERROR_HANDLER_KEY</code> key.</p>
+
+<p>A <code>validate:</code> message is sent to the model instance passing in the <code>attrs</code> parameter.
+If the return value of <code>validate:</code> has one or more elements (errors) and the validation error block
+is not <strong>nil</strong>, the validation error block is
+invoked passing the value of <strong>self</strong>, the errors array, and the <code>options</code>.
+Otherwise, an <code>@"error"</code> is triggered passing the errors, the <code>options</code>, and the model&rsquo;s <a href="#//api/name/collection">collection</a>, if it has one.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/previous:" title="previous:"></a>
+	<h3 class="subsubtitle method-title">previous:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The previous value of an attribute</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)previous:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute key.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The value of the attribute, nil if not found.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The previous value of an attribute</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/previousAttributes" title="previousAttributes"></a>
+	<h3 class="subsubtitle method-title">previousAttributes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The previous <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSMutableDictionary *)previousAttributes</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A dictionary of the previous <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The previous <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:" title="save:"></a>
+	<h3 class="subsubtitle method-title">save:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Save a model to the server.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)save:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options if any.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Save a model to the server.</p>
+
+<p>Invokes <a href="#//api/name/save:options:">save:options:</a> passing <strong>nil</strong> for the <code>attrs</code> parameter.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:options:" title="save:options:"></a>
+	<h3 class="subsubtitle method-title">save:options:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Save a model to the server.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)save:(NSDictionary *)<em>attrs</em> options:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The <a href="#//api/name/attributes">attributes</a> to be set before saving the model.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options, if any.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Save a model to the server.</p>
+
+<p>Save works in the same way as fetch except the method <a href="#//api/name/dataToSave"><code>dataToSave</code></a> of the model is called to provide the data
+(instance of <code>NSData</code>) that will be sent to the server. By default the data is a JSON representation of the <a href="#//api/name/attributes">attributes</a>
+obtained by sending a <a href="#//api/name/JSONDataFromAttributes:">JSONDataFromAttributes:</a> message to the model instance passing in <a href="#//api/name/attributes"><code>attributes</code></a> as an argument.
+Override this method in your base class if this is not the behavior that you wish. See SimplePhotos sample app.</p>
+
+<p>Save is used for both saving an existing (non-new) model as well as creating a new object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/set:" title="set:"></a>
+	<h3 class="subsubtitle method-title">set:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/attributes">attributes</a> of the model with additional values.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)set:(NSDictionary *)<em>attrs</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The key/value dictionary used to update the <a href="#//api/name/attributes">attributes</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The same <a href="ISModel.html">ISModel</a> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the <a href="#//api/name/attributes">attributes</a> of the model with additional values.</p>
+
+<p>Invokes <a href="#//api/name/set:withOptions:">set:withOptions:</a> passing <strong>nil</strong> for options.
+Every attribute in attr that exists in <a href="#//api/name/attributes">attributes</a> is overwritten.
+Attributes not found in <code>attrs</code> are not touched.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/set:withOptions:" title="set:withOptions:"></a>
+	<h3 class="subsubtitle method-title">set:withOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/attributes">attributes</a> of the model with additional values.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)set:(NSDictionary *)<em>attrs</em> withOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attrs</em></dt>
+			<dd><p>The key/value dictionary used to update the <a href="#//api/name/attributes">attributes</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options to control setting the atributes.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The same <a href="ISModel.html">ISModel</a> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the <a href="#//api/name/attributes">attributes</a> of the model with additional values.</p>
+
+<p>Every attribute in <code>attr</code> that exists in <a href="#//api/name/attributes">attributes</a> is overwritten.
+Attributes not found in <code>attrs</code> are not touched.</p>
+
+<p>The following shows hwo to set the <code>name</code> attribute to an empty string.</p>
+
+<pre><code>[model set:$dict(@"name", @"") withOptions:$dict()];
+STAssertEqualObjects([model get:@"name"], @"", @"Model: name is set correctly with empty string");
+</code></pre>
+
+<p>The following shows how the <code>options</code> parameter is used to set the <a href="#//api/name/collection">collection</a> value of the model instance:</p>
+
+<pre><code>ISCollection *collection = [[[ISCollection alloc] initWithModels:$array() andOptions:$dict()] autorelease];
+ISModel *aModel = [[[ISModel alloc] initWithAttributes:$dict() andOptions:$dict(COLLECTION_KEY, collection)] autorelease];
+STAssertEqualObjects(collection, aModel.collection, @"Model: collection should be stored correctly");
+</code></pre>
+
+<p>Every attribute in <a href="#//api/name/attributes">attributes</a> is mutable:</p>
+
+<pre><code>ISModel *aModel = [[[ISModel alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
+[aModel set:$dict(@"people", $array()) withOptions:$dict()];
+NSMutableArray    *people = [aModel get:@"people"];
+STAssertNotNil(people, @"Model: model should have a value for people attribute");
+[people addObject:@"Maher"];
+STAssertTrue(people.count == 1, @"Model: people attribute should be a mutable array");
+</code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setBaseUrl:" title="setBaseUrl:"></a>
+	<h3 class="subsubtitle method-title">setBaseUrl:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set the Base URL of the model instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)setBaseUrl:(NSString *)<em>theUrl</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>theUrl</em></dt>
+			<dd><p>The URL value to be set as Base URL of the model instance.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Set the Base URL of the model instance.</p>
+
+<p>Used to provide a Base URL of the instance that will be used when server is contacted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unSet:" title="unSet:"></a>
+	<h3 class="subsubtitle method-title">unSet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)unSet:(NSString *)<em>attr</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute to be removed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The instance itself.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+
+<p>Invokes <a href="#//api/name/unSet:withOptions:">unSet:withOptions:</a> passing <strong>nil</strong> as options.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unSet:withOptions:" title="unSet:withOptions:"></a>
+	<h3 class="subsubtitle method-title">unSet:withOptions:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (ISModel *)unSet:(NSString *)<em>attr</em> withOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attr</em></dt>
+			<dd><p>The attribute to be removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options to be used during the removal process.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The instance itself.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove a specific attribute from <a href="#//api/name/attributes">attributes</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updatePath" title="updatePath"></a>
+	<h3 class="subsubtitle method-title">updatePath</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The create <a href="#//api/name/path">path</a> used in a Save operation of a model with <a href="#//api/name/id">id</a> equals to <strong>nil</strong>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)updatePath</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the <a href="#//api/name/path">path</a> value used in a Save operation.
+Base implementation returns <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The create <a href="#//api/name/path">path</a> used in a Save operation of a model with <a href="#//api/name/id">id</a> equals to <strong>nil</strong>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>
