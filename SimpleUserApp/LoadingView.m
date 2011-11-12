@@ -20,6 +20,9 @@
 //
 // Creates a CGPathRect with a round rect of the given radius.
 //
+
+#pragma clang diagnostic ignored "-Wmissing-prototypes"
+
 CGPathRef NewPathWithRoundRect(CGRect rect, CGFloat cornerRadius)
 {
 	//

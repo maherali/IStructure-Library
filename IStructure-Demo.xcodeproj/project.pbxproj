@@ -112,7 +112,7 @@
 		4123064D146E069900B0DEA1 /* TCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123064B146E069900B0DEA1 /* TCLoginView.m */; };
 		41230654146E06B400B0DEA1 /* TCRegistrationFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */; };
 		41230655146E06B400B0DEA1 /* TCRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230651146E06B400B0DEA1 /* TCRegistrationView.m */; };
-		41230656146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */; };
+		41230656146E06B400B0DEA1 /* TCLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230653146E06B400B0DEA1 /* TCLink.m */; };
 		41230659146E06E000B0DEA1 /* TCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230658146E06E000B0DEA1 /* TCDateFormatter.m */; };
 		4123065F146E075800B0DEA1 /* TCFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123065E146E075800B0DEA1 /* TCFormController.m */; };
 		41230662146E076300B0DEA1 /* TCLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230661146E076300B0DEA1 /* TCLoginController.m */; };
@@ -351,8 +351,8 @@
 		4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationFooter.m; path = Code/View/Register/TCRegistrationFooter.m; sourceTree = "<group>"; };
 		41230650146E06B400B0DEA1 /* TCRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegistrationView.h; path = Code/View/Register/TCRegistrationView.h; sourceTree = "<group>"; };
 		41230651146E06B400B0DEA1 /* TCRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationView.m; path = Code/View/Register/TCRegistrationView.m; sourceTree = "<group>"; };
-		41230652146E06B400B0DEA1 /* TCTermsAndConditionsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTermsAndConditionsLabel.h; path = Code/View/Register/TCTermsAndConditionsLabel.h; sourceTree = "<group>"; };
-		41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTermsAndConditionsLabel.m; path = Code/View/Register/TCTermsAndConditionsLabel.m; sourceTree = "<group>"; };
+		41230652146E06B400B0DEA1 /* TCLink.h */ = {isa = PBXFileReference; fileEncoding = 4; name = TCLink.h; path = Code/View/Register/TCLink.h; sourceTree = "<group>"; };
+		41230653146E06B400B0DEA1 /* TCLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLink.m; path = Code/View/Register/TCLink.m; sourceTree = "<group>"; };
 		41230657146E06E000B0DEA1 /* TCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCDateFormatter.h; path = Code/Util/TCDateFormatter.h; sourceTree = "<group>"; };
 		41230658146E06E000B0DEA1 /* TCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCDateFormatter.m; path = Code/Util/TCDateFormatter.m; sourceTree = "<group>"; };
 		4123065D146E075800B0DEA1 /* TCFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormController.h; path = Code/Controller/Shared/TCFormController.h; sourceTree = "<group>"; };
@@ -824,8 +824,8 @@
 				4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */,
 				41230650146E06B400B0DEA1 /* TCRegistrationView.h */,
 				41230651146E06B400B0DEA1 /* TCRegistrationView.m */,
-				41230652146E06B400B0DEA1 /* TCTermsAndConditionsLabel.h */,
-				41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */,
+				41230652146E06B400B0DEA1 /* TCLink.h */,
+				41230653146E06B400B0DEA1 /* TCLink.m */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -1450,7 +1450,7 @@
 				4123064D146E069900B0DEA1 /* TCLoginView.m in Sources */,
 				41230654146E06B400B0DEA1 /* TCRegistrationFooter.m in Sources */,
 				41230655146E06B400B0DEA1 /* TCRegistrationView.m in Sources */,
-				41230656146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m in Sources */,
+				41230656146E06B400B0DEA1 /* TCLink.m in Sources */,
 				41230659146E06E000B0DEA1 /* TCDateFormatter.m in Sources */,
 				4123065F146E075800B0DEA1 /* TCFormController.m in Sources */,
 				41230662146E076300B0DEA1 /* TCLoginController.m in Sources */,

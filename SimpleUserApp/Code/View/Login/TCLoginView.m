@@ -31,6 +31,10 @@
         $trigger(@"initiate:login");
     });
     
+    $watch(@"signup_button:tapped", ^(NSNotification *notif){
+        $trigger(@"initiate:register");
+    });
+    
     __block LoadingView *loadingView = nil;
     $watch(@"internet:begin", ^(NSNotification *notif){
         loadingView = [LoadingView loadingViewInView:this];
@@ -57,11 +61,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 100;
+    return 170;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 100) andModel:self.model] autorelease];
+    return [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 170) andModel:self.model] autorelease];
 }
 
 // receive the login button was clicked, get the remember me state and the user/pass and trigger

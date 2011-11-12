@@ -6,8 +6,8 @@
 
 @implementation TCRegistrationView
 
-- (id)init{
-    self = [super init];
+- (id) initWithOptions:(NSDictionary *) _options{
+    self = [super initWithOptions:_options];
     self.sectionHeaderHeight = 5;
     TCEditingNavigationBar *bar = [[[TCEditingNavigationBar alloc] init] autorelease];
     bar.delegate              = self;

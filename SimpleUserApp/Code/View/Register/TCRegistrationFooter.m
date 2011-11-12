@@ -1,5 +1,5 @@
 #import "TCRegistrationFooter.h"
-#import "TCTermsAndConditionsLabel.h"
+#import "TCLink.h"
 #import "TCUIFactory.h"
 #import "TCInternetButton.h"
 
@@ -19,11 +19,16 @@
     [self addSubview:label];    
     
     self.backgroundColor = [UIColor clearColor];
-    TCTermsAndConditionsLabel *tncLabel = [[[TCTermsAndConditionsLabel alloc] init] autorelease];	
-    tncLabel.frame = CGRectMake(100, 75, 125, 20);
+    TCLink *tncLabel = [TCLink linkWithLabel:@"Terms & Conditions"];	
+    tncLabel.frame = CGRectMake((320-110)/2, 75, 110, 20);
     [self addSubview:tncLabel]; 
     
     return self;
 }
+
+- (void) signUp{
+    
+}
+
 
 @end

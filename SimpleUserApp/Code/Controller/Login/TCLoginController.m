@@ -13,15 +13,19 @@
     }
     $trigger(@"internet:begin", this.model);
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
-         $trigger(@"internet:end", this.model);
+        $trigger(@"internet:end", this.model);
         [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;
         $navigate(@"/welcome");
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
-         $trigger(@"internet:end", this.model);
+        $trigger(@"internet:end", this.model);
         [UIAlertView errors:errors];
-        
     }))];
+}
+
+- (void) startRegister{
+    __block TCLoginController *this = self;
+    $navigate(@"/register");
 }
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
@@ -34,6 +38,11 @@
     return [TCLoginView class];
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void) viewDidLoad{
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
@@ -41,6 +50,9 @@
     $unwatch(@"initiate:login", this.tableView);
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
+    });
+    $watch(@"initiate:register", this.tableView,  ^(NSNotification *notif){
+        [this startRegister];
     });
 }
 

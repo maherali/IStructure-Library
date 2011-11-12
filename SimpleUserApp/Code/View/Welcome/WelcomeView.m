@@ -1,21 +1,21 @@
 #import "WelcomeView.h"
-#import "TCTermsAndConditionsLabel.h"
+#import "TCLink.h"
 
 @implementation WelcomeView
 
 - (id) initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
-    
-    TCTermsAndConditionsLabel *tncLabel = [[[TCTermsAndConditionsLabel alloc] init] autorelease];	
-    tncLabel.text = @"Welcome, now logout";
-    tncLabel.frame = CGRectMake(100, 75, 125, 20);
     self.backgroundColor = [UIColor clearColor];
-    [self addSubview:tncLabel]; 
+
+    TCLink *link = [TCLink linkWithLabel:@"Welcome, now logout"];
+    link.frame = CGRectMake(100, 75, 125, 20);
+    [self addSubview:link]; 
     
-    WelcomeView *this = self;
-    $watch(@"link_tapped", tncLabel,  ^(NSNotification *notif){
-        $navigate(@"/logout");
+    __block WelcomeView *this = self;
+    $watch(TCLinkEventMame, link,  ^(NSNotification *notif){
+        $trigger(@"logout:requested");
     });
+    
     return self;
 }
 
