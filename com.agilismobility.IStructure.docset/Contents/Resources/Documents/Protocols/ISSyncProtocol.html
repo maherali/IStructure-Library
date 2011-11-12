@@ -27,6 +27,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -70,6 +72,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -141,6 +145,14 @@
 					
 					
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Protocol for synchronizing model/collection.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -155,56 +167,62 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/syncWithOptions:">+&nbsp;syncWithOptions:</a></code>
-		
+		<span class="tooltip"><p>Method to initiate synching with options.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithOptions:">&ndash;&nbsp;initWithOptions:</a></code>
-		
+		<span class="tooltip"><p>Initializes the instance.
+ISync has the following implementation of this method:</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initiateSync">&ndash;&nbsp;initiateSync</a></code>
-		
+		<span class="tooltip"><p>Start teh actual synchronization.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hasAppLevelErrors">&ndash;&nbsp;hasAppLevelErrors</a></code>
-		
+		<span class="tooltip"><p>Determines if there are app-level errors.
+Base implementation proxy that to the errorDecoder instance.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/appLevelErrors">&ndash;&nbsp;appLevelErrors</a></code>
-		
+		<span class="tooltip"><p>Computes the app-level errors.
+Base implementation proxy that to the errorDecoder instance.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/hasNetworkLevelErrors">&ndash;&nbsp;hasNetworkLevelErrors</a></code>
-		
+		<span class="tooltip"><p>Determines if there are network-level errors.
+Base implementation proxy that to the errorDecoder instance.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/networkLevelErrors">&ndash;&nbsp;networkLevelErrors</a></code>
-		
+		<span class="tooltip"><p>Computes the network-level errors.
+Base implementation proxy that to the errorDecoder instance.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/callbackArgs">&ndash;&nbsp;callbackArgs</a></code>
-		
+		<span class="tooltip"><p>Computes the two arguments (data, and metadata) to use in
+invoking either success/failure handlers. See the discussions in sync:.</p></span>
 	</span>
 	
 	<span class="task-item-suffix">required method</span>
@@ -228,6 +246,64 @@
 	<h3 class="subsubtitle method-title">syncWithOptions:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Method to initiate synching with options.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (id&lt;ISSyncProtocol&gt;)syncWithOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p>The options to use in the synchronization.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The id&lt;ISSyncProtocol> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Method to initiate synching with options.</p>
+
+<p>ISync class implements that simply by calling sync as follows:</p>
+
+<pre><code>+ (idISSyncProtocol) syncWithOptions:(NSDictionary*) _options{
+    ISSync *sync = [[[self alloc] initWithOptions:_options] autorelease];
+    [sync sync];
+    return sync;
+}
+</code></pre>
+
+<p>This behaviour should be sufficient for most apps.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -243,11 +319,79 @@
 	<h3 class="subsubtitle method-title">appLevelErrors</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Computes the app-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)appLevelErrors</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Computes the app-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/callbackArgs" title="callbackArgs"></a>
 	<h3 class="subsubtitle method-title">callbackArgs</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Computes the two arguments (data, and metadata) to use in
+invoking either success/failure handlers. See the discussions in sync:.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)callbackArgs</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Computes the two arguments (data, and metadata) to use in
+invoking either success/failure handlers. See the discussions in sync:.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -257,11 +401,79 @@
 	<h3 class="subsubtitle method-title">hasAppLevelErrors</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines if there are app-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasAppLevelErrors</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Determines if there are app-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/hasNetworkLevelErrors" title="hasNetworkLevelErrors"></a>
 	<h3 class="subsubtitle method-title">hasNetworkLevelErrors</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines if there are network-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)hasNetworkLevelErrors</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Determines if there are network-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -271,6 +483,50 @@
 	<h3 class="subsubtitle method-title">initWithOptions:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes the instance.
+ISync has the following implementation of this method:</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id&lt;ISSyncProtocol&gt;)initWithOptions:(NSDictionary *)<em>options</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes the instance.
+ISync has the following implementation of this method:</p>
+
+<pre><code>- (idISSyncProtocol) initWithOptions:(NSDictionary*) _options{
+    self = [super init];
+    self.options        =   _options;
+    self.errorDecoder   =   [[[self class] errorDecoderClass] errorDecoder];
+    return self;
+}
+</code></pre>
+
+<p>This behaviour should be sufficient for most apps.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -278,11 +534,77 @@
 	<h3 class="subsubtitle method-title">initiateSync</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Start teh actual synchronization.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)initiateSync</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Start teh actual synchronization.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
 	<a name="//api/name/networkLevelErrors" title="networkLevelErrors"></a>
 	<h3 class="subsubtitle method-title">networkLevelErrors</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Computes the network-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)networkLevelErrors</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Computes the network-level errors.
+Base implementation proxy that to the errorDecoder instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
 	
 	
 </div>
@@ -300,7 +622,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-10-06)</span><br />
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

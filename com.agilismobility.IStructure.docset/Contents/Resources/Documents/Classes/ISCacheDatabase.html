@@ -1,0 +1,516 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ISCacheDatabase Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">IStructure </a></h1>
+				<a id="developerHome" href="../index.html">Agilis Mobility, LLC</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ISCacheDatabase Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/dbName">&nbsp;&nbsp;&nbsp;&nbsp;dbName</option>
+	
+	<option value="//api/name/version">&nbsp;&nbsp;&nbsp;&nbsp;version</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/cString:">&nbsp;&nbsp;&nbsp;&nbsp;+ cString:</option>
+	
+	<option value="//api/name/closeConnectionToDBWithName:">&nbsp;&nbsp;&nbsp;&nbsp;+ closeConnectionToDBWithName:</option>
+	
+	<option value="//api/name/sharedDBWithName:andVersion:">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedDBWithName:andVersion:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cacheURL:forUser:andData:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheURL:forUser:andData:</option>
+	
+	<option value="//api/name/cacheURL:withData:">&nbsp;&nbsp;&nbsp;&nbsp;- cacheURL:withData:</option>
+	
+	<option value="//api/name/createTables">&nbsp;&nbsp;&nbsp;&nbsp;- createTables</option>
+	
+	<option value="//api/name/dataForURL:">&nbsp;&nbsp;&nbsp;&nbsp;- dataForURL:</option>
+	
+	<option value="//api/name/dataForUserID:andURL:">&nbsp;&nbsp;&nbsp;&nbsp;- dataForUserID:andURL:</option>
+	
+	<option value="//api/name/dbVersion">&nbsp;&nbsp;&nbsp;&nbsp;- dbVersion</option>
+	
+	<option value="//api/name/initWithDBName:andVersion:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDBName:andVersion:</option>
+	
+	<option value="//api/name/openDatabase">&nbsp;&nbsp;&nbsp;&nbsp;- openDatabase</option>
+	
+	<option value="//api/name/setDBVersion">&nbsp;&nbsp;&nbsp;&nbsp;- setDBVersion</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dbName">dbName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/version">version</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cString:">cString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/closeConnectionToDBWithName:">closeConnectionToDBWithName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedDBWithName:andVersion:">sharedDBWithName:andVersion:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheURL:forUser:andData:">cacheURL:forUser:andData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheURL:withData:">cacheURL:withData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createTables">createTables</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataForURL:">dataForURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataForUserID:andURL:">dataForUserID:andURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dbVersion">dbVersion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDBName:andVersion:">initWithDBName:andVersion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openDatabase">openDatabase</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDBVersion">setDBVersion</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ISCacheDatabase Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ISCacheDatabase Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ISCacheDatabase.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dbName">&nbsp;&nbsp;dbName</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/version">&nbsp;&nbsp;version</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cString:">+&nbsp;cString:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedDBWithName:andVersion:">+&nbsp;sharedDBWithName:andVersion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/closeConnectionToDBWithName:">+&nbsp;closeConnectionToDBWithName:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDBName:andVersion:">&ndash;&nbsp;initWithDBName:andVersion:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createTables">&ndash;&nbsp;createTables</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openDatabase">&ndash;&nbsp;openDatabase</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cacheURL:withData:">&ndash;&nbsp;cacheURL:withData:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cacheURL:forUser:andData:">&ndash;&nbsp;cacheURL:forUser:andData:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataForURL:">&ndash;&nbsp;dataForURL:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataForUserID:andURL:">&ndash;&nbsp;dataForUserID:andURL:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dbVersion">&ndash;&nbsp;dbVersion</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDBVersion">&ndash;&nbsp;setDBVersion</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dbName" title="dbName"></a>
+	<h3 class="subsubtitle method-title">dbName</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/version" title="version"></a>
+	<h3 class="subsubtitle method-title">version</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cString:" title="cString:"></a>
+	<h3 class="subsubtitle method-title">cString:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/closeConnectionToDBWithName:" title="closeConnectionToDBWithName:"></a>
+	<h3 class="subsubtitle method-title">closeConnectionToDBWithName:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedDBWithName:andVersion:" title="sharedDBWithName:andVersion:"></a>
+	<h3 class="subsubtitle method-title">sharedDBWithName:andVersion:</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cacheURL:forUser:andData:" title="cacheURL:forUser:andData:"></a>
+	<h3 class="subsubtitle method-title">cacheURL:forUser:andData:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cacheURL:withData:" title="cacheURL:withData:"></a>
+	<h3 class="subsubtitle method-title">cacheURL:withData:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/createTables" title="createTables"></a>
+	<h3 class="subsubtitle method-title">createTables</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataForURL:" title="dataForURL:"></a>
+	<h3 class="subsubtitle method-title">dataForURL:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataForUserID:andURL:" title="dataForUserID:andURL:"></a>
+	<h3 class="subsubtitle method-title">dataForUserID:andURL:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dbVersion" title="dbVersion"></a>
+	<h3 class="subsubtitle method-title">dbVersion</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDBName:andVersion:" title="initWithDBName:andVersion:"></a>
+	<h3 class="subsubtitle method-title">initWithDBName:andVersion:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openDatabase" title="openDatabase"></a>
+	<h3 class="subsubtitle method-title">openDatabase</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDBVersion" title="setDBVersion"></a>
+	<h3 class="subsubtitle method-title">setDBVersion</h3>
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-12)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

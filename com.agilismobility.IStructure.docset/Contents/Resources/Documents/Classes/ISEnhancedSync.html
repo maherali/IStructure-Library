@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ISBaseView Class Reference</title>
+		<title>ISEnhancedSync Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ISBaseView Class Reference</h1>
+				<h1 class="hideInXcode">ISEnhancedSync Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -26,6 +26,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -36,13 +38,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/model">&nbsp;&nbsp;&nbsp;&nbsp;model</option>
-	
-	<option value="//api/name/observers">&nbsp;&nbsp;&nbsp;&nbsp;observers</option>
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/dbName">&nbsp;&nbsp;&nbsp;&nbsp;+ dbName</option>
+	
+	<option value="//api/name/dbVersion">&nbsp;&nbsp;&nbsp;&nbsp;+ dbVersion</option>
+	
+	<option value="//api/name/setDBName:andVersion:">&nbsp;&nbsp;&nbsp;&nbsp;+ setDBName:andVersion:</option>
 	
 	
 	
@@ -55,6 +59,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -66,15 +72,17 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/model">model</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dbName">dbName</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/observers">observers</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dbVersion">dbVersion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDBName:andVersion:">setDBName:andVersion:</a></span></li>
 	
 </ul></li>
-
-
 
 
 
@@ -83,7 +91,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ISBaseView Class Reference" name="top"></a>
+				<a title="ISEnhancedSync Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,7 +100,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ISBaseView Class Reference</h1>
+						<h1 class="title title-header">ISEnhancedSync Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -100,13 +108,26 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIView</td>
+	<td class="specification-value"><a href="../Classes/ISBasicSync.html">ISBasicSync</a> : <a href="../Classes/ISSync.html">ISSync</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ISBaseView.h</td>
+	<td class="specification-value">ISEnhancedSync.h</td>
 </tr>
 						</tbody></table></div>
 					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A Sync class with JSON over HTTP and Offline capabilities</p>
+
+<p>To use, just return this class from the <a href="../Classes/ISModel.html#//api/name/syncClass">[ISModel syncClass]</a> or  [ISCollection synClass] method.
+For a specific database name, use <a href="#//api/name/setDBName:andVersion:">setDBName:andVersion:</a> before synching. Only needs to be done once.
+Data is cached for all requests, to partition the cached data, provide the key in <code>SYNC_CACHE_USER_KEY</code>
+in the options hash of syncWithOptions: method.</p>
+					</div>
 					
 					
 					
@@ -123,17 +144,24 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/model">&nbsp;&nbsp;model</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/model">model</a> attached to the view</p></span>
+		<code><a href="#//api/name/setDBName:andVersion:">+&nbsp;setDBName:andVersion:</a></code>
+		<span class="tooltip"><p>Specify the database name and version.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/observers">&nbsp;&nbsp;observers</a></code>
-		
+		<code><a href="#//api/name/dbName">+&nbsp;dbName</a></code>
+		<span class="tooltip"><p>Retrieves the database name</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dbVersion">+&nbsp;dbVersion</a></code>
+		<span class="tooltip"><p>Retrieves database version</p></span>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -144,25 +172,32 @@
 					
 					
 					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/model" title="model"></a>
-	<h3 class="subsubtitle method-title">model</h3>
+	<a name="//api/name/dbName" title="dbName"></a>
+	<h3 class="subsubtitle method-title">dbName</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/model">model</a> attached to the view</p>
+		<p>Retrieves the database name</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) ISModel *model</code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *)dbName</code></div>
 	
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Database name</p>
+	</div>
 	
 	
 	
@@ -170,7 +205,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The <a href="#//api/name/model">model</a> attached to the view</p>
+		<p>Retrieves the database name</p>
 	</div>
 	
 	
@@ -181,22 +216,113 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ISBaseView.h</code><br />
+		<code class="declared-in-ref">ISEnhancedSync.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/observers" title="observers"></a>
-	<h3 class="subsubtitle method-title">observers</h3>
+	<a name="//api/name/dbVersion" title="dbVersion"></a>
+	<h3 class="subsubtitle method-title">dbVersion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves database version</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSString *)dbVersion</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Database version.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieves database version</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISEnhancedSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDBName:andVersion:" title="setDBName:andVersion:"></a>
+	<h3 class="subsubtitle method-title">setDBName:andVersion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Specify the database name and version.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)setDBName:(NSString *)<em>name</em> andVersion:(NSString *)<em>version</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>Database name.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>version</em></dt>
+			<dd><p>Database version.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Specify the database name and version.</p>
+
+<p>Databases are stored in <code>Library</code> directory of the app&rsquo;s sandbox.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISEnhancedSync.h</code><br />
+	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
 					
 					
 					

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ISBaseView Class Reference</title>
+		<title>NSMutableURLRequest(IStructure) Category Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ISBaseView Class Reference</h1>
+				<h1 class="hideInXcode">NSMutableURLRequest(IStructure) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -36,15 +36,13 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/model">&nbsp;&nbsp;&nbsp;&nbsp;model</option>
-	
-	<option value="//api/name/observers">&nbsp;&nbsp;&nbsp;&nbsp;observers</option>
 	
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addBasicHTTPAuthHeaderForUser:withPassword:">&nbsp;&nbsp;&nbsp;&nbsp;- addBasicHTTPAuthHeaderForUser:withPassword:</option>
 	
 	
 	
@@ -66,24 +64,22 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/model">model</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/observers">observers</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addBasicHTTPAuthHeaderForUser:withPassword:">addBasicHTTPAuthHeaderForUser:withPassword:</a></span></li>
 	
 </ul></li>
-
-
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ISBaseView Class Reference" name="top"></a>
+				<a title="NSMutableURLRequest(IStructure) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -92,18 +88,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ISBaseView Class Reference</h1>
+						<h1 class="title title-header">NSMutableURLRequest(IStructure) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIView</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ISBaseView.h</td>
+	<td class="specification-value">NSMutableURLRequest+IStructure.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,17 +116,10 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/model">&nbsp;&nbsp;model</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/model">model</a> attached to the view</p></span>
+		<code><a href="#//api/name/addBasicHTTPAuthHeaderForUser:withPassword:">&ndash;&nbsp;addBasicHTTPAuthHeaderForUser:withPassword:</a></code>
+		<span class="tooltip"><p>Support for adding a Basic HTTP Authentication (Authorization) header</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/observers">&nbsp;&nbsp;observers</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -144,23 +130,42 @@
 					
 					
 					
+					
+					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/model" title="model"></a>
-	<h3 class="subsubtitle method-title">model</h3>
+	<a name="//api/name/addBasicHTTPAuthHeaderForUser:withPassword:" title="addBasicHTTPAuthHeaderForUser:withPassword:"></a>
+	<h3 class="subsubtitle method-title">addBasicHTTPAuthHeaderForUser:withPassword:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/model">model</a> attached to the view</p>
+		<p>Support for adding a Basic HTTP Authentication (Authorization) header</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) ISModel *model</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)addBasicHTTPAuthHeaderForUser:(NSString *)<em>user</em> withPassword:(NSString *)<em>password</em></code></div>
 	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>user</em></dt>
+			<dd><p>The user login id</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>password</em></dt>
+			<dd><p>The user password</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -170,7 +175,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The <a href="#//api/name/model">model</a> attached to the view</p>
+		<p>Support for adding a Basic HTTP Authentication (Authorization) header</p>
 	</div>
 	
 	
@@ -181,24 +186,13 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ISBaseView.h</code><br />
+		<code class="declared-in-ref">NSMutableURLRequest+IStructure.h</code><br />
 	</div>				
 	
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/observers" title="observers"></a>
-	<h3 class="subsubtitle method-title">observers</h3>
-	
-	
-</div>
-						
 					</div>
-					
-					
-					
-					
 					
 					
 				</div>
