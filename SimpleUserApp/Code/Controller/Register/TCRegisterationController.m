@@ -1,12 +1,12 @@
-#import "TCRegisterationFormController.h"
-#import "TCRegistrationFormView.h"
+#import "TCRegisterationController.h"
+#import "TCRegistrationView.h"
 #import "TCUIFactory.h"
 //#import "TCTripNavigationBar.h"
 
-@implementation TCRegisterationFormController
+@implementation TCRegisterationController
 
 - (Class) formTableClass{
-    return [TCRegistrationFormView class];
+    return [TCRegistrationView class];
 }
 
 - (void) viewDidLoad{

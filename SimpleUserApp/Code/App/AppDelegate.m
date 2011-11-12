@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "TCRegisterationFormController.h"
+#import "TCRegisterationController.h"
 #import "TCUIFactory.h"
 #import "TCLoginController.h"
 

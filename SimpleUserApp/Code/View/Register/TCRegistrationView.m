@@ -1,10 +1,10 @@
-#import "TCRegistrationFormView.h"
+#import "TCRegistrationView.h"
 #import "TCFormCell.h"
 #import "TCTextFieldCell.h"
 #import "TCCheckedFieldCell.h"
 #import "TCRegistrationFooter.h"
 
-@implementation TCRegistrationFormView
+@implementation TCRegistrationView
 
 - (id)init{
     self = [super init];

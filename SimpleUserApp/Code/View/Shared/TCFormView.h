@@ -1,6 +1,6 @@
 #import "TCEditingNavigationBar.h"
 
-@interface TCFormTable : ISTableView<UITableViewDelegate, UITableViewDataSource, TCEditingNavigationBarDelegate> {
+@interface TCFormView : ISTableView<UITableViewDelegate, UITableViewDataSource, TCEditingNavigationBarDelegate> {
 	NSString        *title;
 	NSArray         *cells;
 }

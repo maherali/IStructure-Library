@@ -1,5 +1,5 @@
 #import "TCFormController.h"
-#import "TCFormTable.h"
+#import "TCFormView.h"
 
 @implementation TCFormController
 
@@ -9,7 +9,7 @@
 }
 
 - (Class) formTableClass{
-    return [TCFormTable class];
+    return [TCFormView class];
 }
 
 -(void)viewDidLoad {

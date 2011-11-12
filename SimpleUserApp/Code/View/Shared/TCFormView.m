@@ -1,8 +1,8 @@
-#import "TCFormTable.h"
+#import "TCFormView.h"
 #import "TCFormCell.h"
 #import "UIView+TripCase.h"
 
-@implementation TCFormTable
+@implementation TCFormView
 
 @synthesize title, cells;
 

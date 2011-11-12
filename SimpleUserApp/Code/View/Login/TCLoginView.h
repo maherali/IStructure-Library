@@ -1,5 +1,5 @@
-#import "TCFormTable.h"
+#import "TCFormView.h"
 
-@interface TCLoginView : TCFormTable<UITextFieldDelegate>
+@interface TCLoginView : TCFormView<UITextFieldDelegate>
 
 @end
