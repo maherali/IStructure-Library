@@ -41,10 +41,22 @@
     });
 }
 
+- (void) logout{
+    __block TCLoginController *this = self;
+    [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
+        [UIAlertView message:$array(@"You have successfully logged out of server!")];
+        ((Session*)this.model).loggedIn = NO;
+        [this.navigationController popToRootViewControllerAnimated:NO];
+        //   $navigate(@"/welcome");
+    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
+        [UIAlertView errors:errors];
+    }))];
+}
+
 - (NSDictionary*) routes{
     __block TCLoginController *this = self;
     return $dict(@"/logout", $block(^(NSNotification* notif){
-        [this.navigationController popToRootViewControllerAnimated:NO];        
+        [this logout];        
     }));    
 }
 

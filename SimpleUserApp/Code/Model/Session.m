@@ -9,6 +9,10 @@
     return @"/users/sign_in.json";
 }
 
+- (NSString*) destroyPath{
+    return @"/users/sign_out.json";
+}
+
 + (Class) syncClass{
     return [SessionSync class];
 }
