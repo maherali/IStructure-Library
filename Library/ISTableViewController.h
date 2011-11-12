@@ -14,6 +14,7 @@
 @property (retain) ISCollection     *collection;
 @property (retain) NSDictionary     *options;
 @property (retain) NSDictionary     *params;
+@property (assign) UITableViewStyle style;
 
 - (id) initWithValues:(NSDictionary*) _passedIn andStyle:(UITableViewStyle) style;
 - (id) initWithValues:(NSDictionary*) _passedIn;

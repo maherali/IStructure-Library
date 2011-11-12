@@ -244,7 +244,7 @@
 
 /////////////////////////////////////////////////////////////////////
 
-#define REJECT_SIMULTANEOUS_CONNECTIONS if(self.sync) return;
+#define REJECT_SIMULTANEOUS_CONNECTIONS if(self.sync) {LOG(@"no sim calls"); return;}
 
 #define IS_COLLECTION(OPTIONS) [OPTIONS objectForKey:COLLECTION_KEY]
 #define IS_SILENT(OPTIONS) [[OPTIONS objectForKey:SILENT_KEY] boolValue]
