@@ -5,14 +5,16 @@
 @implementation TCLoginController
 
 - (void) login{
+    __block TCLoginController *this = self;
     if(((Session*)self.model).loggedIn){
         [UIAlertView message:$array(@"You are already logged in!")];
+        $navigate(@"/welcome");
         return;
     }
-     __block TCLoginController *this = self;
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;
+        $navigate(@"/welcome");
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
         [UIAlertView errors:errors];
         
@@ -37,6 +39,13 @@
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
     });
+}
+
+- (NSDictionary*) routes{
+    __block TCLoginController *this = self;
+    return $dict(@"/logout", $block(^(NSNotification* notif){
+        [this.navigationController popToRootViewControllerAnimated:NO];        
+    }));    
 }
 
 @end

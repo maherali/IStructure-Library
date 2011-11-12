@@ -121,6 +121,8 @@
 		412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBC146E277B00C82B42 /* WelcomeController.m */; };
+		41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBF146E28B100C82B42 /* WelcomeView.m */; };
 		4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* MyErrorDecoder.m */; };
 		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
 		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
@@ -359,6 +361,10 @@
 		412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISCacheDatabase.h; path = Library/ISCacheDatabase.h; sourceTree = "<group>"; };
 		412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISEnhancedSync.h; path = Library/ISEnhancedSync.h; sourceTree = "<group>"; };
 		412745C01448ED2400CA7E05 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		41744FBB146E277B00C82B42 /* WelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeController.h; path = Code/Controller/Welcome/WelcomeController.h; sourceTree = "<group>"; };
+		41744FBC146E277B00C82B42 /* WelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeController.m; path = Code/Controller/Welcome/WelcomeController.m; sourceTree = "<group>"; };
+		41744FBE146E28B100C82B42 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Code/View/Welcome/WelcomeView.h; sourceTree = "<group>"; };
+		41744FBF146E28B100C82B42 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = Code/View/Welcome/WelcomeView.m; sourceTree = "<group>"; };
 		4184A10D146E129D00572663 /* MyErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyErrorDecoder.h; path = Code/Sync/MyErrorDecoder.h; sourceTree = "<group>"; };
 		4184A10E146E129D00572663 /* MyErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyErrorDecoder.m; path = Code/Sync/MyErrorDecoder.m; sourceTree = "<group>"; };
 		4184A10F146E129D00572663 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Code/Sync/SessionSync.h; sourceTree = "<group>"; };
@@ -370,9 +376,9 @@
 		418A6E2C146CC9B4009243E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		418A6E2E146CC9B4009243E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		418A6E30146CC9B4009243E4 /* HTTPBasicAuthApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HTTPBasicAuthApp-Prefix.pch"; sourceTree = "<group>"; };
-		418A6E3B146CCB1F009243E4 /* Session1.h */ = {isa = PBXFileReference; fileEncoding = 4; name = Session1.h; path = Models/Session1.h; sourceTree = "<group>"; };
+		418A6E3B146CCB1F009243E4 /* Session1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session1.h; path = Models/Session1.h; sourceTree = "<group>"; };
 		418A6E3C146CCB1F009243E4 /* Session1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session1.m; path = Models/Session1.m; sourceTree = "<group>"; };
-		418A6E3E146CCB56009243E4 /* Session1Sync.h */ = {isa = PBXFileReference; fileEncoding = 4; name = Session1Sync.h; path = Sync/Session1Sync.h; sourceTree = "<group>"; };
+		418A6E3E146CCB56009243E4 /* Session1Sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session1Sync.h; path = Sync/Session1Sync.h; sourceTree = "<group>"; };
 		418A6E3F146CCB56009243E4 /* Session1Sync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session1Sync.m; path = Sync/Session1Sync.m; sourceTree = "<group>"; };
 		418A6E41146CCEA2009243E4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = App/AppDelegate.h; sourceTree = "<group>"; };
 		418A6E42146CCEA2009243E4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = App/AppDelegate.m; sourceTree = "<group>"; };
@@ -702,6 +708,7 @@
 		41230608146E02A300B0DEA1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				41744FB9146E271B00C82B42 /* Welcome */,
 				4123065C146E074100B0DEA1 /* Login */,
 				4123065B146E073900B0DEA1 /* Register */,
 				4123065A146E072E00B0DEA1 /* Shared */,
@@ -712,6 +719,7 @@
 		41230609146E02A600B0DEA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				41744FBA146E272800C82B42 /* Welcome */,
 				41230626146E063200B0DEA1 /* Login */,
 				41230625146E062700B0DEA1 /* Register */,
 				41230624146E049800B0DEA1 /* Shared */,
@@ -844,6 +852,24 @@
 				41230661146E076300B0DEA1 /* TCLoginController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		41744FB9146E271B00C82B42 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				41744FBB146E277B00C82B42 /* WelcomeController.h */,
+				41744FBC146E277B00C82B42 /* WelcomeController.m */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		41744FBA146E272800C82B42 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				41744FBE146E28B100C82B42 /* WelcomeView.h */,
+				41744FBF146E28B100C82B42 /* WelcomeView.m */,
+			);
+			name = Welcome;
 			sourceTree = "<group>";
 		};
 		418A6E28146CC9B4009243E4 /* HTTPBasicAuthApp */ = {
@@ -1418,6 +1444,8 @@
 				4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */,
 				4184A112146E129D00572663 /* SessionSync.m in Sources */,
 				4184A116146E12AC00572663 /* Session.m in Sources */,
+				41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */,
+				41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

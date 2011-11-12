@@ -24,7 +24,8 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	self.backgroundColor = tempColor;
 	[tempColor release];
-    //show TNC
+    TCTermsAndConditionsLabel *this = self;
+    $trigger(@"link_tapped");
 }
 
 @end
