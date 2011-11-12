@@ -68,8 +68,4 @@
     return [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 170) andModel:self.model] autorelease];
 }
 
-// receive the login button was clicked, get the remember me state and the user/pass and trigger
-// should update the session model and trigger
-// someone must observer the session model 
-
 @end

@@ -24,6 +24,21 @@
     }))];
 }
 
+- (void) logout{
+    __block TCLoginController *this = self;
+    
+    $trigger(@"internet:begin", self.model);
+    [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
+        $trigger(@"internet:end", this.model);
+        [UIAlertView message:$array(@"You have successfully logged out of server!")];
+        ((Session*)this.model).loggedIn = NO;
+        [this.navigationController popToRootViewControllerAnimated:NO];
+    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
+        $trigger(@"internet:end", this.model);
+        [UIAlertView errors:errors];
+    }))];
+}
+
 - (void) startRegister{
     __block TCLoginController *this = self;
     Registration *reg = [[[Registration alloc] initWithAttributes:$dict(@"email", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
@@ -34,10 +49,6 @@
     self = [super initWithValues:passedInValues andStyle:style];
     self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
     return self;
-}
-
-- (Class) formTableClass{
-    return [TCLoginView class];
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -61,22 +72,10 @@
     $watch(@"login:success", ^(NSNotification *notif){
         ((Session*)this.model).loggedIn = YES;
     });
-    
 }
 
-- (void) logout{
-    __block TCLoginController *this = self;
-    
-    $trigger(@"internet:begin", self.model);
-    [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
-        $trigger(@"internet:end", this.model);
-        [UIAlertView message:$array(@"You have successfully logged out of server!")];
-        ((Session*)this.model).loggedIn = NO;
-        [this.navigationController popToRootViewControllerAnimated:NO];
-    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
-        $trigger(@"internet:end", this.model);
-        [UIAlertView errors:errors];
-    }))];
+- (Class) formTableClass{
+    return [TCLoginView class];
 }
 
 - (NSDictionary*) routes{

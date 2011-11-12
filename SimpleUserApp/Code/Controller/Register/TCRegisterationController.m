@@ -8,9 +8,7 @@
 - (void) signup{
     __block TCRegisterationController *this = self;
     $trigger(@"register:begin", this.model);
-    
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Registration *model, NSData *data){
-        LOG(@"current thread is main thread? %d", [[NSThread currentThread] isMainThread]);
         $trigger(@"register:end", this.model);
         $trigger(@"login:success");
         [UIAlertView message:$array(@"Successful Registration!")];
@@ -20,10 +18,6 @@
         $trigger(@"register:end", this.model);
         [UIAlertView errors:errors];
     }))];
-}
-
-- (Class) formTableClass{
-    return [TCRegistrationView class];
 }
 
 - (void) viewDidLoad{
@@ -41,21 +35,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void) editAction{
-    
-}
-
-- (void) refreshAction{
-    
+- (Class) formTableClass{
+    return [TCRegistrationView class];
 }
 
 + (void) load{
     __block Class this = self;
     $routec(@"/register");
-}
-
-- (void) dealloc{
-    [super dealloc];
 }
 
 @end

@@ -45,7 +45,6 @@
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
     });
 
-    
     return self;
 }
 

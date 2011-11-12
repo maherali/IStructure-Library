@@ -1,4 +1,4 @@
-#import "UINavigationBar+TripCase.h"
+#import "UINavigationBar+Enhancements.h"
 
 @interface MyNavigationBar : UINavigationBar
 

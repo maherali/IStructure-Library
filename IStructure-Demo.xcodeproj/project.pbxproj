@@ -106,13 +106,12 @@
 		41230643146E068600B0DEA1 /* TCTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230634146E068600B0DEA1 /* TCTextFieldCell.m */; };
 		41230644146E068600B0DEA1 /* TCToggleFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230636146E068600B0DEA1 /* TCToggleFieldCell.m */; };
 		41230645146E068600B0DEA1 /* TCUIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230638146E068600B0DEA1 /* TCUIFactory.m */; };
-		41230646146E068600B0DEA1 /* UINavigationBar+TripCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */; };
-		41230647146E068600B0DEA1 /* UIView+TripCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123063C146E068600B0DEA1 /* UIView+TripCase.m */; };
+		41230646146E068600B0DEA1 /* UINavigationBar+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123063A146E068600B0DEA1 /* UINavigationBar+Enhancements.m */; };
+		41230647146E068600B0DEA1 /* UIView+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123063C146E068600B0DEA1 /* UIView+Enhancements.m */; };
 		4123064C146E069900B0DEA1 /* TCLoginFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230649146E069900B0DEA1 /* TCLoginFooter.m */; };
 		4123064D146E069900B0DEA1 /* TCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123064B146E069900B0DEA1 /* TCLoginView.m */; };
 		41230654146E06B400B0DEA1 /* TCRegistrationFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */; };
 		41230655146E06B400B0DEA1 /* TCRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230651146E06B400B0DEA1 /* TCRegistrationView.m */; };
-		41230656146E06B400B0DEA1 /* TCLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230653146E06B400B0DEA1 /* TCLink.m */; };
 		41230659146E06E000B0DEA1 /* TCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230658146E06E000B0DEA1 /* TCDateFormatter.m */; };
 		4123065F146E075800B0DEA1 /* TCFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123065E146E075800B0DEA1 /* TCFormController.m */; };
 		41230662146E076300B0DEA1 /* TCLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230661146E076300B0DEA1 /* TCLoginController.m */; };
@@ -128,6 +127,7 @@
 		41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41744FCF146EC31500C82B42 /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FCE146EC31500C82B42 /* Registration.m */; };
 		41744FD2146EC3A000C82B42 /* AppSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FD1146EC3A000C82B42 /* AppSync.m */; };
+		41744FD5146F133D00C82B42 /* TCLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FD4146F133C00C82B42 /* TCLink.m */; };
 		4184A111146E129D00572663 /* AppErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* AppErrorDecoder.m */; };
 		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
 		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
@@ -341,10 +341,10 @@
 		41230636146E068600B0DEA1 /* TCToggleFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCToggleFieldCell.m; path = Code/View/Shared/TCToggleFieldCell.m; sourceTree = "<group>"; };
 		41230637146E068600B0DEA1 /* TCUIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCUIFactory.h; path = Code/View/Shared/TCUIFactory.h; sourceTree = "<group>"; };
 		41230638146E068600B0DEA1 /* TCUIFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCUIFactory.m; path = Code/View/Shared/TCUIFactory.m; sourceTree = "<group>"; };
-		41230639146E068600B0DEA1 /* UINavigationBar+TripCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+TripCase.h"; path = "Code/View/Shared/UINavigationBar+TripCase.h"; sourceTree = "<group>"; };
-		4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+TripCase.m"; path = "Code/View/Shared/UINavigationBar+TripCase.m"; sourceTree = "<group>"; };
-		4123063B146E068600B0DEA1 /* UIView+TripCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TripCase.h"; path = "Code/View/Shared/UIView+TripCase.h"; sourceTree = "<group>"; };
-		4123063C146E068600B0DEA1 /* UIView+TripCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TripCase.m"; path = "Code/View/Shared/UIView+TripCase.m"; sourceTree = "<group>"; };
+		41230639146E068600B0DEA1 /* UINavigationBar+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "UINavigationBar+Enhancements.h"; path = "Code/View/Shared/UINavigationBar+Enhancements.h"; sourceTree = "<group>"; };
+		4123063A146E068600B0DEA1 /* UINavigationBar+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+Enhancements.m"; path = "Code/View/Shared/UINavigationBar+Enhancements.m"; sourceTree = "<group>"; };
+		4123063B146E068600B0DEA1 /* UIView+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "UIView+Enhancements.h"; path = "Code/View/Shared/UIView+Enhancements.h"; sourceTree = "<group>"; };
+		4123063C146E068600B0DEA1 /* UIView+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Enhancements.m"; path = "Code/View/Shared/UIView+Enhancements.m"; sourceTree = "<group>"; };
 		41230648146E069900B0DEA1 /* TCLoginFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLoginFooter.h; path = Code/View/Login/TCLoginFooter.h; sourceTree = "<group>"; };
 		41230649146E069900B0DEA1 /* TCLoginFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLoginFooter.m; path = Code/View/Login/TCLoginFooter.m; sourceTree = "<group>"; };
 		4123064A146E069900B0DEA1 /* TCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLoginView.h; path = Code/View/Login/TCLoginView.h; sourceTree = "<group>"; };
@@ -353,8 +353,6 @@
 		4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationFooter.m; path = Code/View/Register/TCRegistrationFooter.m; sourceTree = "<group>"; };
 		41230650146E06B400B0DEA1 /* TCRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegistrationView.h; path = Code/View/Register/TCRegistrationView.h; sourceTree = "<group>"; };
 		41230651146E06B400B0DEA1 /* TCRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationView.m; path = Code/View/Register/TCRegistrationView.m; sourceTree = "<group>"; };
-		41230652146E06B400B0DEA1 /* TCLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLink.h; path = Code/View/Register/TCLink.h; sourceTree = "<group>"; };
-		41230653146E06B400B0DEA1 /* TCLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLink.m; path = Code/View/Register/TCLink.m; sourceTree = "<group>"; };
 		41230657146E06E000B0DEA1 /* TCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCDateFormatter.h; path = Code/Util/TCDateFormatter.h; sourceTree = "<group>"; };
 		41230658146E06E000B0DEA1 /* TCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCDateFormatter.m; path = Code/Util/TCDateFormatter.m; sourceTree = "<group>"; };
 		4123065D146E075800B0DEA1 /* TCFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormController.h; path = Code/Controller/Shared/TCFormController.h; sourceTree = "<group>"; };
@@ -379,7 +377,9 @@
 		41744FCE146EC31500C82B42 /* Registration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Registration.m; path = Code/Model/Registration.m; sourceTree = "<group>"; };
 		41744FD0146EC3A000C82B42 /* AppSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSync.h; path = Code/Sync/AppSync.h; sourceTree = "<group>"; };
 		41744FD1146EC3A000C82B42 /* AppSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppSync.m; path = Code/Sync/AppSync.m; sourceTree = "<group>"; };
-		4184A10D146E129D00572663 /* AppErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; name = AppErrorDecoder.h; path = Code/Sync/AppErrorDecoder.h; sourceTree = "<group>"; };
+		41744FD3146F133C00C82B42 /* TCLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLink.h; path = Code/View/Shared/TCLink.h; sourceTree = "<group>"; };
+		41744FD4146F133C00C82B42 /* TCLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLink.m; path = Code/View/Shared/TCLink.m; sourceTree = "<group>"; };
+		4184A10D146E129D00572663 /* AppErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppErrorDecoder.h; path = Code/Sync/AppErrorDecoder.h; sourceTree = "<group>"; };
 		4184A10E146E129D00572663 /* AppErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppErrorDecoder.m; path = Code/Sync/AppErrorDecoder.m; sourceTree = "<group>"; };
 		4184A10F146E129D00572663 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Code/Sync/SessionSync.h; sourceTree = "<group>"; };
 		4184A110146E129D00572663 /* SessionSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionSync.m; path = Code/Sync/SessionSync.m; sourceTree = "<group>"; };
@@ -797,6 +797,8 @@
 		41230624146E049800B0DEA1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				41744FD3146F133C00C82B42 /* TCLink.h */,
+				41744FD4146F133C00C82B42 /* TCLink.m */,
 				41230627146E068600B0DEA1 /* TCCheckBoxView.h */,
 				41230628146E068600B0DEA1 /* TCCheckBoxView.m */,
 				41230629146E068600B0DEA1 /* TCCheckedFieldCell.h */,
@@ -815,10 +817,10 @@
 				41230636146E068600B0DEA1 /* TCToggleFieldCell.m */,
 				41230637146E068600B0DEA1 /* TCUIFactory.h */,
 				41230638146E068600B0DEA1 /* TCUIFactory.m */,
-				41230639146E068600B0DEA1 /* UINavigationBar+TripCase.h */,
-				4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */,
-				4123063B146E068600B0DEA1 /* UIView+TripCase.h */,
-				4123063C146E068600B0DEA1 /* UIView+TripCase.m */,
+				41230639146E068600B0DEA1 /* UINavigationBar+Enhancements.h */,
+				4123063A146E068600B0DEA1 /* UINavigationBar+Enhancements.m */,
+				4123063B146E068600B0DEA1 /* UIView+Enhancements.h */,
+				4123063C146E068600B0DEA1 /* UIView+Enhancements.m */,
 				41744FC1146E982700C82B42 /* TCInternetButton.h */,
 				41744FC2146E982700C82B42 /* TCInternetButton.m */,
 				41744FC8146EA2B500C82B42 /* LoadingView.h */,
@@ -834,8 +836,6 @@
 				4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */,
 				41230650146E06B400B0DEA1 /* TCRegistrationView.h */,
 				41230651146E06B400B0DEA1 /* TCRegistrationView.m */,
-				41230652146E06B400B0DEA1 /* TCLink.h */,
-				41230653146E06B400B0DEA1 /* TCLink.m */,
 			);
 			name = Register;
 			sourceTree = "<group>";
@@ -1454,13 +1454,12 @@
 				41230643146E068600B0DEA1 /* TCTextFieldCell.m in Sources */,
 				41230644146E068600B0DEA1 /* TCToggleFieldCell.m in Sources */,
 				41230645146E068600B0DEA1 /* TCUIFactory.m in Sources */,
-				41230646146E068600B0DEA1 /* UINavigationBar+TripCase.m in Sources */,
-				41230647146E068600B0DEA1 /* UIView+TripCase.m in Sources */,
+				41230646146E068600B0DEA1 /* UINavigationBar+Enhancements.m in Sources */,
+				41230647146E068600B0DEA1 /* UIView+Enhancements.m in Sources */,
 				4123064C146E069900B0DEA1 /* TCLoginFooter.m in Sources */,
 				4123064D146E069900B0DEA1 /* TCLoginView.m in Sources */,
 				41230654146E06B400B0DEA1 /* TCRegistrationFooter.m in Sources */,
 				41230655146E06B400B0DEA1 /* TCRegistrationView.m in Sources */,
-				41230656146E06B400B0DEA1 /* TCLink.m in Sources */,
 				41230659146E06E000B0DEA1 /* TCDateFormatter.m in Sources */,
 				4123065F146E075800B0DEA1 /* TCFormController.m in Sources */,
 				41230662146E076300B0DEA1 /* TCLoginController.m in Sources */,
@@ -1474,6 +1473,7 @@
 				41744FCA146EA2B500C82B42 /* LoadingView.m in Sources */,
 				41744FCF146EC31500C82B42 /* Registration.m in Sources */,
 				41744FD2146EC3A000C82B42 /* AppSync.m in Sources */,
+				41744FD5146F133D00C82B42 /* TCLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

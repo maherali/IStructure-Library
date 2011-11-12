@@ -1,6 +1,6 @@
 #import <QuartzCore/QuartzCore.h>
 
-@interface UINavigationBar (TripCase)
+@interface UINavigationBar (Enhancements)
 
 -(void) applyDefaultStyle;
 

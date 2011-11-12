@@ -31,5 +31,4 @@
     $trigger(@"signup_button:tapped");
 }
 
-
 @end

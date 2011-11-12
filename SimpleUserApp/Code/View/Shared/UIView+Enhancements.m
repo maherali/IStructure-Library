@@ -1,6 +1,6 @@
-#import "UIView+TripCase.h"
+#import "UIView+Enhancements.h"
 
-@implementation UIView(TripCase)
+@implementation UIView(Enhancements)
 
 - (UIView*) findFirstResponder{
     if (self.isFirstResponder) {
