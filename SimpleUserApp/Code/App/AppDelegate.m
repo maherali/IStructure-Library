@@ -9,6 +9,7 @@
 @synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    LOG(@"%@", [IStructure version]);
     [ISModel setBaseUrl:@"http://gentle-lightning-6506.herokuapp.com/"];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [self.window addSubview:[TCUIFactory backgroundImageView]];
