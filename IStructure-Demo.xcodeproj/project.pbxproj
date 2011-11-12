@@ -78,6 +78,45 @@
 		411C1C85143C04AE000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
 		411C1C86143C04BE000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
 		411C1C87143C04CA000449E1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
+		412305EE146E019000B0DEA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2A143BFBA2000449E1 /* UIKit.framework */; };
+		412305EF146E019000B0DEA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2C143BFBA2000449E1 /* Foundation.framework */; };
+		412305F0146E019000B0DEA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */; };
+		412305F6146E019000B0DEA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 412305F4146E019000B0DEA1 /* InfoPlist.strings */; };
+		412305F8146E019000B0DEA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 412305F7146E019000B0DEA1 /* main.m */; };
+		41230604146E026400B0DEA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230603146E026400B0DEA1 /* AppDelegate.m */; };
+		41230605146E028500B0DEA1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		41230606146E029000B0DEA1 /* libIStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1C83143C049D000449E1 /* libIStructure.a */; };
+		41230619146E042100B0DEA1 /* bg_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 4123060E146E042100B0DEA1 /* bg_main.png */; };
+		4123061A146E042100B0DEA1 /* bg_main@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4123060F146E042100B0DEA1 /* bg_main@2x.png */; };
+		4123061B146E042100B0DEA1 /* btn_back_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230610146E042100B0DEA1 /* btn_back_press@2x.png */; };
+		4123061C146E042100B0DEA1 /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230611146E042100B0DEA1 /* btn_back@2x.png */; };
+		4123061D146E042100B0DEA1 /* btn_light_blue_lg_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230612146E042100B0DEA1 /* btn_light_blue_lg_press@2x.png */; };
+		4123061E146E042100B0DEA1 /* btn_light_blue_lg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230613146E042100B0DEA1 /* btn_light_blue_lg@2x.png */; };
+		4123061F146E042100B0DEA1 /* chk_box_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230614146E042100B0DEA1 /* chk_box_selected.png */; };
+		41230620146E042100B0DEA1 /* chk_box_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230615146E042100B0DEA1 /* chk_box_selected@2x.png */; };
+		41230621146E042100B0DEA1 /* chk_box.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230616146E042100B0DEA1 /* chk_box.png */; };
+		41230622146E042100B0DEA1 /* chk_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230617146E042100B0DEA1 /* chk_box@2x.png */; };
+		41230623146E042100B0DEA1 /* titlebar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41230618146E042100B0DEA1 /* titlebar_bg@2x.png */; };
+		4123063D146E068600B0DEA1 /* TCCheckBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230628146E068600B0DEA1 /* TCCheckBoxView.m */; };
+		4123063E146E068600B0DEA1 /* TCCheckedFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123062A146E068600B0DEA1 /* TCCheckedFieldCell.m */; };
+		4123063F146E068600B0DEA1 /* TCEditingNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123062C146E068600B0DEA1 /* TCEditingNavigationBar.m */; };
+		41230640146E068600B0DEA1 /* TCFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123062E146E068600B0DEA1 /* TCFormCell.m */; };
+		41230641146E068600B0DEA1 /* TCFormTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230630146E068600B0DEA1 /* TCFormTable.m */; };
+		41230642146E068600B0DEA1 /* TCLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230632146E068600B0DEA1 /* TCLinkLabel.m */; };
+		41230643146E068600B0DEA1 /* TCTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230634146E068600B0DEA1 /* TCTextFieldCell.m */; };
+		41230644146E068600B0DEA1 /* TCToggleFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230636146E068600B0DEA1 /* TCToggleFieldCell.m */; };
+		41230645146E068600B0DEA1 /* TCUIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230638146E068600B0DEA1 /* TCUIFactory.m */; };
+		41230646146E068600B0DEA1 /* UINavigationBar+TripCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */; };
+		41230647146E068600B0DEA1 /* UIView+TripCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123063C146E068600B0DEA1 /* UIView+TripCase.m */; };
+		4123064C146E069900B0DEA1 /* TCLoginFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230649146E069900B0DEA1 /* TCLoginFooter.m */; };
+		4123064D146E069900B0DEA1 /* TCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123064B146E069900B0DEA1 /* TCLoginView.m */; };
+		41230654146E06B400B0DEA1 /* TCRegistrationFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */; };
+		41230655146E06B400B0DEA1 /* TCRegistrationFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230651146E06B400B0DEA1 /* TCRegistrationFormView.m */; };
+		41230656146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */; };
+		41230659146E06E000B0DEA1 /* TCDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230658146E06E000B0DEA1 /* TCDateFormatter.m */; };
+		4123065F146E075800B0DEA1 /* TCFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4123065E146E075800B0DEA1 /* TCFormController.m */; };
+		41230662146E076300B0DEA1 /* TCLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230661146E076300B0DEA1 /* TCLoginController.m */; };
+		41230665146E076D00B0DEA1 /* TCRegisterationFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41230664146E076D00B0DEA1 /* TCRegisterationFormController.m */; };
 		412745C11448ED2400CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
@@ -256,6 +295,64 @@
 		411C1C7C143C036C000449E1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		411C1C81143C0392000449E1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		411C1C83143C049D000449E1 /* libIStructure.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libIStructure.a; path = Library/libIStructure.a; sourceTree = "<group>"; };
+		412305EC146E019000B0DEA1 /* SimpleUserApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleUserApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		412305F3146E019000B0DEA1 /* SimpleUserApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleUserApp-Info.plist"; sourceTree = "<group>"; };
+		412305F5146E019000B0DEA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		412305F7146E019000B0DEA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		412305F9146E019000B0DEA1 /* SimpleUserApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleUserApp-Prefix.pch"; sourceTree = "<group>"; };
+		41230602146E026400B0DEA1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Code/App/AppDelegate.h; sourceTree = "<group>"; };
+		41230603146E026400B0DEA1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Code/App/AppDelegate.m; sourceTree = "<group>"; };
+		4123060E146E042100B0DEA1 /* bg_main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_main.png; path = Assets/bg_main.png; sourceTree = "<group>"; };
+		4123060F146E042100B0DEA1 /* bg_main@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg_main@2x.png"; path = "Assets/bg_main@2x.png"; sourceTree = "<group>"; };
+		41230610146E042100B0DEA1 /* btn_back_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_back_press@2x.png"; path = "Assets/btn_back_press@2x.png"; sourceTree = "<group>"; };
+		41230611146E042100B0DEA1 /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_back@2x.png"; path = "Assets/btn_back@2x.png"; sourceTree = "<group>"; };
+		41230612146E042100B0DEA1 /* btn_light_blue_lg_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_light_blue_lg_press@2x.png"; path = "Assets/btn_light_blue_lg_press@2x.png"; sourceTree = "<group>"; };
+		41230613146E042100B0DEA1 /* btn_light_blue_lg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_light_blue_lg@2x.png"; path = "Assets/btn_light_blue_lg@2x.png"; sourceTree = "<group>"; };
+		41230614146E042100B0DEA1 /* chk_box_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chk_box_selected.png; path = Assets/chk_box_selected.png; sourceTree = "<group>"; };
+		41230615146E042100B0DEA1 /* chk_box_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chk_box_selected@2x.png"; path = "Assets/chk_box_selected@2x.png"; sourceTree = "<group>"; };
+		41230616146E042100B0DEA1 /* chk_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chk_box.png; path = Assets/chk_box.png; sourceTree = "<group>"; };
+		41230617146E042100B0DEA1 /* chk_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chk_box@2x.png"; path = "Assets/chk_box@2x.png"; sourceTree = "<group>"; };
+		41230618146E042100B0DEA1 /* titlebar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titlebar_bg@2x.png"; path = "Assets/titlebar_bg@2x.png"; sourceTree = "<group>"; };
+		41230627146E068600B0DEA1 /* TCCheckBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCCheckBoxView.h; path = Code/View/Shared/TCCheckBoxView.h; sourceTree = "<group>"; };
+		41230628146E068600B0DEA1 /* TCCheckBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCCheckBoxView.m; path = Code/View/Shared/TCCheckBoxView.m; sourceTree = "<group>"; };
+		41230629146E068600B0DEA1 /* TCCheckedFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCCheckedFieldCell.h; path = Code/View/Shared/TCCheckedFieldCell.h; sourceTree = "<group>"; };
+		4123062A146E068600B0DEA1 /* TCCheckedFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCCheckedFieldCell.m; path = Code/View/Shared/TCCheckedFieldCell.m; sourceTree = "<group>"; };
+		4123062B146E068600B0DEA1 /* TCEditingNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCEditingNavigationBar.h; path = Code/View/Shared/TCEditingNavigationBar.h; sourceTree = "<group>"; };
+		4123062C146E068600B0DEA1 /* TCEditingNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCEditingNavigationBar.m; path = Code/View/Shared/TCEditingNavigationBar.m; sourceTree = "<group>"; };
+		4123062D146E068600B0DEA1 /* TCFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormCell.h; path = Code/View/Shared/TCFormCell.h; sourceTree = "<group>"; };
+		4123062E146E068600B0DEA1 /* TCFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCFormCell.m; path = Code/View/Shared/TCFormCell.m; sourceTree = "<group>"; };
+		4123062F146E068600B0DEA1 /* TCFormTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormTable.h; path = Code/View/Shared/TCFormTable.h; sourceTree = "<group>"; };
+		41230630146E068600B0DEA1 /* TCFormTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCFormTable.m; path = Code/View/Shared/TCFormTable.m; sourceTree = "<group>"; };
+		41230631146E068600B0DEA1 /* TCLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLinkLabel.h; path = Code/View/Shared/TCLinkLabel.h; sourceTree = "<group>"; };
+		41230632146E068600B0DEA1 /* TCLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLinkLabel.m; path = Code/View/Shared/TCLinkLabel.m; sourceTree = "<group>"; };
+		41230633146E068600B0DEA1 /* TCTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTextFieldCell.h; path = Code/View/Shared/TCTextFieldCell.h; sourceTree = "<group>"; };
+		41230634146E068600B0DEA1 /* TCTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTextFieldCell.m; path = Code/View/Shared/TCTextFieldCell.m; sourceTree = "<group>"; };
+		41230635146E068600B0DEA1 /* TCToggleFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCToggleFieldCell.h; path = Code/View/Shared/TCToggleFieldCell.h; sourceTree = "<group>"; };
+		41230636146E068600B0DEA1 /* TCToggleFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCToggleFieldCell.m; path = Code/View/Shared/TCToggleFieldCell.m; sourceTree = "<group>"; };
+		41230637146E068600B0DEA1 /* TCUIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCUIFactory.h; path = Code/View/Shared/TCUIFactory.h; sourceTree = "<group>"; };
+		41230638146E068600B0DEA1 /* TCUIFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCUIFactory.m; path = Code/View/Shared/TCUIFactory.m; sourceTree = "<group>"; };
+		41230639146E068600B0DEA1 /* UINavigationBar+TripCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+TripCase.h"; path = "Code/View/Shared/UINavigationBar+TripCase.h"; sourceTree = "<group>"; };
+		4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+TripCase.m"; path = "Code/View/Shared/UINavigationBar+TripCase.m"; sourceTree = "<group>"; };
+		4123063B146E068600B0DEA1 /* UIView+TripCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TripCase.h"; path = "Code/View/Shared/UIView+TripCase.h"; sourceTree = "<group>"; };
+		4123063C146E068600B0DEA1 /* UIView+TripCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TripCase.m"; path = "Code/View/Shared/UIView+TripCase.m"; sourceTree = "<group>"; };
+		41230648146E069900B0DEA1 /* TCLoginFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLoginFooter.h; path = Code/View/Login/TCLoginFooter.h; sourceTree = "<group>"; };
+		41230649146E069900B0DEA1 /* TCLoginFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLoginFooter.m; path = Code/View/Login/TCLoginFooter.m; sourceTree = "<group>"; };
+		4123064A146E069900B0DEA1 /* TCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLoginView.h; path = Code/View/Login/TCLoginView.h; sourceTree = "<group>"; };
+		4123064B146E069900B0DEA1 /* TCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLoginView.m; path = Code/View/Login/TCLoginView.m; sourceTree = "<group>"; };
+		4123064E146E06B400B0DEA1 /* TCRegistrationFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegistrationFooter.h; path = Code/View/Register/TCRegistrationFooter.h; sourceTree = "<group>"; };
+		4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationFooter.m; path = Code/View/Register/TCRegistrationFooter.m; sourceTree = "<group>"; };
+		41230650146E06B400B0DEA1 /* TCRegistrationFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegistrationFormView.h; path = Code/View/Register/TCRegistrationFormView.h; sourceTree = "<group>"; };
+		41230651146E06B400B0DEA1 /* TCRegistrationFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegistrationFormView.m; path = Code/View/Register/TCRegistrationFormView.m; sourceTree = "<group>"; };
+		41230652146E06B400B0DEA1 /* TCTermsAndConditionsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTermsAndConditionsLabel.h; path = Code/View/Register/TCTermsAndConditionsLabel.h; sourceTree = "<group>"; };
+		41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTermsAndConditionsLabel.m; path = Code/View/Register/TCTermsAndConditionsLabel.m; sourceTree = "<group>"; };
+		41230657146E06E000B0DEA1 /* TCDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCDateFormatter.h; path = Code/Util/TCDateFormatter.h; sourceTree = "<group>"; };
+		41230658146E06E000B0DEA1 /* TCDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCDateFormatter.m; path = Code/Util/TCDateFormatter.m; sourceTree = "<group>"; };
+		4123065D146E075800B0DEA1 /* TCFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCFormController.h; path = Code/Controller/Shared/TCFormController.h; sourceTree = "<group>"; };
+		4123065E146E075800B0DEA1 /* TCFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCFormController.m; path = Code/Controller/Shared/TCFormController.m; sourceTree = "<group>"; };
+		41230660146E076300B0DEA1 /* TCLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCLoginController.h; path = Code/Controller/Login/TCLoginController.h; sourceTree = "<group>"; };
+		41230661146E076300B0DEA1 /* TCLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCLoginController.m; path = Code/Controller/Login/TCLoginController.m; sourceTree = "<group>"; };
+		41230663146E076D00B0DEA1 /* TCRegisterationFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCRegisterationFormController.h; path = Code/Controller/Register/TCRegisterationFormController.h; sourceTree = "<group>"; };
+		41230664146E076D00B0DEA1 /* TCRegisterationFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCRegisterationFormController.m; path = Code/Controller/Register/TCRegisterationFormController.m; sourceTree = "<group>"; };
 		412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISCacheDatabase.h; path = Library/ISCacheDatabase.h; sourceTree = "<group>"; };
 		412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISEnhancedSync.h; path = Library/ISEnhancedSync.h; sourceTree = "<group>"; };
 		412745C01448ED2400CA7E05 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -331,6 +428,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		412305E9146E019000B0DEA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41230606146E029000B0DEA1 /* libIStructure.a in Frameworks */,
+				41230605146E028500B0DEA1 /* libsqlite3.dylib in Frameworks */,
+				412305EE146E019000B0DEA1 /* UIKit.framework in Frameworks */,
+				412305EF146E019000B0DEA1 /* Foundation.framework in Frameworks */,
+				412305F0146E019000B0DEA1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		418A6E20146CC9B4009243E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +465,7 @@
 				411C1BE6143BFEF4000449E1 /* NearbyPlace App */,
 				411C1C53143C029B000449E1 /* RoutePlayground App */,
 				418A6E28146CC9B4009243E4 /* HTTPBasicAuthApp */,
+				412305F1146E019000B0DEA1 /* SimpleUserApp */,
 				411C1B29143BFBA2000449E1 /* Frameworks */,
 				411C1B27143BFBA2000449E1 /* Products */,
 			);
@@ -369,6 +479,7 @@
 				411C1BE1143BFEF4000449E1 /* NearbyPlace.app */,
 				411C1C4E143C029B000449E1 /* RoutePlayground.app */,
 				418A6E23146CC9B4009243E4 /* HTTPBasicAuthApp.app */,
+				412305EC146E019000B0DEA1 /* SimpleUserApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -534,6 +645,190 @@
 				411C1C77143C034E000449E1 /* RoutePlayground-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		412305F1146E019000B0DEA1 /* SimpleUserApp */ = {
+			isa = PBXGroup;
+			children = (
+				4123060D146E038C00B0DEA1 /* Assets */,
+				41230601146E01D300B0DEA1 /* App */,
+				41230607146E029F00B0DEA1 /* Service */,
+				41230608146E02A300B0DEA1 /* Controller */,
+				41230609146E02A600B0DEA1 /* View */,
+				4123060B146E02AA00B0DEA1 /* Model */,
+				4123060A146E02A800B0DEA1 /* Sync */,
+				4123060C146E031300B0DEA1 /* Util */,
+				412305F2146E019000B0DEA1 /* Supporting Files */,
+			);
+			path = SimpleUserApp;
+			sourceTree = "<group>";
+		};
+		412305F2146E019000B0DEA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				412305F3146E019000B0DEA1 /* SimpleUserApp-Info.plist */,
+				412305F4146E019000B0DEA1 /* InfoPlist.strings */,
+				412305F7146E019000B0DEA1 /* main.m */,
+				412305F9146E019000B0DEA1 /* SimpleUserApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41230601146E01D300B0DEA1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				41230602146E026400B0DEA1 /* AppDelegate.h */,
+				41230603146E026400B0DEA1 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		41230607146E029F00B0DEA1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		41230608146E02A300B0DEA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4123065C146E074100B0DEA1 /* Login */,
+				4123065B146E073900B0DEA1 /* Register */,
+				4123065A146E072E00B0DEA1 /* Shared */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		41230609146E02A600B0DEA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				41230626146E063200B0DEA1 /* Login */,
+				41230625146E062700B0DEA1 /* Register */,
+				41230624146E049800B0DEA1 /* Shared */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4123060A146E02A800B0DEA1 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		4123060B146E02AA00B0DEA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4123060C146E031300B0DEA1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				41230657146E06E000B0DEA1 /* TCDateFormatter.h */,
+				41230658146E06E000B0DEA1 /* TCDateFormatter.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		4123060D146E038C00B0DEA1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4123060E146E042100B0DEA1 /* bg_main.png */,
+				4123060F146E042100B0DEA1 /* bg_main@2x.png */,
+				41230610146E042100B0DEA1 /* btn_back_press@2x.png */,
+				41230611146E042100B0DEA1 /* btn_back@2x.png */,
+				41230612146E042100B0DEA1 /* btn_light_blue_lg_press@2x.png */,
+				41230613146E042100B0DEA1 /* btn_light_blue_lg@2x.png */,
+				41230614146E042100B0DEA1 /* chk_box_selected.png */,
+				41230615146E042100B0DEA1 /* chk_box_selected@2x.png */,
+				41230616146E042100B0DEA1 /* chk_box.png */,
+				41230617146E042100B0DEA1 /* chk_box@2x.png */,
+				41230618146E042100B0DEA1 /* titlebar_bg@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		41230624146E049800B0DEA1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				41230627146E068600B0DEA1 /* TCCheckBoxView.h */,
+				41230628146E068600B0DEA1 /* TCCheckBoxView.m */,
+				41230629146E068600B0DEA1 /* TCCheckedFieldCell.h */,
+				4123062A146E068600B0DEA1 /* TCCheckedFieldCell.m */,
+				4123062B146E068600B0DEA1 /* TCEditingNavigationBar.h */,
+				4123062C146E068600B0DEA1 /* TCEditingNavigationBar.m */,
+				4123062D146E068600B0DEA1 /* TCFormCell.h */,
+				4123062E146E068600B0DEA1 /* TCFormCell.m */,
+				4123062F146E068600B0DEA1 /* TCFormTable.h */,
+				41230630146E068600B0DEA1 /* TCFormTable.m */,
+				41230631146E068600B0DEA1 /* TCLinkLabel.h */,
+				41230632146E068600B0DEA1 /* TCLinkLabel.m */,
+				41230633146E068600B0DEA1 /* TCTextFieldCell.h */,
+				41230634146E068600B0DEA1 /* TCTextFieldCell.m */,
+				41230635146E068600B0DEA1 /* TCToggleFieldCell.h */,
+				41230636146E068600B0DEA1 /* TCToggleFieldCell.m */,
+				41230637146E068600B0DEA1 /* TCUIFactory.h */,
+				41230638146E068600B0DEA1 /* TCUIFactory.m */,
+				41230639146E068600B0DEA1 /* UINavigationBar+TripCase.h */,
+				4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */,
+				4123063B146E068600B0DEA1 /* UIView+TripCase.h */,
+				4123063C146E068600B0DEA1 /* UIView+TripCase.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		41230625146E062700B0DEA1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4123064E146E06B400B0DEA1 /* TCRegistrationFooter.h */,
+				4123064F146E06B400B0DEA1 /* TCRegistrationFooter.m */,
+				41230650146E06B400B0DEA1 /* TCRegistrationFormView.h */,
+				41230651146E06B400B0DEA1 /* TCRegistrationFormView.m */,
+				41230652146E06B400B0DEA1 /* TCTermsAndConditionsLabel.h */,
+				41230653146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		41230626146E063200B0DEA1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				41230648146E069900B0DEA1 /* TCLoginFooter.h */,
+				41230649146E069900B0DEA1 /* TCLoginFooter.m */,
+				4123064A146E069900B0DEA1 /* TCLoginView.h */,
+				4123064B146E069900B0DEA1 /* TCLoginView.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		4123065A146E072E00B0DEA1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4123065D146E075800B0DEA1 /* TCFormController.h */,
+				4123065E146E075800B0DEA1 /* TCFormController.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		4123065B146E073900B0DEA1 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				41230663146E076D00B0DEA1 /* TCRegisterationFormController.h */,
+				41230664146E076D00B0DEA1 /* TCRegisterationFormController.m */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		4123065C146E074100B0DEA1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				41230660146E076300B0DEA1 /* TCLoginController.h */,
+				41230661146E076300B0DEA1 /* TCLoginController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		418A6E28146CC9B4009243E4 /* HTTPBasicAuthApp */ = {
@@ -871,6 +1166,23 @@
 			productReference = 411C1C4E143C029B000449E1 /* RoutePlayground.app */;
 			productType = "com.apple.product-type.application";
 		};
+		412305EB146E019000B0DEA1 /* SimpleUserApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 412305FF146E019000B0DEA1 /* Build configuration list for PBXNativeTarget "SimpleUserApp" */;
+			buildPhases = (
+				412305E8146E019000B0DEA1 /* Sources */,
+				412305E9146E019000B0DEA1 /* Frameworks */,
+				412305EA146E019000B0DEA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleUserApp;
+			productName = SimpleUserApp;
+			productReference = 412305EC146E019000B0DEA1 /* SimpleUserApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		418A6E22146CC9B4009243E4 /* HTTPBasicAuthApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 418A6E34146CC9B4009243E4 /* Build configuration list for PBXNativeTarget "HTTPBasicAuthApp" */;
@@ -913,6 +1225,7 @@
 				411C1BE0143BFEF4000449E1 /* NearbyPlace */,
 				411C1C4D143C029B000449E1 /* RoutePlayground */,
 				418A6E22146CC9B4009243E4 /* HTTPBasicAuthApp */,
+				412305EB146E019000B0DEA1 /* SimpleUserApp */,
 			);
 		};
 /* End PBXProject section */
@@ -953,6 +1266,25 @@
 				411C1C80143C036C000449E1 /* second@2x.png in Resources */,
 				41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */,
 				41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		412305EA146E019000B0DEA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				412305F6146E019000B0DEA1 /* InfoPlist.strings in Resources */,
+				41230619146E042100B0DEA1 /* bg_main.png in Resources */,
+				4123061A146E042100B0DEA1 /* bg_main@2x.png in Resources */,
+				4123061B146E042100B0DEA1 /* btn_back_press@2x.png in Resources */,
+				4123061C146E042100B0DEA1 /* btn_back@2x.png in Resources */,
+				4123061D146E042100B0DEA1 /* btn_light_blue_lg_press@2x.png in Resources */,
+				4123061E146E042100B0DEA1 /* btn_light_blue_lg@2x.png in Resources */,
+				4123061F146E042100B0DEA1 /* chk_box_selected.png in Resources */,
+				41230620146E042100B0DEA1 /* chk_box_selected@2x.png in Resources */,
+				41230621146E042100B0DEA1 /* chk_box.png in Resources */,
+				41230622146E042100B0DEA1 /* chk_box@2x.png in Resources */,
+				41230623146E042100B0DEA1 /* titlebar_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1374,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		412305E8146E019000B0DEA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				412305F8146E019000B0DEA1 /* main.m in Sources */,
+				41230604146E026400B0DEA1 /* AppDelegate.m in Sources */,
+				4123063D146E068600B0DEA1 /* TCCheckBoxView.m in Sources */,
+				4123063E146E068600B0DEA1 /* TCCheckedFieldCell.m in Sources */,
+				4123063F146E068600B0DEA1 /* TCEditingNavigationBar.m in Sources */,
+				41230640146E068600B0DEA1 /* TCFormCell.m in Sources */,
+				41230641146E068600B0DEA1 /* TCFormTable.m in Sources */,
+				41230642146E068600B0DEA1 /* TCLinkLabel.m in Sources */,
+				41230643146E068600B0DEA1 /* TCTextFieldCell.m in Sources */,
+				41230644146E068600B0DEA1 /* TCToggleFieldCell.m in Sources */,
+				41230645146E068600B0DEA1 /* TCUIFactory.m in Sources */,
+				41230646146E068600B0DEA1 /* UINavigationBar+TripCase.m in Sources */,
+				41230647146E068600B0DEA1 /* UIView+TripCase.m in Sources */,
+				4123064C146E069900B0DEA1 /* TCLoginFooter.m in Sources */,
+				4123064D146E069900B0DEA1 /* TCLoginView.m in Sources */,
+				41230654146E06B400B0DEA1 /* TCRegistrationFooter.m in Sources */,
+				41230655146E06B400B0DEA1 /* TCRegistrationFormView.m in Sources */,
+				41230656146E06B400B0DEA1 /* TCTermsAndConditionsLabel.m in Sources */,
+				41230659146E06E000B0DEA1 /* TCDateFormatter.m in Sources */,
+				4123065F146E075800B0DEA1 /* TCFormController.m in Sources */,
+				41230662146E076300B0DEA1 /* TCLoginController.m in Sources */,
+				41230665146E076D00B0DEA1 /* TCRegisterationFormController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		418A6E1F146CC9B4009243E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1079,6 +1440,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				411C1BEA143BFEF4000449E1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		412305F4146E019000B0DEA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				412305F5146E019000B0DEA1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1309,6 +1678,46 @@
 			};
 			name = Release;
 		};
+		412305FD146E019000B0DEA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleUserApp/SimpleUserApp-Prefix.pch";
+				INFOPLIST_FILE = "SimpleUserApp/SimpleUserApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					./Library/libIStructure.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		412305FE146E019000B0DEA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleUserApp/SimpleUserApp-Prefix.pch";
+				INFOPLIST_FILE = "SimpleUserApp/SimpleUserApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Library\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					./Library/libIStructure.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		418A6E35146CC9B4009243E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1396,6 +1805,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		412305FF146E019000B0DEA1 /* Build configuration list for PBXNativeTarget "SimpleUserApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				412305FD146E019000B0DEA1 /* Debug */,
+				412305FE146E019000B0DEA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		418A6E34146CC9B4009243E4 /* Build configuration list for PBXNativeTarget "HTTPBasicAuthApp" */ = {
 			isa = XCConfigurationList;

@@ -1,0 +1,3 @@
+@interface TCRegistrationFooter : UIView
+
+@end
