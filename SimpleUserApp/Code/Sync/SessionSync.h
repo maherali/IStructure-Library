@@ -1,3 +1,5 @@
-@interface SessionSync : ISBasicSync
+#import "AppSync.h"
+
+@interface SessionSync : AppSync
 
 @end

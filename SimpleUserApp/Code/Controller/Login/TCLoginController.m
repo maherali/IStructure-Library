@@ -1,6 +1,7 @@
 #import "TCLoginController.h"
 #import "TCLoginView.h"
 #import "Session.h"
+#import "Registration.h"
 
 @implementation TCLoginController
 
@@ -25,7 +26,9 @@
 
 - (void) startRegister{
     __block TCLoginController *this = self;
-    $navigate(@"/register");
+    
+    Registration *reg = [[[Registration alloc] initWithAttributes:$dict(@"user_name", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
+    $navigate(@"/register", $dict(MODEL_KEY, reg));
 }
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{

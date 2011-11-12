@@ -19,6 +19,7 @@
     [cell2 setEditingNavigationBar:bar];
     TCTextFieldCell   *cell3 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Email"] autorelease];
     cell3.textField.delegate = self;
+    cell3.textField.text     = [self.model get:@"user_name"];
     cell3.textField.keyboardType = UIKeyboardTypeEmailAddress;
     [cell3 setEditingNavigationBar:bar];
     TCTextFieldCell   *cell4 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];

@@ -1,0 +1,3 @@
+@interface Registration : ISModel
+
+@end
