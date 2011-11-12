@@ -12,7 +12,7 @@
     return [GeoNamesSync class];
 }
 
-- (NSString*) url{
+- (NSString*) path{
     return @"http://api.geonames.org/findNearbyPlaceNameJSON?lat=30&lng=-97&radius=50&style=FULL&username=agilis";
 }
 

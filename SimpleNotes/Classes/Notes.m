@@ -7,7 +7,7 @@
     return [Note class];
 }
 
-- (NSString*) url{
+- (NSString*) path{
     return @"/notes";
 }
 

@@ -2,7 +2,7 @@
 
 @implementation Places2
 
-- (NSString*) url{
+- (NSString*) path{
     return @"http://api.geonames.org/findNearbyPlaceName?lat=30&lng=-97&radius=50&style=FULL&username=agilis";
 }
 

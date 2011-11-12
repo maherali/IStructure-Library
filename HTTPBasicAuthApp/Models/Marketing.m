@@ -3,7 +3,7 @@
 
 @implementation Marketing
 
-- (NSString*) url{
+- (NSString*) path{
     return @"/marketings/1.json";
 }
 

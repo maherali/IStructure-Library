@@ -18,7 +18,7 @@
     [_data appendData:_photoData];
 }
 
-- (NSString*) url{
+- (NSString*) path{
     return @"/photos";    
 }
 

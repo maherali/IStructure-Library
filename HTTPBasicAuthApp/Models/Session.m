@@ -3,7 +3,7 @@
 
 @implementation Session
 
-- (NSString*) createUrl{
+- (NSString*) createPath{
     return @"/users/sign_in.json";
 }
 
