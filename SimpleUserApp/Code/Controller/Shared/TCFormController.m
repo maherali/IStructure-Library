@@ -3,8 +3,8 @@
 
 @implementation TCFormController
 
-- (id)init{
-    self = [super initWithStyle:UITableViewStyleGrouped];
+- (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
+    self = [super initWithValues:passedInValues andStyle:style];
     return self;
 }
 
@@ -14,7 +14,7 @@
 
 -(void)viewDidLoad {
 	[super viewDidLoad];
-	self.tableView = [[[[self formTableClass] alloc] init] autorelease];
+	self.tableView = [[[[self formTableClass] alloc] initWithOptions:$dict(COLLECTION_KEY, collection)] autorelease];
 }
 
 @end

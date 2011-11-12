@@ -6,8 +6,8 @@
 
 @synthesize title, cells;
 
-- (id)init{
-	self = [super initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStyleGrouped];
+- (id) initWithOptions:(NSDictionary *) _options{
+	self = [super initWithOptions:_options];
 	self.delegate           = self;
 	self.dataSource         = self;
     self.backgroundColor    = [UIColor clearColor];

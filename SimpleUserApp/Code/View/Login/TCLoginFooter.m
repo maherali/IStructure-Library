@@ -17,7 +17,8 @@
 }
 
 - (void) signIn{
-    //trigger button:signin
+    __block TCLoginFooter *this = self;
+    $trigger(@"signin_button:tapped");
 }
 
 @end

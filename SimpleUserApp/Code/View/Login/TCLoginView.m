@@ -6,8 +6,8 @@
 
 @implementation TCLoginView
 
-- (id)init{
-    self = [super init];
+- (id) initWithOptions:(NSDictionary *) _options{
+    self = [super initWithOptions:_options];
     self.sectionHeaderHeight = 5;
     TCEditingNavigationBar *bar = [[[TCEditingNavigationBar alloc] init] autorelease];
     bar.delegate              = self;
@@ -20,6 +20,11 @@
     cell2.textField.returnKeyType  = UIReturnKeyDone;
     TCToggleFieldCell   *cell3 = [[[TCToggleFieldCell alloc] init] autorelease];
     self.cells = [NSArray arrayWithObjects:cell1, cell2, cell3, nil];
+    
+    __block TCLoginView *this = self;
+    $watch(@"signin_button:tapped", ^(NSNotification *notif){
+        LOG(@"Signin button tapped");
+    });
     return self;
 }
 

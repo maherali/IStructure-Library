@@ -1,4 +1,4 @@
-@interface TCFormController : UITableViewController
+@interface TCFormController : ISTableViewController
 
 - (Class) formTableClass;
 
