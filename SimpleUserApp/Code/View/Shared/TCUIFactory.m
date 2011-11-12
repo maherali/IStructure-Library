@@ -39,17 +39,4 @@
     return [[[UIBarButtonItem alloc] initWithCustomView:customView] autorelease];
 }
 
-
-+(UIButton *)buttonWithLabel:(NSString *)label frame:(CGRect)frame {
-	UIButton *button = [[[UIButton alloc] initWithFrame:frame] autorelease];
-	button.tag = label.hash;
-	[button setTitle:label forState:UIControlStateNormal];
-	[button setTitleColor:[UIColor colorWithRed:37/255.0f green:45/255.0f blue:52/255.0f alpha:1.0f] forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:17];
-	[button setBackgroundImage:[[UIImage imageNamed:@"btn_light_blue_lg.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0] forState:UIControlStateNormal];
-    [button setBackgroundImage:[[UIImage imageNamed:@"btn_light_blue_lg_press.png"] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0] forState:UIControlStateHighlighted];
-    button.backgroundColor = [UIColor clearColor];
-	return button;	
-}
-
 @end

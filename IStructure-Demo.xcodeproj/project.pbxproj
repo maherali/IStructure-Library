@@ -123,6 +123,9 @@
 		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBC146E277B00C82B42 /* WelcomeController.m */; };
 		41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBF146E28B100C82B42 /* WelcomeView.m */; };
+		41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC2146E982700C82B42 /* TCInternetButton.m */; };
+		41744FCA146EA2B500C82B42 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC9146EA2B500C82B42 /* LoadingView.m */; };
+		41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* MyErrorDecoder.m */; };
 		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
 		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
@@ -365,6 +368,11 @@
 		41744FBC146E277B00C82B42 /* WelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeController.m; path = Code/Controller/Welcome/WelcomeController.m; sourceTree = "<group>"; };
 		41744FBE146E28B100C82B42 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Code/View/Welcome/WelcomeView.h; sourceTree = "<group>"; };
 		41744FBF146E28B100C82B42 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = Code/View/Welcome/WelcomeView.m; sourceTree = "<group>"; };
+		41744FC1146E982700C82B42 /* TCInternetButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCInternetButton.h; path = Code/View/Shared/TCInternetButton.h; sourceTree = "<group>"; };
+		41744FC2146E982700C82B42 /* TCInternetButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCInternetButton.m; path = Code/View/Shared/TCInternetButton.m; sourceTree = "<group>"; };
+		41744FC8146EA2B500C82B42 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		41744FC9146EA2B500C82B42 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		41744FCB146EA36600C82B42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4184A10D146E129D00572663 /* MyErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyErrorDecoder.h; path = Code/Sync/MyErrorDecoder.h; sourceTree = "<group>"; };
 		4184A10E146E129D00572663 /* MyErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyErrorDecoder.m; path = Code/Sync/MyErrorDecoder.m; sourceTree = "<group>"; };
 		4184A10F146E129D00572663 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Code/Sync/SessionSync.h; sourceTree = "<group>"; };
@@ -447,6 +455,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */,
 				41230606146E029000B0DEA1 /* libIStructure.a in Frameworks */,
 				41230605146E028500B0DEA1 /* libsqlite3.dylib in Frameworks */,
 				412305EE146E019000B0DEA1 /* UIKit.framework in Frameworks */,
@@ -473,6 +482,7 @@
 		411C1B1B143BFBA1000449E1 = {
 			isa = PBXGroup;
 			children = (
+				41744FCB146EA36600C82B42 /* QuartzCore.framework */,
 				418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */,
 				411C1B59143BFBE6000449E1 /* IStructure Library */,
 				411C1B4A143BFBB7000449E1 /* SimpleNotes App */,
@@ -799,6 +809,10 @@
 				4123063A146E068600B0DEA1 /* UINavigationBar+TripCase.m */,
 				4123063B146E068600B0DEA1 /* UIView+TripCase.h */,
 				4123063C146E068600B0DEA1 /* UIView+TripCase.m */,
+				41744FC1146E982700C82B42 /* TCInternetButton.h */,
+				41744FC2146E982700C82B42 /* TCInternetButton.m */,
+				41744FC8146EA2B500C82B42 /* LoadingView.h */,
+				41744FC9146EA2B500C82B42 /* LoadingView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1446,6 +1460,8 @@
 				4184A116146E12AC00572663 /* Session.m in Sources */,
 				41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */,
 				41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */,
+				41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */,
+				41744FCA146EA2B500C82B42 /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

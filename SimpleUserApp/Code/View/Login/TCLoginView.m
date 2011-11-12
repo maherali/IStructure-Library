@@ -3,6 +3,7 @@
 #import "TCTextFieldCell.h"
 #import "TCLoginFooter.h"
 #import "TCToggleFieldCell.h"
+#import "LoadingView.h"
 
 @implementation TCLoginView
 
@@ -29,6 +30,16 @@
         [this.model set:$dict(@"user_name", cell1.textField.text, @"password", cell2.textField.text)];
         $trigger(@"initiate:login");
     });
+    
+    __block LoadingView *loadingView = nil;
+    $watch(@"internet:begin", ^(NSNotification *notif){
+        loadingView = [LoadingView loadingViewInView:this];
+    });
+    
+    $watch(@"internet:end", ^(NSNotification *notif){
+        [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
+    });
+
     return self;
 }
 
@@ -50,7 +61,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
+    return [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 100) andModel:self.model] autorelease];
 }
 
 // receive the login button was clicked, get the remember me state and the user/pass and trigger
