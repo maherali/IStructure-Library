@@ -38,6 +38,14 @@
     TCCheckedFieldCell   *cell8 = [[[TCCheckedFieldCell alloc] initWithText:@"Sign me up for product updates"] autorelease];
  
     self.cells = [NSArray arrayWithObjects:cell1, cell2, cell3, cell4, cell5, cell6, cell7, cell8, nil];
+    
+    
+    __block TCRegistrationView *this = self;
+    $watch(@"signup_button:tapped", ^(NSNotification *notif){
+      //  [this.model set:$dict(@"user_name", cell1.textField.text, @"password", cell2.textField.text)];
+        $trigger(@"initiate:register");
+    });
+    
     return self;
 }
 

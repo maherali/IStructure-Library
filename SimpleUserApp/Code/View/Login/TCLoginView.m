@@ -31,8 +31,8 @@
         $trigger(@"initiate:login");
     });
     
-    $watch(@"signup_button:tapped", ^(NSNotification *notif){
-        $trigger(@"initiate:register");
+    $watch(@"start_signup_button:tapped", ^(NSNotification *notif){
+        $trigger(@"start:register");
     });
     
     __block LoadingView *loadingView = nil;

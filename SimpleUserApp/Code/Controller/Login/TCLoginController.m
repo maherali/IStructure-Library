@@ -48,10 +48,11 @@
     self.navigationController.navigationBarHidden = YES;
     __block TCLoginController *this = self;
     $unwatch(@"initiate:login", this.tableView);
+    $unwatch(@"start:register", this.tableView);
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
     });
-    $watch(@"initiate:register", this.tableView,  ^(NSNotification *notif){
+    $watch(@"start:register", this.tableView,  ^(NSNotification *notif){
         [this startRegister];
     });
 }

@@ -27,7 +27,8 @@
 }
 
 - (void) signUp{
-    
+    __block TCRegistrationFooter *this = self;
+    $trigger(@"signup_button:tapped");
 }
 
 

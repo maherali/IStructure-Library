@@ -5,6 +5,10 @@
 
 @implementation TCRegisterationController
 
+- (void) signup{
+    LOG(@"should call server now!");
+}
+
 - (Class) formTableClass{
     return [TCRegistrationView class];
 }
@@ -14,7 +18,12 @@
     self.navigationController.navigationBarHidden = NO;
     [[self navigationItem] setLeftBarButtonItem:[TCUIFactory backButtonForTarget:self andAction:@selector(goBack)]];
     [[self navigationItem] setRightBarButtonItem:[TCUIFactory editRefreshButtonsForTarget:self editAction:@selector(editAction) refreshAction:@selector(refreshAction)]];
-  //  [self.navigationController.navigationBar addSubview:[TCTripNavigationBar navBar]]; 
+    
+    __block TCRegisterationController *this = self;
+    $unwatch(@"initiate:register", this.tableView);
+    $watch(@"initiate:register", this.tableView,  ^(NSNotification *notif){
+        [this signup];
+    });
 }
 
 - (void) goBack{
