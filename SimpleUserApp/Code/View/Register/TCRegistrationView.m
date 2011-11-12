@@ -3,6 +3,8 @@
 #import "TCTextFieldCell.h"
 #import "TCCheckedFieldCell.h"
 #import "TCRegistrationFooter.h"
+#import "TCUIFactory.h"
+#import "LoadingView.h"
 
 @implementation TCRegistrationView
 
@@ -30,9 +32,19 @@
     
     __block TCRegistrationView *this = self;
     $watch(@"signup_button:tapped", ^(NSNotification *notif){
-        [this.model set:$dict(@"email", cell1.textField.text, @"password", cell2.textField.text?cell2.textField.text:@"",  @"password_confirmation", cell3.textField.text?cell3.textField.text:@"")];
-        $trigger(@"initiate:register");
+        if([this.model set:$dict(@"email", cell1.textField.text, @"password", cell2.textField.text?cell2.textField.text:@"", @"password_confirmation", cell3.textField.text?cell3.textField.text:@"") withOptions:[TCUIFactory commonSetOptions] ]){
+            $trigger(@"initiate:register");
+        }
     });
+    __block TCRegistrationView *loadingView = nil;
+    $watch(@"register:begin", ^(NSNotification *notif){
+        loadingView = [LoadingView loadingViewInView:this.window];
+    });
+    
+    $watch(@"register:end", ^(NSNotification *notif){
+        [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
+    });
+
     
     return self;
 }
@@ -50,7 +62,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    if(textField == ((TCTextFieldCell*)[cells objectAtIndex:5]).textField){
+    if(textField == ((TCTextFieldCell*)[cells objectAtIndex:2]).textField){
         [self done];
     }else{
         [self moveToNext];

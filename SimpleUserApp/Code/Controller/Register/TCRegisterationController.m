@@ -5,21 +5,19 @@
 
 @implementation TCRegisterationController
 
-- (void) nav{
-    [self removeFromParentViewController];
-}
 - (void) signup{
     __block TCRegisterationController *this = self;
-    $trigger(@"internet:begin", this.model);
+    $trigger(@"register:begin", this.model);
     
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Registration *model, NSData *data){
-        $trigger(@"internet:end", this.model);
+        LOG(@"current thread is main thread? %d", [[NSThread currentThread] isMainThread]);
+        $trigger(@"register:end", this.model);
         $trigger(@"login:success");
         [UIAlertView message:$array(@"Successful Registration!")];
         $navigate(@"/welcome");
-        [this performSelector:@selector(nav) withObject:nil afterDelay:0];
+        [this performSelector:@selector(removeFromParentViewController) withObject:nil afterDelay:0];
     }), FAILURE_HANDLER_KEY, $block(^(Registration *model, NSArray *errors){
-        $trigger(@"internet:end", this.model);
+        $trigger(@"register:end", this.model);
         [UIAlertView errors:errors];
     }))];
 }
@@ -31,9 +29,7 @@
 - (void) viewDidLoad{
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
-    [[self navigationItem] setLeftBarButtonItem:[TCUIFactory backButtonForTarget:self andAction:@selector(goBack)]];
-    [[self navigationItem] setRightBarButtonItem:[TCUIFactory editRefreshButtonsForTarget:self editAction:@selector(editAction) refreshAction:@selector(refreshAction)]];
-    
+    [[self navigationItem] setLeftBarButtonItem:[TCUIFactory backButtonForTarget:self andAction:@selector(goBack)]];    
     __block TCRegisterationController *this = self;
     $unwatch(@"initiate:register", this.tableView);
     $watch(@"initiate:register", this.tableView,  ^(NSNotification *notif){
@@ -58,5 +54,8 @@
     $routec(@"/register");
 }
 
+- (void) dealloc{
+    [super dealloc];
+}
 
 @end

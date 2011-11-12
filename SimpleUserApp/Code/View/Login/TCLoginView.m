@@ -36,11 +36,11 @@
     });
     
     __block LoadingView *loadingView = nil;
-    $watch(@"internet:begin", ^(NSNotification *notif){
+    $watch(@"login:begin", ^(NSNotification *notif){
         loadingView = [LoadingView loadingViewInView:this];
     });
     
-    $watch(@"internet:end", ^(NSNotification *notif){
+    $watch(@"login:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
     });
 

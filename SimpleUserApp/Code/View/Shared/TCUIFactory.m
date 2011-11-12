@@ -24,7 +24,7 @@
     
     UIView *customView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, editImg.size.width*2, 30)] autorelease];
     UIButton *editButton = [[[UIButton alloc] initWithFrame:CGRectMake(0, 0, editImg.size.width, 30)] autorelease];
-
+    
     [editButton setImage:[UIImage imageNamed:@"btn_edit.png"] forState:UIControlStateNormal];
     [editButton setImage:[UIImage imageNamed:@"btn_edit_press.png"] forState:UIControlStateHighlighted];
     [editButton addTarget:target action:editAction forControlEvents:UIControlEventTouchUpInside];
@@ -35,8 +35,22 @@
     [refreshButton setImage:[UIImage imageNamed:@"btn_refresh_press.png"] forState:UIControlStateHighlighted];
     [refreshButton addTarget:target action:refreshAction forControlEvents:UIControlEventTouchUpInside];
     [customView addSubview:refreshButton];
-
+    
     return [[[UIBarButtonItem alloc] initWithCustomView:customView] autorelease];
+}
+
++ (ValidationErrorHandler) commonValidationErrorHandler{
+    static ValidationErrorHandler validationErrorHndlr = nil;
+    if(!validationErrorHndlr){
+        validationErrorHndlr = $block(^(id origin, NSArray *errors, NSDictionary* options){
+            [UIAlertView errors:errors];
+        });
+    }
+    return validationErrorHndlr;
+}
+
++ (NSDictionary*) commonSetOptions{
+    return $dict(VALIDATION_ERROR_HANDLER_KEY, [self commonValidationErrorHandler]);
 }
 
 @end

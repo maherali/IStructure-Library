@@ -12,21 +12,20 @@
         $navigate(@"/welcome");
         return;
     }
-    $trigger(@"internet:begin", this.model);
+    $trigger(@"login:begin", this.model);
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
-        $trigger(@"internet:end", this.model);
+        $trigger(@"login:end", this.model);
         [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;
         $navigate(@"/welcome");
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
-        $trigger(@"internet:end", this.model);
+        $trigger(@"login:end", this.model);
         [UIAlertView errors:errors];
     }))];
 }
 
 - (void) startRegister{
     __block TCLoginController *this = self;
-    
     Registration *reg = [[[Registration alloc] initWithAttributes:$dict(@"email", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
     $navigate(@"/register", $dict(MODEL_KEY, reg));
 }
