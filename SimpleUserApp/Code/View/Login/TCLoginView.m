@@ -27,7 +27,7 @@
     
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
-        [this.model set:$dict(@"user_name", cell1.textField.text, @"password", cell2.textField.text)];
+        [this.model set:$dict(@"user_name", cell1.textField.text?cell1.textField.text:@"", @"password", cell2.textField.text?cell2.textField.text:@"")];
         $trigger(@"initiate:login");
     });
     

@@ -41,13 +41,13 @@
 
 - (void) startRegister{
     __block TCLoginController *this = self;
-    Registration *reg = [[[Registration alloc] initWithAttributes:$dict(@"email", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
+    Registration *reg = [[[Registration alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
     $navigate(@"/register", $dict(MODEL_KEY, reg));
 }
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
     self = [super initWithValues:passedInValues andStyle:style];
-    self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", @"alime@me.com", @"password", @"test123") andOptions:$dict()] autorelease];
+    self.model = [[[Session alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
     return self;
 }
 

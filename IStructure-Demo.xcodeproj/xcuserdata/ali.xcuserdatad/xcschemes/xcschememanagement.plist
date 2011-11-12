@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HTTPBasicAuthApp.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 		<key>NearbyPlace.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
