@@ -102,9 +102,9 @@
 
 /** The collection's URL
  
- @return The collections's URL.
+ @return The collections's path.
  */
-- (NSString*) url;
+- (NSString*) path;
 
 /** The base URL of the collection
 @return The base URL of the collection

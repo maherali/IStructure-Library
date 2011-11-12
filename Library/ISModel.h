@@ -257,27 +257,27 @@ After initialization, the model is new:
 - (id) get:(NSString*) attr;
 
 #pragma mark
-#pragma mark URLS
+#pragma mark URLs and PATHs
 
-/** Specifies the root URL of the model.
+/** Specifies the root PATH of the model.
  
  The ISModel implementation returns *nil*.
- @return Root URL.
+ @return Root PATH.
  */
-- (NSString*) urlRoot;
+- (NSString*) pathRoot;
 
 
-/** The URL used to synchronize this model with the server.
+/** The PATH used to synchronize this model with the server.
  
- For a model that is server-backed, it needs to provide a URL value. The url method, by default, looks to see if 
- the model is inside a collection, if that's the case and the model is new, the collection's URL becomes the URL value. 
- If there is a collection and the model is not new, the collection's URL and the encoded value of the model's id value
- becomes the model's url. For example `/notes/1` is the URL value returned where `/notes` is the collection's URL 
+ For a model that is server-backed, it needs to provide a URL value. The path method, by default, looks to see if 
+ the model is inside a collection, if that's the case and the model is new, the collection's path becomes the Path value. 
+ If there is a collection and the model is not new, the collection's path and the encoded value of the model's id value
+ becomes the model's path. For example `/notes/1` is the path value returned where `/notes` is the collection's path 
  and `1` is the `id` value of the model instance. 
  
  
- If the model does not belong to a collection, then the value of its urlRoot method is substituted and used as above
- instead of the collection's URL. Otherwise, an exception is thrown.
+ If the model does not belong to a collection, then the value of its pathRoot method is substituted and used as above
+ instead of the collection's path. Otherwise, an exception is thrown.
  
  
  For the complete URL to be used in accessing the server-backed version of the model instance, a base URL is prepended.
@@ -289,46 +289,46 @@ After initialization, the model is new:
  class method.
  
  
- In addtion, you can provide fine-grained model URLs for the four different synchronization methods by overriding the
- following methods: fetchUrl, createUrl, updateUrl, destroyUrl.
+ In addtion, you can provide fine-grained model paths for the four different synchronization methods by overriding the
+ following methods: fetchPath, createPath, updatePath, and destroyPath.
  
  
- If an operation (such as Fetch) is invoked on the instance and the corresponding URL method (e.g., fetchUrl) does not
- return *nil*, the value returned is used instead of the value returned from the url instance method.
+ If an operation (such as Fetch) is invoked on the instance and the corresponding path method (e.g., fetchpath) does not
+ return *nil*, the value returned is used instead of the value returned from the path instance method.
  The base URL is calculated as normal.
  
- @return The URL value of this instance.
+ @return The path value of this instance.
  */
-- (NSString*) url;
+- (NSString*) path;
 
-/** The fetch URL used in a Fetch operation.
+/** The fetch path used in a Fetch operation.
  
- @return the URL value used in a Fetch operation.
+ @return the path value used in a Fetch operation.
  Base implementation returns *nil*.
  */
-- (NSString*) fetchUrl;
+- (NSString*) fetchPath;
 
-/** The create URL used in a Save operation.
+/** The create path used in a Save operation.
  
- @return the URL value used in a Save operation.
+ @return the path value used in a Save operation.
  Base implementation returns *nil*.
  */
-- (NSString*) createUrl;
+- (NSString*) createPath;
 
 
-/** The create URL used in a Save operation of a model with id equals to *nil*.
+/** The create path used in a Save operation of a model with id equals to *nil*.
  
- @return the URL value used in a Save operation.
+ @return the path value used in a Save operation.
  Base implementation returns *nil*.
  */
-- (NSString*) updateUrl;
+- (NSString*) updatePath;
 
-/** The create URL used in a Destroy operation with a non-*nil* id.
+/** The create path used in a Destroy operation with a non-*nil* id.
  
- @return the URL value used in a Destroy operation.
+ @return the path value used in a Destroy operation.
  Base implementation returns *nil*.
  */
-- (NSString*) destroyUrl;
+- (NSString*) destroyPath;
 
 
 /** The Base URL of the ISModel instance.

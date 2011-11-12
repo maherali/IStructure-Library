@@ -109,6 +109,8 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
  */
 + (Class)   errorDecoderClass;
 
+- (void) _callBack:(id) block;
+
 @end
 
 extern  NSString* const METHOD_KEY;
