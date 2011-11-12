@@ -37,7 +37,7 @@
     
     __block LoadingView *loadingView = nil;
     $watch(@"login:begin", ^(NSNotification *notif){
-        loadingView = [LoadingView loadingViewInView:this];
+        loadingView = [LoadingView loadingViewInView:this.window];
     });
     
     $watch(@"login:end", ^(NSNotification *notif){
