@@ -1,12 +1,22 @@
 #import "TCRegisterationController.h"
 #import "TCRegistrationView.h"
 #import "TCUIFactory.h"
-//#import "TCTripNavigationBar.h"
+#import "Registration.h"
 
 @implementation TCRegisterationController
 
 - (void) signup{
-    LOG(@"should call server now!");
+    __block TCRegisterationController *this = self;
+    LOG(@"Registration attributes: %@", self.model);
+    $trigger(@"internet:begin", this.model);
+    [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Registration *model, NSData *data){
+        $trigger(@"internet:end", this.model);
+        [UIAlertView message:$array(@"Successful Registration!")];
+        $navigate(@"/welcome");
+    }), FAILURE_HANDLER_KEY, $block(^(Registration *model, NSArray *errors){
+        $trigger(@"internet:end", this.model);
+        [UIAlertView errors:errors];
+    }))];
 }
 
 - (Class) formTableClass{

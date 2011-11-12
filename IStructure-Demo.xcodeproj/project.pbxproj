@@ -128,7 +128,7 @@
 		41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41744FCF146EC31500C82B42 /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FCE146EC31500C82B42 /* Registration.m */; };
 		41744FD2146EC3A000C82B42 /* AppSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FD1146EC3A000C82B42 /* AppSync.m */; };
-		4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* MyErrorDecoder.m */; };
+		4184A111146E129D00572663 /* AppErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* AppErrorDecoder.m */; };
 		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
 		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
 		418A6E25146CC9B4009243E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2A143BFBA2000449E1 /* UIKit.framework */; };
@@ -379,8 +379,8 @@
 		41744FCE146EC31500C82B42 /* Registration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Registration.m; path = Code/Model/Registration.m; sourceTree = "<group>"; };
 		41744FD0146EC3A000C82B42 /* AppSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppSync.h; path = Code/Sync/AppSync.h; sourceTree = "<group>"; };
 		41744FD1146EC3A000C82B42 /* AppSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppSync.m; path = Code/Sync/AppSync.m; sourceTree = "<group>"; };
-		4184A10D146E129D00572663 /* MyErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyErrorDecoder.h; path = Code/Sync/MyErrorDecoder.h; sourceTree = "<group>"; };
-		4184A10E146E129D00572663 /* MyErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyErrorDecoder.m; path = Code/Sync/MyErrorDecoder.m; sourceTree = "<group>"; };
+		4184A10D146E129D00572663 /* AppErrorDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; name = AppErrorDecoder.h; path = Code/Sync/AppErrorDecoder.h; sourceTree = "<group>"; };
+		4184A10E146E129D00572663 /* AppErrorDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppErrorDecoder.m; path = Code/Sync/AppErrorDecoder.m; sourceTree = "<group>"; };
 		4184A10F146E129D00572663 /* SessionSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionSync.h; path = Code/Sync/SessionSync.h; sourceTree = "<group>"; };
 		4184A110146E129D00572663 /* SessionSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionSync.m; path = Code/Sync/SessionSync.m; sourceTree = "<group>"; };
 		4184A114146E12AC00572663 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = Code/Model/Session.h; sourceTree = "<group>"; };
@@ -746,8 +746,8 @@
 		4123060A146E02A800B0DEA1 /* Sync */ = {
 			isa = PBXGroup;
 			children = (
-				4184A10D146E129D00572663 /* MyErrorDecoder.h */,
-				4184A10E146E129D00572663 /* MyErrorDecoder.m */,
+				4184A10D146E129D00572663 /* AppErrorDecoder.h */,
+				4184A10E146E129D00572663 /* AppErrorDecoder.m */,
 				4184A10F146E129D00572663 /* SessionSync.h */,
 				4184A110146E129D00572663 /* SessionSync.m */,
 				41744FD0146EC3A000C82B42 /* AppSync.h */,
@@ -1465,7 +1465,7 @@
 				4123065F146E075800B0DEA1 /* TCFormController.m in Sources */,
 				41230662146E076300B0DEA1 /* TCLoginController.m in Sources */,
 				41230665146E076D00B0DEA1 /* TCRegisterationController.m in Sources */,
-				4184A111146E129D00572663 /* MyErrorDecoder.m in Sources */,
+				4184A111146E129D00572663 /* AppErrorDecoder.m in Sources */,
 				4184A112146E129D00572663 /* SessionSync.m in Sources */,
 				4184A116146E12AC00572663 /* Session.m in Sources */,
 				41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */,

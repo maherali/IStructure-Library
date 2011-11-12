@@ -4,7 +4,7 @@
 @implementation Registration
 
 - (NSString*) createPath{
-    return @"/users";
+    return @"/users.json";
 }
 
 + (Class) syncClass{
@@ -14,7 +14,7 @@
 - (NSData*) dataToSave{
     NSMutableDictionary *user = $mdict();
     NSMutableDictionary *attrs = $mdict(@"user", user);
-    [user setObject:[self get:@"user_name"] forKey:@"user_name"];
+    [user setObject:[self get:@"email"] forKey:@"email"];
     [user setObject:[self get:@"password"] forKey:@"password"];
     [user setObject:[self get:@"password_confirmation"] forKey:@"password_confirmation"];
     return [self JSONDataFromAttributes:attrs];

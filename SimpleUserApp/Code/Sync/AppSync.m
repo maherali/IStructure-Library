@@ -1,10 +1,10 @@
 #import "AppSync.h"
-#import "MyErrorDecoder.h"
+#import "AppErrorDecoder.h"
 
 @implementation AppSync
 
 + (Class) errorDecoderClass{
-    return [MyErrorDecoder class];
+    return [AppErrorDecoder class];
 }
 
 @end
