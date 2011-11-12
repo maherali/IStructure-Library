@@ -54,7 +54,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/sync:">&nbsp;&nbsp;&nbsp;&nbsp;- sync:</option>
+	<option value="//api/name/_callBack:">&nbsp;&nbsp;&nbsp;&nbsp;- _callBack:</option>
+	
+	<option value="//api/name/finish">&nbsp;&nbsp;&nbsp;&nbsp;- finish</option>
+	
+	<option value="//api/name/sync">&nbsp;&nbsp;&nbsp;&nbsp;- sync</option>
 	
 	
 	
@@ -96,7 +100,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sync:">sync:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/_callBack:">_callBack:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/finish">finish</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sync">sync</a></span></li>
 	
 </ul></li>
 
@@ -163,8 +171,15 @@ for decoding both network and aplication errors.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sync:">&ndash;&nbsp;sync:</a></code>
-		<span class="tooltip"><p>The mothod used to initiate sync.</p></span>
+		<code><a href="#//api/name/sync">&ndash;&nbsp;sync</a></code>
+		<span class="tooltip"><p>The mothod used to initiate <a href="#//api/name/sync">sync</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/finish">&ndash;&nbsp;finish</a></code>
+		
 	</span>
 	
 	
@@ -172,6 +187,13 @@ for decoding both network and aplication errors.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/errorDecoderClass">+&nbsp;errorDecoderClass</a></code>
 		<span class="tooltip"><p>The class to use for net/app error decoding.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/_callBack:">&ndash;&nbsp;_callBack:</a></code>
+		
 	</span>
 	
 	
@@ -324,28 +346,32 @@ for decoding both network and aplication errors.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/sync:" title="sync:"></a>
-	<h3 class="subsubtitle method-title">sync:</h3>
+	<a name="//api/name/_callBack:" title="_callBack:"></a>
+	<h3 class="subsubtitle method-title">_callBack:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/finish" title="finish"></a>
+	<h3 class="subsubtitle method-title">finish</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sync" title="sync"></a>
+	<h3 class="subsubtitle method-title">sync</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The mothod used to initiate sync.</p>
+		<p>The mothod used to initiate <a href="#//api/name/sync">sync</a>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)sync:(NSThread *)<em>callerThread</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)sync</code></div>
 	
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>callerThread</em></dt>
-			<dd><p>The thread that called sync.</p></dd>
-		</dl>
-		
-	</div>
 	
 	
 	
@@ -355,20 +381,17 @@ for decoding both network and aplication errors.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The mothod used to initiate sync.</p>
+		<p>The mothod used to initiate <a href="#//api/name/sync">sync</a>.</p>
 
-<p>The method assumes that <a href="#//api/name/options"><code>options</code></a> has been set. It&rsquo;s usually executed in
-a background thread (not the main UI thread). As such, it uses its own autorelease pool.</p>
-
-<p>You can pass in a Sync handler (type SyncHandler) for success in <a href="#//api/name/options"><code>options</code></a> using the <code>SYNC_SUCCESS_HANDLER_KEY</code> key.
+<p>The method assumes that <a href="#//api/name/options"><code>options</code></a> has been set.
+You can pass in a Sync handler (type SyncHandler) for success in <a href="#//api/name/options"><code>options</code></a> using the <code>SYNC_SUCCESS_HANDLER_KEY</code> key.
 You can also pass in a SyncHandler for failure in <a href="#//api/name/options"><code>options</code></a> using the <code>SYNC_FAILURE_HANDLER_KEY</code> key.
 Depending on the outcome of synchronization, either one will be invoked.</p>
 
-<p>The method first sends a <code>initiateSync</code> message to itself. implementation of <code>initiateSync</code> in the ISync base class is a noop.
-After that, it sends a <code>hasNetworkLevelErrors</code> message to itself to determine if there are network-level errors. If
-there are, it invokes the failure handler on the <code>callerThread</code>. Otherwise, the success handler is invoked (also on the
-<code>callerThread</code>). When invoking a failure/success call back, it asks itself for the arguments by sending itself a
-<code>callbackArgs</code> message. This method should return a dictionary of two values:</p>
+<p>The method first sends a <code>initiateSync</code> message to itself. implementation of <code>initiateSync</code> in the ISync base class is a call to <a href="#//api/name/finish">finish</a>.
+<a href="#//api/name/finish">finish</a> sends a <code>hasNetworkLevelErrors</code> message to <a href="#//api/name/sync">sync</a> instance to determine if there are network-level errors. If
+there are, it invokes the failure handler. Otherwise, the success handler is invoked. When invoking a failure/success call back,
+it asks itself for the arguments by sending itself a <code>callbackArgs</code> message. This method should return a dictionary of two values:</p>
 
 <ol>
 <li>The data in a <code>SYNC_DATA_ARG_KEY</code> key.</li>
@@ -376,7 +399,7 @@ there are, it invokes the failure handler on the <code>callerThread</code>. Othe
 </ol>
 
 
-<p>The data and the metadata are the only two parameters used in calling either of the two sync handlers.</p>
+<p>The data and the metadata are the only two parameters used in calling either of the two <a href="#//api/name/sync">sync</a> handlers.</p>
 
 <p>Default implementation in ISync returns empty dictionary.</p>
 	</div>
@@ -408,7 +431,7 @@ there are, it invokes the failure handler on the <code>callerThread</code>. Othe
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-05)</span><br />
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
