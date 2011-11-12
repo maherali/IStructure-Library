@@ -5,7 +5,7 @@
 
 @synthesize loggedIn;
 
-- (NSString*) createPath{
+- (NSString*) path{
     return @"/users/sign_in.json";
 }
 
@@ -20,6 +20,10 @@
 - (void) lastChanceToUpdateSyncOptions:(NSMutableDictionary*) opts forMethod:(NSString*) method{
     [opts setObject:[self get:@"user_name"] forKey:@"USER_NAME"];
     [opts setObject:[self get:@"password"] forKey:@"PASSWORD"];
+}
+
+- (BOOL) isNew{
+    return !loggedIn;
 }
 
 @end
