@@ -25,13 +25,13 @@
     [passwordCell setEditingNavigationBar:bar];
     passwordCell.textField.returnKeyType  = UIReturnKeyDone;
     TCToggleFieldCell   *rememberMeCell = [[[TCToggleFieldCell alloc] init] autorelease];
-    BOOL rememberMe = [[self.model get:@"last_login_remember_me"] isEqualToString:@"1"];
+    BOOL rememberMe = [[self.model get:@"remember_me"] isEqualToString:@"1"];
     rememberMeCell.checked = rememberMe;
     self.cells = $array(userNameCell, passwordCell, rememberMeCell);
     
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
-        if([this.model set:$dict(@"user_name", userNameCell.textField.text?userNameCell.textField.text:@"", @"password", passwordCell.textField.text?passwordCell.textField.text:@"", @"last_login_remember_me", rememberMeCell.checked?@"1":@"0")
+        if([this.model set:$dict(@"user_name", userNameCell.textField.text?userNameCell.textField.text:@"", @"password", passwordCell.textField.text?passwordCell.textField.text:@"", @"remember_me", rememberMeCell.checked?@"1":@"0")
                withOptions:[TCUIFactory commonSetOptions]]){
             $trigger(@"initiate:login");
         }
@@ -49,7 +49,7 @@
     $watch(@"reload_data", this, ^(NSNotification *notif){
         userNameCell.textField.text    = [self.model get:@"user_name"];
         passwordCell.textField.text    = [self.model get:@"password"];
-        BOOL rememberMe                = [[self.model get:@"last_login_remember_me"] isEqualToString:@"1"];
+        BOOL rememberMe                = [[self.model get:@"remember_me"] isEqualToString:@"1"];
         rememberMeCell.checked         = rememberMe;
     });
     

@@ -15,7 +15,7 @@
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
     self = [super initWithValues:passedInValues andStyle:style];
-    NSString *rememberMe = [self.model get:@"last_login_remember_me"];
+    NSString *rememberMe = [self.model get:@"remember_me"];
     if([rememberMe isEqualToString:@"1"]){
         [self performSelector:@selector(login) withObject:nil afterDelay:0];
     }
