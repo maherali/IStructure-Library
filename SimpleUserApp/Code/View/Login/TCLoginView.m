@@ -15,6 +15,7 @@
     bar.delegate              = self;
     __block TCTextFieldCell   *cell1 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Username"] autorelease];
     cell1.textField.text = [self.model get:@"user_name"];
+    cell1.textField.keyboardType = UIKeyboardTypeEmailAddress;
     cell1.textField.delegate = self;
     [cell1 setEditingNavigationBar:bar];
     __block TCTextFieldCell   *cell2 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];
@@ -69,7 +70,14 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 170) andModel:self.model] autorelease];
+    __block TCLoginView *this = self;
+    UIView *v = [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 170) andModel:self.model] autorelease];
+    $unwatch(@"tnc_link:tapped");
+    $watch(@"tnc_link:tapped", v, ^(NSNotification *notif){
+        $trigger(@"start:tnc");
+    });
+    
+    return v;
 }
 
 @end

@@ -1,3 +1,3 @@
-@interface TCRegistrationFooter : UIView
+@interface TCRegistrationFooter : ISBaseView
 
 @end

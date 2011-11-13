@@ -76,6 +76,7 @@
     __block TCLoginController *this = self;
     $unwatch(@"initiate:login", this.tableView);
     $unwatch(@"start:register", this.tableView);
+    $unwatch(@"start:tnc", this.tableView);
     $unwatch(@"login:success");
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
@@ -85,6 +86,9 @@
     });
     $watch(@"login:success", ^(NSNotification *notif){
         ((Session*)this.model).loggedIn = YES;
+    });
+    $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
+        $navigate(@"/www", $dict(@"URL", @"http://cnn.com"));
     });
 }
 

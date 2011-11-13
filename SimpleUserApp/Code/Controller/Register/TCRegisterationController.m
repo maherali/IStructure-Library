@@ -26,8 +26,13 @@
     [[self navigationItem] setLeftBarButtonItem:[TCUIFactory backButtonForTarget:self andAction:@selector(goBack)]];    
     __block TCRegisterationController *this = self;
     $unwatch(@"initiate:register", this.tableView);
+    $unwatch(@"start:tnc", this.tableView);
+
     $watch(@"initiate:register", this.tableView,  ^(NSNotification *notif){
         [this signup];
+    });
+    $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
+        $navigate(@"/www", $dict(@"URL", @"http://cnn.com"));
     });
 }
 

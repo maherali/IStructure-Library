@@ -8,7 +8,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(TCSettings)
 @synthesize settings;
 
 + (NSString*) settingsFileName{
-    return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/settings.plist"];
+    return [NSHomeDirectory() stringByAppendingPathComponent:@"Library/settings.plist"];
 }
 
 - (id) init{

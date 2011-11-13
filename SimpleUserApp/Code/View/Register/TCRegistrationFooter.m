@@ -23,6 +23,11 @@
     tncLabel.frame = CGRectMake((320-110)/2, 75, 110, 20);
     [self addSubview:tncLabel]; 
     
+    __block TCRegistrationFooter *this = self;
+    $watch(TCLinkEventMame, tncLabel,  ^(NSNotification *notif){
+        $trigger(@"tnc_link:tapped");
+    });
+    
     return self;
 }
 

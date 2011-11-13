@@ -5,8 +5,9 @@
 
 @implementation TCLoginFooter
 
-- (id) initWithFrame:(CGRect)frame andModel:(ISModel*) model{
+- (id) initWithFrame:(CGRect)frame andModel:(ISModel*) _model{
     self = [super initWithFrame:frame];
+    self.model = _model;
     TCInternetButton *signinButton = [TCInternetButton buttonForObservable:model target:self action:@selector(signIn) frame:CGRectMake(5, 17, 310, 50) andLabel:@"Sign In"];
     TCInternetButton *signupButton = [TCInternetButton buttonForObservable:nil target:self action:@selector(signUp) frame:CGRectMake(5, 75, 310, 50) andLabel:@"Sign Up"];
     
@@ -16,6 +17,12 @@
     [self addSubview:signinButton];
     [self addSubview:signupButton];
     [self addSubview:tncLabel]; 
+    
+    __block TCLoginFooter *this = self;
+    $watch(TCLinkEventMame, tncLabel,  ^(NSNotification *notif){
+        $trigger(@"tnc_link:tapped");
+    });
+    
     return self;
 }
 

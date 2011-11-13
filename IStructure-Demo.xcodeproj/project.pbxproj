@@ -123,6 +123,12 @@
 		41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345728146F4AE600BBB2C1 /* TCPasswordVault.m */; };
 		4134572D146F4B6700BBB2C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134572B146F4B0E00BBB2C1 /* Security.framework */; };
 		41345733146F65ED00BBB2C1 /* TCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345732146F65ED00BBB2C1 /* TCSettings.m */; };
+		4140FCA4146FECF800F067EF /* TCWebHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FCA3146FECF800F067EF /* TCWebHostView.m */; };
+		4140FCA8146FED0F00F067EF /* TCWebHostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FCA7146FED0F00F067EF /* TCWebHostController.m */; };
+		4140FCAC146FF04300F067EF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4140FCAA146FF04300F067EF /* back.png */; };
+		4140FCAD146FF04300F067EF /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 4140FCAB146FF04300F067EF /* next.png */; };
+		4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FCAF146FFDBA00F067EF /* UIApplication+Extensions.m */; };
+		4140FCB2146FFDCB00F067EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4140FCB1146FFDCB00F067EF /* SystemConfiguration.framework */; };
 		41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBC146E277B00C82B42 /* WelcomeController.m */; };
 		41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBF146E28B100C82B42 /* WelcomeView.m */; };
 		41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC2146E982700C82B42 /* TCInternetButton.m */; };
@@ -360,6 +366,15 @@
 		41345731146F65ED00BBB2C1 /* TCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCSettings.h; path = Code/Util/TCSettings.h; sourceTree = "<group>"; };
 		41345732146F65ED00BBB2C1 /* TCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCSettings.m; path = Code/Util/TCSettings.m; sourceTree = "<group>"; };
 		41345734146F6A8700BBB2C1 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = Code/Util/macros.h; sourceTree = "<group>"; };
+		4140FCA2146FECF800F067EF /* TCWebHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCWebHostView.h; path = ../../../TripCase/iphone/TCWebHostView.h; sourceTree = "<group>"; };
+		4140FCA3146FECF800F067EF /* TCWebHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCWebHostView.m; path = ../../../TripCase/iphone/TCWebHostView.m; sourceTree = "<group>"; };
+		4140FCA6146FED0F00F067EF /* TCWebHostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCWebHostController.h; path = Code/Controller/Shared/TCWebHostController.h; sourceTree = "<group>"; };
+		4140FCA7146FED0F00F067EF /* TCWebHostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCWebHostController.m; path = Code/Controller/Shared/TCWebHostController.m; sourceTree = "<group>"; };
+		4140FCAA146FF04300F067EF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Assets/back.png; sourceTree = "<group>"; };
+		4140FCAB146FF04300F067EF /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = Assets/next.png; sourceTree = "<group>"; };
+		4140FCAE146FFDBA00F067EF /* UIApplication+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "UIApplication+Extensions.h"; path = "Code/Util/UIApplication+Extensions.h"; sourceTree = "<group>"; };
+		4140FCAF146FFDBA00F067EF /* UIApplication+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Extensions.m"; path = "Code/Util/UIApplication+Extensions.m"; sourceTree = "<group>"; };
+		4140FCB1146FFDCB00F067EF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41744FBB146E277B00C82B42 /* WelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeController.h; path = Code/Controller/Welcome/WelcomeController.h; sourceTree = "<group>"; };
 		41744FBC146E277B00C82B42 /* WelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeController.m; path = Code/Controller/Welcome/WelcomeController.m; sourceTree = "<group>"; };
 		41744FBE146E28B100C82B42 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Code/View/Welcome/WelcomeView.h; sourceTree = "<group>"; };
@@ -440,6 +455,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4140FCB2146FFDCB00F067EF /* SystemConfiguration.framework in Frameworks */,
 				4134572D146F4B6700BBB2C1 /* Security.framework in Frameworks */,
 				41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */,
 				41230606146E029000B0DEA1 /* libIStructure.a in Frameworks */,
@@ -456,6 +472,7 @@
 		411C1B1B143BFBA1000449E1 = {
 			isa = PBXGroup;
 			children = (
+				4140FCB1146FFDCB00F067EF /* SystemConfiguration.framework */,
 				4134572B146F4B0E00BBB2C1 /* Security.framework */,
 				41744FCB146EA36600C82B42 /* QuartzCore.framework */,
 				418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */,
@@ -744,6 +761,8 @@
 				41230657146E06E000B0DEA1 /* TCDateFormatter.h */,
 				41230658146E06E000B0DEA1 /* TCDateFormatter.m */,
 				41345734146F6A8700BBB2C1 /* macros.h */,
+				4140FCAE146FFDBA00F067EF /* UIApplication+Extensions.h */,
+				4140FCAF146FFDBA00F067EF /* UIApplication+Extensions.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -751,6 +770,8 @@
 		4123060D146E038C00B0DEA1 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				4140FCAA146FF04300F067EF /* back.png */,
+				4140FCAB146FF04300F067EF /* next.png */,
 				4123060E146E042100B0DEA1 /* bg_main.png */,
 				4123060F146E042100B0DEA1 /* bg_main@2x.png */,
 				41230610146E042100B0DEA1 /* btn_back_press@2x.png */,
@@ -797,6 +818,8 @@
 				41744FC2146E982700C82B42 /* TCInternetButton.m */,
 				41744FC8146EA2B500C82B42 /* LoadingView.h */,
 				41744FC9146EA2B500C82B42 /* LoadingView.m */,
+				4140FCA2146FECF800F067EF /* TCWebHostView.h */,
+				4140FCA3146FECF800F067EF /* TCWebHostView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -828,6 +851,8 @@
 			children = (
 				4123065D146E075800B0DEA1 /* TCFormController.h */,
 				4123065E146E075800B0DEA1 /* TCFormController.m */,
+				4140FCA6146FED0F00F067EF /* TCWebHostController.h */,
+				4140FCA7146FED0F00F067EF /* TCWebHostController.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1249,6 +1274,8 @@
 				41230621146E042100B0DEA1 /* chk_box.png in Resources */,
 				41230622146E042100B0DEA1 /* chk_box@2x.png in Resources */,
 				41230623146E042100B0DEA1 /* titlebar_bg@2x.png in Resources */,
+				4140FCAC146FF04300F067EF /* back.png in Resources */,
+				4140FCAD146FF04300F067EF /* next.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1367,6 +1394,9 @@
 				41744FD5146F133D00C82B42 /* TCLink.m in Sources */,
 				41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */,
 				41345733146F65ED00BBB2C1 /* TCSettings.m in Sources */,
+				4140FCA4146FECF800F067EF /* TCWebHostView.m in Sources */,
+				4140FCA8146FED0F00F067EF /* TCWebHostController.m in Sources */,
+				4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
