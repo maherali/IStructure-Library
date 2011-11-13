@@ -140,6 +140,7 @@
 		4184A111146E129D00572663 /* AppErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* AppErrorDecoder.m */; };
 		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
 		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
+		41EDF54A147009D700A436D9 /* AppFacadeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF549147009D700A436D9 /* AppFacadeService.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -398,6 +399,8 @@
 		4184A115146E12AC00572663 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = Code/Model/Session.m; sourceTree = "<group>"; };
 		418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		418A6E5C146D516F009243E4 /* NSMutableURLRequest+IStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+IStructure.h"; path = "Library/NSMutableURLRequest+IStructure.h"; sourceTree = "<group>"; };
+		41EDF548147009D700A436D9 /* AppFacadeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppFacadeService.h; path = Code/Service/AppFacadeService.h; sourceTree = "<group>"; };
+		41EDF549147009D700A436D9 /* AppFacadeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppFacadeService.m; path = Code/Service/AppFacadeService.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -701,6 +704,8 @@
 		41230607146E029F00B0DEA1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF548147009D700A436D9 /* AppFacadeService.h */,
+				41EDF549147009D700A436D9 /* AppFacadeService.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -1397,6 +1402,7 @@
 				4140FCA8146FED0F00F067EF /* TCWebHostController.m in Sources */,
 				4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */,
 				4111B77C147001920016F2C4 /* TCWebHostView.m in Sources */,
+				41EDF54A147009D700A436D9 /* AppFacadeService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
