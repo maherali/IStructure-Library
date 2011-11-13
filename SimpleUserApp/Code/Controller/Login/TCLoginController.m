@@ -34,9 +34,6 @@
     $unwatch(@"initiate:login", this.tableView);
     $unwatch(@"start:register", this.tableView);
     $unwatch(@"start:tnc", this.tableView);
-    $unwatch(@"login:success");
-    $unwatch(@"logout:success");
-    $unwatch(@"registration:success");
     
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
@@ -46,10 +43,6 @@
     });
     $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
         $navigate(@"/www", $dict(@"URL", @"http://www.apple.com/legal/itunes/us/terms.html"));
-    });
-    $watch(@"logout:success", ^(NSNotification *notif){
-        ((Session*)this.model).loggedIn = NO;
-        [this.navigationController popToRootViewControllerAnimated:NO];
     });
 }
 

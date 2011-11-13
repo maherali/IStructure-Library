@@ -40,16 +40,21 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"user_name"] forKey:@"last_loggedin_user"];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"last_login_remember_me"] forKey:@"last_login_remember_me"];
     });
+    $watch(@"logout:success",  ^(NSNotification *notif){ // I'm going to watch (observe) logout:success event triggered by any object.
+        // when logging out is successful, I need to update state
+        session.loggedIn = NO;
+        [this.navigationController popToRootViewControllerAnimated:NO];
+    });
     $watch(@"registration:success", ^(NSNotification *notif){
-        session.loggedIn = YES;
+        session.loggedIn = YES; // our server logs us automatically upon registration.
+        // teh guy who just registered will have his credintials saved and auto logged next time!
         ISModel *registeration = [notif.userInfo objectForKey:MODEL_KEY];
         [TCPasswordVault savePassword:[registeration get:@"password"] forAccount:[registeration get:@"email"]];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[registeration get:@"email"] forKey:@"last_loggedin_user"];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:@"1" forKey:@"last_login_remember_me"];
         [session set:$dict(@"password", [registeration get:@"password"], @"user_name", [registeration get:@"email"], @"last_login_remember_me", @"1") withOptions:$dict(SILENT_KEY, $object(YES))];
-        [session change];
+        [session change]; // trigger a change event so that the login view can reload itself. In teh above line, we make the change of attributes silent so that we just trigger change event once!
     });
-
     // At the start of the app, I show login 
     // The values passed have two possible entries: params (from the navigation path, which we don't use because we start it manualy) and options with the most important option (the model or collection).
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:[[[TCLoginController alloc] initWithValues:$dict(OPTIONS_KEY, $dict(MODEL_KEY, session))] autorelease]] autorelease];
