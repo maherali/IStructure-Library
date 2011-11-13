@@ -28,10 +28,10 @@
     $unwatch(@"initiate:register", this.tableView);
     $unwatch(@"start:tnc", this.tableView);
 
-    $watch(@"initiate:register", this.tableView,  ^(NSNotification *notif){
+    $watch(@"initiate:register", this.tableView, ^(NSNotification *notif){
         [this signup];
     });
-    $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
+    $watch(@"start:tnc", this.tableView, ^(NSNotification *notif){
         $navigate(@"/www", $dict(@"URL", @"http://www.apple.com/legal/itunes/us/terms.html"));
     });
 }

@@ -102,28 +102,12 @@
     UIBarButtonItem *fwdButton  = [[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"next.png"] style:UIBarButtonItemStylePlain target:self action:@selector(fwd)] autorelease];
     
     if(bkEnabled && fwdEnabled){
-        self.toolbarItems = [NSArray arrayWithObjects:
-                             space2,
-                             bkButton,
-                             space,
-                             fwdButton,
-                             space,
-                             nil
-                             ];
+        self.toolbarItems = $array(space2, bkButton, space, fwdButton, space);
     }else if (bkEnabled && !fwdEnabled){
-        self.toolbarItems = [NSArray arrayWithObjects:
-                             space2,
-                             bkButton, space, space2,
-                             nil
-                             ];        
+        self.toolbarItems = $array(space2, bkButton, space, space2);
     }else if (!bkEnabled && fwdEnabled){
-        self.toolbarItems = [NSArray arrayWithObjects:
-                             space2, space2, space, 
-                             fwdButton,
-                             nil
-                             ];     
-    }
-    else{
+        self.toolbarItems = $array(space2, space2, space, fwdButton);
+    }else{
         self.toolbarItems = nil;
     }
     [self setupToolbarAppearance];
