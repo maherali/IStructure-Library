@@ -119,7 +119,6 @@
 		41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBC146E277B00C82B42 /* WelcomeController.m */; };
 		41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBF146E28B100C82B42 /* WelcomeView.m */; };
 		41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC2146E982700C82B42 /* TCInternetButton.m */; };
-		41744FCA146EA2B500C82B42 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC9146EA2B500C82B42 /* LoadingView.m */; };
 		41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41744FCF146EC31500C82B42 /* Registration.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FCE146EC31500C82B42 /* Registration.m */; };
 		41744FD2146EC3A000C82B42 /* AppSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FD1146EC3A000C82B42 /* AppSync.m */; };
@@ -141,6 +140,7 @@
 		41EDF564147013F100A436D9 /* chk_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF557147013F100A436D9 /* chk_box@2x.png */; };
 		41EDF565147013F100A436D9 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF558147013F100A436D9 /* next.png */; };
 		41EDF566147013F100A436D9 /* titlebar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF559147013F100A436D9 /* titlebar_bg@2x.png */; };
+		41EDF569147014BD00A436D9 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF568147014BD00A436D9 /* LoadingView.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -369,8 +369,6 @@
 		41744FBF146E28B100C82B42 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = Code/View/Welcome/WelcomeView.m; sourceTree = "<group>"; };
 		41744FC1146E982700C82B42 /* TCInternetButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCInternetButton.h; path = Code/View/Shared/TCInternetButton.h; sourceTree = "<group>"; };
 		41744FC2146E982700C82B42 /* TCInternetButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCInternetButton.m; path = Code/View/Shared/TCInternetButton.m; sourceTree = "<group>"; };
-		41744FC8146EA2B500C82B42 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
-		41744FC9146EA2B500C82B42 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		41744FCB146EA36600C82B42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		41744FCD146EC31500C82B42 /* Registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Registration.h; path = Code/Model/Registration.h; sourceTree = "<group>"; };
 		41744FCE146EC31500C82B42 /* Registration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Registration.m; path = Code/Model/Registration.m; sourceTree = "<group>"; };
@@ -401,6 +399,8 @@
 		41EDF557147013F100A436D9 /* chk_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chk_box@2x.png"; path = "Assets/Images/chk_box@2x.png"; sourceTree = "<group>"; };
 		41EDF558147013F100A436D9 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = Assets/Images/next.png; sourceTree = "<group>"; };
 		41EDF559147013F100A436D9 /* titlebar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titlebar_bg@2x.png"; path = "Assets/Images/titlebar_bg@2x.png"; sourceTree = "<group>"; };
+		41EDF567147014BD00A436D9 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = Code/View/Shared/LoadingView.h; sourceTree = "<group>"; };
+		41EDF568147014BD00A436D9 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = Code/View/Shared/LoadingView.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -809,10 +809,10 @@
 				4123063C146E068600B0DEA1 /* UIView+Enhancements.m */,
 				41744FC1146E982700C82B42 /* TCInternetButton.h */,
 				41744FC2146E982700C82B42 /* TCInternetButton.m */,
-				41744FC8146EA2B500C82B42 /* LoadingView.h */,
-				41744FC9146EA2B500C82B42 /* LoadingView.m */,
 				4111B77A147001920016F2C4 /* TCWebHostView.h */,
 				4111B77B147001920016F2C4 /* TCWebHostView.m */,
+				41EDF567147014BD00A436D9 /* LoadingView.h */,
+				41EDF568147014BD00A436D9 /* LoadingView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1401,7 +1401,6 @@
 				41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */,
 				41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */,
 				41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */,
-				41744FCA146EA2B500C82B42 /* LoadingView.m in Sources */,
 				41744FCF146EC31500C82B42 /* Registration.m in Sources */,
 				41744FD2146EC3A000C82B42 /* AppSync.m in Sources */,
 				41744FD5146F133D00C82B42 /* TCLink.m in Sources */,
@@ -1411,6 +1410,7 @@
 				4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */,
 				4111B77C147001920016F2C4 /* TCWebHostView.m in Sources */,
 				41EDF54A147009D700A436D9 /* AppFacadeService.m in Sources */,
+				41EDF569147014BD00A436D9 /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
