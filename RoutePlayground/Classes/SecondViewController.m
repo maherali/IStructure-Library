@@ -60,12 +60,12 @@
     __block SecondViewController *this = self;
     if($route_exist(this.installField.text)){
         $unroute(this.installField.text);
-        [UIAlertView message:$array(@"Route has been removed!")];
+        [UIAlertView message:@"Route has been removed!"];
     }else{
         $route(this.installField.text, $block(^(NSNotification *notif){
             [UIAlertView allParams:[this realParams:[notif.userInfo objectForKey:PARAMS_KEY]]];
         }));
-        [UIAlertView message:$array(@"Route has been added!")];
+        [UIAlertView message:@"Route has been added!"];
     }
     [this.installField resignFirstResponder];
 }

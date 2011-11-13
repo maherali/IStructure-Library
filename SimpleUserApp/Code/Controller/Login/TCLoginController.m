@@ -51,7 +51,7 @@
 - (void) login{
     __block TCLoginController *this = self;
     if(((Session*)self.model).loggedIn){
-        [UIAlertView message:$array(@"You are already logged in!")];
+        [UIAlertView message:@"You are already logged in!"];
         $navigate(@"/welcome");
         return;
     }

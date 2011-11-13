@@ -24,7 +24,7 @@
     self.photo = [[[Photo alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
     photo.image = [UIImage imageNamed:@"clouds.jpg"];
     [photo save:$dict(SUCCESS_HANDLER_KEY, $block(^(Photo *model, NSData *data){
-        [UIAlertView message:$array(@"Success uploading photo to server!")];
+        [UIAlertView message:@"Success uploading photo to server!"];
     }), FAILURE_HANDLER_KEY, $block(^(Photo *model, NSArray *errors){
         [UIAlertView errors:errors];
     }))];
