@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4111B77C147001920016F2C4 /* TCWebHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4111B77B147001920016F2C4 /* TCWebHostView.m */; };
 		411C1B47143BFBB7000449E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2A143BFBA2000449E1 /* UIKit.framework */; };
 		411C1B48143BFBB7000449E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2C143BFBA2000449E1 /* Foundation.framework */; };
 		411C1B49143BFBB7000449E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */; };
@@ -123,7 +124,6 @@
 		41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345728146F4AE600BBB2C1 /* TCPasswordVault.m */; };
 		4134572D146F4B6700BBB2C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134572B146F4B0E00BBB2C1 /* Security.framework */; };
 		41345733146F65ED00BBB2C1 /* TCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345732146F65ED00BBB2C1 /* TCSettings.m */; };
-		4140FCA4146FECF800F067EF /* TCWebHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FCA3146FECF800F067EF /* TCWebHostView.m */; };
 		4140FCA8146FED0F00F067EF /* TCWebHostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FCA7146FED0F00F067EF /* TCWebHostController.m */; };
 		4140FCAC146FF04300F067EF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4140FCAA146FF04300F067EF /* back.png */; };
 		4140FCAD146FF04300F067EF /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 4140FCAB146FF04300F067EF /* next.png */; };
@@ -145,6 +145,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4111B77A147001920016F2C4 /* TCWebHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCWebHostView.h; path = Code/View/Shared/TCWebHostView.h; sourceTree = "<group>"; };
+		4111B77B147001920016F2C4 /* TCWebHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCWebHostView.m; path = Code/View/Shared/TCWebHostView.m; sourceTree = "<group>"; };
 		411C1B2A143BFBA2000449E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		411C1B2C143BFBA2000449E1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -366,13 +368,11 @@
 		41345731146F65ED00BBB2C1 /* TCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCSettings.h; path = Code/Util/TCSettings.h; sourceTree = "<group>"; };
 		41345732146F65ED00BBB2C1 /* TCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCSettings.m; path = Code/Util/TCSettings.m; sourceTree = "<group>"; };
 		41345734146F6A8700BBB2C1 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = Code/Util/macros.h; sourceTree = "<group>"; };
-		4140FCA2146FECF800F067EF /* TCWebHostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCWebHostView.h; path = ../../../TripCase/iphone/TCWebHostView.h; sourceTree = "<group>"; };
-		4140FCA3146FECF800F067EF /* TCWebHostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCWebHostView.m; path = ../../../TripCase/iphone/TCWebHostView.m; sourceTree = "<group>"; };
 		4140FCA6146FED0F00F067EF /* TCWebHostController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCWebHostController.h; path = Code/Controller/Shared/TCWebHostController.h; sourceTree = "<group>"; };
 		4140FCA7146FED0F00F067EF /* TCWebHostController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCWebHostController.m; path = Code/Controller/Shared/TCWebHostController.m; sourceTree = "<group>"; };
 		4140FCAA146FF04300F067EF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Assets/back.png; sourceTree = "<group>"; };
 		4140FCAB146FF04300F067EF /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = Assets/next.png; sourceTree = "<group>"; };
-		4140FCAE146FFDBA00F067EF /* UIApplication+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; name = "UIApplication+Extensions.h"; path = "Code/Util/UIApplication+Extensions.h"; sourceTree = "<group>"; };
+		4140FCAE146FFDBA00F067EF /* UIApplication+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+Extensions.h"; path = "Code/Util/UIApplication+Extensions.h"; sourceTree = "<group>"; };
 		4140FCAF146FFDBA00F067EF /* UIApplication+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Extensions.m"; path = "Code/Util/UIApplication+Extensions.m"; sourceTree = "<group>"; };
 		4140FCB1146FFDCB00F067EF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		41744FBB146E277B00C82B42 /* WelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeController.h; path = Code/Controller/Welcome/WelcomeController.h; sourceTree = "<group>"; };
@@ -818,8 +818,8 @@
 				41744FC2146E982700C82B42 /* TCInternetButton.m */,
 				41744FC8146EA2B500C82B42 /* LoadingView.h */,
 				41744FC9146EA2B500C82B42 /* LoadingView.m */,
-				4140FCA2146FECF800F067EF /* TCWebHostView.h */,
-				4140FCA3146FECF800F067EF /* TCWebHostView.m */,
+				4111B77A147001920016F2C4 /* TCWebHostView.h */,
+				4111B77B147001920016F2C4 /* TCWebHostView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1394,9 +1394,9 @@
 				41744FD5146F133D00C82B42 /* TCLink.m in Sources */,
 				41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */,
 				41345733146F65ED00BBB2C1 /* TCSettings.m in Sources */,
-				4140FCA4146FECF800F067EF /* TCWebHostView.m in Sources */,
 				4140FCA8146FED0F00F067EF /* TCWebHostController.m in Sources */,
 				4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */,
+				4111B77C147001920016F2C4 /* TCWebHostView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
