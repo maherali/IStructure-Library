@@ -7,10 +7,10 @@
 #import "Session.h"
 
 /*
-
+ 
  It's better to have an object responsible for starting the app that is different than the App Delegate. App delegate can get bigger without you knowing.
  
-*/
+ */
 
 static AppFacadeService  *singleton  = nil; // my service is a singleton.
 
@@ -24,6 +24,12 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
 @synthesize navigationController;
 @synthesize observers;
 
+- (void) saveInfoForNextTimeWithUser:(NSString*) user password:(NSString*) password rememberMe:(NSString*) rememberMe{
+    [TCPasswordVault savePassword:password forAccount:user];
+    [[TCSettings instance] setValue:user forKey:@"last_loggedin_user"];
+    [[TCSettings instance] setValue:rememberMe forKey:@"last_login_remember_me"];
+}
+
 - (id) intWithOptions:(NSDictionary*) options{
     LOG(@"%@", [IStructure version]); // you can always see what build of iStructure you're using!
     self = [super init];
@@ -33,14 +39,12 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
     [ISModel setBaseUrl:@"http://gentle-lightning-6506.herokuapp.com/"]; // all my models have this base url. You can specify base url for specific model classes or even specific model instances!
     __block AppFacadeService *this = self; // most macros use this to refere to self. Always define it to make your life easy. Never reference properties without using this in the dot notation. You don't want these blocks to retain you!
     Session *session = [self prepareSession]; // Let's create a session object and possibly populate it from last time!
-    $watch(@"login:success",  ^(NSNotification *notif){ // I'm going to watch (observe) login:success event triggered by any object.
-        // when logging is successful, I need to store the state for next time.
+    $watch(@"login:success", ^(NSNotification *notif){ // I'm going to watch (observe) login:success event triggered by any object.
         session.loggedIn = YES;
-        [TCPasswordVault savePassword:[session get:@"password"] forAccount:[session get:@"user_name"]];
-        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"user_name"] forKey:@"last_loggedin_user"];
-        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"last_login_remember_me"] forKey:@"last_login_remember_me"];
+        // when logging is successful, I need to store the state for next time.
+        [self saveInfoForNextTimeWithUser:[session get:@"user_name"] password:[session get:@"password"] rememberMe:[session get:@"last_login_remember_me"]];
     });
-    $watch(@"logout:success",  ^(NSNotification *notif){ // I'm going to watch (observe) logout:success event triggered by any object.
+    $watch(@"logout:success", ^(NSNotification *notif){ // I'm going to watch (observe) logout:success event triggered by any object.
         // when logging out is successful, I need to update state
         session.loggedIn = NO;
         [this.navigationController popToRootViewControllerAnimated:NO];
@@ -49,9 +53,7 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
         session.loggedIn = YES; // our server logs us automatically upon registration.
         // the user who just registered will have his credintials saved and auto logged next time!
         ISModel *registeration = [notif.userInfo objectForKey:MODEL_KEY];
-        [TCPasswordVault savePassword:[registeration get:@"password"] forAccount:[registeration get:@"email"]];
-        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[registeration get:@"email"] forKey:@"last_loggedin_user"];
-        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:@"1" forKey:@"last_login_remember_me"];
+        [self saveInfoForNextTimeWithUser:[registeration get:@"email"] password:[registeration get:@"password"] rememberMe:@"1"];
         [session set:$dict(@"password", [registeration get:@"password"], @"user_name", [registeration get:@"email"], @"last_login_remember_me", @"1") withOptions:$dict(SILENT_KEY, $object(YES))];
         [session change]; // trigger a change event so that the login view can reload itself. In teh above line, we make the change of attributes silent so that we just trigger change event once!
     });

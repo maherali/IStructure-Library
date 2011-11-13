@@ -8,5 +8,6 @@
 -   (void)  setValue:(id)_setting forKey:(NSString*)_key;
 -   (id)    valueForKey:(NSString*)_key;
 +   (NSString*) settingsFileName;
++   (TCSettings*) instance;
 
 @end

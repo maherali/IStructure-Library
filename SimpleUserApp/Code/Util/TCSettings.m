@@ -7,6 +7,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(TCSettings)
 
 @synthesize settings;
 
++ (TCSettings*) instance{
+    return [self performSelector:@selector(sharedTCSettings)];   
+}
+
 + (NSString*) settingsFileName{
     return [NSHomeDirectory() stringByAppendingPathComponent:@"Library/settings.plist"];
 }
