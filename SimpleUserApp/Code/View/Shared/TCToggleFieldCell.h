@@ -2,6 +2,6 @@
 
 @interface TCToggleFieldCell : TCFormCell
 
-@property (nonatomic, assign)   BOOL    rememberMeOn;
+@property (nonatomic, assign)   BOOL    checked;
 
 @end

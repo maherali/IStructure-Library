@@ -2,7 +2,7 @@
 
 @implementation TCToggleFieldCell
 
-@synthesize rememberMeOn;
+@synthesize checked;
 
 - (id) init{
     self = [super init];
@@ -18,7 +18,7 @@
 }
 
 - (void) switchOnOff:(UISwitch*) toggle{
-    self.rememberMeOn = toggle.on; 
+    self.checked = toggle.on; 
 }
 
 @end

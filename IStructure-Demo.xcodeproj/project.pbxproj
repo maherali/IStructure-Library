@@ -122,6 +122,7 @@
 		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345728146F4AE600BBB2C1 /* TCPasswordVault.m */; };
 		4134572D146F4B6700BBB2C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134572B146F4B0E00BBB2C1 /* Security.framework */; };
+		41345733146F65ED00BBB2C1 /* TCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345732146F65ED00BBB2C1 /* TCSettings.m */; };
 		41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBC146E277B00C82B42 /* WelcomeController.m */; };
 		41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBF146E28B100C82B42 /* WelcomeView.m */; };
 		41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC2146E982700C82B42 /* TCInternetButton.m */; };
@@ -356,6 +357,9 @@
 		41345727146F4AE600BBB2C1 /* TCPasswordVault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCPasswordVault.h; path = Code/Util/TCPasswordVault.h; sourceTree = "<group>"; };
 		41345728146F4AE600BBB2C1 /* TCPasswordVault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCPasswordVault.m; path = Code/Util/TCPasswordVault.m; sourceTree = "<group>"; };
 		4134572B146F4B0E00BBB2C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		41345731146F65ED00BBB2C1 /* TCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCSettings.h; path = Code/Util/TCSettings.h; sourceTree = "<group>"; };
+		41345732146F65ED00BBB2C1 /* TCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCSettings.m; path = Code/Util/TCSettings.m; sourceTree = "<group>"; };
+		41345734146F6A8700BBB2C1 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = macros.h; path = Code/Util/macros.h; sourceTree = "<group>"; };
 		41744FBB146E277B00C82B42 /* WelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeController.h; path = Code/Controller/Welcome/WelcomeController.h; sourceTree = "<group>"; };
 		41744FBC146E277B00C82B42 /* WelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeController.m; path = Code/Controller/Welcome/WelcomeController.m; sourceTree = "<group>"; };
 		41744FBE146E28B100C82B42 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Code/View/Welcome/WelcomeView.h; sourceTree = "<group>"; };
@@ -733,10 +737,13 @@
 		4123060C146E031300B0DEA1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				41345731146F65ED00BBB2C1 /* TCSettings.h */,
+				41345732146F65ED00BBB2C1 /* TCSettings.m */,
 				41345727146F4AE600BBB2C1 /* TCPasswordVault.h */,
 				41345728146F4AE600BBB2C1 /* TCPasswordVault.m */,
 				41230657146E06E000B0DEA1 /* TCDateFormatter.h */,
 				41230658146E06E000B0DEA1 /* TCDateFormatter.m */,
+				41345734146F6A8700BBB2C1 /* macros.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -1359,6 +1366,7 @@
 				41744FD2146EC3A000C82B42 /* AppSync.m in Sources */,
 				41744FD5146F133D00C82B42 /* TCLink.m in Sources */,
 				41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */,
+				41345733146F65ED00BBB2C1 /* TCSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

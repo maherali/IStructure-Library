@@ -3,6 +3,7 @@
 #import "Session.h"
 #import "Registration.h"
 #import "TCPasswordVault.h"
+#import "TCSettings.h"
 
 @implementation TCLoginController
 
@@ -16,6 +17,7 @@
     $trigger(@"login:begin", this.model);
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         [TCPasswordVault savePassword:[self.model get:@"password"] forAccount:[self.model get:@"user_name"]];
+        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[self.model get:@"user_name"] forKey:@"last_loggedin_user"];
         $trigger(@"login:end", this.model);
         [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;
@@ -49,7 +51,8 @@
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
     self = [super initWithValues:passedInValues andStyle:style];
-    self.model = [[[Session alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
+    NSString *lastUserName = [[TCSettings performSelector:@selector(sharedTCSettings)] valueForKey:@"last_loggedin_user"];
+    self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"") andOptions:$dict()] autorelease];
     return self;
 }
 

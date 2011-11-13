@@ -18,8 +18,10 @@
 }
 
 - (void) lastChanceToUpdateSyncOptions:(NSMutableDictionary*) opts forMethod:(NSString*) method{
-    [opts setObject:[self get:@"user_name"] forKey:@"USER_NAME"];
-    [opts setObject:[self get:@"password"] forKey:@"PASSWORD"];
+    if([method isEqualToString:METHOD_CREATE]){
+        [opts setObject:[self get:@"user_name"] forKey:@"USER_NAME"];
+        [opts setObject:[self get:@"password"] forKey:@"PASSWORD"];
+    }
 }
 
 - (BOOL) isNew{
