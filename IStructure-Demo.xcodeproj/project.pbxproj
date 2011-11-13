@@ -120,6 +120,8 @@
 		412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */ = {isa = PBXBuildFile; fileRef = 41345728146F4AE600BBB2C1 /* TCPasswordVault.m */; };
+		4134572D146F4B6700BBB2C1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4134572B146F4B0E00BBB2C1 /* Security.framework */; };
 		41744FBD146E277B00C82B42 /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBC146E277B00C82B42 /* WelcomeController.m */; };
 		41744FC0146E28B100C82B42 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FBF146E28B100C82B42 /* WelcomeView.m */; };
 		41744FC3146E982800C82B42 /* TCInternetButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 41744FC2146E982700C82B42 /* TCInternetButton.m */; };
@@ -351,6 +353,9 @@
 		412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISCacheDatabase.h; path = Library/ISCacheDatabase.h; sourceTree = "<group>"; };
 		412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ISEnhancedSync.h; path = Library/ISEnhancedSync.h; sourceTree = "<group>"; };
 		412745C01448ED2400CA7E05 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		41345727146F4AE600BBB2C1 /* TCPasswordVault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCPasswordVault.h; path = Code/Util/TCPasswordVault.h; sourceTree = "<group>"; };
+		41345728146F4AE600BBB2C1 /* TCPasswordVault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCPasswordVault.m; path = Code/Util/TCPasswordVault.m; sourceTree = "<group>"; };
+		4134572B146F4B0E00BBB2C1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		41744FBB146E277B00C82B42 /* WelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeController.h; path = Code/Controller/Welcome/WelcomeController.h; sourceTree = "<group>"; };
 		41744FBC146E277B00C82B42 /* WelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeController.m; path = Code/Controller/Welcome/WelcomeController.m; sourceTree = "<group>"; };
 		41744FBE146E28B100C82B42 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = Code/View/Welcome/WelcomeView.h; sourceTree = "<group>"; };
@@ -431,6 +436,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4134572D146F4B6700BBB2C1 /* Security.framework in Frameworks */,
 				41744FCC146EA36700C82B42 /* QuartzCore.framework in Frameworks */,
 				41230606146E029000B0DEA1 /* libIStructure.a in Frameworks */,
 				41230605146E028500B0DEA1 /* libsqlite3.dylib in Frameworks */,
@@ -446,6 +452,7 @@
 		411C1B1B143BFBA1000449E1 = {
 			isa = PBXGroup;
 			children = (
+				4134572B146F4B0E00BBB2C1 /* Security.framework */,
 				41744FCB146EA36600C82B42 /* QuartzCore.framework */,
 				418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */,
 				411C1B59143BFBE6000449E1 /* IStructure Library */,
@@ -726,6 +733,8 @@
 		4123060C146E031300B0DEA1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				41345727146F4AE600BBB2C1 /* TCPasswordVault.h */,
+				41345728146F4AE600BBB2C1 /* TCPasswordVault.m */,
 				41230657146E06E000B0DEA1 /* TCDateFormatter.h */,
 				41230658146E06E000B0DEA1 /* TCDateFormatter.m */,
 			);
@@ -1349,6 +1358,7 @@
 				41744FCF146EC31500C82B42 /* Registration.m in Sources */,
 				41744FD2146EC3A000C82B42 /* AppSync.m in Sources */,
 				41744FD5146F133D00C82B42 /* TCLink.m in Sources */,
+				41345729146F4AE600BBB2C1 /* TCPasswordVault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
