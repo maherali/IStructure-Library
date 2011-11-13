@@ -53,8 +53,8 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
         session.loggedIn = YES; // our server logs us automatically upon registration.
         // the user who just registered will have his credintials saved and auto logged next time!
         ISModel *registeration = [notif.userInfo objectForKey:MODEL_KEY];
-        [self saveInfoForNextTimeWithUser:[registeration get:@"email"] password:[registeration get:@"password"] rememberMe:@"1"];
-        [session set:$dict(@"password", [registeration get:@"password"], @"user_name", [registeration get:@"email"], @"remember_me", @"1") withOptions:$dict(SILENT_KEY, $object(YES))];
+        [self saveInfoForNextTimeWithUser:[registeration get:@"email"] password:[registeration get:@"password"] rememberMe:@"YES"];
+        [session set:$dict(@"password", [registeration get:@"password"], @"user_name", [registeration get:@"email"], @"remember_me", @"YES") withOptions:$dict(SILENT_KEY, $object(YES))];
         [session change]; // trigger a change event so that the login view can reload itself. In teh above line, we make the change of attributes silent so that we just trigger change event once!
     });
     // At the start of the app, I show login 
@@ -69,10 +69,10 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
     NSString *lastUserName  = [[TCSettings instance] valueForKey:@"last_loggedin_user"];
     NSString *rememberMe    = [[TCSettings instance] valueForKey:@"last_login_remember_me"];
     NSString *password      = @"";
-    if([rememberMe isEqualToString:@"1"]){
+    if([rememberMe isEqualToString:@"YES"]){
         password = [TCPasswordVault passwordForAccount:lastUserName];
     }
-    return [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password?password:@"", @"remember_me", rememberMe?rememberMe:@"0") andOptions:$dict()] autorelease];
+    return [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password?password:@"", @"remember_me", rememberMe?rememberMe:@"NO") andOptions:$dict()] autorelease];
 }
 
 // This class method is called when someone starts my service by issuing $start(@"app")
