@@ -55,11 +55,13 @@
     NSString *lastUserName  = [[TCSettings performSelector:@selector(sharedTCSettings)] valueForKey:@"last_loggedin_user"];
     NSString *rememberMe    = [[TCSettings performSelector:@selector(sharedTCSettings)] valueForKey:@"last_login_remember_me"];
     NSString *password      = @"";
-    if(rememberMe){
+    if([rememberMe isEqualToString:@"1"]){
         password = [TCPasswordVault passwordForAccount:lastUserName];
     }
     self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password, @"last_login_remember_me", rememberMe?rememberMe:@"0") andOptions:$dict()] autorelease];
-    [self performSelector:@selector(login) withObject:nil afterDelay:0];
+    if([rememberMe isEqualToString:@"1"]){
+        [self performSelector:@selector(login) withObject:nil afterDelay:0];
+    }
     return self;
 }
 
