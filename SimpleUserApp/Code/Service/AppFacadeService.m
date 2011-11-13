@@ -47,7 +47,7 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
     });
     $watch(@"registration:success", ^(NSNotification *notif){
         session.loggedIn = YES; // our server logs us automatically upon registration.
-        // teh guy who just registered will have his credintials saved and auto logged next time!
+        // the user who just registered will have his credintials saved and auto logged next time!
         ISModel *registeration = [notif.userInfo objectForKey:MODEL_KEY];
         [TCPasswordVault savePassword:[registeration get:@"password"] forAccount:[registeration get:@"email"]];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[registeration get:@"email"] forKey:@"last_loggedin_user"];

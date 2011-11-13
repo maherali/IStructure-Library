@@ -39,7 +39,6 @@
     $watch(@"register:begin", ^(NSNotification *notif){
         loadingView = [LoadingView loadingViewInView:this.window];
     });
-    
     $watch(@"register:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
     });

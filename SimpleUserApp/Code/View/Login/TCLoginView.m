@@ -49,8 +49,8 @@
     $watch(@"reload_data", this, ^(NSNotification *notif){
         userNameCell.textField.text    = [self.model get:@"user_name"];
         passwordCell.textField.text    = [self.model get:@"password"];
-        BOOL rememberMe         = [[self.model get:@"last_login_remember_me"] isEqualToString:@"1"];
-        rememberMeCell.checked           = rememberMe;
+        BOOL rememberMe                = [[self.model get:@"last_login_remember_me"] isEqualToString:@"1"];
+        rememberMeCell.checked         = rememberMe;
     });
     
     return self;

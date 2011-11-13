@@ -1,7 +1,6 @@
 #import "TCWebHostController.h"
 #import "TCWebHostView.h"
 
-
 @interface TCWebHostController ()
 
 - (void) setupWebViewNavButtons;
