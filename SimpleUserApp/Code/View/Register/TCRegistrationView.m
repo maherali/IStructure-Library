@@ -54,15 +54,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     __block TCRegistrationView *this = self;
-    UIView *v = [[[TCRegistrationFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
+    UIView *registrationFooter = [[[TCRegistrationFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 100)] autorelease];
     $unwatch(@"tnc_link:tapped");
-    $watch(@"tnc_link:tapped", v, ^(NSNotification *notif){
+    $watch(@"tnc_link:tapped", registrationFooter, ^(NSNotification *notif){
         $trigger(@"start:tnc");
     });
-    
-    return v;
-
-    
+    return registrationFooter;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

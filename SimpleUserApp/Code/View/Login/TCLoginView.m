@@ -84,13 +84,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     __block TCLoginView *this = self;
-    UIView *v = [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 170) andModel:self.model] autorelease];
+    UIView *loginFooter = [[[TCLoginFooter alloc] initWithFrame:CGRectMake(0, 0, 320, 170) andModel:self.model] autorelease];
     $unwatch(@"tnc_link:tapped");
-    $watch(@"tnc_link:tapped", v, ^(NSNotification *notif){
+    $watch(@"tnc_link:tapped", loginFooter, ^(NSNotification *notif){
         $trigger(@"start:tnc");
     });
-    
-    return v;
+    return loginFooter;
 }
 
 @end
