@@ -2,6 +2,7 @@
 
 + (NSString*) passwordForAccount:(NSString*) account;
 + (BOOL) savePassword:(NSString*) password forAccount:(NSString*) account;
++ (BOOL) deleteAccount:(NSString*) account;
 
 @end
 

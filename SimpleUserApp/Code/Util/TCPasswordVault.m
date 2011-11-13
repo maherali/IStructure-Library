@@ -42,4 +42,10 @@ const NSString *serviceName = @"com.agilismobility.simpleuserapp";
     return status == noErr;
 }
 
++ (BOOL) deleteAccount:(NSString*) account{
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self queryForAccount:account]];
+    OSStatus status = SecItemDelete((CFDictionaryRef)attributes);
+    return status == noErr;
+}
+
 @end
