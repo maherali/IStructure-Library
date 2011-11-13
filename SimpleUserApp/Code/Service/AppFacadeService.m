@@ -34,11 +34,22 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
     __block AppFacadeService *this = self; // most macros use this to refere to self. Always define it to make your life easy. Never reference properties without using this in the dot notation. You don't want these blocks to retain you!
     Session *session = [self prepareSession]; // Let's create a session object and possibly populate it from last time!
     $watch(@"login:success",  ^(NSNotification *notif){ // I'm going to watch (observe) login:success event triggered by any object.
-        // when loggin is successful, I need to store the state for next time.
+        // when logging is successful, I need to store the state for next time.
+        session.loggedIn = YES;
         [TCPasswordVault savePassword:[session get:@"password"] forAccount:[session get:@"user_name"]];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"user_name"] forKey:@"last_loggedin_user"];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"last_login_remember_me"] forKey:@"last_login_remember_me"];
     });
+    $watch(@"registration:success", ^(NSNotification *notif){
+        session.loggedIn = YES;
+        ISModel *registeration = [notif.userInfo objectForKey:MODEL_KEY];
+        [TCPasswordVault savePassword:[registeration get:@"password"] forAccount:[registeration get:@"email"]];
+        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[registeration get:@"email"] forKey:@"last_loggedin_user"];
+        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:@"1" forKey:@"last_login_remember_me"];
+        [session set:$dict(@"password", [registeration get:@"password"], @"user_name", [registeration get:@"email"], @"last_login_remember_me", @"1") withOptions:$dict(SILENT_KEY, $object(YES))];
+        [session change];
+    });
+
     // At the start of the app, I show login 
     // The values passed have two possible entries: params (from the navigation path, which we don't use because we start it manualy) and options with the most important option (the model or collection).
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:[[[TCLoginController alloc] initWithValues:$dict(OPTIONS_KEY, $dict(MODEL_KEY, session))] autorelease]] autorelease];

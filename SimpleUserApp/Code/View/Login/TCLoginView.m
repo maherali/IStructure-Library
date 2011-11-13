@@ -48,8 +48,21 @@
     $watch(@"login:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
     });
-
+    
+    $watch(@"reload_data", this, ^(NSNotification *notif){
+        cell1.textField.text = [self.model get:@"user_name"];
+        cell2.textField.text = [self.model get:@"password"];
+        BOOL rememberMe = [[self.model get:@"last_login_remember_me"] isEqualToString:@"1"];
+        cell3.checked = rememberMe;
+    });
+    
     return self;
+}
+
+- (void) reloadData{
+    __block TCLoginView *this = self;
+    LOG(@"reloading the login in info");
+    $trigger(@"reload_data");
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

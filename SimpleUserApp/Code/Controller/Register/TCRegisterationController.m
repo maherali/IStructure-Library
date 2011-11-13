@@ -8,9 +8,9 @@
 - (void) signup{
     __block TCRegisterationController *this = self;
     $trigger(@"register:begin", this.model);
-    [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Registration *model, NSData *data){
+    [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Registration *model, NSData *data){     
         $trigger(@"register:end", this.model);
-        $trigger(@"login:success");
+        $trigger(@"registration:success", $dict(MODEL_KEY, this.model));
         [UIAlertView message:$array(@"Successful Registration!")];
         $navigate(@"/welcome");
         [this performSelector:@selector(removeFromParentViewController) withObject:nil afterDelay:0];
