@@ -7,11 +7,11 @@
 
 - (id) initWithFrame:(CGRect)frame andModel:(ISModel*) model{
     self = [super initWithFrame:frame];
-    TCInternetButton *signinButton = [TCInternetButton buttonForObservable:model target:self action:@selector(signIn) frame:CGRectMake(5, 7, 310, 50) andLabel:@"Sign In"];
-    TCInternetButton *signupButton = [TCInternetButton buttonForObservable:nil target:self action:@selector(signUp) frame:CGRectMake(5, 57, 310, 50) andLabel:@"Sign Up"];
+    TCInternetButton *signinButton = [TCInternetButton buttonForObservable:model target:self action:@selector(signIn) frame:CGRectMake(5, 17, 310, 50) andLabel:@"Sign In"];
+    TCInternetButton *signupButton = [TCInternetButton buttonForObservable:nil target:self action:@selector(signUp) frame:CGRectMake(5, 75, 310, 50) andLabel:@"Sign Up"];
     
     TCLink *tncLabel = [TCLink linkWithLabel:@"Terms & Conditions"];	
-    tncLabel.frame = CGRectMake(100, 130, 125, 20);
+    tncLabel.frame = CGRectMake(100, 140, 125, 20);
     self.backgroundColor = [UIColor clearColor];
     [self addSubview:signinButton];
     [self addSubview:signupButton];

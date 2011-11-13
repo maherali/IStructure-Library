@@ -2,6 +2,7 @@
 #import "TCLoginView.h"
 #import "Session.h"
 #import "Registration.h"
+#import "TCPasswordVault.h"
 
 @implementation TCLoginController
 
@@ -14,6 +15,7 @@
     }
     $trigger(@"login:begin", this.model);
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
+        [TCPasswordVault savePassword:[self.model get:@"password"] forAccount:[self.model get:@"user_name"]];
         $trigger(@"login:end", this.model);
         [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;

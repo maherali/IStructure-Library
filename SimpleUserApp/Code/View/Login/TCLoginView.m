@@ -4,6 +4,7 @@
 #import "TCLoginFooter.h"
 #import "TCToggleFieldCell.h"
 #import "LoadingView.h"
+#import "TCUIFactory.h"
 
 @implementation TCLoginView
 
@@ -27,8 +28,9 @@
     
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
-        [this.model set:$dict(@"user_name", cell1.textField.text?cell1.textField.text:@"", @"password", cell2.textField.text?cell2.textField.text:@"")];
-        $trigger(@"initiate:login");
+        if([this.model set:$dict(@"user_name", cell1.textField.text?cell1.textField.text:@"", @"password", cell2.textField.text?cell2.textField.text:@"") withOptions:[TCUIFactory commonSetOptions]]){
+            $trigger(@"initiate:login");
+        }
     });
     
     $watch(@"start_signup_button:tapped", ^(NSNotification *notif){

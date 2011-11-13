@@ -3,7 +3,7 @@
 
 @implementation Session
 
-@synthesize loggedIn;
+@synthesize loggedIn, rememberMe;
 
 - (NSString*) path{
     return @"/users/sign_in.json";
@@ -25,5 +25,19 @@
 - (BOOL) isNew{
     return !loggedIn;
 }
+
+- (NSArray*) validate:(NSDictionary*) attrs{
+    NSMutableArray  *arr    = $marray();
+    NSString        *userName  = [attrs objectForKey:@"user_name"];
+    if(userName && [userName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length < 1){
+        [arr addObject:@"Username is missing"];
+    }
+    NSString        *password  = [attrs objectForKey:@"password"];
+    if(password && [password stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length < 1){
+        [arr addObject:@"Password is missing"];
+    }
+    return arr;
+}
+
 
 @end
