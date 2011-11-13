@@ -32,6 +32,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
     __block TCLoginController *this = self;
+    // Since the view may unload during memory shortages, unwatch previously observed events
     $unwatch(@"initiate:login", this.tableView);
     $unwatch(@"start:register", this.tableView);
     $unwatch(@"start:tnc", this.tableView);
