@@ -16,7 +16,6 @@
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         $trigger(@"store_last_session_params", this.model);
         $trigger(@"login:end", this.model);
-        [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;
         $navigate(@"/welcome");
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
@@ -31,7 +30,6 @@
     $trigger(@"internet:begin", self.model);
     [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         $trigger(@"internet:end", this.model);
-        [UIAlertView message:$array(@"You have successfully logged out of server!")];
         ((Session*)this.model).loggedIn = NO;
         [this.navigationController popToRootViewControllerAnimated:NO];
     }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
