@@ -10,6 +10,7 @@
 	self.delegate = self;
 	self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = YES;
+    self.scalesPageToFit = YES;
 	return self;
 }
 

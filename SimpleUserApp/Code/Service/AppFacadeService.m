@@ -26,7 +26,7 @@ static AppFacadeService    *singleton  = nil;
     [ISModel setBaseUrl:@"http://gentle-lightning-6506.herokuapp.com/"];
     __block AppFacadeService *this = self;
     Session *session = [self prepareSession];
-    $watch(@"store_last_session_params", session,  ^(NSNotification *notif){
+    $watch(@"login:success",  ^(NSNotification *notif){
         [TCPasswordVault savePassword:[session get:@"password"] forAccount:[session get:@"user_name"]];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"user_name"] forKey:@"last_loggedin_user"];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[session get:@"last_login_remember_me"] forKey:@"last_login_remember_me"];

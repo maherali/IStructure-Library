@@ -3,46 +3,15 @@
 #import "Session.h"
 #import "Registration.h"
 
+@interface TCLoginController ()
+
+- (void) login;
+- (void) logout;
+- (void) startRegister;
+
+@end 
+
 @implementation TCLoginController
-
-- (void) login{
-    __block TCLoginController *this = self;
-    if(((Session*)self.model).loggedIn){
-        [UIAlertView message:$array(@"You are already logged in!")];
-        $navigate(@"/welcome");
-        return;
-    }
-    $trigger(@"login:begin", this.model);
-    [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
-        $trigger(@"store_last_session_params", this.model);
-        $trigger(@"login:end", this.model);
-        ((Session*)this.model).loggedIn = YES;
-        $navigate(@"/welcome");
-    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
-        $trigger(@"login:end", this.model);
-        [UIAlertView errors:errors];
-    }))];
-}
-
-- (void) logout{
-    __block TCLoginController *this = self;
-    
-    $trigger(@"internet:begin", self.model);
-    [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
-        $trigger(@"internet:end", this.model);
-        ((Session*)this.model).loggedIn = NO;
-        [this.navigationController popToRootViewControllerAnimated:NO];
-    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
-        $trigger(@"internet:end", this.model);
-        [UIAlertView errors:errors];
-    }))];
-}
-
-- (void) startRegister{
-    __block TCLoginController *this = self;
-    Registration *reg = [[[Registration alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
-    $navigate(@"/register", $dict(MODEL_KEY, reg));
-}
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
     self = [super initWithValues:passedInValues andStyle:style];
@@ -66,18 +35,57 @@
     $unwatch(@"start:register", this.tableView);
     $unwatch(@"start:tnc", this.tableView);
     $unwatch(@"login:success");
+    $unwatch(@"logout:success");
+    
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
         [this login];
     });
     $watch(@"start:register", this.tableView,  ^(NSNotification *notif){
         [this startRegister];
     });
+    $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
+        $navigate(@"/www", $dict(@"URL", @"http://www.apple.com/legal/itunes/us/terms.html"));
+    });
     $watch(@"login:success", ^(NSNotification *notif){
         ((Session*)this.model).loggedIn = YES;
     });
-    $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
-        $navigate(@"/www", $dict(@"URL", @"http://cnn.com"));
+    $watch(@"logout:success", ^(NSNotification *notif){
+        ((Session*)this.model).loggedIn = NO;
+        [this.navigationController popToRootViewControllerAnimated:NO];
     });
+  }
+
+- (void) login{
+    __block TCLoginController *this = self;
+    if(((Session*)self.model).loggedIn){
+        [UIAlertView message:$array(@"You are already logged in!")];
+        $navigate(@"/welcome");
+        return;
+    }
+    $trigger(@"login:begin", this.model);
+    [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
+        $trigger(@"login:end", this.model);
+        $trigger(@"login:success");
+        $navigate(@"/welcome");
+    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
+        $trigger(@"login:end", this.model);
+        [UIAlertView errors:errors];
+    }))];
+}
+
+- (void) logout{
+    __block TCLoginController *this = self;
+    [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
+        $trigger(@"logout:success");
+    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
+        [UIAlertView errors:errors];
+    }))];
+}
+
+- (void) startRegister{
+    __block TCLoginController *this = self;
+    Registration *reg = [[[Registration alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
+    $navigate(@"/register", $dict(MODEL_KEY, reg));
 }
 
 - (Class) formTableClass{

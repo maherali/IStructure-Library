@@ -32,7 +32,7 @@
         [this signup];
     });
     $watch(@"start:tnc", this.tableView,  ^(NSNotification *notif){
-        $navigate(@"/www", $dict(@"URL", @"http://cnn.com"));
+        $navigate(@"/www", $dict(@"URL", @"http://www.apple.com/legal/itunes/us/terms.html"));
     });
 }
 
