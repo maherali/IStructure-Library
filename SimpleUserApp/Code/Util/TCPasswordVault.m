@@ -15,6 +15,7 @@ const NSString *serviceName = @"com.agilismobility.simpleuserapp";
 }
 
 + (NSString*) passwordForAccount:(NSString*) account{
+    if(!account) return nil;
     NSData   *result = nil;
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self queryForAccount:account]];
     [attributes setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
@@ -29,6 +30,7 @@ const NSString *serviceName = @"com.agilismobility.simpleuserapp";
 }
 
 + (BOOL) savePassword:(NSString*) password forAccount:(NSString*) account{
+    if(!account) return NO;
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary:[self queryForAccount:account]];
     OSStatus status = 0;
     if(![self passwordForAccount:account]){

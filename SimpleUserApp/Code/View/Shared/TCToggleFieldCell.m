@@ -25,6 +25,7 @@
 - (void) setChecked:(BOOL) _checked{
     UISwitch *rm =  (UISwitch*)[self.contentView viewWithTag:12345];
     rm.on = _checked;
+    checked = _checked;
 }
 
 @end

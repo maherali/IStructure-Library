@@ -17,7 +17,7 @@
     $trigger(@"login:begin", this.model);
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         [TCPasswordVault savePassword:[this.model get:@"password"] forAccount:[this.model get:@"user_name"]];
-        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[this.model get:@"user_name"] forKey:@"user_name"];
+        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[this.model get:@"user_name"] forKey:@"last_loggedin_user"];
         [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[this.model get:@"last_login_remember_me"] forKey:@"last_login_remember_me"];
         $trigger(@"login:end", this.model);
         [UIAlertView message:$array(@"Success logging to server!")];
@@ -58,7 +58,7 @@
     if([rememberMe isEqualToString:@"1"]){
         password = [TCPasswordVault passwordForAccount:lastUserName];
     }
-    self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password, @"last_login_remember_me", rememberMe?rememberMe:@"0") andOptions:$dict()] autorelease];
+    self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password?password:@"", @"last_login_remember_me", rememberMe?rememberMe:@"0") andOptions:$dict()] autorelease];
     if([rememberMe isEqualToString:@"1"]){
         [self performSelector:@selector(login) withObject:nil afterDelay:0];
     }
