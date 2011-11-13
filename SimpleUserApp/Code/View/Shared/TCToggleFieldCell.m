@@ -13,12 +13,18 @@
     
     UISwitch *rm = [[[UISwitch alloc] initWithFrame:CGRectMake(220, 9, 0, 0)] autorelease];
     [rm addTarget:self action:@selector(switchOnOff:) forControlEvents:UIControlEventValueChanged];
+    rm.tag = 12345;
     [self.contentView addSubview:rm];
     return self;
 }
 
 - (void) switchOnOff:(UISwitch*) toggle{
-    self.checked = toggle.on; 
+    checked = toggle.on; 
+}
+
+- (void) setChecked:(BOOL) _checked{
+    UISwitch *rm =  (UISwitch*)[self.contentView viewWithTag:12345];
+    rm.on = _checked;
 }
 
 @end

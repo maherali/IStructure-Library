@@ -16,8 +16,9 @@
     }
     $trigger(@"login:begin", this.model);
     [self.model save:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
-        [TCPasswordVault savePassword:[self.model get:@"password"] forAccount:[self.model get:@"user_name"]];
-        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[self.model get:@"user_name"] forKey:@"last_loggedin_user"];
+        [TCPasswordVault savePassword:[this.model get:@"password"] forAccount:[this.model get:@"user_name"]];
+        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[this.model get:@"user_name"] forKey:@"user_name"];
+        [[TCSettings performSelector:@selector(sharedTCSettings)] setValue:[this.model get:@"last_login_remember_me"] forKey:@"last_login_remember_me"];
         $trigger(@"login:end", this.model);
         [UIAlertView message:$array(@"Success logging to server!")];
         ((Session*)this.model).loggedIn = YES;
@@ -51,8 +52,14 @@
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
     self = [super initWithValues:passedInValues andStyle:style];
-    NSString *lastUserName = [[TCSettings performSelector:@selector(sharedTCSettings)] valueForKey:@"last_loggedin_user"];
-    self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"") andOptions:$dict()] autorelease];
+    NSString *lastUserName  = [[TCSettings performSelector:@selector(sharedTCSettings)] valueForKey:@"last_loggedin_user"];
+    NSString *rememberMe    = [[TCSettings performSelector:@selector(sharedTCSettings)] valueForKey:@"last_login_remember_me"];
+    NSString *password      = @"";
+    if(rememberMe){
+        password = [TCPasswordVault passwordForAccount:lastUserName];
+    }
+    self.model = [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password, @"last_login_remember_me", rememberMe?rememberMe:@"0") andOptions:$dict()] autorelease];
+    [self performSelector:@selector(login) withObject:nil afterDelay:0];
     return self;
 }
 

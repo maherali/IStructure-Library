@@ -24,11 +24,13 @@
     [cell2 setEditingNavigationBar:bar];
     cell2.textField.returnKeyType  = UIReturnKeyDone;
     TCToggleFieldCell   *cell3 = [[[TCToggleFieldCell alloc] init] autorelease];
+    BOOL rememberMe = [[self.model get:@"last_login_remember_me"] isEqualToString:@"1"];
+    cell3.checked = rememberMe;
     self.cells = [NSArray arrayWithObjects:cell1, cell2, cell3, nil];
     
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
-        if([this.model set:$dict(@"user_name", cell1.textField.text?cell1.textField.text:@"", @"password", cell2.textField.text?cell2.textField.text:@"", @"remember_me", cell3.checked?@"1":@"0") withOptions:[TCUIFactory commonSetOptions]]){
+        if([this.model set:$dict(@"user_name", cell1.textField.text?cell1.textField.text:@"", @"password", cell2.textField.text?cell2.textField.text:@"", @"last_login_remember_me", cell3.checked?@"1":@"0") withOptions:[TCUIFactory commonSetOptions]]){
             $trigger(@"initiate:login");
         }
     });
