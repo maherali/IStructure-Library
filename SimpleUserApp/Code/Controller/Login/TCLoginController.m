@@ -14,9 +14,10 @@
 @implementation TCLoginController
 
 - (id) initWithValues:(NSDictionary*) passedInValues andStyle:(UITableViewStyle) style{
-    self = [super initWithValues:passedInValues andStyle:style];
-    NSString *rememberMe = [self.model get:@"remember_me"];
+    self = [super initWithValues:passedInValues andStyle:style]; // The parent class extracts the options and params from passedInValues parameter. It also extracts teh model and collection objects passed in options.
+    NSString *rememberMe = [self.model get:@"remember_me"]; // the model was extracted in the base class
     if([rememberMe isEqualToString:@"YES"]){
+        // Log in automatically if remember was on from the last login session
         [self performSelector:@selector(login) withObject:nil afterDelay:0];
     }
     return self;
@@ -76,14 +77,16 @@
 - (void) startRegister{
     __block TCLoginController *this = self;
     Registration *reg = [[[Registration alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
-    $navigate(@"/register", $dict(MODEL_KEY, reg));
+    $navigate(@"/register", $dict(MODEL_KEY, reg)); // navigate to register and pass in the Registration model in options
 }
 
 - (Class) formTableClass{
-    return [TCLoginView class];
+    return [TCLoginView class]; // our form view class is specified here
 }
 
 - (NSDictionary*) routes{
+    // The ISViewController or ISTableViewController calls this method at initialization and 
+    // adds a route for each one using $route(key, block) key: /logout, block: the block specified
     __block TCLoginController *this = self;
     return $dict(@"/logout", $block(^(NSNotification* notif){
         [this logout];        

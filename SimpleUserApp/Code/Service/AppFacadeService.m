@@ -65,6 +65,7 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
     return self;
 }
 
+// This method is used internaly to create a session based on previous session.
 - (Session*) prepareSession{
     NSString *lastUserName  = [[TCSettings instance] valueForKey:@"last_loggedin_user"];
     NSString *rememberMe    = [[TCSettings instance] valueForKey:@"last_login_remember_me"];
@@ -72,19 +73,20 @@ static AppFacadeService  *singleton  = nil; // my service is a singleton.
     if([rememberMe isEqualToString:@"YES"]){
         password = [TCPasswordVault passwordForAccount:lastUserName];
     }
-    return [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password?password:@"", @"remember_me", rememberMe?rememberMe:@"NO") andOptions:$dict()] autorelease];
+    // Create the session model used to login/logout. Don't bother to trigger change events (pass silent = true) since no one is watching at this point!
+    return [[[Session alloc] initWithAttributes:$dict(@"user_name", lastUserName?lastUserName:@"", @"password", password?password:@"", @"remember_me", rememberMe?rememberMe:@"NO") andOptions:$dict(SILENT_KEY, $object(YES))] autorelease];
 }
 
-// This class method is called when someone starts my service by issuing $start(@"app")
+// This class method is called when someone starts my service by issuing $start(@"app"). Options passed in the second parameter calll to $start are passed as sole argument to this method.
 + (void) startWithOptions:(NSDictionary*) options{
     singleton = singleton ? singleton : [[self alloc] intWithOptions:options];
 }
 
 + (void) load{
     // When the runtime loads my class, I would like to register this as a service call app.
-    // anyone who wants to start me, will have to $start(@"app") and possibly pass in some optins in the second parameter
+    // Anyone who wants to start me, will have to $start(@"app") and possibly pass in some optins in the second parameter
     __block Class this = self;
-    $register(@"app");
+    $register(@"app"); // you can only register names, not regular expressions as in $route and $routec
 }
 
 - (void) dealloc{
