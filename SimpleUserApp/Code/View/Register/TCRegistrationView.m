@@ -12,27 +12,26 @@
     self = [super initWithOptions:_options];
     self.sectionHeaderHeight = 5;
     TCEditingNavigationBar *bar = [[[TCEditingNavigationBar alloc] init] autorelease];
-    bar.delegate              = self;
-    
-    TCTextFieldCell   *cell1 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Email"] autorelease];
-    cell1.textField.delegate = self;
-    cell1.textField.text     = [self.model get:@"email"];
-    cell1.textField.keyboardType = UIKeyboardTypeEmailAddress;
-    [cell1 setEditingNavigationBar:bar];
-    TCTextFieldCell   *cell2 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];
-    cell2.textField.delegate = self;
-    cell2.textField.secureTextEntry = YES;
-    [cell2 setEditingNavigationBar:bar];
-    TCTextFieldCell   *cell3 = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password Conformation"] autorelease];
-    cell3.textField.delegate = self;
-    cell3.textField.secureTextEntry = YES;
-    [cell3 setEditingNavigationBar:bar];
-    
-    self.cells = [NSArray arrayWithObjects:cell1, cell2, cell3, nil];
+    bar.delegate                = self;
+    TCTextFieldCell   *emailCell = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Email"] autorelease];
+    emailCell.textField.delegate = self;
+    emailCell.textField.text     = [self.model get:@"email"];
+    emailCell.textField.keyboardType = UIKeyboardTypeEmailAddress;
+    [emailCell setEditingNavigationBar:bar];
+    TCTextFieldCell   *passwordCell = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password"] autorelease];
+    passwordCell.textField.delegate = self;
+    passwordCell.textField.secureTextEntry = YES;
+    [passwordCell setEditingNavigationBar:bar];
+    TCTextFieldCell   *passwordConfCell = [[[TCTextFieldCell alloc] initWithPlaceHolder:@"Password Conformation"] autorelease];
+    passwordConfCell.textField.delegate = self;
+    passwordConfCell.textField.secureTextEntry = YES;
+    [passwordConfCell setEditingNavigationBar:bar];
+    self.cells = $array(emailCell, passwordCell, passwordConfCell);
     
     __block TCRegistrationView *this = self;
     $watch(@"signup_button:tapped", ^(NSNotification *notif){
-        if([this.model set:$dict(@"email", cell1.textField.text, @"password", cell2.textField.text?cell2.textField.text:@"", @"password_confirmation", cell3.textField.text?cell3.textField.text:@"") withOptions:[TCUIFactory commonSetOptions] ]){
+        if([this.model set:$dict(@"email", emailCell.textField.text, @"password", passwordCell.textField.text?passwordCell.textField.text:@"", @"password_confirmation", passwordConfCell.textField.text?passwordConfCell.textField.text:@"") 
+               withOptions:[TCUIFactory commonSetOptions] ]){
             $trigger(@"initiate:register");
         }
     });
@@ -44,7 +43,7 @@
     $watch(@"register:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
     });
-
+    
     return self;
 }
 
