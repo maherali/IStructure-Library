@@ -5,5 +5,7 @@
 + (UIBarButtonItem*) editRefreshButtonsForTarget:(id) target editAction:(SEL) editAction refreshAction:(SEL) refreshAction;
 + (ValidationErrorHandler) commonValidationErrorHandler;
 + (NSDictionary*) commonSetOptions;
++ (ErrorHandler) commonErrorHandler;
++ (NSDictionary*) commonMethodOptions;
 
 @end

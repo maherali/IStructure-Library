@@ -2,6 +2,7 @@
 #import "TCLoginView.h"
 #import "Session.h"
 #import "Registration.h"
+#import "TCUIFactory.h"
 
 @interface TCLoginController ()
 
@@ -38,6 +39,7 @@
     $unwatch(@"start:tnc", this.tableView);
     
     $watch(@"initiate:login", this.tableView,  ^(NSNotification *notif){
+        //TODO: get the attributes from the user infor passed by the view and check 
         [this login];
     });
     $watch(@"start:register", this.tableView,  ^(NSNotification *notif){
@@ -70,9 +72,7 @@
     __block TCLoginController *this = self;
     [self.model destroy:$dict(SUCCESS_HANDLER_KEY, $block(^(Session *model, NSData *data){
         $trigger(@"logout:success");
-    }), FAILURE_HANDLER_KEY, $block(^(Session *model, NSArray *errors){
-        [UIAlertView errors:errors];
-    }))];
+    }), FAILURE_HANDLER_KEY, [TCUIFactory commonErrorHandler])];
 }
 
 - (void) startRegister{

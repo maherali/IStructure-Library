@@ -31,6 +31,7 @@
     
     __block TCLoginView *this = self;
     $watch(@"signin_button:tapped", ^(NSNotification *notif){
+        //TODO: view shoudl not do this, just send with the trigger the user name, pass, remember me and the controller should handle set and validations
         if([this.model set:$dict(@"user_name", userNameCell.textField.text?userNameCell.textField.text:@"", @"password", passwordCell.textField.text?passwordCell.textField.text:@"", @"remember_me", rememberMeCell.checked?@"YES":@"NO")
                withOptions:[TCUIFactory commonSetOptions]]){
             $trigger(@"initiate:login");

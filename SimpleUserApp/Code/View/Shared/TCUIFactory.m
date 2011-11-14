@@ -49,8 +49,22 @@
     return validationErrorHndlr;
 }
 
++ (ErrorHandler) commonErrorHandler{
+    static ErrorHandler errorHandler = nil;
+    if(!errorHandler){
+        errorHandler = $block(^(ISModel *model, NSArray *errors){
+            [UIAlertView errors:errors];
+        });
+    }
+    return errorHandler;
+}
+
 + (NSDictionary*) commonSetOptions{
     return $dict(VALIDATION_ERROR_HANDLER_KEY, [self commonValidationErrorHandler]);
+}
+
++ (NSDictionary*) commonMethodOptions{
+    return $dict(FAILURE_HANDLER_KEY, [self commonErrorHandler]);
 }
 
 @end
