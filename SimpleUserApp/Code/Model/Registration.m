@@ -12,12 +12,8 @@
 }
 
 - (NSData*) dataToSave{
-    NSMutableDictionary *user = $mdict();
-    NSMutableDictionary *attrs = $mdict(@"user", user);
-    [user setObject:[self get:@"email"] forKey:@"email"];
-    [user setObject:[self get:@"password"] forKey:@"password"];
-    [user setObject:[self get:@"password_confirmation"] forKey:@"password_confirmation"];
-    return [self JSONDataFromAttributes:attrs];
+    NSMutableDictionary *user = $mdict(@"email", [self get:@"email"], @"password", [self get:@"password"], @"password_confirmation", [self get:@"password_confirmation"]);
+    return [self JSONDataFromAttributes: $mdict(@"user", user)];
 }
 
 - (NSArray*) validate:(NSDictionary*) attrs{
