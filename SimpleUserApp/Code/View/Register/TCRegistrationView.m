@@ -36,13 +36,13 @@
             $trigger(@"initiate:register");
         }
     });
-    __block ISLoadingView *loadingView = nil;
-    $watch(@"register:begin", ^(NSNotification *notif){
-        loadingView = [ISLoadingView loadingViewWithMessage:@"Signing up..."];
-    });
-    $watch(@"register:end", ^(NSNotification *notif){
-        [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
-    });
+//    __block ISLoadingView *loadingView = nil;
+//    $watch(@"register:begin", ^(NSNotification *notif){
+//        loadingView = [ISLoadingView loadingViewWithMessage:@"Signing up..."];
+//    });
+//    $watch(@"register:end", ^(NSNotification *notif){
+//        [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
+//    });
     
     return self;
 }

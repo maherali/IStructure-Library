@@ -7,4 +7,8 @@
     return [AppErrorDecoder class];
 }
 
+- (BOOL) showsLoading{
+    return YES;    
+}
+
 @end
