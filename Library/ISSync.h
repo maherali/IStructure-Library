@@ -150,6 +150,13 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
  */
 - (BOOL) isUserCancellable;
 
+/**
+ The loading message shown to the user when showsLoading returns YES
+ 
+ @return The message shown on the busy view while an operation is in progress.
+ */
+- (NSString*) loadingMessage;
+
 @end
 
 extern  NSString* const METHOD_KEY;
