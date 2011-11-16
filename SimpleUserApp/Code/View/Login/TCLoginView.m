@@ -4,7 +4,6 @@
 #import "TCLoginFooter.h"
 #import "TCToggleFieldCell.h"
 #import "TCUIFactory.h"
-#import "ISLoadingView.h"
 
 @implementation TCLoginView
 
