@@ -140,6 +140,7 @@
 		41EDF564147013F100A436D9 /* chk_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF557147013F100A436D9 /* chk_box@2x.png */; };
 		41EDF565147013F100A436D9 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF558147013F100A436D9 /* next.png */; };
 		41EDF566147013F100A436D9 /* titlebar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF559147013F100A436D9 /* titlebar_bg@2x.png */; };
+		41EDF592147361C000A436D9 /* RegistrationSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF591147361C000A436D9 /* RegistrationSync.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -399,6 +400,8 @@
 		41EDF558147013F100A436D9 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = Assets/Images/next.png; sourceTree = "<group>"; };
 		41EDF559147013F100A436D9 /* titlebar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titlebar_bg@2x.png"; path = "Assets/Images/titlebar_bg@2x.png"; sourceTree = "<group>"; };
 		41EDF58F1473494600A436D9 /* ISLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISLoadingView.h; path = Library/ISLoadingView.h; sourceTree = "<group>"; };
+		41EDF590147361C000A436D9 /* RegistrationSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationSync.h; path = Code/Sync/RegistrationSync.h; sourceTree = "<group>"; };
+		41EDF591147361C000A436D9 /* RegistrationSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationSync.m; path = Code/Sync/RegistrationSync.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -738,6 +741,8 @@
 				4184A10E146E129D00572663 /* AppErrorDecoder.m */,
 				4184A10F146E129D00572663 /* SessionSync.h */,
 				4184A110146E129D00572663 /* SessionSync.m */,
+				41EDF590147361C000A436D9 /* RegistrationSync.h */,
+				41EDF591147361C000A436D9 /* RegistrationSync.m */,
 				41744FD0146EC3A000C82B42 /* AppSync.h */,
 				41744FD1146EC3A000C82B42 /* AppSync.m */,
 			);
@@ -1407,6 +1412,7 @@
 				4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */,
 				4111B77C147001920016F2C4 /* TCWebHostView.m in Sources */,
 				41EDF54A147009D700A436D9 /* AppFacadeService.m in Sources */,
+				41EDF592147361C000A436D9 /* RegistrationSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

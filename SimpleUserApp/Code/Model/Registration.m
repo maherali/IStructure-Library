@@ -1,5 +1,5 @@
 #import "Registration.h"
-#import "AppSync.h"
+#import "RegistrationSync.h"
 
 @implementation Registration
 
@@ -8,7 +8,7 @@
 }
 
 + (Class) syncClass{
-    return [AppSync class];
+    return [RegistrationSync class];
 }
 
 - (NSData*) dataToSave{
