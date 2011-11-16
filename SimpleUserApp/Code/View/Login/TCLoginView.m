@@ -43,7 +43,7 @@
         loadingView = [ISLoadingView loadingViewWithMessage:@"Signing in..."];
     });
     $watch(@"login:end", ^(NSNotification *notif){
-        [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
+       // [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
     });
     $watch(@"reload_data", this, ^(NSNotification *notif){
         userNameCell.textField.text    = [self.model get:@"user_name"];
