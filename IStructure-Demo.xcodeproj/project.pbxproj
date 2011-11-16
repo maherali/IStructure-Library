@@ -398,6 +398,7 @@
 		41EDF557147013F100A436D9 /* chk_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chk_box@2x.png"; path = "Assets/Images/chk_box@2x.png"; sourceTree = "<group>"; };
 		41EDF558147013F100A436D9 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = Assets/Images/next.png; sourceTree = "<group>"; };
 		41EDF559147013F100A436D9 /* titlebar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titlebar_bg@2x.png"; path = "Assets/Images/titlebar_bg@2x.png"; sourceTree = "<group>"; };
+		41EDF58F1473494600A436D9 /* ISLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISLoadingView.h; path = Library/ISLoadingView.h; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -539,6 +540,7 @@
 		411C1B59143BFBE6000449E1 /* IStructure Library */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF58F1473494600A436D9 /* ISLoadingView.h */,
 				412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */,
 				412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */,
 				411C1B5A143BFBFC000449E1 /* CollectionUtils.h */,

@@ -4,7 +4,6 @@
 #import "TCCheckedFieldCell.h"
 #import "TCRegistrationFooter.h"
 #import "TCUIFactory.h"
-#import "LoadingView.h"
 
 @implementation TCRegistrationView
 
@@ -37,9 +36,9 @@
             $trigger(@"initiate:register");
         }
     });
-    __block TCRegistrationView *loadingView = nil;
+    __block ISLoadingView *loadingView = nil;
     $watch(@"register:begin", ^(NSNotification *notif){
-        loadingView = [LoadingView loadingViewInView:this.window];
+        loadingView = [ISLoadingView loadingViewWithMessage:@"Signing up..."];
     });
     $watch(@"register:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];

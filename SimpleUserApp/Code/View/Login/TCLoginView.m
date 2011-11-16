@@ -40,7 +40,7 @@
     });
     __block ISLoadingView *loadingView = nil;
     $watch(@"login:begin", ^(NSNotification *notif){
-        loadingView = [ISLoadingView loadingView];
+        loadingView = [ISLoadingView loadingViewWithMessage:@"Signing in..."];
     });
     $watch(@"login:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
