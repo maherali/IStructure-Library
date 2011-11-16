@@ -3,8 +3,8 @@
 #import "TCTextFieldCell.h"
 #import "TCLoginFooter.h"
 #import "TCToggleFieldCell.h"
-#import "LoadingView.h"
 #import "TCUIFactory.h"
+#import "ISLoadingView.h"
 
 @implementation TCLoginView
 
@@ -39,9 +39,9 @@
     $watch(@"start_signup_button:tapped", ^(NSNotification *notif){
         $trigger(@"start:register");
     });
-    __block LoadingView *loadingView = nil;
+    __block ISLoadingView *loadingView = nil;
     $watch(@"login:begin", ^(NSNotification *notif){
-        loadingView = [LoadingView loadingViewInView:this.window];
+        loadingView = [ISLoadingView loadingView];
     });
     $watch(@"login:end", ^(NSNotification *notif){
         [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];

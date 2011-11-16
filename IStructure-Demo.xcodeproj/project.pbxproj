@@ -140,7 +140,6 @@
 		41EDF564147013F100A436D9 /* chk_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF557147013F100A436D9 /* chk_box@2x.png */; };
 		41EDF565147013F100A436D9 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF558147013F100A436D9 /* next.png */; };
 		41EDF566147013F100A436D9 /* titlebar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF559147013F100A436D9 /* titlebar_bg@2x.png */; };
-		41EDF569147014BD00A436D9 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF568147014BD00A436D9 /* LoadingView.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -399,8 +398,6 @@
 		41EDF557147013F100A436D9 /* chk_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chk_box@2x.png"; path = "Assets/Images/chk_box@2x.png"; sourceTree = "<group>"; };
 		41EDF558147013F100A436D9 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = next.png; path = Assets/Images/next.png; sourceTree = "<group>"; };
 		41EDF559147013F100A436D9 /* titlebar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titlebar_bg@2x.png"; path = "Assets/Images/titlebar_bg@2x.png"; sourceTree = "<group>"; };
-		41EDF567147014BD00A436D9 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = Code/View/Shared/LoadingView.h; sourceTree = "<group>"; };
-		41EDF568147014BD00A436D9 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = Code/View/Shared/LoadingView.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -811,8 +808,6 @@
 				41744FC2146E982700C82B42 /* TCInternetButton.m */,
 				4111B77A147001920016F2C4 /* TCWebHostView.h */,
 				4111B77B147001920016F2C4 /* TCWebHostView.m */,
-				41EDF567147014BD00A436D9 /* LoadingView.h */,
-				41EDF568147014BD00A436D9 /* LoadingView.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1410,7 +1405,6 @@
 				4140FCB0146FFDBA00F067EF /* UIApplication+Extensions.m in Sources */,
 				4111B77C147001920016F2C4 /* TCWebHostView.m in Sources */,
 				41EDF54A147009D700A436D9 /* AppFacadeService.m in Sources */,
-				41EDF569147014BD00A436D9 /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
