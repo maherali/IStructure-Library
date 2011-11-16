@@ -1,6 +1,8 @@
 #define SYNC_DATA_ARG_KEY                    @"SYNC_DATA_ARG_KEY"
 #define SYNC_META_DATA_ARG_KEY               @"SYNC_META_DATA_ARG_KEY"
 
+@class ISLoadingView;
+
 typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 /** Protocol for synchronizing model/collection.
@@ -81,6 +83,8 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
  */
 @property   (retain)    ISErrorDecoder  *errorDecoder;
 
+@property   (retain)    ISLoadingView   *loadingView;
+
 /** The mothod used to initiate sync. 
  
  The method assumes that `options` has been set.  
@@ -111,6 +115,41 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 - (void) _callBack:(id) block;
 
+
+/**
+ Specifies whether the operation starts immediately.
+ 
+ @return YES if operation starts immediately; NO, otherwise 
+ */
+- (BOOL) startsImmediately;
+
+/**
+ Start the operation.
+ 
+ Only needed if the method startsImmediately return NO
+ */
+
+- (void) start;
+
+/**
+ Cancel the operation
+ */
+
+- (void) cancel;
+
+- (BOOL) showsLoading;
+- (void) showLoading;
+- (void) hideLoading;
+
+/**
+ Allows the user to cancel the sync operation.
+ 
+ By default, returns NO. If this method returns YES and showsLoading returns YES, then a cancel button is shown to the 
+ user. If the user taps the cancel button, the operation is cancelled, the loading view is removed, and a cancel handler specified in
+ SYNC_CANCEL_HANDLER_KEY key in options is called.
+ */
+- (BOOL) isUserCancellable;
+
 @end
 
 extern  NSString* const METHOD_KEY;
@@ -123,4 +162,10 @@ extern  NSString* const METHOD_CREATE;
 extern  NSString* const SYNC_SUCCESS_HANDLER_KEY;
 extern  NSString* const SYNC_FAILURE_HANDLER_KEY;
 extern  NSString* const SYNC_CONTINUES_KEY;
+extern  NSString* const SYNC_CANCEL_HANDLER_KEY;
+
+
+
+
+
 

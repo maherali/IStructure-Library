@@ -13,7 +13,7 @@ typedef void(^ValidationErrorHandler)(id origin, NSArray *errors, NSDictionary* 
 
 typedef void(^SuccessHandler)(id model, NSData *data);
 typedef void(^ErrorHandler)(id model, NSArray *errors);
-
+typedef void(^CancelHandler)(id model, NSArray *errors);
 
 @interface ISModel : NSObject{
     NSString                *modelBaseUrl;
@@ -565,7 +565,7 @@ extern NSString* const  OPTIONS_KEY;
 extern NSString* const  PARAMS_KEY;
 extern NSString* const  SUCCESS_HANDLER_KEY;
 extern NSString* const  FAILURE_HANDLER_KEY;
-
+extern NSString* const  CANCEL_HANDLER_KEY;
 
 
 
