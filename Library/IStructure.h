@@ -20,6 +20,7 @@
 #import "ISRouteEntry.h"
 #import "ISRoute.h"
 #import "ISRouter.h"
+#import "ISLoadingView.h"
 #import "UIAlertView+ISStructure.h"
 #import "ISViewController.h"
 #import "ISTableView.h"
