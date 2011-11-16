@@ -151,6 +151,10 @@
 		41EDF5B4147368C400A436D9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5B3147368C400A436D9 /* Photo.m */; };
 		41EDF5B71473692E00A436D9 /* PhotoSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5B61473692E00A436D9 /* PhotoSync.m */; };
 		41EDF5BC1473E09100A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
+		41EDF5BD1473E13C00A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
+		41EDF5BE1473E15600A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
+		41EDF5BF1473E16800A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
+		41EDF5C01473E17C00A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -432,6 +436,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EDF5BD1473E13C00A436D9 /* QuartzCore.framework in Frameworks */,
 				412745C11448ED2400CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C84143C049D000449E1 /* libIStructure.a in Frameworks */,
 				411C1B47143BFBB7000449E1 /* UIKit.framework in Frameworks */,
@@ -444,6 +449,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EDF5BE1473E15600A436D9 /* QuartzCore.framework in Frameworks */,
 				412745C21448ED3000CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C85143C04AE000449E1 /* libIStructure.a in Frameworks */,
 				411C1BBD143BFE19000449E1 /* UIKit.framework in Frameworks */,
@@ -456,6 +462,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EDF5C01473E17C00A436D9 /* QuartzCore.framework in Frameworks */,
 				412745C31448ED3700CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C86143C04BE000449E1 /* libIStructure.a in Frameworks */,
 				411C1BE3143BFEF4000449E1 /* UIKit.framework in Frameworks */,
@@ -468,6 +475,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EDF5BF1473E16800A436D9 /* QuartzCore.framework in Frameworks */,
 				412745C41448ED3E00CA7E05 /* libsqlite3.dylib in Frameworks */,
 				411C1C87143C04CA000449E1 /* libIStructure.a in Frameworks */,
 				411C1C50143C029B000449E1 /* UIKit.framework in Frameworks */,
