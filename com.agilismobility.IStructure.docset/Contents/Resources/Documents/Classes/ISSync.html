@@ -66,6 +66,8 @@
 	
 	<option value="//api/name/isUserCancellable">&nbsp;&nbsp;&nbsp;&nbsp;- isUserCancellable</option>
 	
+	<option value="//api/name/loadingMessage">&nbsp;&nbsp;&nbsp;&nbsp;- loadingMessage</option>
+	
 	<option value="//api/name/showLoading">&nbsp;&nbsp;&nbsp;&nbsp;- showLoading</option>
 	
 	<option value="//api/name/showsLoading">&nbsp;&nbsp;&nbsp;&nbsp;- showsLoading</option>
@@ -127,6 +129,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hideLoading">hideLoading</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isUserCancellable">isUserCancellable</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadingMessage">loadingMessage</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showLoading">showLoading</a></span></li>
 	
@@ -282,6 +286,13 @@ for decoding both network and aplication errors.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/isUserCancellable">&ndash;&nbsp;isUserCancellable</a></code>
 		<span class="tooltip"><p>Allows the user to <a href="#//api/name/cancel">cancel</a> the <a href="#//api/name/sync">sync</a> operation.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadingMessage">&ndash;&nbsp;loadingMessage</a></code>
+		<span class="tooltip"><p>The loading message shown to the user when <a href="#//api/name/showsLoading">showsLoading</a> returns YES</p></span>
 	</span>
 	
 	
@@ -527,6 +538,50 @@ for decoding both network and aplication errors.</p>
 <p>By default, returns NO. If this method returns YES and <a href="#//api/name/showsLoading">showsLoading</a> returns YES, then a <a href="#//api/name/cancel">cancel</a> button is shown to the
 user. If the user taps the <a href="#//api/name/cancel">cancel</a> button, the operation is cancelled, the loading view is removed, and a <a href="#//api/name/cancel">cancel</a> handler specified in
 SYNC_CANCEL_HANDLER_KEY key in <a href="#//api/name/options">options</a> is called.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadingMessage" title="loadingMessage"></a>
+	<h3 class="subsubtitle method-title">loadingMessage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The loading message shown to the user when <a href="#//api/name/showsLoading">showsLoading</a> returns YES</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)loadingMessage</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The message shown on the busy view while an operation is in progress.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The loading message shown to the user when <a href="#//api/name/showsLoading">showsLoading</a> returns YES</p>
 	</div>
 	
 	
