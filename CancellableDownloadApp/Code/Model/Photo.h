@@ -1,0 +1,3 @@
+@interface Photo : ISModel
+
+@end

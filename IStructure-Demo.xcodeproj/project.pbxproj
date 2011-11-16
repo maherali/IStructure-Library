@@ -141,6 +141,15 @@
 		41EDF565147013F100A436D9 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF558147013F100A436D9 /* next.png */; };
 		41EDF566147013F100A436D9 /* titlebar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF559147013F100A436D9 /* titlebar_bg@2x.png */; };
 		41EDF592147361C000A436D9 /* RegistrationSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF591147361C000A436D9 /* RegistrationSync.m */; };
+		41EDF5991473677700A436D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2A143BFBA2000449E1 /* UIKit.framework */; };
+		41EDF59A1473677700A436D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2C143BFBA2000449E1 /* Foundation.framework */; };
+		41EDF59B1473677700A436D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411C1B2E143BFBA2000449E1 /* CoreGraphics.framework */; };
+		41EDF5A11473677700A436D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF59F1473677700A436D9 /* InfoPlist.strings */; };
+		41EDF5A31473677700A436D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5A21473677700A436D9 /* main.m */; };
+		41EDF5B01473680C00A436D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5AF1473680C00A436D9 /* AppDelegate.m */; };
+		41EDF5B11473685000A436D9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
+		41EDF5B4147368C400A436D9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5B3147368C400A436D9 /* Photo.m */; };
+		41EDF5B71473692E00A436D9 /* PhotoSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5B61473692E00A436D9 /* PhotoSync.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -402,6 +411,17 @@
 		41EDF58F1473494600A436D9 /* ISLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISLoadingView.h; path = Library/ISLoadingView.h; sourceTree = "<group>"; };
 		41EDF590147361C000A436D9 /* RegistrationSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistrationSync.h; path = Code/Sync/RegistrationSync.h; sourceTree = "<group>"; };
 		41EDF591147361C000A436D9 /* RegistrationSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistrationSync.m; path = Code/Sync/RegistrationSync.m; sourceTree = "<group>"; };
+		41EDF5971473677600A436D9 /* CancellableDownloadApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancellableDownloadApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41EDF59E1473677700A436D9 /* CancellableDownloadApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CancellableDownloadApp-Info.plist"; sourceTree = "<group>"; };
+		41EDF5A01473677700A436D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41EDF5A21473677700A436D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41EDF5A41473677700A436D9 /* CancellableDownloadApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CancellableDownloadApp-Prefix.pch"; sourceTree = "<group>"; };
+		41EDF5AE1473680C00A436D9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Code/App/AppDelegate.h; sourceTree = "<group>"; };
+		41EDF5AF1473680C00A436D9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Code/App/AppDelegate.m; sourceTree = "<group>"; };
+		41EDF5B2147368C400A436D9 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Code/Model/Photo.h; sourceTree = "<group>"; };
+		41EDF5B3147368C400A436D9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Code/Model/Photo.m; sourceTree = "<group>"; };
+		41EDF5B51473692E00A436D9 /* PhotoSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoSync.h; path = Code/Sync/PhotoSync.h; sourceTree = "<group>"; };
+		41EDF5B61473692E00A436D9 /* PhotoSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoSync.m; path = Code/Sync/PhotoSync.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -470,6 +490,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41EDF5941473677600A436D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EDF5B11473685000A436D9 /* libsqlite3.dylib in Frameworks */,
+				41EDF5991473677700A436D9 /* UIKit.framework in Frameworks */,
+				41EDF59A1473677700A436D9 /* Foundation.framework in Frameworks */,
+				41EDF59B1473677700A436D9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -486,6 +517,7 @@
 				411C1BE6143BFEF4000449E1 /* NearbyPlace App */,
 				411C1C53143C029B000449E1 /* RoutePlayground App */,
 				412305F1146E019000B0DEA1 /* SimpleUserApp */,
+				41EDF59C1473677700A436D9 /* CancellableDownloadApp */,
 				411C1B29143BFBA2000449E1 /* Frameworks */,
 				411C1B27143BFBA2000449E1 /* Products */,
 			);
@@ -499,6 +531,7 @@
 				411C1BE1143BFEF4000449E1 /* NearbyPlace.app */,
 				411C1C4E143C029B000449E1 /* RoutePlayground.app */,
 				412305EC146E019000B0DEA1 /* SimpleUserApp.app */,
+				41EDF5971473677600A436D9 /* CancellableDownloadApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -908,6 +941,55 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		41EDF59C1473677700A436D9 /* CancellableDownloadApp */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF5AD147367DB00A436D9 /* App */,
+				41EDF5AC147367D900A436D9 /* Model */,
+				41EDF5AB147367D500A436D9 /* Sync */,
+				41EDF59D1473677700A436D9 /* Supporting Files */,
+			);
+			path = CancellableDownloadApp;
+			sourceTree = "<group>";
+		};
+		41EDF59D1473677700A436D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF59E1473677700A436D9 /* CancellableDownloadApp-Info.plist */,
+				41EDF59F1473677700A436D9 /* InfoPlist.strings */,
+				41EDF5A21473677700A436D9 /* main.m */,
+				41EDF5A41473677700A436D9 /* CancellableDownloadApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		41EDF5AB147367D500A436D9 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF5B51473692E00A436D9 /* PhotoSync.h */,
+				41EDF5B61473692E00A436D9 /* PhotoSync.m */,
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		41EDF5AC147367D900A436D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF5B2147368C400A436D9 /* Photo.h */,
+				41EDF5B3147368C400A436D9 /* Photo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		41EDF5AD147367DB00A436D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				41EDF5AE1473680C00A436D9 /* AppDelegate.h */,
+				41EDF5AF1473680C00A436D9 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		41F4044C143C0AC700116FC3 /* TouchXML */ = {
 			isa = PBXGroup;
 			children = (
@@ -1205,6 +1287,23 @@
 			productReference = 412305EC146E019000B0DEA1 /* SimpleUserApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		41EDF5961473677600A436D9 /* CancellableDownloadApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41EDF5A81473677700A436D9 /* Build configuration list for PBXNativeTarget "CancellableDownloadApp" */;
+			buildPhases = (
+				41EDF5931473677600A436D9 /* Sources */,
+				41EDF5941473677600A436D9 /* Frameworks */,
+				41EDF5951473677600A436D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CancellableDownloadApp;
+			productName = CancellableDownloadApp;
+			productReference = 41EDF5971473677600A436D9 /* CancellableDownloadApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1230,6 +1329,7 @@
 				411C1BE0143BFEF4000449E1 /* NearbyPlace */,
 				411C1C4D143C029B000449E1 /* RoutePlayground */,
 				412305EB146E019000B0DEA1 /* SimpleUserApp */,
+				41EDF5961473677600A436D9 /* CancellableDownloadApp */,
 			);
 		};
 /* End PBXProject section */
@@ -1291,6 +1391,14 @@
 				41EDF564147013F100A436D9 /* chk_box@2x.png in Resources */,
 				41EDF565147013F100A436D9 /* next.png in Resources */,
 				41EDF566147013F100A436D9 /* titlebar_bg@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41EDF5951473677600A436D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EDF5A11473677700A436D9 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1416,6 +1524,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41EDF5931473677600A436D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EDF5A31473677700A436D9 /* main.m in Sources */,
+				41EDF5B01473680C00A436D9 /* AppDelegate.m in Sources */,
+				41EDF5B4147368C400A436D9 /* Photo.m in Sources */,
+				41EDF5B71473692E00A436D9 /* PhotoSync.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1447,6 +1566,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				412305F5146E019000B0DEA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		41EDF59F1473677700A436D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41EDF5A01473677700A436D9 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1709,6 +1836,38 @@
 			};
 			name = Release;
 		};
+		41EDF5A91473677700A436D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CancellableDownloadApp/CancellableDownloadApp-Prefix.pch";
+				INFOPLIST_FILE = "CancellableDownloadApp/CancellableDownloadApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					./Library/libIStructure.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		41EDF5AA1473677700A436D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CancellableDownloadApp/CancellableDownloadApp-Prefix.pch";
+				INFOPLIST_FILE = "CancellableDownloadApp/CancellableDownloadApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					./Library/libIStructure.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1765,6 +1924,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		41EDF5A81473677700A436D9 /* Build configuration list for PBXNativeTarget "CancellableDownloadApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41EDF5A91473677700A436D9 /* Debug */,
+				41EDF5AA1473677700A436D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
