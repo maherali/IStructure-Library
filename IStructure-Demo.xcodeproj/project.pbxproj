@@ -150,6 +150,7 @@
 		41EDF5B11473685000A436D9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 412745C01448ED2400CA7E05 /* libsqlite3.dylib */; };
 		41EDF5B4147368C400A436D9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5B3147368C400A436D9 /* Photo.m */; };
 		41EDF5B71473692E00A436D9 /* PhotoSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5B61473692E00A436D9 /* PhotoSync.m */; };
+		41EDF5BC1473E09100A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -494,6 +495,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41EDF5BC1473E09100A436D9 /* QuartzCore.framework in Frameworks */,
 				41EDF5B11473685000A436D9 /* libsqlite3.dylib in Frameworks */,
 				41EDF5991473677700A436D9 /* UIKit.framework in Frameworks */,
 				41EDF59A1473677700A436D9 /* Foundation.framework in Frameworks */,
