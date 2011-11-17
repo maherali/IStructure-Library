@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ResumableDownloadsApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>RoutePlayground.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -68,6 +73,11 @@
 			<true/>
 		</dict>
 		<key>41EDF5961473677600A436D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41EDF5FD14759DB600A436D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
