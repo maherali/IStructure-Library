@@ -73,6 +73,10 @@
 	
 	<option value="//api/name/setUpdateInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- setUpdateInfo:</option>
 	
+	<option value="//api/name/syncFailed">&nbsp;&nbsp;&nbsp;&nbsp;- syncFailed</option>
+	
+	<option value="//api/name/syncFinished">&nbsp;&nbsp;&nbsp;&nbsp;- syncFinished</option>
+	
 	
 	
 </select>
@@ -130,6 +134,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setReadInfo:">setReadInfo:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setUpdateInfo:">setUpdateInfo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/syncFailed">syncFailed</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/syncFinished">syncFinished</a></span></li>
 	
 </ul></li>
 
@@ -273,6 +281,24 @@ The following is a possible implementation of this method:</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/lastChanceToUpdateRequest:">&ndash;&nbsp;lastChanceToUpdateRequest:</a></code>
 		<span class="tooltip"><p>Provide a way for subclasses to configure teh request just before contacting server.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/syncFinished">&ndash;&nbsp;syncFinished</a></code>
+		<span class="tooltip"><p>Called when the HTTP <a href="#//api/name/connection">connection</a> finished loading <a href="#//api/name/data">data</a>
+You can assume that the <a href="#//api/name/data">data</a> has been set.
+Base class implementation is a no-op.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/syncFailed">&ndash;&nbsp;syncFailed</a></code>
+		<span class="tooltip"><p>Called when the HTTP <a href="#//api/name/connection">connection</a> failed.
+You can assume that the <a href="#//api/name/error">error</a> has been set.
+Base class implementation is a no-op.</p></span>
 	</span>
 	
 	
@@ -773,6 +799,92 @@ The following is a possible implementation of this method:</p>
         [request setHTTPMethod:@"PUT"];
     }
 </code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISBasicSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/syncFailed" title="syncFailed"></a>
+	<h3 class="subsubtitle method-title">syncFailed</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> failed.
+You can assume that the <a href="#//api/name/error">error</a> has been set.
+Base class implementation is a no-op.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)syncFailed</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> failed.
+You can assume that the <a href="#//api/name/error">error</a> has been set.
+Base class implementation is a no-op.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISBasicSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/syncFinished" title="syncFinished"></a>
+	<h3 class="subsubtitle method-title">syncFinished</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> finished loading <a href="#//api/name/data">data</a>
+You can assume that the <a href="#//api/name/data">data</a> has been set.
+Base class implementation is a no-op.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)syncFinished</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> finished loading <a href="#//api/name/data">data</a>
+You can assume that the <a href="#//api/name/data">data</a> has been set.
+Base class implementation is a no-op.</p>
 	</div>
 	
 	

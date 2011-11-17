@@ -282,12 +282,14 @@ invoking either success/failure handlers. See the discussions in sync:.</p></spa
 
 <p>ISync class implements that simply by calling sync as follows:</p>
 
-<pre><code>+ (idISSyncProtocol) syncWithOptions:(NSDictionary*) _options{
-    ISSync *sync = [[[self alloc] initWithOptions:_options] autorelease];
-    [sync sync];
-    return sync;
-}
-</code></pre>
+<ul>
+<li>(id<a href="ISSyncProtocol.html">ISSyncProtocol</a>) <a href="#//api/name/syncWithOptions:">syncWithOptions:</a>(NSDictionary<strong>) _options{
+<a href="../Classes/ISSync.html">ISSync</a> </strong>sync = [[[self alloc] initWithOptions:_options] autorelease];
+[sync sync];
+return sync;
+}</li>
+</ul>
+
 
 <p>This behaviour should be sufficient for most apps.</p>
 	</div>
@@ -504,13 +506,15 @@ ISync has the following implementation of this method:</p>
 		<p>Initializes the instance.
 ISync has the following implementation of this method:</p>
 
-<pre><code>- (idISSyncProtocol) initWithOptions:(NSDictionary*) _options{
-    self = [super init];
-    self.options        =   _options;
-    self.errorDecoder   =   [[[self class] errorDecoderClass] errorDecoder];
-    return self;
-}
-</code></pre>
+<ul>
+<li>(id<a href="ISSyncProtocol.html">ISSyncProtocol</a>) <a href="#//api/name/initWithOptions:">initWithOptions:</a>(NSDictionary*) <em>options{
+self = [super init];
+self.options        =   </em>options;
+self.errorDecoder   =   [[[self class] errorDecoderClass] errorDecoder];
+return self;
+}</li>
+</ul>
+
 
 <p>This behaviour should be sufficient for most apps.</p>
 	</div>
