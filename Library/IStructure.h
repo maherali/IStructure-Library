@@ -12,6 +12,7 @@
 #import "ISSync.h"
 #import "ISCacheDatabase.h"
 #import "ISBasicSync.h"
+#import "ISResumableSync.h"
 #import "ISEnhancedSync.h"
 #import "ISErrorDecoder.h"
 #import "ISBasicErrorDecoder.h"
