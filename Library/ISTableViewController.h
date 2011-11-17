@@ -16,9 +16,10 @@
 @property (retain) NSDictionary     *params;
 @property (assign) UITableViewStyle style;
 
-- (id) initWithValues:(NSDictionary*) _passedIn andStyle:(UITableViewStyle) style;
-- (id) initWithValues:(NSDictionary*) _passedIn;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) passedInValues;
+- (id) initWithValues:(NSDictionary*) passedIn andStyle:(UITableViewStyle) style;
+- (id) initWithValues:(NSDictionary*) passedIn;
 - (NSDictionary*) routes;
-
+- (void) assignTableView;
 
 @end

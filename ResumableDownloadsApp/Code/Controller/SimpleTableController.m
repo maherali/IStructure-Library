@@ -4,6 +4,7 @@
 
 @synthesize cell;
 
+- (id) 
 - (id)in:(UITableViewStyle)style{
     self = [super initWithStyle:style];
     if (self) {
