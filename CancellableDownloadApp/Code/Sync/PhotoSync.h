@@ -1,5 +1,5 @@
-#import "MultimediaSync.h"
+#import "ISResumableSync.h"
 
-@interface PhotoSync : MultimediaSync
+@interface PhotoSync : ISResumableSync
 
 @end
