@@ -1,0 +1,3 @@
+@interface MySync : ISResumableSync
+
+@end

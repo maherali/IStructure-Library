@@ -552,6 +552,11 @@ After initialization, the model is new:
  */
 - (void) lastChanceToUpdateSyncOptions:(NSMutableDictionary*) opts forMethod:(NSString*) method;
 
+/**
+ Cancel the currently ongoing sync operation.
+ */
+- (void) cancel;
+
 @end
 
 extern NSString* const  MODEL_KEY;

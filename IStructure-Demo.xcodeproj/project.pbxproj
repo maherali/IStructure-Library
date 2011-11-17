@@ -172,6 +172,8 @@
 		41EDF62C14759F3A00A436D9 /* SimpleTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF62B14759F3A00A436D9 /* SimpleTableController.m */; };
 		41EDF62F1475A00400A436D9 /* SimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF62D1475A00400A436D9 /* SimpleCell.xib */; };
 		41EDF6301475A00400A436D9 /* SimpleTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF62E1475A00400A436D9 /* SimpleTableController.xib */; };
+		41F2D3251475B9DE00A2E5CE /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2D3241475B9DE00A2E5CE /* MyModel.m */; };
+		41F2D3291475BA1800A2E5CE /* MySync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2D3281475BA1800A2E5CE /* MySync.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -462,6 +464,10 @@
 		41EDF62B14759F3A00A436D9 /* SimpleTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTableController.m; path = Code/Controller/SimpleTableController.m; sourceTree = "<group>"; };
 		41EDF62D1475A00400A436D9 /* SimpleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleCell.xib; path = Code/View/SimpleCell.xib; sourceTree = "<group>"; };
 		41EDF62E1475A00400A436D9 /* SimpleTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTableController.xib; path = Code/View/SimpleTableController.xib; sourceTree = "<group>"; };
+		41F2D3231475B9DE00A2E5CE /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyModel.h; path = Code/Model/MyModel.h; sourceTree = "<group>"; };
+		41F2D3241475B9DE00A2E5CE /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyModel.m; path = Code/Model/MyModel.m; sourceTree = "<group>"; };
+		41F2D3271475BA1800A2E5CE /* MySync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySync.h; path = Code/Sync/MySync.h; sourceTree = "<group>"; };
+		41F2D3281475BA1800A2E5CE /* MySync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySync.m; path = Code/Sync/MySync.m; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1054,6 +1060,8 @@
 		41EDF60314759DB600A436D9 /* ResumableDownloadsApp */ = {
 			isa = PBXGroup;
 			children = (
+				41F2D3261475B9FB00A2E5CE /* Sync */,
+				41F2D3211475B99B00A2E5CE /* Model */,
 				41EDF61614759E4100A436D9 /* App */,
 				41EDF62614759EF700A436D9 /* Controller */,
 				41EDF62514759EEC00A436D9 /* View */,
@@ -1128,6 +1136,24 @@
 				41EDF62B14759F3A00A436D9 /* SimpleTableController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		41F2D3211475B99B00A2E5CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41F2D3231475B9DE00A2E5CE /* MyModel.h */,
+				41F2D3241475B9DE00A2E5CE /* MyModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		41F2D3261475B9FB00A2E5CE /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				41F2D3271475BA1800A2E5CE /* MySync.h */,
+				41F2D3281475BA1800A2E5CE /* MySync.m */,
+			);
+			name = Sync;
 			sourceTree = "<group>";
 		};
 		41F4044C143C0AC700116FC3 /* TouchXML */ = {
@@ -1715,6 +1741,8 @@
 				41EDF61914759E5200A436D9 /* AppDelegate.m in Sources */,
 				41EDF62914759F2100A436D9 /* SimpleCell.m in Sources */,
 				41EDF62C14759F3A00A436D9 /* SimpleTableController.m in Sources */,
+				41F2D3251475B9DE00A2E5CE /* MyModel.m in Sources */,
+				41F2D3291475BA1800A2E5CE /* MySync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

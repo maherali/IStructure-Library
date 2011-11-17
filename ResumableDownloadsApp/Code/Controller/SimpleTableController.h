@@ -6,4 +6,6 @@
 
 @property   (nonatomic, retain)     SimpleCell  *cell;
 
+- (void) fetchModel:(MyModel*) m;
+
 @end
