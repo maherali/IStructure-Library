@@ -30,6 +30,10 @@
         NSString *length = [notif.userInfo objectForKey:@"length"];
         LOG(@"received so far  %@", length)
     });
+    $watch(@"cached-data-count", self.sync, ^(NSNotification *notif){
+        NSString *length = [notif.userInfo objectForKey:@"length"];
+        LOG(@"cached at beginning  %@", length)
+    });
     [self.sync start];
 }
 
