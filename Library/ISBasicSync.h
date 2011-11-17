@@ -148,14 +148,14 @@ The following is a possible implementation of this method:
 
 /**
  Called when the HTTP connection finished loading data
- 
+ You can assume that the data has been set.
  Base class implementation is a no-op.
  */
 - (void) syncFinished;
 
 /**
  Called when the HTTP connection failed.
- 
+ You can assume that the error has been set.
  Base class implementation is a no-op.
  */
 - (void) syncFailed;

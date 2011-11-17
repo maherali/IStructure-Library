@@ -6,35 +6,35 @@
 typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 /** Protocol for synchronizing model/collection.
-*/
+ */
 @protocol ISSyncProtocol <NSObject>
 
 /** Method to initiate synching with options.
  
  ISync class implements that simply by calling sync as follows:
  
-    + (id<ISSyncProtocol>) syncWithOptions:(NSDictionary*) _options{
-        ISSync *sync = [[[self alloc] initWithOptions:_options] autorelease];
-        [sync sync];
-        return sync;
-    }
+ + (id<ISSyncProtocol>) syncWithOptions:(NSDictionary*) _options{
+ ISSync *sync = [[[self alloc] initWithOptions:_options] autorelease];
+ [sync sync];
+ return sync;
+ }
  
  This behaviour should be sufficient for most apps.
  
  @return The id\<ISSyncProtocol\> instance.
  @param options The options to use in the synchronization.
-*/
+ */
 + (id<ISSyncProtocol>)  syncWithOptions:(NSDictionary*) options;
 
 /** Initializes the instance.
  ISync has the following implementation of this method:
  
-    - (id<ISSyncProtocol>) initWithOptions:(NSDictionary*) _options{
-        self = [super init];
-        self.options        =   _options;
-        self.errorDecoder   =   [[[self class] errorDecoderClass] errorDecoder];
-        return self;
-    }
+ - (id<ISSyncProtocol>) initWithOptions:(NSDictionary*) _options{
+ self = [super init];
+ self.options        =   _options;
+ self.errorDecoder   =   [[[self class] errorDecoderClass] errorDecoder];
+ return self;
+ }
  
  This behaviour should be sufficient for most apps.
  */
@@ -57,7 +57,7 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 /** Determines if there are network-level errors.
  Base implementation proxy that to the errorDecoder instance.
-*/
+ */
 - (BOOL)                hasNetworkLevelErrors;
 
 /** Computes the network-level errors.
@@ -72,7 +72,14 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 
 @end
 
-@interface ISSync : NSObject<ISSyncProtocol>
+@interface ISSync : NSObject<ISSyncProtocol>{    
+    NSMutableArray          *observers;
+}
+
+/**
+ ISSync class can observe events.
+ */
+@property (nonatomic, retain) NSMutableArray        *observers;
 
 /** Options used in synchronization.
  */
