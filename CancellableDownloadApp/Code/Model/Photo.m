@@ -18,11 +18,6 @@
     return $mdict();
 }
 
-- (void)dealloc {
-    self.image  =   nil;
-    [super dealloc];
-}
-
 - (void) fetch:(NSDictionary *)options{
     [super fetch:options];
     __block Photo *this = self;
@@ -36,6 +31,11 @@
         LOG(@"received so far  %@", length)
     });
     [self.sync start];
+}
+
+- (void)dealloc {
+    self.image  =   nil;
+    [super dealloc];
 }
 
 @end

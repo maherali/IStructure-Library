@@ -1,3 +1,2 @@
-@interface PhotoSync : ISResumableSync
-
+@interface PhotoSync : ISBasicSync
 @end
