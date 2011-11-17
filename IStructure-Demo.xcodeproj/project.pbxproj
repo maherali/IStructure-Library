@@ -155,7 +155,6 @@
 		41EDF5BE1473E15600A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41EDF5BF1473E16800A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
 		41EDF5C01473E17C00A436D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41744FCB146EA36600C82B42 /* QuartzCore.framework */; };
-		41EDF5C614747C1100A436D9 /* ISResumableSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF5C514747C1100A436D9 /* ISResumableSync.m */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -428,8 +427,7 @@
 		41EDF5B3147368C400A436D9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Code/Model/Photo.m; sourceTree = "<group>"; };
 		41EDF5B51473692E00A436D9 /* PhotoSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoSync.h; path = Code/Sync/PhotoSync.h; sourceTree = "<group>"; };
 		41EDF5B61473692E00A436D9 /* PhotoSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoSync.m; path = Code/Sync/PhotoSync.m; sourceTree = "<group>"; };
-		41EDF5C414747C1100A436D9 /* ISResumableSync.h */ = {isa = PBXFileReference; fileEncoding = 4; name = ISResumableSync.h; path = Code/Sync/ISResumableSync.h; sourceTree = "<group>"; };
-		41EDF5C514747C1100A436D9 /* ISResumableSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISResumableSync.m; path = Code/Sync/ISResumableSync.m; sourceTree = "<group>"; };
+		41EDF5DF1474AF1300A436D9 /* ISResumableSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISResumableSync.h; path = Library/ISResumableSync.h; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -589,6 +587,7 @@
 		411C1B59143BFBE6000449E1 /* IStructure Library */ = {
 			isa = PBXGroup;
 			children = (
+				41EDF5DF1474AF1300A436D9 /* ISResumableSync.h */,
 				41EDF58F1473494600A436D9 /* ISLoadingView.h */,
 				412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */,
 				412745BE1448ECD900CA7E05 /* ISEnhancedSync.h */,
@@ -981,8 +980,6 @@
 			children = (
 				41EDF5B51473692E00A436D9 /* PhotoSync.h */,
 				41EDF5B61473692E00A436D9 /* PhotoSync.m */,
-				41EDF5C414747C1100A436D9 /* ISResumableSync.h */,
-				41EDF5C514747C1100A436D9 /* ISResumableSync.m */,
 			);
 			name = Sync;
 			sourceTree = "<group>";
@@ -1547,7 +1544,6 @@
 				41EDF5B01473680C00A436D9 /* AppDelegate.m in Sources */,
 				41EDF5B4147368C400A436D9 /* Photo.m in Sources */,
 				41EDF5B71473692E00A436D9 /* PhotoSync.m in Sources */,
-				41EDF5C614747C1100A436D9 /* ISResumableSync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
