@@ -9,7 +9,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.controller  = [[[SimpleTableController alloc] initWithValues:$dict()] autorelease];
+    self.controller  = [[[SimpleTableController alloc] initWithNibName:@"SimpleTableController" bundle:nil andValues:$dict()] autorelease];
     [self.window addSubview:controller.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -19,7 +19,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) passedInValues;
 - (id) initWithValues:(NSDictionary*) passedIn andStyle:(UITableViewStyle) style;
 - (id) initWithValues:(NSDictionary*) passedIn;
+- (void) initialize:(NSDictionary*) values;
 - (NSDictionary*) routes;
-- (void) assignTableView;
+- (void) configureTableView;
 
 @end

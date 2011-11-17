@@ -4,7 +4,11 @@
 
 @synthesize cell;
 
-- (id) 
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary *)passedInValues{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil andValues:passedInValues];
+    return self;
+}
+
 - (id)in:(UITableViewStyle)style{
     self = [super initWithStyle:style];
     if (self) {
