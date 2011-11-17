@@ -38,13 +38,6 @@
     $watch(@"start_signup_button:tapped", ^(NSNotification *notif){
         $trigger(@"start:register");
     });
-//    __block ISLoadingView *loadingView = nil;
-//    $watch(@"login:begin", ^(NSNotification *notif){
-//        loadingView = [ISLoadingView loadingViewWithMessage:@"Signing in..."];
-//    });
-//    $watch(@"login:end", ^(NSNotification *notif){
-//        [loadingView performSelector:@selector(removeView) withObject:nil afterDelay:0];
-//    });
     $watch(@"reload_data", this, ^(NSNotification *notif){
         userNameCell.textField.text    = [self.model get:@"user_name"];
         passwordCell.textField.text    = [self.model get:@"password"];

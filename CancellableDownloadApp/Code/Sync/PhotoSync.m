@@ -23,4 +23,8 @@
     return YES;
 }
 
+- (BOOL) startsImmediately{
+    return NO;
+}
+
 @end

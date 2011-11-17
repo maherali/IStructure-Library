@@ -23,4 +23,19 @@
     [super dealloc];
 }
 
+- (void) fetch:(NSDictionary *)options{
+    [super fetch:options];
+    __block Photo *this = self;
+    $unwatch(@"content-length");
+    $watch(@"content-length", self.sync, ^(NSNotification *notif){
+        NSString *length = [notif.userInfo objectForKey:@"length"];
+        LOG(@"Length is %@", length)
+    });
+    $watch(@"received-data-count", self.sync, ^(NSNotification *notif){
+        NSString *length = [notif.userInfo objectForKey:@"length"];
+        LOG(@"received so far  %@", length)
+    });
+    [self.sync start];
+}
+
 @end
