@@ -22,4 +22,5 @@
     self.image  =   nil;
     [super dealloc];
 }
+
 @end

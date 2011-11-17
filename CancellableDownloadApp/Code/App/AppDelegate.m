@@ -14,6 +14,8 @@
         imageView.image = self.photo.image;
     }), FAILURE_HANDLER_KEY, $block(^(Photo *model, NSArray *errors){
         [UIAlertView errors:errors];
+    }), CANCEL_HANDLER_KEY, $block(^(Photo *model, NSArray *errors){
+        [UIAlertView errors:errors];
     }))];
 }
 
