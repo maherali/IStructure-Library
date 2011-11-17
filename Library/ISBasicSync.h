@@ -146,6 +146,19 @@ The following is a possible implementation of this method:
  */
 - (NSMutableURLRequest*) lastChanceToUpdateRequest:(NSMutableURLRequest*) request;
 
+/**
+ Called when the HTTP connection finished loading data
+ 
+ Base class implementation is a no-op.
+ */
+- (void) syncFinished;
+
+/**
+ Called when the HTTP connection failed.
+ 
+ Base class implementation is a no-op.
+ */
+- (void) syncFailed;
 
 @end
 
