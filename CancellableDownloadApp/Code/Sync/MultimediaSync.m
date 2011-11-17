@@ -26,6 +26,19 @@
     }else{
         [self send:[self lastChanceToUpdateRequest:[self buildRequest]]];
     }
+    __block MultimediaSync *this = self;
+    $watch(@"received-data-count", self, ^(NSNotification *notif){
+        NSString *length = [notif.userInfo objectForKey:@"length"];
+        LOG(@"received so far  %@", length)
+    });
+}
+
+- (void) syncFinished{
+    // rename the download file by removing .download
+}
+
+- (void) syncFailed{
+    
 }
 
 - (void)dealloc {
