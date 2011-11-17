@@ -15,8 +15,7 @@
 }
 
 - (void) operationIsCancelled{
-    [self cancel];
-    NSLog(@"Operation is cancelled");
+    [super cancel];
 }
 
 - (BOOL) isUserCancellable{
