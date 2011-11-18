@@ -1,6 +1,6 @@
 @interface MyModel : ISModel{
-    float percentage;
-    UIImage *image;
+    float       percentage;
+    UIImage     *image;
 }
 
 @property (nonatomic, assign) float     percentage;
