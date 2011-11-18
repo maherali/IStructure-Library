@@ -23,7 +23,7 @@
     $watch(@"note:delete", ^(NSNotification *notif) {
         NSInteger row = [[notif.userInfo objectForKey:@"note"] intValue];
         Note *note = (Note*)[this.collection at:row];
-        [self destroyNote:note];
+        [this destroyNote:note];
     });
     $watch(@"note:add", ^(NSNotification *notif) {
         Note *aNote = [[[Note alloc] initWithAttributes:$dict() andOptions:$dict(COLLECTION_KEY, this.collection)] autorelease];
