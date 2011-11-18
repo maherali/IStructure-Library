@@ -2,9 +2,7 @@
 
 @interface SimpleCell : UITableViewCell{
     IBOutlet UIButton           *playPauseButton;
-    BOOL                        currentlyPlaying;
     MyModel                     *model;
-    BOOL                        hideLoadingPause;
     NSMutableArray              *observers;
     IBOutlet UILabel            *messageLabel;
     IBOutlet UIProgressView     *progressView;

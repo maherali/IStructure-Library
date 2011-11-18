@@ -3,7 +3,7 @@
 
 @implementation MyModel
 
-@synthesize percentage, image;
+@synthesize percentage, image, downloadPaused, downloadOngoing;
 
 - (UIImage*) image{
     if(!image){
@@ -26,12 +26,20 @@
     return [ISResumableSync resourceExistForURL:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]];
 }
 
+- (BOOL) partialResourceExist{
+    return [ISResumableSync partialDownloadExistForURL:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]];
+}
+
 - (NSString*) resourcePathOnDisk{
     return [ISResumableSync potentialResourceFilePath:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]];
 }
 
 - (void) removeResource{
     [ISResumableSync removeResourceOnDisk:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]]; 
+    self.image = nil;
+    self.downloadPaused = NO;
+    self.downloadOngoing = NO;
+    self.percentage = 0.0f;
 }
 
 - (NSDictionary*) parse:(NSData*) data{

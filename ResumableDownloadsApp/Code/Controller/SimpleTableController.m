@@ -31,15 +31,18 @@
         [[NSBundle mainBundle] loadNibNamed:@"SimpleCell" owner:self options:nil];
         theCell = self.cell;
     }
-    [theCell configureCellWithModel:(MyModel*)[self.collection at:indexPath.row]];
+    MyModel *theModel = (MyModel*)[self.collection at:indexPath.row];
+    [theCell configureCellWithModel:theModel];
     __block SimpleTableController *this = self;
-    $unwatch(@"resume_loading", theCell);
-    $unwatch(@"stop_loading", theCell);
-    $watch(@"resume_loading", theCell, ^(NSNotification *notif){
-        [this fetchModel:theCell.model];
+    $unwatch(@"resume_loading");
+    $unwatch(@"stop_loading");
+    $watch(@"resume_loading", ^(NSNotification *notif){
+        MyModel *mod = (MyModel*)[notif.userInfo objectForKey:MODEL_KEY];
+        [this fetchModel:mod];
     });
-    $watch(@"stop_loading", theCell, ^(NSNotification *notif){
-        [theCell.model cancel];
+    $watch(@"stop_loading", ^(NSNotification *notif){
+        MyModel *mod = (MyModel*)[notif.userInfo objectForKey:MODEL_KEY];
+        [mod cancel];
     });
     return theCell;
 }
@@ -51,7 +54,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     MyModel *aModel = (MyModel*)[self.collection at:indexPath.row];
     [aModel removeResource];
-    [aModel change];
+    [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

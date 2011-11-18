@@ -417,7 +417,6 @@
 		4184A110146E129D00572663 /* SessionSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionSync.m; path = Code/Sync/SessionSync.m; sourceTree = "<group>"; };
 		4184A114146E12AC00572663 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = Code/Model/Session.h; sourceTree = "<group>"; };
 		4184A115146E12AC00572663 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = Code/Model/Session.m; sourceTree = "<group>"; };
-		418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		418A6E5C146D516F009243E4 /* NSMutableURLRequest+IStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+IStructure.h"; path = "Library/NSMutableURLRequest+IStructure.h"; sourceTree = "<group>"; };
 		41EDF548147009D700A436D9 /* AppFacadeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppFacadeService.h; path = Code/Service/AppFacadeService.h; sourceTree = "<group>"; };
 		41EDF549147009D700A436D9 /* AppFacadeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppFacadeService.m; path = Code/Service/AppFacadeService.m; sourceTree = "<group>"; };
@@ -576,10 +575,6 @@
 		411C1B1B143BFBA1000449E1 = {
 			isa = PBXGroup;
 			children = (
-				4140FCB1146FFDCB00F067EF /* SystemConfiguration.framework */,
-				4134572B146F4B0E00BBB2C1 /* Security.framework */,
-				41744FCB146EA36600C82B42 /* QuartzCore.framework */,
-				418A6E44146CCFBB009243E4 /* libsqlite3.0.dylib */,
 				411C1B59143BFBE6000449E1 /* IStructure Library */,
 				411C1B4A143BFBB7000449E1 /* SimpleNotes App */,
 				411C1BC0143BFE19000449E1 /* SimplePhotos App */,
@@ -610,6 +605,9 @@
 		411C1B29143BFBA2000449E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41744FCB146EA36600C82B42 /* QuartzCore.framework */,
+				4134572B146F4B0E00BBB2C1 /* Security.framework */,
+				4140FCB1146FFDCB00F067EF /* SystemConfiguration.framework */,
 				412745C01448ED2400CA7E05 /* libsqlite3.dylib */,
 				411C1C83143C049D000449E1 /* libIStructure.a */,
 				411C1B2A143BFBA2000449E1 /* UIKit.framework */,
@@ -1079,7 +1077,6 @@
 		41EDF60414759DB600A436D9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				41EDF61A14759EBB00A436D9 /* New Group */,
 				41EDF60514759DB600A436D9 /* ResumableDownloadsApp-Info.plist */,
 				41EDF60614759DB600A436D9 /* InfoPlist.strings */,
 				41EDF60914759DB600A436D9 /* main.m */,
@@ -1095,13 +1092,6 @@
 				41EDF61814759E5200A436D9 /* AppDelegate.m */,
 			);
 			name = App;
-			sourceTree = "<group>";
-		};
-		41EDF61A14759EBB00A436D9 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		41EDF61B14759EC000A436D9 /* Assets */ = {
