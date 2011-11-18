@@ -2,8 +2,8 @@
 
 @implementation MySync
 
-- (BOOL) isUserCancellable{
-    return YES;
+- (BOOL) startsImmediately{
+    return NO;
 }
 
 @end

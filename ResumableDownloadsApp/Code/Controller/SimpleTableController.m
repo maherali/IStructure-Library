@@ -7,8 +7,10 @@
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary *)passedInValues{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil andValues:passedInValues];
-    MyModel *m = [[[MyModel alloc] initWithAttributes:$dict() andOptions:$dict()] autorelease];
-    self.collection = [[[ISCollection alloc] initWithModels:$array(m)] autorelease];
+    MyModel *m1 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://edmullen.net/test/rc.jpg") andOptions:$dict()] autorelease];
+    MyModel *m2 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://www.nasa.gov/images/content/605011main_moon_946-710.jpg") andOptions:$dict()] autorelease];
+    MyModel *m3 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://cpartipilo.files.wordpress.com/2011/02/large_brown_bearkodiak.jpg") andOptions:$dict()] autorelease];
+    self.collection = [[[ISCollection alloc] initWithModels:$array(m1, m2, m3)] autorelease];
     return self;
 }
 
@@ -29,18 +31,14 @@
         [[NSBundle mainBundle] loadNibNamed:@"SimpleCell" owner:self options:nil];
         theCell = self.cell;
     }
-    MyModel *m = (MyModel*)[self.collection at:indexPath.row];
-    [theCell configureCellWithModel:m];
+    [theCell configureCellWithModel:(MyModel*)[self.collection at:indexPath.row]];
     __block SimpleTableController *this = self;
     $watch(@"resume_loading", theCell, ^(NSNotification *notif){
-        MyModel *passedModel = [notif.userInfo objectForKey:MODEL_KEY];
-        [this fetchModel:passedModel];
+        [this fetchModel:theCell.model];
     });
     $watch(@"stop_loading", theCell, ^(NSNotification *notif){
-        MyModel *passedModel = [notif.userInfo objectForKey:MODEL_KEY];
-        [passedModel cancel];
+        [theCell.model cancel];
     });
-   
     return theCell;
 }
 

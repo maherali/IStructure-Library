@@ -6,7 +6,6 @@
 @synthesize window = _window;
 @synthesize controller;
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     self.controller  = [[[SimpleTableController alloc] initWithNibName:@"SimpleTableController" bundle:nil andValues:$dict()] autorelease];
