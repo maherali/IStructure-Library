@@ -174,6 +174,10 @@
 		41EDF6301475A00400A436D9 /* SimpleTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF62E1475A00400A436D9 /* SimpleTableController.xib */; };
 		41F2D3251475B9DE00A2E5CE /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2D3241475B9DE00A2E5CE /* MyModel.m */; };
 		41F2D3291475BA1800A2E5CE /* MySync.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2D3281475BA1800A2E5CE /* MySync.m */; };
+		41F2D32A1475ED2C00A2E5CE /* TCWebHostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4140FCA7146FED0F00F067EF /* TCWebHostController.m */; };
+		41F2D32B1475ED4300A2E5CE /* TCWebHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4111B77B147001920016F2C4 /* TCWebHostView.m */; };
+		41F2D32F1475F59C00A2E5CE /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F2D32D1475F59C00A2E5CE /* ImageViewController.m */; };
+		41F2D3301475F59C00A2E5CE /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F2D32E1475F59C00A2E5CE /* ImageViewController.xib */; };
 		41F40465143C136E00116FC3 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40463143C136E00116FC3 /* FirstViewController.xib */; };
 		41F40466143C136E00116FC3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F40464143C136E00116FC3 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
@@ -468,6 +472,9 @@
 		41F2D3241475B9DE00A2E5CE /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyModel.m; path = Code/Model/MyModel.m; sourceTree = "<group>"; };
 		41F2D3271475BA1800A2E5CE /* MySync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySync.h; path = Code/Sync/MySync.h; sourceTree = "<group>"; };
 		41F2D3281475BA1800A2E5CE /* MySync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySync.m; path = Code/Sync/MySync.m; sourceTree = "<group>"; };
+		41F2D32C1475F59C00A2E5CE /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewController.h; path = Code/Controller/ImageViewController.h; sourceTree = "<group>"; };
+		41F2D32D1475F59C00A2E5CE /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewController.m; path = Code/Controller/ImageViewController.m; sourceTree = "<group>"; };
+		41F2D32E1475F59C00A2E5CE /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageViewController.xib; path = Code/Controller/ImageViewController.xib; sourceTree = "<group>"; };
 		41F40463143C136E00116FC3 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		41F40464143C136E00116FC3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1134,6 +1141,9 @@
 			children = (
 				41EDF62A14759F3A00A436D9 /* SimpleTableController.h */,
 				41EDF62B14759F3A00A436D9 /* SimpleTableController.m */,
+				41F2D32C1475F59C00A2E5CE /* ImageViewController.h */,
+				41F2D32D1475F59C00A2E5CE /* ImageViewController.m */,
+				41F2D32E1475F59C00A2E5CE /* ImageViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1597,6 +1607,7 @@
 				41EDF62414759ED900A436D9 /* play_button.png in Resources */,
 				41EDF62F1475A00400A436D9 /* SimpleCell.xib in Resources */,
 				41EDF6301475A00400A436D9 /* SimpleTableController.xib in Resources */,
+				41F2D3301475F59C00A2E5CE /* ImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1743,6 +1754,9 @@
 				41EDF62C14759F3A00A436D9 /* SimpleTableController.m in Sources */,
 				41F2D3251475B9DE00A2E5CE /* MyModel.m in Sources */,
 				41F2D3291475BA1800A2E5CE /* MySync.m in Sources */,
+				41F2D32A1475ED2C00A2E5CE /* TCWebHostController.m in Sources */,
+				41F2D32B1475ED4300A2E5CE /* TCWebHostView.m in Sources */,
+				41F2D32F1475F59C00A2E5CE /* ImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

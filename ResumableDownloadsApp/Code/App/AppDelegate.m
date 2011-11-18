@@ -4,19 +4,19 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize controller;
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.controller  = [[[SimpleTableController alloc] initWithNibName:@"SimpleTableController" bundle:nil andValues:$dict()] autorelease];
-    [self.window addSubview:controller.view];
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:[[[SimpleTableController alloc] initWithNibName:@"SimpleTableController" bundle:nil andValues:$dict()] autorelease]] autorelease];
+    [self.window addSubview:navigationController.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (void)dealloc{
-    self.controller     =   nil;
+    self.navigationController     =   nil;
     [_window release];
     [super dealloc];
 }

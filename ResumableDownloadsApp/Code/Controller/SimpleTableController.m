@@ -54,6 +54,12 @@
     [aModel change];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    __block SimpleTableController *this = self;
+    MyModel *aModel = (MyModel*)[self.collection at:indexPath.row];
+    $navigate(@"/show_image", $dict(MODEL_KEY, aModel));
+}
+
 - (void) fetchModel:(MyModel*) m{
     __block SimpleTableController *this = self;
     [m fetch:$dict(SUCCESS_HANDLER_KEY, $block(^(MyModel *model, NSData *data){

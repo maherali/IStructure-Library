@@ -3,7 +3,16 @@
 
 @implementation MyModel
 
-@synthesize percentage;
+@synthesize percentage, image;
+
+- (UIImage*) image{
+    if(!image){
+        if([self resourceExist]){
+            return [UIImage imageWithData:[ISResumableSync resourceOnDiskForURL:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]]];
+        }
+    }
+    return image;
+}
 
 + (Class) syncClass{
     return [MySync class];
@@ -17,8 +26,17 @@
     return [ISResumableSync resourceExistForURL:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]];
 }
 
+- (NSString*) resourcePathOnDisk{
+    return [ISResumableSync potentialResourceFilePath:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]];
+}
+
 - (void) removeResource{
     [ISResumableSync removeResourceOnDisk:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]]; 
+}
+
+- (NSDictionary*) parse:(NSData*) data{
+    self.image = [UIImage imageWithData:data];
+    return $dict(@"loaded", $object(YES));
 }
 
 - (void) fetch:(NSDictionary *)options{
@@ -46,4 +64,8 @@
     [self.sync start];
 }
 
+- (void)dealloc {
+    self.image  =   nil;
+    [super dealloc];
+}
 @end
