@@ -11,6 +11,18 @@
     MyModel *m2 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://www.nasa.gov/images/content/605011main_moon_946-710.jpg") andOptions:$dict()] autorelease];
     MyModel *m3 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://cpartipilo.files.wordpress.com/2011/02/large_brown_bearkodiak.jpg") andOptions:$dict()] autorelease];
     self.collection = [[[ISCollection alloc] initWithModels:$array(m1, m2, m3)] autorelease];
+    
+    __block SimpleTableController *this = self;
+    $unwatch(@"resume_loading");
+    $unwatch(@"stop_loading");
+    $watch(@"resume_loading", ^(NSNotification *notif){
+        MyModel *mod = (MyModel*)[notif.userInfo objectForKey:MODEL_KEY];
+        [this fetchModel:mod];
+    });
+    $watch(@"stop_loading", ^(NSNotification *notif){
+        MyModel *mod = (MyModel*)[notif.userInfo objectForKey:MODEL_KEY];
+        [mod cancel];
+    });
     return self;
 }
 
@@ -33,17 +45,6 @@
     }
     MyModel *theModel = (MyModel*)[self.collection at:indexPath.row];
     [theCell configureCellWithModel:theModel];
-    __block SimpleTableController *this = self;
-    $unwatch(@"resume_loading");
-    $unwatch(@"stop_loading");
-    $watch(@"resume_loading", ^(NSNotification *notif){
-        MyModel *mod = (MyModel*)[notif.userInfo objectForKey:MODEL_KEY];
-        [this fetchModel:mod];
-    });
-    $watch(@"stop_loading", ^(NSNotification *notif){
-        MyModel *mod = (MyModel*)[notif.userInfo objectForKey:MODEL_KEY];
-        [mod cancel];
-    });
     return theCell;
 }
 
