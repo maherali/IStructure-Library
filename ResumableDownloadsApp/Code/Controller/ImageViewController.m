@@ -7,7 +7,7 @@
 
 - (id) initWithValues:(NSDictionary*) _passedIn{
     self = [super initWithNibName:@"ImageViewController" bundle:nil andValues:_passedIn];
-       return self;
+    return self;
 }
 
 - (void) viewDidLoad{

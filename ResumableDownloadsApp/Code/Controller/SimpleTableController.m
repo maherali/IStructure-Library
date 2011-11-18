@@ -11,7 +11,6 @@
     MyModel *m2 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://www.nasa.gov/images/content/605011main_moon_946-710.jpg") andOptions:$dict()] autorelease];
     MyModel *m3 = [[[MyModel alloc] initWithAttributes:$dict(@"URL", @"http://cpartipilo.files.wordpress.com/2011/02/large_brown_bearkodiak.jpg") andOptions:$dict()] autorelease];
     self.collection = [[[ISCollection alloc] initWithModels:$array(m1, m2, m3)] autorelease];
-    
     __block SimpleTableController *this = self;
     $unwatch(@"resume_loading");
     $unwatch(@"stop_loading");
