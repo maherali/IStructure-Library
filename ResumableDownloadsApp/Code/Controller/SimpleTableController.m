@@ -70,7 +70,6 @@
     }), FAILURE_HANDLER_KEY, $block(^(MyModel *model, NSArray *errors){
         [UIAlertView errors:errors];
     }), CANCEL_HANDLER_KEY, $block(^(MyModel *model, NSArray *errors){
-        [UIAlertView errors:errors];
     }))];
 }
 
