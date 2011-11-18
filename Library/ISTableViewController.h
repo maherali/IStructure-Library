@@ -9,7 +9,6 @@
     NSDictionary        *params;
 }
 
-@property (retain) NSMutableArray   *observers;
 @property (retain) ISModel          *model;
 @property (retain) ISCollection     *collection;
 @property (retain) NSDictionary     *options;

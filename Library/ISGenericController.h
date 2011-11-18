@@ -4,7 +4,6 @@
     NSDictionary     *params;
 }
 
-@property (retain) NSMutableArray   *observers;
 @property (retain) NSDictionary     *options;
 @property (retain) NSDictionary     *params;
 
