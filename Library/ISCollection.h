@@ -1,13 +1,10 @@
 @interface ISCollection : NSObject{
     NSMutableArray          *observers;
-     NSString               *collectionBaseUrl;
+    NSString                *collectionBaseUrl;
 }
 
 @property   (retain)    NSMutableArray          *models;
 @property   (retain)    ISBasicSync             *sync;
-@property   (retain)    NSMutableArray          *observers;
-@property   (retain)    NSMutableDictionary     *_byCid;
-@property   (retain)    NSMutableDictionary     *_byId;
 
 /** Initialize with a set of models.
  

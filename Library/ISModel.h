@@ -25,20 +25,6 @@ typedef void(^CancelHandler)(id model, NSArray *errors);
 }
 #pragma mark 
 #pragma mark PROPERTIES
-@property   (retain)        NSMutableDictionary    *_previousAttributes;   
-
-
-/** The observers array.
- 
- As any object that can watch events, it defines and initializes the observers mutable array.
- 
- */
-@property   (retain) NSMutableArray         *observers;
-
-/** The attributes of the instance. 
- A dictionary of key/value objects.
- */
-@property   (retain) NSMutableDictionary    *attributes;
 
 /** The identifier of the model instance.
  
@@ -349,8 +335,6 @@ After initialization, the model is new:
  */
 - (NSString*) baseUrl;
 
-
-
 /** Set the Base URL of the model instance.
 
  Used to provide a Base URL of the instance that will be used when server is contacted. 
@@ -571,8 +555,6 @@ extern NSString* const  PARAMS_KEY;
 extern NSString* const  SUCCESS_HANDLER_KEY;
 extern NSString* const  FAILURE_HANDLER_KEY;
 extern NSString* const  CANCEL_HANDLER_KEY;
-
-
 
 
 
