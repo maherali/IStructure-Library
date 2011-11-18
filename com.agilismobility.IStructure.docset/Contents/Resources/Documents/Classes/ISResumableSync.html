@@ -59,6 +59,10 @@
 	
 	<option value="//api/name/potentialResourceFilePath:withBaseDir:">&nbsp;&nbsp;&nbsp;&nbsp;+ potentialResourceFilePath:withBaseDir:</option>
 	
+	<option value="//api/name/removePartialResourceOnDisk:withBaseDir:">&nbsp;&nbsp;&nbsp;&nbsp;+ removePartialResourceOnDisk:withBaseDir:</option>
+	
+	<option value="//api/name/removeResourceOnDisk:withBaseDir:">&nbsp;&nbsp;&nbsp;&nbsp;+ removeResourceOnDisk:withBaseDir:</option>
+	
 	<option value="//api/name/resourceExistForURL:withBaseDir:">&nbsp;&nbsp;&nbsp;&nbsp;+ resourceExistForURL:withBaseDir:</option>
 	
 	<option value="//api/name/resourceOnDiskForURL:withBaseDir:">&nbsp;&nbsp;&nbsp;&nbsp;+ resourceOnDiskForURL:withBaseDir:</option>
@@ -69,6 +73,14 @@
 	<option value="instance_methods">Instance Methods</option>
 	
 	<option value="//api/name/cacheDir">&nbsp;&nbsp;&nbsp;&nbsp;- cacheDir</option>
+	
+	<option value="//api/name/partialResourceData">&nbsp;&nbsp;&nbsp;&nbsp;- partialResourceData</option>
+	
+	<option value="//api/name/partialResourceExists">&nbsp;&nbsp;&nbsp;&nbsp;- partialResourceExists</option>
+	
+	<option value="//api/name/resourceData">&nbsp;&nbsp;&nbsp;&nbsp;- resourceData</option>
+	
+	<option value="//api/name/resourceExists">&nbsp;&nbsp;&nbsp;&nbsp;- resourceExists</option>
 	
 	
 	
@@ -114,6 +126,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/potentialResourceFilePath:withBaseDir:">potentialResourceFilePath:withBaseDir:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removePartialResourceOnDisk:withBaseDir:">removePartialResourceOnDisk:withBaseDir:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeResourceOnDisk:withBaseDir:">removeResourceOnDisk:withBaseDir:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceExistForURL:withBaseDir:">resourceExistForURL:withBaseDir:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceOnDiskForURL:withBaseDir:">resourceOnDiskForURL:withBaseDir:</a></span></li>
@@ -125,6 +141,14 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheDir">cacheDir</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/partialResourceData">partialResourceData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/partialResourceExists">partialResourceExists</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceData">resourceData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resourceExists">resourceExists</a></span></li>
 	
 </ul></li>
 
@@ -181,7 +205,35 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cacheDir">&ndash;&nbsp;cacheDir</a></code>
-		
+		<span class="tooltip"><p>The cache location in the application Sandbox. Default is Library/IStructure-Cache</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resourceExists">&ndash;&nbsp;resourceExists</a></code>
+		<span class="tooltip"><p>Determines whether the resource is cached on disk.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resourceData">&ndash;&nbsp;resourceData</a></code>
+		<span class="tooltip"><p>Obtains the data cached for the URL</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/partialResourceExists">&ndash;&nbsp;partialResourceExists</a></code>
+		<span class="tooltip"><p>Detarmines whether the partial resource exists for the resource URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/partialResourceData">&ndash;&nbsp;partialResourceData</a></code>
+		<span class="tooltip"><p>Obtains the data for the portion of the resource successfully obtained.</p></span>
 	</span>
 	
 	
@@ -244,6 +296,20 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fileModificationDate:">+&nbsp;fileModificationDate:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeResourceOnDisk:withBaseDir:">+&nbsp;removeResourceOnDisk:withBaseDir:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removePartialResourceOnDisk:withBaseDir:">+&nbsp;removePartialResourceOnDisk:withBaseDir:</a></code>
 		
 	</span>
 	
@@ -326,6 +392,20 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/removePartialResourceOnDisk:withBaseDir:" title="removePartialResourceOnDisk:withBaseDir:"></a>
+	<h3 class="subsubtitle method-title">removePartialResourceOnDisk:withBaseDir:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeResourceOnDisk:withBaseDir:" title="removeResourceOnDisk:withBaseDir:"></a>
+	<h3 class="subsubtitle method-title">removeResourceOnDisk:withBaseDir:</h3>
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/resourceExistForURL:withBaseDir:" title="resourceExistForURL:withBaseDir:"></a>
 	<h3 class="subsubtitle method-title">resourceExistForURL:withBaseDir:</h3>
 	
@@ -350,6 +430,219 @@
 						<div class="section-method">
 	<a name="//api/name/cacheDir" title="cacheDir"></a>
 	<h3 class="subsubtitle method-title">cacheDir</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The cache location in the application Sandbox. Default is Library/IStructure-Cache</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)cacheDir</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The cache path relative to the app sandbox.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The cache location in the application Sandbox. Default is Library/IStructure-Cache</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISResumableSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/partialResourceData" title="partialResourceData"></a>
+	<h3 class="subsubtitle method-title">partialResourceData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Obtains the data for the portion of the resource successfully obtained.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)partialResourceData</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An NSData instance representing the data for the parial resource on disk.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Obtains the data for the portion of the resource successfully obtained.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISResumableSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/partialResourceExists" title="partialResourceExists"></a>
+	<h3 class="subsubtitle method-title">partialResourceExists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Detarmines whether the partial resource exists for the resource URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)partialResourceExists</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES iff a portion of the download exists.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Detarmines whether the partial resource exists for the resource URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISResumableSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resourceData" title="resourceData"></a>
+	<h3 class="subsubtitle method-title">resourceData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Obtains the data cached for the URL</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSData *)resourceData</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>AN instance of NSData representing teh cached data for the resource URL. nil, otherwise.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Obtains the data cached for the URL</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISResumableSync.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resourceExists" title="resourceExists"></a>
+	<h3 class="subsubtitle method-title">resourceExists</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines whether the resource is cached on disk.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)resourceExists</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A YES iff the resource exists on disk.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Determines whether the resource is cached on disk.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISResumableSync.h</code><br />
+	</div>				
 	
 	
 </div>

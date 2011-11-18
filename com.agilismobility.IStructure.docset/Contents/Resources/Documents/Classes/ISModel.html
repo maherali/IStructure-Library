@@ -72,6 +72,8 @@
 	
 	<option value="//api/name/baseUrl">&nbsp;&nbsp;&nbsp;&nbsp;- baseUrl</option>
 	
+	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
+	
 	<option value="//api/name/change">&nbsp;&nbsp;&nbsp;&nbsp;- change</option>
 	
 	<option value="//api/name/changeWithOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- changeWithOptions:</option>
@@ -201,6 +203,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/JSONDataFromAttributes:">JSONDataFromAttributes:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/baseUrl">baseUrl</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/change">change</a></span></li>
 	
@@ -659,6 +663,13 @@ A dictionary of key/value objects.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/lastChanceToUpdateSyncOptions:forMethod:">&ndash;&nbsp;lastChanceToUpdateSyncOptions:forMethod:</a></code>
 		<span class="tooltip"><p>Perform last minute changes to the options hash sent by the model during read, update, delete, and create</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+		<span class="tooltip"><p>Cancel the currently ongoing <a href="#//api/name/sync">sync</a> operation.</p></span>
 	</span>
 	
 	
@@ -1137,6 +1148,45 @@ default implementation of the ISModel class:</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The Base URL of the <a href="ISModel.html">ISModel</a> instance.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ISModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="subsubtitle method-title">cancel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancel the currently ongoing <a href="#//api/name/sync">sync</a> operation.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Cancel the currently ongoing <a href="#//api/name/sync">sync</a> operation.</p>
 	</div>
 	
 	
