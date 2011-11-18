@@ -11,10 +11,9 @@
 }
 
 - (NSData*) dataToSave{
-    NSMutableDictionary *attrs = [[self.attributes mutableDeepCopy] autorelease];
-    [attrs removeObjectForKey:@"created_at"];
-    [attrs removeObjectForKey:@"updated_at"];
-    return [self JSONDataFromAttributes:attrs];
+    [self unSet:@"created_at"];
+    [self unSet:@"updated_at"];
+    return [super dataToSave];
 }
 
 - (NSArray*) validate:(NSDictionary*) attrs{

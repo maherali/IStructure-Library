@@ -8,8 +8,6 @@
     NSMutableArray      *observers;
 }
 
-@property (retain) NSMutableArray   *observers;
-
 /** The model attached to the tableview
  */
 @property (retain) ISModel          *model;
