@@ -50,5 +50,7 @@
 + (void) createDirectory:(NSString*) dir;
 + (unsigned long long) fileSize:(NSString*) filePath;
 + (NSDate*) fileModificationDate:(NSString*) filePath;
++ (void) removeResourceOnDisk:(NSString*) url withBaseDir:(NSString*) baseDir;
++ (void) removePartialResourceOnDisk:(NSString*) url withBaseDir:(NSString*) baseDir;
 
 @end

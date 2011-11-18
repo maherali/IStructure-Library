@@ -46,6 +46,11 @@
     return 100;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    MyModel *model = (MyModel*)[self.collection at:indexPath.row];
+    [model removeResource];
+}
+
 - (void) fetchModel:(MyModel*) m{
     __block SimpleTableController *this = self;
     [m fetch:$dict(SUCCESS_HANDLER_KEY, $block(^(MyModel *model, NSData *data){

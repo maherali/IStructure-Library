@@ -3,7 +3,7 @@
 
 @implementation SimpleCell
 
-@synthesize playPauseButton, model, observers, messageLabel;
+@synthesize playPauseButton, model, observers, messageLabel, progressView;
 
 - (void) configureCellWithModel:(MyModel*) _model{
     if(!self.observers){
@@ -12,8 +12,10 @@
     self.model  =   _model;
     if([self.model resourceExist]){
         hideLoadingPause = YES;
+        self.progressView.progress = 1.0f;
     }else{
         hideLoadingPause = NO;
+        self.progressView.progress = 0.0f;
     }
     currentlyPlaying = NO;
     if(hideLoadingPause){
@@ -23,10 +25,10 @@
     }  
     __block SimpleCell *this = self;
     $unwatch(@"testing");
-
     $watch(@"percentage_retrieved", self.model, ^(NSNotification *notif){
         NSString *percentageSoFar = [notif.userInfo objectForKey:@"value"];
         this.messageLabel.text = $sprintf(@"%.0f%%", [percentageSoFar floatValue]);
+        this.progressView.progress = [percentageSoFar floatValue]/100.0f;
     });
 }
 
@@ -50,6 +52,7 @@
     self.model              =   nil;
     self.playPauseButton    =   nil;
     self.messageLabel       =   nil;
+    self.progressView       =   nil;
     [super dealloc];
 }
 

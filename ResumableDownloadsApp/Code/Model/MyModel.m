@@ -15,6 +15,10 @@
     return [ISResumableSync resourceExistForURL:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]];
 }
 
+- (void) removeResource{
+        
+}
+
 - (void) fetch:(NSDictionary *)options{
     [super fetch:options];
     __block MyModel *this           = self;
