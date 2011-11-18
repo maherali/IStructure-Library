@@ -76,11 +76,6 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
     NSMutableArray          *observers;
 }
 
-/**
- ISSync class can observe events.
- */
-@property (nonatomic, retain) NSMutableArray        *observers;
-
 /** Options used in synchronization.
  */
 @property   (retain)    NSDictionary    *options;
@@ -119,9 +114,6 @@ typedef void(^SyncHandler)(NSData *data, NSDictionary *metaData);
 /** The class to use for net/app error decoding.
  */
 + (Class)   errorDecoderClass;
-
-- (void) _callBack:(id) block;
-
 
 /**
  Specifies whether the operation starts immediately.

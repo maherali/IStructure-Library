@@ -18,8 +18,6 @@
 @property (retain) NSHTTPURLResponse        *response;
 @property (retain) NSError                  *error;
 @property (retain) NSMutableData            *data;
-@property (retain) NSURLConnection          *connection;
-
 
 /** Contact the server.
  The following is a possible implementation of this method:
