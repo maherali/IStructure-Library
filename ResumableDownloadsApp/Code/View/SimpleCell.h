@@ -14,8 +14,7 @@
 @property (nonatomic, retain) UILabel           *messageLabel;
 @property (nonatomic, retain) UIProgressView    *progressView;
 
-
--(IBAction)playPauseTapped:(id)sender;
+- (IBAction) playPauseTapped:(id)sender;
 - (void) configureCellWithModel:(MyModel*) model;
 
 @end
