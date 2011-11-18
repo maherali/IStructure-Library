@@ -40,8 +40,6 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/connection">&nbsp;&nbsp;&nbsp;&nbsp;connection</option>
-	
 	<option value="//api/name/data">&nbsp;&nbsp;&nbsp;&nbsp;data</option>
 	
 	<option value="//api/name/error">&nbsp;&nbsp;&nbsp;&nbsp;error</option>
@@ -100,8 +98,6 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connection">connection</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/data">data</a></span></li>
 	
@@ -215,13 +211,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/connection">&nbsp;&nbsp;connection</a></code>
-		
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/send:">&ndash;&nbsp;send:</a></code>
 		<span class="tooltip"><p>Contact the server.
 The following is a possible implementation of this method:</p></span>
@@ -238,7 +227,7 @@ The following is a possible implementation of this method:</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/configureConnection:">&ndash;&nbsp;configureConnection:</a></code>
-		<span class="tooltip"><p>Configure the <a href="#//api/name/connection">connection</a>.</p></span>
+		<span class="tooltip"><p>Configure the connection.</p></span>
 	</span>
 	
 	
@@ -287,7 +276,7 @@ The following is a possible implementation of this method:</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/syncFinished">&ndash;&nbsp;syncFinished</a></code>
-		<span class="tooltip"><p>Called when the HTTP <a href="#//api/name/connection">connection</a> finished loading <a href="#//api/name/data">data</a>
+		<span class="tooltip"><p>Called when the HTTP connection finished loading <a href="#//api/name/data">data</a>
 You can assume that the <a href="#//api/name/data">data</a> has been set.
 Base class implementation is a no-op.</p></span>
 	</span>
@@ -296,7 +285,7 @@ Base class implementation is a no-op.</p></span>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/syncFailed">&ndash;&nbsp;syncFailed</a></code>
-		<span class="tooltip"><p>Called when the HTTP <a href="#//api/name/connection">connection</a> failed.
+		<span class="tooltip"><p>Called when the HTTP connection failed.
 You can assume that the <a href="#//api/name/error">error</a> has been set.
 Base class implementation is a no-op.</p></span>
 	</span>
@@ -314,13 +303,6 @@ Base class implementation is a no-op.</p></span>
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/connection" title="connection"></a>
-	<h3 class="subsubtitle method-title">connection</h3>
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/data" title="data"></a>
@@ -421,7 +403,7 @@ Base class implementation is a no-op.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Configure the <a href="#//api/name/connection">connection</a>.</p>
+		<p>Configure the connection.</p>
 	</div>		
 	
 	
@@ -436,7 +418,7 @@ Base class implementation is a no-op.</p></span>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Configure the <a href="#//api/name/connection">connection</a>.</p>
+		<p>Configure the connection.</p>
 
 <p>The following is a possible implementation of this method:</p>
 
@@ -822,7 +804,7 @@ The following is a possible implementation of this method:</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> failed.
+		<p>Called when the HTTP connection failed.
 You can assume that the <a href="#//api/name/error">error</a> has been set.
 Base class implementation is a no-op.</p>
 	</div>		
@@ -839,7 +821,7 @@ Base class implementation is a no-op.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> failed.
+		<p>Called when the HTTP connection failed.
 You can assume that the <a href="#//api/name/error">error</a> has been set.
 Base class implementation is a no-op.</p>
 	</div>
@@ -865,7 +847,7 @@ Base class implementation is a no-op.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> finished loading <a href="#//api/name/data">data</a>
+		<p>Called when the HTTP connection finished loading <a href="#//api/name/data">data</a>
 You can assume that the <a href="#//api/name/data">data</a> has been set.
 Base class implementation is a no-op.</p>
 	</div>		
@@ -882,7 +864,7 @@ Base class implementation is a no-op.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called when the HTTP <a href="#//api/name/connection">connection</a> finished loading <a href="#//api/name/data">data</a>
+		<p>Called when the HTTP connection finished loading <a href="#//api/name/data">data</a>
 You can assume that the <a href="#//api/name/data">data</a> has been set.
 Base class implementation is a no-op.</p>
 	</div>
@@ -914,7 +896,7 @@ Base class implementation is a no-op.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-17)</span><br />
+						<p><span class="copyright">&copy; 2011 Agilis Mobility, LLC. All rights reserved. (Last updated: 2011-11-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
