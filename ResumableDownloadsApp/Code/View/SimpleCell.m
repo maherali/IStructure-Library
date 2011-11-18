@@ -16,7 +16,7 @@
         self.progressView.progress = 1.0f;
     }else{
         hideLoadingPause = NO;
-        self.progressView.progress = 0.0f;
+        self.progressView.progress = model.percentage/100.0f;
     }
     currentlyPlaying = NO;
     if(hideLoadingPause){

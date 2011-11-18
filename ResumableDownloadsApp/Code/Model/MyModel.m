@@ -3,6 +3,8 @@
 
 @implementation MyModel
 
+@synthesize percentage;
+
 + (Class) syncClass{
     return [MySync class];
 }
@@ -38,6 +40,7 @@
         if(percentageSoFar >= 100.0005f){
             percentageSoFar = 100.0f;
         }
+        percentage = percentageSoFar;
         $trigger(@"percentage_retrieved", $dict(@"value", $sprintf(@"%f", percentageSoFar)));
     });
     [self.sync start];
