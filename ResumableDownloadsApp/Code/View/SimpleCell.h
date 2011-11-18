@@ -18,7 +18,6 @@
 
 
 -(IBAction)playPauseTapped:(id)sender;
-
 - (void) configureCellWithModel:(MyModel*) model;
 
 @end

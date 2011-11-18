@@ -33,6 +33,8 @@
     }
     [theCell configureCellWithModel:(MyModel*)[self.collection at:indexPath.row]];
     __block SimpleTableController *this = self;
+    $unwatch(@"resume_loading", theCell);
+    $unwatch(@"stop_loading", theCell);
     $watch(@"resume_loading", theCell, ^(NSNotification *notif){
         [this fetchModel:theCell.model];
     });
@@ -47,8 +49,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    MyModel *model = (MyModel*)[self.collection at:indexPath.row];
-    [model removeResource];
+    MyModel *aModel = (MyModel*)[self.collection at:indexPath.row];
+    [aModel removeResource];
+    [aModel change];
 }
 
 - (void) fetchModel:(MyModel*) m{

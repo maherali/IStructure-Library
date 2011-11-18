@@ -16,35 +16,29 @@
 }
 
 - (void) removeResource{
-        
+    [ISResumableSync removeResourceOnDisk:[self pathRoot] withBaseDir:[[[MyModel syncClass] new] cacheDir]]; 
 }
 
 - (void) fetch:(NSDictionary *)options{
     [super fetch:options];
     __block MyModel *this           = self;
-    __block float totalSofar   = 0; 
-    __block float totalLength  = 0;
+    __block float totalSofar        = 0.0f; 
+    __block float totalLength       = 0.0f;
     
     $unwatch();
-    
     $watch(@"content-length", self.sync, ^(NSNotification *notif){
-        NSString *length = [notif.userInfo objectForKey:@"length"];
-        totalLength = [length longLongValue];
+        totalLength = [[notif.userInfo objectForKey:@"length"] longLongValue];
     });
-    
     $watch(@"cached-data-count", self.sync, ^(NSNotification *notif){
-        NSString *length = [notif.userInfo objectForKey:@"length"];
-        totalSofar = [length longLongValue];
+        totalSofar = [[notif.userInfo objectForKey:@"length"] longLongValue];
     });
     $watch(@"received-data-count", self.sync, ^(NSNotification *notif){
-        NSString *length = [notif.userInfo objectForKey:@"length"];
-        totalSofar += [length longLongValue];
+        totalSofar += [[notif.userInfo objectForKey:@"length"] longLongValue];
         float percentageSoFar = totalSofar/totalLength*100.0f;
         if(percentageSoFar >= 100.0005f){
             percentageSoFar = 100.0f;
         }
         $trigger(@"percentage_retrieved", $dict(@"value", $sprintf(@"%f", percentageSoFar)));
-        LOG(@"Received the data in model %@", length);
     });
     [self.sync start];
 }
