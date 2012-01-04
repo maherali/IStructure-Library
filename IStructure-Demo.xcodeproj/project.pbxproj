@@ -126,6 +126,7 @@
 		4184A111146E129D00572663 /* AppErrorDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A10E146E129D00572663 /* AppErrorDecoder.m */; };
 		4184A112146E129D00572663 /* SessionSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A110146E129D00572663 /* SessionSync.m */; };
 		4184A116146E12AC00572663 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 4184A115146E12AC00572663 /* Session.m */; };
+		41DB1FFE14B50BE5008E6BBC /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41DB1FFD14B50BE5008E6BBC /* ImageViewController.xib */; };
 		41EDF54A147009D700A436D9 /* AppFacadeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EDF549147009D700A436D9 /* AppFacadeService.m */; };
 		41EDF55A147013F100A436D9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF54D147013F100A436D9 /* back.png */; };
 		41EDF55B147013F100A436D9 /* bg_main.png in Resources */ = {isa = PBXBuildFile; fileRef = 41EDF54E147013F100A436D9 /* bg_main.png */; };
@@ -418,6 +419,7 @@
 		4184A114146E12AC00572663 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Session.h; path = Code/Model/Session.h; sourceTree = "<group>"; };
 		4184A115146E12AC00572663 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Session.m; path = Code/Model/Session.m; sourceTree = "<group>"; };
 		418A6E5C146D516F009243E4 /* NSMutableURLRequest+IStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+IStructure.h"; path = "Library/NSMutableURLRequest+IStructure.h"; sourceTree = "<group>"; };
+		41DB1FFD14B50BE5008E6BBC /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageViewController.xib; path = Code/View/ImageViewController.xib; sourceTree = "<group>"; };
 		41EDF548147009D700A436D9 /* AppFacadeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppFacadeService.h; path = Code/Service/AppFacadeService.h; sourceTree = "<group>"; };
 		41EDF549147009D700A436D9 /* AppFacadeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppFacadeService.m; path = Code/Service/AppFacadeService.m; sourceTree = "<group>"; };
 		41EDF54D147013F100A436D9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Assets/Images/back.png; sourceTree = "<group>"; };
@@ -1116,6 +1118,7 @@
 		41EDF62514759EEC00A436D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				41DB1FFD14B50BE5008E6BBC /* ImageViewController.xib */,
 				41F2D3311475FE4B00A2E5CE /* SimpleTableController.xib */,
 				41EDF62D1475A00400A436D9 /* SimpleCell.xib */,
 				41EDF62E1475A00400A436D9 /* SimpleTableController.xib */,
@@ -1596,6 +1599,7 @@
 				41EDF62F1475A00400A436D9 /* SimpleCell.xib in Resources */,
 				41EDF6301475A00400A436D9 /* SimpleTableController.xib in Resources */,
 				41F2D3321475FE4B00A2E5CE /* SimpleTableController.xib in Resources */,
+				41DB1FFE14B50BE5008E6BBC /* ImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
