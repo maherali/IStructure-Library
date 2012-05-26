@@ -467,6 +467,7 @@
 		41EDF62B14759F3A00A436D9 /* SimpleTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTableController.m; path = Code/Controller/SimpleTableController.m; sourceTree = "<group>"; };
 		41EDF62D1475A00400A436D9 /* SimpleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleCell.xib; path = Code/View/SimpleCell.xib; sourceTree = "<group>"; };
 		41EDF62E1475A00400A436D9 /* SimpleTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTableController.xib; path = Code/View/SimpleTableController.xib; sourceTree = "<group>"; };
+		41F1C3E2157193A5001E4E9A /* ISSecureCachedSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISSecureCachedSync.h; path = Library/ISSecureCachedSync.h; sourceTree = "<group>"; };
 		41F2D3231475B9DE00A2E5CE /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyModel.h; path = Code/Model/MyModel.h; sourceTree = "<group>"; };
 		41F2D3241475B9DE00A2E5CE /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyModel.m; path = Code/Model/MyModel.m; sourceTree = "<group>"; };
 		41F2D3271475BA1800A2E5CE /* MySync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySync.h; path = Code/Sync/MySync.h; sourceTree = "<group>"; };
@@ -647,6 +648,7 @@
 		411C1B59143BFBE6000449E1 /* IStructure Library */ = {
 			isa = PBXGroup;
 			children = (
+				41F1C3E2157193A5001E4E9A /* ISSecureCachedSync.h */,
 				41EDF5DF1474AF1300A436D9 /* ISResumableSync.h */,
 				41EDF58F1473494600A436D9 /* ISLoadingView.h */,
 				412745BD1448ECD900CA7E05 /* ISCacheDatabase.h */,

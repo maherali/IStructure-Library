@@ -1,5 +1,6 @@
 #import "Notes.h"
 #import "Note.h"
+#import "ISSecureCachedSync.h"
 
 @implementation Notes
 
@@ -13,7 +14,7 @@
 
 // Uncomment this to enable caching
 + (Class) syncClass{
-    return [ISEnhancedSync class];    
+    return [ISSecureCachedSync class];    
 }
 
 @end
