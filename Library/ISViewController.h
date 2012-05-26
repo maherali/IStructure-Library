@@ -9,6 +9,8 @@
 
 - (id)              initWithValues:(NSDictionary*) _passedIn;
 - (id)              initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andValues:(NSDictionary*) _passedInValues;
+- (id)              initWithCoder:(NSCoder *)aDecoder andValues:(NSDictionary*) _passedInValues;
+
 - (NSDictionary*)   routes;
 
 @end

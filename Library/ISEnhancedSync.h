@@ -30,6 +30,10 @@
 */
 + (NSString*) dbVersion;
 
++ (NSString*) decrypt:(NSString*) str;
+
++ (NSString*) encrypt:(NSString*) str;
+
 @end
 
 extern  NSString* const SYNC_CACHE_USER_KEY;
